@@ -29,11 +29,25 @@
 
 - (void)customizeTabBar {
     
-    NSDictionary *selectedProperties = @{ NSForegroundColorAttributeName : [LKColor colorWithIdentifier:LKColorYellow] }; //standby tab
-    NSDictionary *normalProperties = @{ NSForegroundColorAttributeName : [UIColor whiteColor] }; //active tab
+    UIFont *font = [UIFont fontWithName:@"Futura-Medium" size:10];
+    
+    NSDictionary *selectedProperties = @{
+                                         NSFontAttributeName : font,
+                                         NSForegroundColorAttributeName : [UIColor whiteColor]
+                                         }; //active tab
+    NSDictionary *normalProperties = @{
+                                       NSFontAttributeName : font,
+                                       NSForegroundColorAttributeName : [LKColor colorWithIdentifier:LKColorLightRed]
+                                       }; //standby tab
     
     [[UITabBarItem appearance] setTitleTextAttributes:selectedProperties forState:UIControlStateSelected];
     [[UITabBarItem appearance] setTitleTextAttributes:normalProperties forState:UIControlStateNormal];
+    
+    for(UITabBarItem *item in self.tabBar.items) {
+        
+        item.title = [item.title uppercaseString];
+        
+    }
     
 }
 

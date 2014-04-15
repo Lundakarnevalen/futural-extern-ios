@@ -13,7 +13,8 @@ typedef enum {
     LKColorRed = 1,
     LKColorBlue = 2,
     LKColorGreen = 3,
-    LKColorYellow = 4
+    LKColorYellow = 4,
+    LKColorLightRed = 5
     
 } LKColorIdentifier;
 

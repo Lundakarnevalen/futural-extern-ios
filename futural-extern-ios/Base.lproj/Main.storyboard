@@ -111,7 +111,7 @@
             </objects>
             <point key="canvasLocation" x="1265" y="-486"/>
         </scene>
-        <!--View Controller - Kontakt-->
+        <!--View Controller - Övrigt-->
         <scene sceneID="EVS-Nb-w21">
             <objects>
                 <viewController id="N9k-uI-9cF" sceneMemberID="viewController">
@@ -124,7 +124,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Kontakt" id="cAk-w7-2Xe"/>
+                    <tabBarItem key="tabBarItem" title="Övrigt" id="cAk-w7-2Xe"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gQb-Ms-vaV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
