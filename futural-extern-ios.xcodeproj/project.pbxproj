@@ -14,24 +14,11 @@
 		1AE8E56118F42FB50078EBDF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AE8E56018F42FB50078EBDF /* main.m */; };
 		1AE8E56518F42FB50078EBDF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AE8E56418F42FB50078EBDF /* AppDelegate.m */; };
 		1AE8E56818F42FB50078EBDF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1AE8E56618F42FB50078EBDF /* Main.storyboard */; };
-		1AE8E56B18F42FB50078EBDF /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AE8E56A18F42FB50078EBDF /* ViewController.m */; };
-		1AE8E56D18F42FB50078EBDF /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1AE8E56C18F42FB50078EBDF /* Images.xcassets */; };
-		1AE8E57418F42FB50078EBDF /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AE8E57318F42FB50078EBDF /* XCTest.framework */; };
-		1AE8E57518F42FB50078EBDF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AE8E55418F42FB50078EBDF /* Foundation.framework */; };
-		1AE8E57618F42FB50078EBDF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AE8E55818F42FB50078EBDF /* UIKit.framework */; };
-		1AE8E57E18F42FB50078EBDF /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1AE8E57C18F42FB50078EBDF /* InfoPlist.strings */; };
-		1AE8E58018F42FB50078EBDF /* futural_extern_iosTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AE8E57F18F42FB50078EBDF /* futural_extern_iosTests.m */; };
+		57407D1518FD2A5A0003F787 /* LKEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 57407D1418FD2A5A0003F787 /* LKEvent.m */; };
+		57407D1718FD2B1A0003F787 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57407D1618FD2B1A0003F787 /* CoreLocation.framework */; };
+		57407D1A18FD2B5C0003F787 /* LKSektion.m in Sources */ = {isa = PBXBuildFile; fileRef = 57407D1918FD2B5C0003F787 /* LKSektion.m */; };
+		57407D1D18FD2F110003F787 /* LKarnevalist.m in Sources */ = {isa = PBXBuildFile; fileRef = 57407D1C18FD2F110003F787 /* LKarnevalist.m */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		1AE8E57718F42FB50078EBDF /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 1AE8E54918F42FB50078EBDF /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 1AE8E55018F42FB50078EBDF;
-			remoteInfo = "futural-extern-ios";
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		1AE8E55118F42FB50078EBDF /* futural-extern-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "futural-extern-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -45,14 +32,14 @@
 		1AE8E56318F42FB50078EBDF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		1AE8E56418F42FB50078EBDF /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		1AE8E56718F42FB50078EBDF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		1AE8E56918F42FB50078EBDF /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		1AE8E56A18F42FB50078EBDF /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		1AE8E56C18F42FB50078EBDF /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		1AE8E57218F42FB50078EBDF /* futural-extern-iosTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "futural-extern-iosTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1AE8E57318F42FB50078EBDF /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		1AE8E57B18F42FB50078EBDF /* futural-extern-iosTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "futural-extern-iosTests-Info.plist"; sourceTree = "<group>"; };
-		1AE8E57D18F42FB50078EBDF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		1AE8E57F18F42FB50078EBDF /* futural_extern_iosTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = futural_extern_iosTests.m; sourceTree = "<group>"; };
+		57407D1318FD2A5A0003F787 /* LKEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LKEvent.h; path = Models/LKEvent.h; sourceTree = "<group>"; };
+		57407D1418FD2A5A0003F787 /* LKEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LKEvent.m; path = Models/LKEvent.m; sourceTree = "<group>"; };
+		57407D1618FD2B1A0003F787 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		57407D1818FD2B5C0003F787 /* LKSektion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LKSektion.h; path = Models/LKSektion.h; sourceTree = "<group>"; };
+		57407D1918FD2B5C0003F787 /* LKSektion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LKSektion.m; path = Models/LKSektion.m; sourceTree = "<group>"; };
+		57407D1B18FD2F110003F787 /* LKarnevalist.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LKarnevalist.h; path = Models/LKarnevalist.h; sourceTree = "<group>"; };
+		57407D1C18FD2F110003F787 /* LKarnevalist.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LKarnevalist.m; path = Models/LKarnevalist.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,19 +47,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				57407D1718FD2B1A0003F787 /* CoreLocation.framework in Frameworks */,
 				1AE8E55718F42FB50078EBDF /* CoreGraphics.framework in Frameworks */,
 				1AE8E55918F42FB50078EBDF /* UIKit.framework in Frameworks */,
 				1AE8E55518F42FB50078EBDF /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		1AE8E56F18F42FB50078EBDF /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				1AE8E57418F42FB50078EBDF /* XCTest.framework in Frameworks */,
-				1AE8E57618F42FB50078EBDF /* UIKit.framework in Frameworks */,
-				1AE8E57518F42FB50078EBDF /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,7 +61,6 @@
 			isa = PBXGroup;
 			children = (
 				1AE8E55A18F42FB50078EBDF /* futural-extern-ios */,
-				1AE8E57918F42FB50078EBDF /* futural-extern-iosTests */,
 				1AE8E55318F42FB50078EBDF /* Frameworks */,
 				1AE8E55218F42FB50078EBDF /* Products */,
 			);
@@ -93,7 +70,6 @@
 			isa = PBXGroup;
 			children = (
 				1AE8E55118F42FB50078EBDF /* futural-extern-ios.app */,
-				1AE8E57218F42FB50078EBDF /* futural-extern-iosTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -101,6 +77,7 @@
 		1AE8E55318F42FB50078EBDF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				57407D1618FD2B1A0003F787 /* CoreLocation.framework */,
 				1AE8E55418F42FB50078EBDF /* Foundation.framework */,
 				1AE8E55618F42FB50078EBDF /* CoreGraphics.framework */,
 				1AE8E55818F42FB50078EBDF /* UIKit.framework */,
@@ -112,12 +89,11 @@
 		1AE8E55A18F42FB50078EBDF /* futural-extern-ios */ = {
 			isa = PBXGroup;
 			children = (
+				57407D0F18FD29F20003F787 /* Controllers */,
+				57407D0E18FD29EB0003F787 /* Models */,
 				1AE8E56318F42FB50078EBDF /* AppDelegate.h */,
 				1AE8E56418F42FB50078EBDF /* AppDelegate.m */,
 				1AE8E56618F42FB50078EBDF /* Main.storyboard */,
-				1AE8E56918F42FB50078EBDF /* ViewController.h */,
-				1AE8E56A18F42FB50078EBDF /* ViewController.m */,
-				1AE8E56C18F42FB50078EBDF /* Images.xcassets */,
 				1AE8E55B18F42FB50078EBDF /* Supporting Files */,
 			);
 			path = "futural-extern-ios";
@@ -134,22 +110,24 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		1AE8E57918F42FB50078EBDF /* futural-extern-iosTests */ = {
+		57407D0E18FD29EB0003F787 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				1AE8E57F18F42FB50078EBDF /* futural_extern_iosTests.m */,
-				1AE8E57A18F42FB50078EBDF /* Supporting Files */,
+				57407D1318FD2A5A0003F787 /* LKEvent.h */,
+				57407D1418FD2A5A0003F787 /* LKEvent.m */,
+				57407D1818FD2B5C0003F787 /* LKSektion.h */,
+				57407D1918FD2B5C0003F787 /* LKSektion.m */,
+				57407D1B18FD2F110003F787 /* LKarnevalist.h */,
+				57407D1C18FD2F110003F787 /* LKarnevalist.m */,
 			);
-			path = "futural-extern-iosTests";
+			name = Models;
 			sourceTree = "<group>";
 		};
-		1AE8E57A18F42FB50078EBDF /* Supporting Files */ = {
+		57407D0F18FD29F20003F787 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				1AE8E57B18F42FB50078EBDF /* futural-extern-iosTests-Info.plist */,
-				1AE8E57C18F42FB50078EBDF /* InfoPlist.strings */,
 			);
-			name = "Supporting Files";
+			name = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -172,24 +150,6 @@
 			productReference = 1AE8E55118F42FB50078EBDF /* futural-extern-ios.app */;
 			productType = "com.apple.product-type.application";
 		};
-		1AE8E57118F42FB50078EBDF /* futural-extern-iosTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 1AE8E58618F42FB50078EBDF /* Build configuration list for PBXNativeTarget "futural-extern-iosTests" */;
-			buildPhases = (
-				1AE8E56E18F42FB50078EBDF /* Sources */,
-				1AE8E56F18F42FB50078EBDF /* Frameworks */,
-				1AE8E57018F42FB50078EBDF /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				1AE8E57818F42FB50078EBDF /* PBXTargetDependency */,
-			);
-			name = "futural-extern-iosTests";
-			productName = "futural-extern-iosTests";
-			productReference = 1AE8E57218F42FB50078EBDF /* futural-extern-iosTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -198,11 +158,6 @@
 			attributes = {
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = "Richard Luong";
-				TargetAttributes = {
-					1AE8E57118F42FB50078EBDF = {
-						TestTargetID = 1AE8E55018F42FB50078EBDF;
-					};
-				};
 			};
 			buildConfigurationList = 1AE8E54C18F42FB50078EBDF /* Build configuration list for PBXProject "futural-extern-ios" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -218,7 +173,6 @@
 			projectRoot = "";
 			targets = (
 				1AE8E55018F42FB50078EBDF /* futural-extern-ios */,
-				1AE8E57118F42FB50078EBDF /* futural-extern-iosTests */,
 			);
 		};
 /* End PBXProject section */
@@ -228,17 +182,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1AE8E56D18F42FB50078EBDF /* Images.xcassets in Resources */,
 				1AE8E55F18F42FB50078EBDF /* InfoPlist.strings in Resources */,
 				1AE8E56818F42FB50078EBDF /* Main.storyboard in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		1AE8E57018F42FB50078EBDF /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				1AE8E57E18F42FB50078EBDF /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -249,29 +194,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1AE8E56B18F42FB50078EBDF /* ViewController.m in Sources */,
 				1AE8E56518F42FB50078EBDF /* AppDelegate.m in Sources */,
+				57407D1D18FD2F110003F787 /* LKarnevalist.m in Sources */,
+				57407D1518FD2A5A0003F787 /* LKEvent.m in Sources */,
+				57407D1A18FD2B5C0003F787 /* LKSektion.m in Sources */,
 				1AE8E56118F42FB50078EBDF /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		1AE8E56E18F42FB50078EBDF /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				1AE8E58018F42FB50078EBDF /* futural_extern_iosTests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		1AE8E57818F42FB50078EBDF /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 1AE8E55018F42FB50078EBDF /* futural-extern-ios */;
-			targetProxy = 1AE8E57718F42FB50078EBDF /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		1AE8E55D18F42FB50078EBDF /* InfoPlist.strings */ = {
@@ -288,14 +219,6 @@
 				1AE8E56718F42FB50078EBDF /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		1AE8E57C18F42FB50078EBDF /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				1AE8E57D18F42FB50078EBDF /* en */,
-			);
-			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -379,6 +302,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "futural-extern-ios/futural-extern-ios-Prefix.pch";
 				INFOPLIST_FILE = "futural-extern-ios/futural-extern-ios-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -392,48 +316,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "futural-extern-ios/futural-extern-ios-Prefix.pch";
 				INFOPLIST_FILE = "futural-extern-ios/futural-extern-ios-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
-			};
-			name = Release;
-		};
-		1AE8E58718F42FB50078EBDF /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/futural-extern-ios.app/futural-extern-ios";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "futural-extern-ios/futural-extern-ios-Prefix.pch";
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = "futural-extern-iosTests/futural-extern-iosTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = xctest;
-			};
-			name = Debug;
-		};
-		1AE8E58818F42FB50078EBDF /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/futural-extern-ios.app/futural-extern-ios";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "futural-extern-ios/futural-extern-ios-Prefix.pch";
-				INFOPLIST_FILE = "futural-extern-iosTests/futural-extern-iosTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = xctest;
 			};
 			name = Release;
 		};
@@ -456,14 +341,7 @@
 				1AE8E58518F42FB50078EBDF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-		};
-		1AE8E58618F42FB50078EBDF /* Build configuration list for PBXNativeTarget "futural-extern-iosTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				1AE8E58718F42FB50078EBDF /* Debug */,
-				1AE8E58818F42FB50078EBDF /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
