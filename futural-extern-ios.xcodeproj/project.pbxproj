@@ -15,6 +15,10 @@
 		1AE8E56518F42FB50078EBDF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AE8E56418F42FB50078EBDF /* AppDelegate.m */; };
 		1AE8E56818F42FB50078EBDF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1AE8E56618F42FB50078EBDF /* Main.storyboard */; };
 		5722E91018FD72F500BEE3A2 /* LKPlace.m in Sources */ = {isa = PBXBuildFile; fileRef = 5722E90F18FD72F500BEE3A2 /* LKPlace.m */; };
+		5722E91618FD7C3600BEE3A2 /* TabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5722E91518FD7C3600BEE3A2 /* TabBarViewController.m */; };
+		5722E91A18FD7C9000BEE3A2 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5722E91918FD7C9000BEE3A2 /* MapViewController.m */; };
+		5722E91C18FD7DF300BEE3A2 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5722E91B18FD7DF300BEE3A2 /* MapKit.framework */; };
+		5722E91F18FD80C700BEE3A2 /* LKColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 5722E91E18FD80C700BEE3A2 /* LKColor.m */; };
 		57407D1518FD2A5A0003F787 /* LKEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 57407D1418FD2A5A0003F787 /* LKEvent.m */; };
 		57407D1718FD2B1A0003F787 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57407D1618FD2B1A0003F787 /* CoreLocation.framework */; };
 		57407D1A18FD2B5C0003F787 /* LKSektion.m in Sources */ = {isa = PBXBuildFile; fileRef = 57407D1918FD2B5C0003F787 /* LKSektion.m */; };
@@ -36,6 +40,13 @@
 		1AE8E57318F42FB50078EBDF /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		5722E90E18FD72F500BEE3A2 /* LKPlace.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LKPlace.h; path = Models/LKPlace.h; sourceTree = "<group>"; };
 		5722E90F18FD72F500BEE3A2 /* LKPlace.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LKPlace.m; path = Models/LKPlace.m; sourceTree = "<group>"; };
+		5722E91418FD7C3600BEE3A2 /* TabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TabBarViewController.h; path = Controllers/TabBarViewController.h; sourceTree = "<group>"; };
+		5722E91518FD7C3600BEE3A2 /* TabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TabBarViewController.m; path = Controllers/TabBarViewController.m; sourceTree = "<group>"; };
+		5722E91818FD7C9000BEE3A2 /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MapViewController.h; path = Controllers/MapViewController.h; sourceTree = "<group>"; };
+		5722E91918FD7C9000BEE3A2 /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MapViewController.m; path = Controllers/MapViewController.m; sourceTree = "<group>"; };
+		5722E91B18FD7DF300BEE3A2 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		5722E91D18FD80C700BEE3A2 /* LKColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LKColor.h; path = Models/LKColor.h; sourceTree = "<group>"; };
+		5722E91E18FD80C700BEE3A2 /* LKColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LKColor.m; path = Models/LKColor.m; sourceTree = "<group>"; };
 		57407D1318FD2A5A0003F787 /* LKEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LKEvent.h; path = Models/LKEvent.h; sourceTree = "<group>"; };
 		57407D1418FD2A5A0003F787 /* LKEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LKEvent.m; path = Models/LKEvent.m; sourceTree = "<group>"; };
 		57407D1618FD2B1A0003F787 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
@@ -50,6 +61,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5722E91C18FD7DF300BEE3A2 /* MapKit.framework in Frameworks */,
 				57407D1718FD2B1A0003F787 /* CoreLocation.framework in Frameworks */,
 				1AE8E55718F42FB50078EBDF /* CoreGraphics.framework in Frameworks */,
 				1AE8E55918F42FB50078EBDF /* UIKit.framework in Frameworks */,
@@ -80,6 +92,7 @@
 		1AE8E55318F42FB50078EBDF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				5722E91B18FD7DF300BEE3A2 /* MapKit.framework */,
 				57407D1618FD2B1A0003F787 /* CoreLocation.framework */,
 				1AE8E55418F42FB50078EBDF /* Foundation.framework */,
 				1AE8E55618F42FB50078EBDF /* CoreGraphics.framework */,
@@ -113,6 +126,15 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		5722E92018FD81B300BEE3A2 /* Toolbox */ = {
+			isa = PBXGroup;
+			children = (
+				5722E91D18FD80C700BEE3A2 /* LKColor.h */,
+				5722E91E18FD80C700BEE3A2 /* LKColor.m */,
+			);
+			name = Toolbox;
+			sourceTree = "<group>";
+		};
 		57407D0E18FD29EB0003F787 /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -124,6 +146,7 @@
 				57407D1C18FD2F110003F787 /* LKarnevalist.m */,
 				5722E90E18FD72F500BEE3A2 /* LKPlace.h */,
 				5722E90F18FD72F500BEE3A2 /* LKPlace.m */,
+				5722E92018FD81B300BEE3A2 /* Toolbox */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -131,6 +154,10 @@
 		57407D0F18FD29F20003F787 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				5722E91418FD7C3600BEE3A2 /* TabBarViewController.h */,
+				5722E91518FD7C3600BEE3A2 /* TabBarViewController.m */,
+				5722E91818FD7C9000BEE3A2 /* MapViewController.h */,
+				5722E91918FD7C9000BEE3A2 /* MapViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -201,9 +228,12 @@
 			files = (
 				1AE8E56518F42FB50078EBDF /* AppDelegate.m in Sources */,
 				57407D1D18FD2F110003F787 /* LKarnevalist.m in Sources */,
+				5722E91618FD7C3600BEE3A2 /* TabBarViewController.m in Sources */,
+				5722E91A18FD7C9000BEE3A2 /* MapViewController.m in Sources */,
 				57407D1518FD2A5A0003F787 /* LKEvent.m in Sources */,
 				57407D1A18FD2B5C0003F787 /* LKSektion.m in Sources */,
 				5722E91018FD72F500BEE3A2 /* LKPlace.m in Sources */,
+				5722E91F18FD80C700BEE3A2 /* LKColor.m in Sources */,
 				1AE8E56118F42FB50078EBDF /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
