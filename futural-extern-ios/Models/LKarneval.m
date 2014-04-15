@@ -10,26 +10,27 @@
 
 @implementation LKarneval
 
+- (LKarneval *)init {
+    
+    self = [super init];
+    
+    if(self) {
+        
+        //load events, places and store it in specific arrays.
+        
+    }
+    
+    return self;
+    
+}
+
 #pragma mark Lazy Instantiation
 
 - (NSDictionary *)openingHours {
     
     if(_openingHours) {
         
-        _openingHours = @{
-                          @"2014-05-16" : @{
-                                  @"open" : @"09:00",
-                                  @"close" : @"21:00"
-                                  },
-                          @"2014-05-17" : @{
-                                  @"open" : @"09:00",
-                                  @"close" : @"21:00"
-                                  },
-                          @"2014-05-18" : @{
-                                  @"open" : @"09:00",
-                                  @"close" : @"21:00"
-                                  },
-                          }; //store in plist 
+        _openingHours = @{}; //store in plist
         
     }
     

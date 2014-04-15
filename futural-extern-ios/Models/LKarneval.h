@@ -10,6 +10,9 @@
 
 @interface LKarneval : NSObject
 
+@property (nonatomic) NSMutableArray *places;
+@property (nonatomic) NSMutableArray *events;
+
 @property (nonatomic) NSDictionary *openingHours;
 
 @end
