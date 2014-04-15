@@ -10,14 +10,16 @@
 #import "CoreLocation/CoreLocation.h"
 
 #import "LKSektion.h"
+#import "LKPlace.h"
 
 @interface LKEvent : NSObject
 
 @property (nonatomic) NSString *name;
 @property (nonatomic) NSString *description; //description of the event.
-@property (nonatomic) CLLocationDegrees location; //where the event is located.
+@property (nonatomic) LKPlace *place; //where the event is located.
 
 @property (nonatomic) NSDate *date;
+@property (nonatomic) NSTimeInterval duration;
 @property (nonatomic) LKSektion *host; //the sektion that is hosting the event.
 
 @property (nonatomic, getter = isCancelled) BOOL cancelled; //if the event is cancelled.

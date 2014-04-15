@@ -13,16 +13,24 @@ typedef enum {
     
     LKPaymentOptionCard = 1,
     LKPaymentOptionPhone = 2,
-    LKPaymentOptionFutural = 3
+    LKPaymentOptionFutural = 3,
+    LKPaymentOptionCash = 4
     
 } LKPaymentOption;
 
 typedef enum {
     
     LKPlaceIdentifierFood = 1,
-    LKPlaceIdentifierIceCream = 2,
-    LKPlaceIdentifierBeverage = 3,
-    LKPlaceIdentifierSnacks = 4
+    LKPlaceIdentifierBeverage = 2,
+    LKPlaceIdentifierSnacks = 3,
+    LKPlaceIdentifierTent = 4,
+    LKPlaceIdentifierToilet = 5,
+    LKPlaceIdentifierFirstAid = 6,
+    LKPlaceIdentifierCharge = 7,
+    LKPlaceIdentifierScene = 8,
+    LKPlaceIdentifierShop = 9,
+    LKPlaceIdentifierLottery = 10,
+    LKPlaceIdentifierMinorEntertainment = 11
     
 } LKPlaceIdentifier;
 
