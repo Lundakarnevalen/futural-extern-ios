@@ -14,6 +14,7 @@
 		1AE8E56118F42FB50078EBDF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AE8E56018F42FB50078EBDF /* main.m */; };
 		1AE8E56518F42FB50078EBDF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AE8E56418F42FB50078EBDF /* AppDelegate.m */; };
 		1AE8E56818F42FB50078EBDF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1AE8E56618F42FB50078EBDF /* Main.storyboard */; };
+		5722E91018FD72F500BEE3A2 /* LKPlace.m in Sources */ = {isa = PBXBuildFile; fileRef = 5722E90F18FD72F500BEE3A2 /* LKPlace.m */; };
 		57407D1518FD2A5A0003F787 /* LKEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 57407D1418FD2A5A0003F787 /* LKEvent.m */; };
 		57407D1718FD2B1A0003F787 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57407D1618FD2B1A0003F787 /* CoreLocation.framework */; };
 		57407D1A18FD2B5C0003F787 /* LKSektion.m in Sources */ = {isa = PBXBuildFile; fileRef = 57407D1918FD2B5C0003F787 /* LKSektion.m */; };
@@ -33,6 +34,8 @@
 		1AE8E56418F42FB50078EBDF /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		1AE8E56718F42FB50078EBDF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1AE8E57318F42FB50078EBDF /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		5722E90E18FD72F500BEE3A2 /* LKPlace.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LKPlace.h; path = Models/LKPlace.h; sourceTree = "<group>"; };
+		5722E90F18FD72F500BEE3A2 /* LKPlace.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LKPlace.m; path = Models/LKPlace.m; sourceTree = "<group>"; };
 		57407D1318FD2A5A0003F787 /* LKEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LKEvent.h; path = Models/LKEvent.h; sourceTree = "<group>"; };
 		57407D1418FD2A5A0003F787 /* LKEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LKEvent.m; path = Models/LKEvent.m; sourceTree = "<group>"; };
 		57407D1618FD2B1A0003F787 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
@@ -119,6 +122,8 @@
 				57407D1918FD2B5C0003F787 /* LKSektion.m */,
 				57407D1B18FD2F110003F787 /* LKarnevalist.h */,
 				57407D1C18FD2F110003F787 /* LKarnevalist.m */,
+				5722E90E18FD72F500BEE3A2 /* LKPlace.h */,
+				5722E90F18FD72F500BEE3A2 /* LKPlace.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -198,6 +203,7 @@
 				57407D1D18FD2F110003F787 /* LKarnevalist.m in Sources */,
 				57407D1518FD2A5A0003F787 /* LKEvent.m in Sources */,
 				57407D1A18FD2B5C0003F787 /* LKSektion.m in Sources */,
+				5722E91018FD72F500BEE3A2 /* LKPlace.m in Sources */,
 				1AE8E56118F42FB50078EBDF /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

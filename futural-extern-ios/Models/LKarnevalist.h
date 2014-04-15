@@ -21,6 +21,9 @@
 @property (nonatomic) NSURL *photoURL;
 
 
+
+- (LKarnevalist *)initWithProperties:(NSDictionary *)propertyList;
+
 - (NSURL *)phoneURL; //returns url formatted for a phone call.
 
 @end
