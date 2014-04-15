@@ -47,6 +47,18 @@
 
 #pragma mark Lazy Instantiation
 
+- (LKPlace *)place {
+    
+    if(!_place) {
+        
+        _place = [[LKPlace alloc] init];
+        
+    }
+    
+    return _place;
+    
+}
+
 - (LKSektion *)host {
     
     if(!_host) {

@@ -23,6 +23,8 @@
 		57407D1718FD2B1A0003F787 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57407D1618FD2B1A0003F787 /* CoreLocation.framework */; };
 		57407D1A18FD2B5C0003F787 /* LKSektion.m in Sources */ = {isa = PBXBuildFile; fileRef = 57407D1918FD2B5C0003F787 /* LKSektion.m */; };
 		57407D1D18FD2F110003F787 /* LKarnevalist.m in Sources */ = {isa = PBXBuildFile; fileRef = 57407D1C18FD2F110003F787 /* LKarnevalist.m */; };
+		576EA12C18FDD6BE00D4166D /* LKarneval.m in Sources */ = {isa = PBXBuildFile; fileRef = 576EA12B18FDD6BE00D4166D /* LKarneval.m */; };
+		576EA12F18FDD8F300D4166D /* OpeningHours.plist in Resources */ = {isa = PBXBuildFile; fileRef = 576EA12E18FDD8F300D4166D /* OpeningHours.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +56,9 @@
 		57407D1918FD2B5C0003F787 /* LKSektion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LKSektion.m; path = Models/LKSektion.m; sourceTree = "<group>"; };
 		57407D1B18FD2F110003F787 /* LKarnevalist.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LKarnevalist.h; path = Models/LKarnevalist.h; sourceTree = "<group>"; };
 		57407D1C18FD2F110003F787 /* LKarnevalist.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LKarnevalist.m; path = Models/LKarnevalist.m; sourceTree = "<group>"; };
+		576EA12A18FDD6BE00D4166D /* LKarneval.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LKarneval.h; path = Models/LKarneval.h; sourceTree = "<group>"; };
+		576EA12B18FDD6BE00D4166D /* LKarneval.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LKarneval.m; path = Models/LKarneval.m; sourceTree = "<group>"; };
+		576EA12E18FDD8F300D4166D /* OpeningHours.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = OpeningHours.plist; path = Data/OpeningHours.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +110,7 @@
 		1AE8E55A18F42FB50078EBDF /* futural-extern-ios */ = {
 			isa = PBXGroup;
 			children = (
+				576EA12D18FDD8D400D4166D /* Data */,
 				57407D0F18FD29F20003F787 /* Controllers */,
 				57407D0E18FD29EB0003F787 /* Models */,
 				1AE8E56318F42FB50078EBDF /* AppDelegate.h */,
@@ -138,6 +144,8 @@
 		57407D0E18FD29EB0003F787 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				576EA12A18FDD6BE00D4166D /* LKarneval.h */,
+				576EA12B18FDD6BE00D4166D /* LKarneval.m */,
 				57407D1318FD2A5A0003F787 /* LKEvent.h */,
 				57407D1418FD2A5A0003F787 /* LKEvent.m */,
 				57407D1818FD2B5C0003F787 /* LKSektion.h */,
@@ -160,6 +168,14 @@
 				5722E91918FD7C9000BEE3A2 /* MapViewController.m */,
 			);
 			name = Controllers;
+			sourceTree = "<group>";
+		};
+		576EA12D18FDD8D400D4166D /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				576EA12E18FDD8F300D4166D /* OpeningHours.plist */,
+			);
+			name = Data;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -214,6 +230,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				576EA12F18FDD8F300D4166D /* OpeningHours.plist in Resources */,
 				1AE8E55F18F42FB50078EBDF /* InfoPlist.strings in Resources */,
 				1AE8E56818F42FB50078EBDF /* Main.storyboard in Resources */,
 			);
@@ -234,6 +251,7 @@
 				57407D1A18FD2B5C0003F787 /* LKSektion.m in Sources */,
 				5722E91018FD72F500BEE3A2 /* LKPlace.m in Sources */,
 				5722E91F18FD80C700BEE3A2 /* LKColor.m in Sources */,
+				576EA12C18FDD6BE00D4166D /* LKarneval.m in Sources */,
 				1AE8E56118F42FB50078EBDF /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

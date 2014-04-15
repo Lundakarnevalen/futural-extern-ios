@@ -26,11 +26,14 @@ typedef enum {
     LKPlaceIdentifierTent = 4,
     LKPlaceIdentifierToilet = 5,
     LKPlaceIdentifierFirstAid = 6,
-    LKPlaceIdentifierCharge = 7,
+    LKPlaceIdentifierChargingStation = 7,
     LKPlaceIdentifierScene = 8,
     LKPlaceIdentifierShop = 9,
     LKPlaceIdentifierLottery = 10,
-    LKPlaceIdentifierMinorEntertainment = 11
+    LKPlaceIdentifierMinorEntertainment = 11,
+    LKPlaceIdentifierCoffee = 12,
+    LKPlaceIdentifierParking = 13,
+    LKPlaceIdentifierATM = 14
     
 } LKPlaceIdentifier;
 
