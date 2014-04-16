@@ -8,10 +8,6 @@
 
 #import "MapViewController.h"
 
-@interface MapViewController ()
-
-@end
-
 @implementation MapViewController
 
 - (void)viewDidLoad {

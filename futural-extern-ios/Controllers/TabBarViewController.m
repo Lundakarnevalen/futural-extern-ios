@@ -11,10 +11,6 @@
 
 #define TAB_INDEX_DEFAULT 2
 
-@interface TabBarViewController ()
-
-@end
-
 @implementation TabBarViewController
 
 - (void)viewDidLoad {
@@ -68,18 +64,6 @@
     
 }
 
-+ (NSDictionary *)tabSprites {
-    
-    return @{
-             @"NÖJEN" : @"entertainment",
-             @"SCHEMA" : @"schedule",
-             @"ÖVRIGT" : @"misc",
-             @"KARTA" : @"map",
-             @"MAT" : @"food"
-             };
-    
-}
-
 - (LKarneval *)karneval {
     
     if(!_karneval) {
@@ -89,6 +73,20 @@
     }
     
     return _karneval;
+    
+}
+
+#pragma mark - Class methods
+
++ (NSDictionary *)tabSprites {
+    
+    return @{
+             @"NÖJEN" : @"entertainment",
+             @"SCHEMA" : @"schedule",
+             @"ÖVRIGT" : @"misc",
+             @"KARTA" : @"map",
+             @"MAT" : @"food"
+             };
     
 }
 

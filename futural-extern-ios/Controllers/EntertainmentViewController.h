@@ -1,5 +1,5 @@
 //
-//  ScheduleTableViewController.h
+//  EntertainmentViewController.h
 //  Lundakarnevalen
 //
 //  Created by Victor Ingman on 2014-04-16.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ScheduleTableViewController : UITableViewController
+@interface EntertainmentViewController : UIViewController
 
 @end

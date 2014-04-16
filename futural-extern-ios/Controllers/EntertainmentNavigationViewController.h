@@ -1,5 +1,5 @@
 //
-//  FoodTableViewController.h
+//  EntertainmentNavigationViewController.h
 //  Lundakarnevalen
 //
 //  Created by Victor Ingman on 2014-04-16.
@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface FoodTableViewController : UITableViewController
+#import "LKColor.h"
+
+@interface EntertainmentNavigationViewController : UINavigationController
 
 @end
