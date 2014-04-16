@@ -15,4 +15,6 @@
 
 @property (nonatomic) NSDictionary *openingHours;
 
++ (LKarneval *)sharedLKarneval; //USE THIS, it's stuffed with data about the karneval.
+
 @end

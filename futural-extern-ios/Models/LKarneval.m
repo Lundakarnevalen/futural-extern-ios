@@ -13,6 +13,28 @@
 
 @implementation LKarneval
 
+#pragma mark Singleton
+
++ (LKarneval *)sharedLKarneval {
+    
+    static LKarneval *sharedLKarneval;
+    
+    @synchronized(self) { //low level thread stuff, don't bother.
+        
+        if(!sharedLKarneval) {
+            
+            sharedLKarneval = [[LKarneval alloc] init];
+            
+        }
+        
+        return sharedLKarneval;
+        
+    }
+    
+}
+
+#pragma mark Designated initializer
+
 - (LKarneval *)init {
     
     self = [super init];
