@@ -23,6 +23,8 @@
 		57407D1718FD2B1A0003F787 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57407D1618FD2B1A0003F787 /* CoreLocation.framework */; };
 		57407D1A18FD2B5C0003F787 /* LKSektion.m in Sources */ = {isa = PBXBuildFile; fileRef = 57407D1918FD2B5C0003F787 /* LKSektion.m */; };
 		57407D1D18FD2F110003F787 /* LKarnevalist.m in Sources */ = {isa = PBXBuildFile; fileRef = 57407D1C18FD2F110003F787 /* LKarnevalist.m */; };
+		575C949D18FE7F0000A341EE /* Places.plist in Resources */ = {isa = PBXBuildFile; fileRef = 575C949C18FE7F0000A341EE /* Places.plist */; };
+		575C949F18FE7F3D00A341EE /* Events.plist in Resources */ = {isa = PBXBuildFile; fileRef = 575C949E18FE7F3D00A341EE /* Events.plist */; };
 		576EA12C18FDD6BE00D4166D /* LKarneval.m in Sources */ = {isa = PBXBuildFile; fileRef = 576EA12B18FDD6BE00D4166D /* LKarneval.m */; };
 		576EA12F18FDD8F300D4166D /* OpeningHours.plist in Resources */ = {isa = PBXBuildFile; fileRef = 576EA12E18FDD8F300D4166D /* OpeningHours.plist */; };
 /* End PBXBuildFile section */
@@ -56,6 +58,8 @@
 		57407D1918FD2B5C0003F787 /* LKSektion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LKSektion.m; path = Models/LKSektion.m; sourceTree = "<group>"; };
 		57407D1B18FD2F110003F787 /* LKarnevalist.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LKarnevalist.h; path = Models/LKarnevalist.h; sourceTree = "<group>"; };
 		57407D1C18FD2F110003F787 /* LKarnevalist.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LKarnevalist.m; path = Models/LKarnevalist.m; sourceTree = "<group>"; };
+		575C949C18FE7F0000A341EE /* Places.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Places.plist; path = Data/Places.plist; sourceTree = "<group>"; };
+		575C949E18FE7F3D00A341EE /* Events.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Events.plist; path = Data/Events.plist; sourceTree = "<group>"; };
 		576EA12A18FDD6BE00D4166D /* LKarneval.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LKarneval.h; path = Models/LKarneval.h; sourceTree = "<group>"; };
 		576EA12B18FDD6BE00D4166D /* LKarneval.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LKarneval.m; path = Models/LKarneval.m; sourceTree = "<group>"; };
 		576EA12E18FDD8F300D4166D /* OpeningHours.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = OpeningHours.plist; path = Data/OpeningHours.plist; sourceTree = "<group>"; };
@@ -174,6 +178,8 @@
 			isa = PBXGroup;
 			children = (
 				576EA12E18FDD8F300D4166D /* OpeningHours.plist */,
+				575C949C18FE7F0000A341EE /* Places.plist */,
+				575C949E18FE7F3D00A341EE /* Events.plist */,
 			);
 			name = Data;
 			sourceTree = "<group>";
@@ -230,8 +236,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				575C949F18FE7F3D00A341EE /* Events.plist in Resources */,
 				576EA12F18FDD8F300D4166D /* OpeningHours.plist in Resources */,
 				1AE8E55F18F42FB50078EBDF /* InfoPlist.strings in Resources */,
+				575C949D18FE7F0000A341EE /* Places.plist in Resources */,
 				1AE8E56818F42FB50078EBDF /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

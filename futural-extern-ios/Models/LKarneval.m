@@ -8,6 +8,9 @@
 
 #import "LKarneval.h"
 
+#define PLIST_PLACES "Places"
+#define PLIST_EVENTS "Events"
+
 @implementation LKarneval
 
 - (LKarneval *)init {
