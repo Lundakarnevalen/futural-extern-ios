@@ -26,19 +26,22 @@
 		575C949D18FE7F0000A341EE /* Places.plist in Resources */ = {isa = PBXBuildFile; fileRef = 575C949C18FE7F0000A341EE /* Places.plist */; };
 		575C949F18FE7F3D00A341EE /* Events.plist in Resources */ = {isa = PBXBuildFile; fileRef = 575C949E18FE7F3D00A341EE /* Events.plist */; };
 		575C94A318FE838E00A341EE /* TabBar.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 575C94A218FE838E00A341EE /* TabBar.xcassets */; };
+		575C94A718FE87CF00A341EE /* App.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 575C94A618FE87CF00A341EE /* App.xcassets */; };
+		575C94AE18FE90D900A341EE /* futura-bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 575C94AC18FE90D900A341EE /* futura-bold.ttf */; };
+		575C94AF18FE90D900A341EE /* robothead.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 575C94AD18FE90D900A341EE /* robothead.ttf */; };
 		576EA12C18FDD6BE00D4166D /* LKarneval.m in Sources */ = {isa = PBXBuildFile; fileRef = 576EA12B18FDD6BE00D4166D /* LKarneval.m */; };
 		576EA12F18FDD8F300D4166D /* OpeningHours.plist in Resources */ = {isa = PBXBuildFile; fileRef = 576EA12E18FDD8F300D4166D /* OpeningHours.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		1AE8E55118F42FB50078EBDF /* futural-extern-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "futural-extern-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1AE8E55118F42FB50078EBDF /* Lundakarnevalen.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lundakarnevalen.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1AE8E55418F42FB50078EBDF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		1AE8E55618F42FB50078EBDF /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		1AE8E55818F42FB50078EBDF /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		1AE8E55C18F42FB50078EBDF /* futural-extern-ios-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "futural-extern-ios-Info.plist"; sourceTree = "<group>"; };
+		1AE8E55C18F42FB50078EBDF /* Lundakarnevalen-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Lundakarnevalen-Info.plist"; sourceTree = "<group>"; };
 		1AE8E55E18F42FB50078EBDF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		1AE8E56018F42FB50078EBDF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		1AE8E56218F42FB50078EBDF /* futural-extern-ios-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "futural-extern-ios-Prefix.pch"; sourceTree = "<group>"; };
+		1AE8E56218F42FB50078EBDF /* Lundakarnevalen-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Lundakarnevalen-Prefix.pch"; sourceTree = "<group>"; };
 		1AE8E56318F42FB50078EBDF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		1AE8E56418F42FB50078EBDF /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		1AE8E56718F42FB50078EBDF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -62,6 +65,9 @@
 		575C949C18FE7F0000A341EE /* Places.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Places.plist; path = Data/Places.plist; sourceTree = "<group>"; };
 		575C949E18FE7F3D00A341EE /* Events.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Events.plist; path = Data/Events.plist; sourceTree = "<group>"; };
 		575C94A218FE838E00A341EE /* TabBar.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = TabBar.xcassets; path = Data/Sprites/TabBar.xcassets; sourceTree = "<group>"; };
+		575C94A618FE87CF00A341EE /* App.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = App.xcassets; sourceTree = "<group>"; };
+		575C94AC18FE90D900A341EE /* futura-bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "futura-bold.ttf"; path = "Data/Typefaces/futura-bold.ttf"; sourceTree = "<group>"; };
+		575C94AD18FE90D900A341EE /* robothead.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = robothead.ttf; path = Data/Typefaces/robothead.ttf; sourceTree = "<group>"; };
 		576EA12A18FDD6BE00D4166D /* LKarneval.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LKarneval.h; path = Models/LKarneval.h; sourceTree = "<group>"; };
 		576EA12B18FDD6BE00D4166D /* LKarneval.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LKarneval.m; path = Models/LKarneval.m; sourceTree = "<group>"; };
 		576EA12E18FDD8F300D4166D /* OpeningHours.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = OpeningHours.plist; path = Data/OpeningHours.plist; sourceTree = "<group>"; };
@@ -86,7 +92,7 @@
 		1AE8E54818F42FB50078EBDF = {
 			isa = PBXGroup;
 			children = (
-				1AE8E55A18F42FB50078EBDF /* futural-extern-ios */,
+				1AE8E55A18F42FB50078EBDF /* Lundakarnevalen */,
 				1AE8E55318F42FB50078EBDF /* Frameworks */,
 				1AE8E55218F42FB50078EBDF /* Products */,
 			);
@@ -95,7 +101,7 @@
 		1AE8E55218F42FB50078EBDF /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				1AE8E55118F42FB50078EBDF /* futural-extern-ios.app */,
+				1AE8E55118F42FB50078EBDF /* Lundakarnevalen.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -113,9 +119,10 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		1AE8E55A18F42FB50078EBDF /* futural-extern-ios */ = {
+		1AE8E55A18F42FB50078EBDF /* Lundakarnevalen */ = {
 			isa = PBXGroup;
 			children = (
+				575C94A618FE87CF00A341EE /* App.xcassets */,
 				576EA12D18FDD8D400D4166D /* Data */,
 				57407D0F18FD29F20003F787 /* Controllers */,
 				57407D0E18FD29EB0003F787 /* Models */,
@@ -124,16 +131,17 @@
 				1AE8E56618F42FB50078EBDF /* Main.storyboard */,
 				1AE8E55B18F42FB50078EBDF /* Supporting Files */,
 			);
+			name = Lundakarnevalen;
 			path = "futural-extern-ios";
 			sourceTree = "<group>";
 		};
 		1AE8E55B18F42FB50078EBDF /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				1AE8E55C18F42FB50078EBDF /* futural-extern-ios-Info.plist */,
+				1AE8E55C18F42FB50078EBDF /* Lundakarnevalen-Info.plist */,
 				1AE8E55D18F42FB50078EBDF /* InfoPlist.strings */,
 				1AE8E56018F42FB50078EBDF /* main.m */,
-				1AE8E56218F42FB50078EBDF /* futural-extern-ios-Prefix.pch */,
+				1AE8E56218F42FB50078EBDF /* Lundakarnevalen-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -184,9 +192,19 @@
 			name = Sprites;
 			sourceTree = "<group>";
 		};
+		575C94A818FE8D0000A341EE /* Typefaces */ = {
+			isa = PBXGroup;
+			children = (
+				575C94AC18FE90D900A341EE /* futura-bold.ttf */,
+				575C94AD18FE90D900A341EE /* robothead.ttf */,
+			);
+			name = Typefaces;
+			sourceTree = "<group>";
+		};
 		576EA12D18FDD8D400D4166D /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				575C94A818FE8D0000A341EE /* Typefaces */,
 				575C94A118FE835400A341EE /* Sprites */,
 				576EA12E18FDD8F300D4166D /* OpeningHours.plist */,
 				575C949C18FE7F0000A341EE /* Places.plist */,
@@ -198,9 +216,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		1AE8E55018F42FB50078EBDF /* futural-extern-ios */ = {
+		1AE8E55018F42FB50078EBDF /* Lundakarnevalen */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1AE8E58318F42FB50078EBDF /* Build configuration list for PBXNativeTarget "futural-extern-ios" */;
+			buildConfigurationList = 1AE8E58318F42FB50078EBDF /* Build configuration list for PBXNativeTarget "Lundakarnevalen" */;
 			buildPhases = (
 				1AE8E54D18F42FB50078EBDF /* Sources */,
 				1AE8E54E18F42FB50078EBDF /* Frameworks */,
@@ -210,9 +228,9 @@
 			);
 			dependencies = (
 			);
-			name = "futural-extern-ios";
+			name = Lundakarnevalen;
 			productName = "futural-extern-ios";
-			productReference = 1AE8E55118F42FB50078EBDF /* futural-extern-ios.app */;
+			productReference = 1AE8E55118F42FB50078EBDF /* Lundakarnevalen.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -222,9 +240,9 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0510;
-				ORGANIZATIONNAME = "Richard Luong";
+				ORGANIZATIONNAME = Lundakarnevalen;
 			};
-			buildConfigurationList = 1AE8E54C18F42FB50078EBDF /* Build configuration list for PBXProject "futural-extern-ios" */;
+			buildConfigurationList = 1AE8E54C18F42FB50078EBDF /* Build configuration list for PBXProject "Lundakarnevalen" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -237,7 +255,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				1AE8E55018F42FB50078EBDF /* futural-extern-ios */,
+				1AE8E55018F42FB50078EBDF /* Lundakarnevalen */,
 			);
 		};
 /* End PBXProject section */
@@ -247,7 +265,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				575C94AE18FE90D900A341EE /* futura-bold.ttf in Resources */,
+				575C94A718FE87CF00A341EE /* App.xcassets in Resources */,
 				575C949F18FE7F3D00A341EE /* Events.plist in Resources */,
+				575C94AF18FE90D900A341EE /* robothead.ttf in Resources */,
 				576EA12F18FDD8F300D4166D /* OpeningHours.plist in Resources */,
 				1AE8E55F18F42FB50078EBDF /* InfoPlist.strings in Resources */,
 				575C949D18FE7F0000A341EE /* Places.plist in Resources */,
@@ -378,10 +399,10 @@
 					"$(PROJECT_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "futural-extern-ios/futural-extern-ios-Prefix.pch";
-				INFOPLIST_FILE = "futural-extern-ios/futural-extern-ios-Info.plist";
+				GCC_PREFIX_HEADER = "futural-extern-ios/Lundakarnevalen-Prefix.pch";
+				INFOPLIST_FILE = "futural-extern-ios/Lundakarnevalen-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Lundakarnevalen;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -396,10 +417,10 @@
 					"$(PROJECT_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "futural-extern-ios/futural-extern-ios-Prefix.pch";
-				INFOPLIST_FILE = "futural-extern-ios/futural-extern-ios-Info.plist";
+				GCC_PREFIX_HEADER = "futural-extern-ios/Lundakarnevalen-Prefix.pch";
+				INFOPLIST_FILE = "futural-extern-ios/Lundakarnevalen-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Lundakarnevalen;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -407,7 +428,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		1AE8E54C18F42FB50078EBDF /* Build configuration list for PBXProject "futural-extern-ios" */ = {
+		1AE8E54C18F42FB50078EBDF /* Build configuration list for PBXProject "Lundakarnevalen" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1AE8E58118F42FB50078EBDF /* Debug */,
@@ -416,7 +437,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		1AE8E58318F42FB50078EBDF /* Build configuration list for PBXNativeTarget "futural-extern-ios" */ = {
+		1AE8E58318F42FB50078EBDF /* Build configuration list for PBXNativeTarget "Lundakarnevalen" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1AE8E58418F42FB50078EBDF /* Debug */,

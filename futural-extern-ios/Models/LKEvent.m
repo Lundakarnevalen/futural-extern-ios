@@ -59,7 +59,7 @@
     
 }
 
-- (LKSektion *)host {
+/*- (LKSektion *)host {
     
     if(!_host) {
         
@@ -69,6 +69,6 @@
     
     return _host;
     
-}
+}*/
 
 @end

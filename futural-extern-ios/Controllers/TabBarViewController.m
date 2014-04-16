@@ -29,7 +29,7 @@
 
 - (void)customizeTabBar {
     
-    UIFont *font = [UIFont fontWithName:@"Futura-Medium" size:10];
+    UIFont *font = [UIFont fontWithName:@"Futura-Bold" size:10];
     
     NSDictionary *selectedProperties = @{
                                          NSFontAttributeName : font,
