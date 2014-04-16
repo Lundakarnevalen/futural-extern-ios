@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1A7DA8A318FF06C70025C677 /* App.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1A7DA8A218FF06C70025C677 /* App.xcassets */; };
 		1AE8E55518F42FB50078EBDF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AE8E55418F42FB50078EBDF /* Foundation.framework */; };
 		1AE8E55718F42FB50078EBDF /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AE8E55618F42FB50078EBDF /* CoreGraphics.framework */; };
 		1AE8E55918F42FB50078EBDF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AE8E55818F42FB50078EBDF /* UIKit.framework */; };
@@ -26,7 +27,6 @@
 		575C949D18FE7F0000A341EE /* Places.plist in Resources */ = {isa = PBXBuildFile; fileRef = 575C949C18FE7F0000A341EE /* Places.plist */; };
 		575C949F18FE7F3D00A341EE /* Events.plist in Resources */ = {isa = PBXBuildFile; fileRef = 575C949E18FE7F3D00A341EE /* Events.plist */; };
 		575C94A318FE838E00A341EE /* TabBar.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 575C94A218FE838E00A341EE /* TabBar.xcassets */; };
-		575C94A718FE87CF00A341EE /* App.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 575C94A618FE87CF00A341EE /* App.xcassets */; };
 		575C94AE18FE90D900A341EE /* futura-bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 575C94AC18FE90D900A341EE /* futura-bold.ttf */; };
 		575C94AF18FE90D900A341EE /* robothead.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 575C94AD18FE90D900A341EE /* robothead.ttf */; };
 		575C94B818FEC9C600A341EE /* ScheduleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 575C94B718FEC9C600A341EE /* ScheduleViewController.m */; };
@@ -39,6 +39,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1A7DA8A218FF06C70025C677 /* App.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = App.xcassets; sourceTree = "<group>"; };
 		1AE8E55118F42FB50078EBDF /* Lundakarnevalen.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lundakarnevalen.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1AE8E55418F42FB50078EBDF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		1AE8E55618F42FB50078EBDF /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -70,7 +71,6 @@
 		575C949C18FE7F0000A341EE /* Places.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Places.plist; path = Data/Places.plist; sourceTree = "<group>"; };
 		575C949E18FE7F3D00A341EE /* Events.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Events.plist; path = Data/Events.plist; sourceTree = "<group>"; };
 		575C94A218FE838E00A341EE /* TabBar.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = TabBar.xcassets; path = Data/Sprites/TabBar.xcassets; sourceTree = "<group>"; };
-		575C94A618FE87CF00A341EE /* App.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = App.xcassets; sourceTree = "<group>"; };
 		575C94AC18FE90D900A341EE /* futura-bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "futura-bold.ttf"; path = "Data/Typefaces/futura-bold.ttf"; sourceTree = "<group>"; };
 		575C94AD18FE90D900A341EE /* robothead.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = robothead.ttf; path = Data/Typefaces/robothead.ttf; sourceTree = "<group>"; };
 		575C94B618FEC9C600A341EE /* ScheduleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ScheduleViewController.h; path = Controllers/ScheduleViewController.h; sourceTree = "<group>"; };
@@ -137,7 +137,6 @@
 		1AE8E55A18F42FB50078EBDF /* Lundakarnevalen */ = {
 			isa = PBXGroup;
 			children = (
-				575C94A618FE87CF00A341EE /* App.xcassets */,
 				576EA12D18FDD8D400D4166D /* Data */,
 				57407D0F18FD29F20003F787 /* Controllers */,
 				57407D0E18FD29EB0003F787 /* Models */,
@@ -145,6 +144,7 @@
 				1AE8E56418F42FB50078EBDF /* AppDelegate.m */,
 				1AE8E56618F42FB50078EBDF /* Main.storyboard */,
 				1AE8E55B18F42FB50078EBDF /* Supporting Files */,
+				1A7DA8A218FF06C70025C677 /* App.xcassets */,
 			);
 			name = Lundakarnevalen;
 			path = "futural-extern-ios";
@@ -299,7 +299,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				575C94AE18FE90D900A341EE /* futura-bold.ttf in Resources */,
-				575C94A718FE87CF00A341EE /* App.xcassets in Resources */,
 				575C949F18FE7F3D00A341EE /* Events.plist in Resources */,
 				575C94AF18FE90D900A341EE /* robothead.ttf in Resources */,
 				576EA12F18FDD8F300D4166D /* OpeningHours.plist in Resources */,
@@ -307,6 +306,7 @@
 				575C949D18FE7F0000A341EE /* Places.plist in Resources */,
 				1AE8E56818F42FB50078EBDF /* Main.storyboard in Resources */,
 				575C94A318FE838E00A341EE /* TabBar.xcassets in Resources */,
+				1A7DA8A318FF06C70025C677 /* App.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
