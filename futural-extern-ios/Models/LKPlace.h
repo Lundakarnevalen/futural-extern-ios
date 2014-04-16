@@ -20,30 +20,29 @@ typedef enum {
 
 typedef enum {
     
-    LKPlaceIdentifierFood = 1,
-    LKPlaceIdentifierBeverage = 2,
-    LKPlaceIdentifierSnacks = 3,
-    LKPlaceIdentifierTent = 4,
-    LKPlaceIdentifierToilet = 5,
-    LKPlaceIdentifierFirstAid = 6,
-    LKPlaceIdentifierChargingStation = 7,
-    LKPlaceIdentifierScene = 8,
-    LKPlaceIdentifierShop = 9,
-    LKPlaceIdentifierLottery = 10,
-    LKPlaceIdentifierMinorEntertainment = 11,
-    LKPlaceIdentifierCoffee = 12,
-    LKPlaceIdentifierParking = 13,
-    LKPlaceIdentifierATM = 14
+    LKPlaceCategoryFood = 1,
+    LKPlaceCategoryBeverage = 2,
+    LKPlaceCategorySnacks = 3,
+    LKPlaceCategoryTent = 4,
+    LKPlaceCategoryToilet = 5,
+    LKPlaceCategoryFirstAid = 6,
+    LKPlaceCategoryChargingStation = 7,
+    LKPlaceCategoryScene = 8,
+    LKPlaceCategoryShop = 9,
+    LKPlaceCategoryLottery = 10,
+    LKPlaceCategoryMinorEntertainment = 11,
+    LKPlaceCategoryCoffee = 12,
+    LKPlaceCategoryParking = 13,
+    LKPlaceCategoryATM = 14
     
-} LKPlaceIdentifier;
+} LKPlaceCategory;
 
 @interface LKPlace : NSObject
 
-@property (nonatomic) LKPlaceIdentifier *identifier;
+@property (nonatomic) LKPlaceCategory *category;
 @property (nonatomic) CLLocationDegrees *position;
 
 @property (nonatomic, getter = isSellingAlcohol) BOOL alcohol; //selling alcoholic beverages?
-@property (nonatomic, getter = isFree) BOOL free; //entrance free, etc?
-@property (nonatomic) NSMutableArray *paymentOptions; //of LKPaymentOption. what kind of payments are available (card, phone, futural)
+@property (nonatomic) NSMutableArray *paymentOptions; //of LKPaymentOption. what kind of payments are available (card, phone, futural). IF THE ARRAY IS EMPTY, IT'S FOR FREE.
 
 @end

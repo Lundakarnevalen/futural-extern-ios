@@ -18,12 +18,12 @@
 @property (nonatomic) NSString *description; //description of the event.
 @property (nonatomic) LKPlace *place; //where the event is located.
 
-@property (nonatomic) NSDate *date;
-@property (nonatomic) NSTimeInterval duration;
-@property (nonatomic) LKSektion *host; //the sektion that is hosting the event.
+@property (nonatomic) NSDate *start;
+@property (nonatomic) NSDate *end;
+//@property (nonatomic) LKSektion *host; //the sektion that is hosting the event.
 
-@property (nonatomic, getter = isCancelled) BOOL cancelled; //if the event is cancelled.
-@property (nonatomic) NSString *reason; //a message telling the user why it's cancelled.
+//@property (nonatomic, getter = isCancelled) BOOL cancelled; //if the event is cancelled.
+//@property (nonatomic) NSString *reason; //a message telling the user why it's cancelled.
 
 @property (nonatomic, getter = isFavorite) BOOL favorite; //if the user set the event as a favorite.
 

@@ -24,6 +24,12 @@
     
 }
 
+- (BOOL)isFree {
+    
+    return [self.paymentOptions count] == 0;
+    
+}
+
 - (BOOL)acceptsCard {
     
     //loop through the array paymentOptions, if it finds an object containing LKPaymentOptionCard the place accepts card.

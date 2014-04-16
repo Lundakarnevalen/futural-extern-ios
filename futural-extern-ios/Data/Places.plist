@@ -1,5 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
-<dict/>
+<dict>
+	<key>kroglaunchingpad</key>
+	<dict>
+		<key>name</key>
+		<string>Krog L[a]unchingpad</string>
+		<key>description</key>
+		<string>Lorem Ipsum</string>
+		<key>category</key>
+		<integer>1</integer>
+		<key>position</key>
+		<dict>
+			<key>longitude</key>
+			<real>0.95912834</real>
+			<key>latitude</key>
+			<real>0.91737232</real>
+		</dict>
+		<key>alcohol</key>
+		<false/>
+		<key>payment_options</key>
+		<array>
+			<integer>1</integer>
+			<integer>3</integer>
+		</array>
+	</dict>
+</dict>
 </plist>
