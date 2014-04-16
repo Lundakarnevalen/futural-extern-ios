@@ -42,6 +42,7 @@
     if(self) {
         
         //load events, places and store it in specific arrays.
+        NSLog(@"Hello world");
         
     }
     

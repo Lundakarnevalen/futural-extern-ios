@@ -29,6 +29,7 @@
 		575C94A718FE87CF00A341EE /* App.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 575C94A618FE87CF00A341EE /* App.xcassets */; };
 		575C94AE18FE90D900A341EE /* futura-bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 575C94AC18FE90D900A341EE /* futura-bold.ttf */; };
 		575C94AF18FE90D900A341EE /* robothead.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 575C94AD18FE90D900A341EE /* robothead.ttf */; };
+		575C94B218FEA9F100A341EE /* ScheduleTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 575C94B118FEA9F100A341EE /* ScheduleTableViewController.m */; };
 		576EA12C18FDD6BE00D4166D /* LKarneval.m in Sources */ = {isa = PBXBuildFile; fileRef = 576EA12B18FDD6BE00D4166D /* LKarneval.m */; };
 		576EA12F18FDD8F300D4166D /* OpeningHours.plist in Resources */ = {isa = PBXBuildFile; fileRef = 576EA12E18FDD8F300D4166D /* OpeningHours.plist */; };
 /* End PBXBuildFile section */
@@ -68,6 +69,8 @@
 		575C94A618FE87CF00A341EE /* App.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = App.xcassets; sourceTree = "<group>"; };
 		575C94AC18FE90D900A341EE /* futura-bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "futura-bold.ttf"; path = "Data/Typefaces/futura-bold.ttf"; sourceTree = "<group>"; };
 		575C94AD18FE90D900A341EE /* robothead.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = robothead.ttf; path = Data/Typefaces/robothead.ttf; sourceTree = "<group>"; };
+		575C94B018FEA9F100A341EE /* ScheduleTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ScheduleTableViewController.h; path = Controllers/ScheduleTableViewController.h; sourceTree = "<group>"; };
+		575C94B118FEA9F100A341EE /* ScheduleTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ScheduleTableViewController.m; path = Controllers/ScheduleTableViewController.m; sourceTree = "<group>"; };
 		576EA12A18FDD6BE00D4166D /* LKarneval.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; name = LKarneval.h; path = Models/LKarneval.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		576EA12B18FDD6BE00D4166D /* LKarneval.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; name = LKarneval.m; path = Models/LKarneval.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		576EA12E18FDD8F300D4166D /* OpeningHours.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = OpeningHours.plist; path = Data/OpeningHours.plist; sourceTree = "<group>"; };
@@ -180,6 +183,8 @@
 				5722E91518FD7C3600BEE3A2 /* TabBarViewController.m */,
 				5722E91818FD7C9000BEE3A2 /* MapViewController.h */,
 				5722E91918FD7C9000BEE3A2 /* MapViewController.m */,
+				575C94B018FEA9F100A341EE /* ScheduleTableViewController.h */,
+				575C94B118FEA9F100A341EE /* ScheduleTableViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -287,6 +292,7 @@
 				1AE8E56518F42FB50078EBDF /* AppDelegate.m in Sources */,
 				57407D1D18FD2F110003F787 /* LKarnevalist.m in Sources */,
 				5722E91618FD7C3600BEE3A2 /* TabBarViewController.m in Sources */,
+				575C94B218FEA9F100A341EE /* ScheduleTableViewController.m in Sources */,
 				5722E91A18FD7C9000BEE3A2 /* MapViewController.m in Sources */,
 				57407D1518FD2A5A0003F787 /* LKEvent.m in Sources */,
 				57407D1A18FD2B5C0003F787 /* LKSektion.m in Sources */,

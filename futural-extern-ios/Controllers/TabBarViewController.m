@@ -25,19 +25,23 @@
     
     [self setSelectedIndex:TAB_INDEX_DEFAULT]; //switch to map.
     
+    NSLog(@"Karneval: %@", self.karneval);
+    
 }
 
 - (void)customizeTabBar {
     
     UIFont *font = [UIFont fontWithName:@"Futura-Bold" size:10];
+    UIColor *colorActive = [UIColor whiteColor];
+    UIColor *colorStandby = [LKColor colorWithIdentifier:LKColorLightRed];
     
     NSDictionary *selectedProperties = @{
                                          NSFontAttributeName : font,
-                                         NSForegroundColorAttributeName : [UIColor whiteColor]
+                                         NSForegroundColorAttributeName : colorActive
                                          }; //active tab
     NSDictionary *normalProperties = @{
                                        NSFontAttributeName : font,
-                                       NSForegroundColorAttributeName : [LKColor colorWithIdentifier:LKColorLightRed]
+                                       NSForegroundColorAttributeName : colorStandby
                                        }; //standby tab
     
     [[UITabBarItem appearance] setTitleTextAttributes:selectedProperties forState:UIControlStateSelected];
@@ -47,7 +51,44 @@
         
         item.title = [item.title uppercaseString];
         
+        NSDictionary *imageNames = [self.class tabSprites];
+        
+        for(NSString *title in imageNames) {
+            
+            if([title isEqualToString:item.title]) {
+                
+                [item setFinishedSelectedImage:[UIImage imageNamed:[NSString stringWithFormat:@"%@-active", imageNames[title]]]
+                   withFinishedUnselectedImage:[UIImage imageNamed:imageNames[title]]];
+                
+            }
+            
+        }
+        
     }
+    
+}
+
++ (NSDictionary *)tabSprites {
+    
+    return @{
+             @"NÖJEN" : @"entertainment",
+             @"SCHEMA" : @"schedule",
+             @"ÖVRIGT" : @"misc",
+             @"KARTA" : @"map",
+             @"MAT" : @"food"
+             };
+    
+}
+
+- (LKarneval *)karneval {
+    
+    if(!_karneval) {
+        
+        _karneval = [LKarneval sharedLKarneval];
+        
+    }
+    
+    return _karneval;
     
 }
 
