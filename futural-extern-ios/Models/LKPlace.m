@@ -90,4 +90,83 @@
     
 }
 
+#pragma mark Class methods
+
+#warning Insufficient images, add more when possible.
++ (UIImage *)imageForCategory:(LKPlaceCategory)category {
+ 
+    NSString *imageName;
+    
+    switch(category) {
+            
+        case LKPlaceCategoryATM:
+            
+            break;
+            
+        case LKPlaceCategoryBeverage:
+            
+            break;
+            
+        case LKPlaceCategoryChargingStation:
+            
+            break;
+            
+        case LKPlaceCategoryCoffee:
+            
+            break;
+            
+        case LKPlaceCategoryFirstAid:
+            
+            break;
+            
+        case LKPlaceCategoryFood:
+            
+            imageName = @"food";
+            
+            break;
+            
+        case LKPlaceCategoryLottery:
+            
+            break;
+            
+        case LKPlaceCategoryMinorEntertainment:
+            
+            break;
+            
+        case LKPlaceCategoryParking:
+            
+            break;
+            
+        case LKPlaceCategoryScene:
+            
+            break;
+            
+        case LKPlaceCategoryShop:
+            
+            break;
+            
+        case LKPlaceCategorySnacks:
+            
+            break;
+            
+        case LKPlaceCategoryTent:
+            
+            break;
+            
+        case LKPlaceCategoryToilet:
+            
+            break;
+            
+        default:
+            
+            imageName = @"unknown";
+            
+            break;
+            
+    }
+    
+    return [UIImage imageNamed:imageName];
+    
+}
+
 @end
