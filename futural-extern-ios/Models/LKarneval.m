@@ -117,6 +117,68 @@
 
 #pragma mark Methods
 
+- (NSArray *)placesFilteredByCategories:(NSArray *)categories {
+    
+    NSMutableArray *places;
+    
+    for(LKPlace *place in self.places) { //one to many relation.
+        for(NSNumber *typeContainer in categories) {
+         
+            LKPlaceCategory category = [typeContainer integerValue];
+            
+            if(place.category == category) {
+                
+                if(!places)
+                    places = [[NSMutableArray alloc] init]; //lazy instantiation mofo.
+                
+                [places addObject:place];
+                break;
+                
+            }
+            
+        }
+    }
+    
+    return places;
+    
+}
+
+- (NSArray *)placesExcludedByCategories:(NSArray *)categories {
+    
+    NSMutableArray *places;
+    
+    for(LKPlace *place in self.places) {
+        
+        BOOL includeFile = YES;
+        
+        for(NSNumber *typeContainer in categories) {
+            
+            LKPlaceCategory category = [typeContainer integerValue];
+            
+            if(place.category == category) {
+
+                includeFile = NO;
+                break;
+                
+            }
+            
+        }
+        
+        if(includeFile) {
+         
+            if(!places)
+                places = [[NSMutableArray alloc] init]; //lazy mofo.
+            
+            [places addObject:place];
+            
+        }
+        
+    }
+    
+    return places;
+    
+}
+
 - (NSArray *)eventsAtPlaceWithIdentifier:(NSString *)identifier {
     
     NSMutableArray *events = [[NSMutableArray alloc] init];

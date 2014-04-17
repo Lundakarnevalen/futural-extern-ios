@@ -22,6 +22,26 @@
 		<key>payment_options</key>
 		<array/>
 	</dict>
+	<key>launchingpad</key>
+	<dict>
+		<key>name</key>
+		<string>Krog L[a]unchingpad</string>
+		<key>description</key>
+		<string>Lorem Ipsum</string>
+		<key>category</key>
+		<integer>1</integer>
+		<key>position</key>
+		<dict>
+			<key>longitude</key>
+			<real>13.1965</real>
+			<key>latitude</key>
+			<real>55.707242</real>
+		</dict>
+		<key>alcohol</key>
+		<true/>
+		<key>payment_options</key>
+		<array/>
+	</dict>
 	<key>storascenen</key>
 	<dict>
 		<key>name</key>
