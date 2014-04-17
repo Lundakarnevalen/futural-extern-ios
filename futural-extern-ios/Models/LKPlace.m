@@ -17,7 +17,6 @@
     if(self) {
         
         //create logic to read from a property list and store it in this model
-        NSLog(@"%@", propertyList);
         self.name = propertyList[@"name"];
         self.description = propertyList[@"description"];
         self.category = [propertyList[@"category"] integerValue];

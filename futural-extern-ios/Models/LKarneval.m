@@ -41,7 +41,7 @@
     
     if(self) {
         
-        //load events, places and store it in specific arrays.
+        //the loading of places and events is taking place inside of the getters.
         
     }
     
@@ -75,12 +75,10 @@
         NSString *path = [[NSBundle mainBundle] pathForResource:@"Places" ofType:@"plist"];
         NSDictionary *places = [NSDictionary dictionaryWithContentsOfFile:path];
         
-        for(NSString *identifier in places) {
+        for(NSString *identifier in places) { //dictionary enumerates with the key (NSString).
             
             LKPlace *place = [[LKPlace alloc] initWithProperties:places[identifier]];
             place.identifier = identifier;
-            
-            NSLog(@"%@", place);
             
             [_places addObject:place];
             
@@ -105,7 +103,7 @@
         for(NSDictionary *eventProperties in events) {
             
             LKEvent *event = [[LKEvent alloc] initWithProperties:eventProperties];
-            //add place object as well.
+            event.place = [self placeWithIdentifier:eventProperties[@"place"]];
             
             [_events addObject:event];
             
@@ -117,7 +115,41 @@
     
 }
 
-#pragma mark Misc
+#pragma mark Methods
+
+- (NSArray *)eventsAtPlaceWithIdentifier:(NSString *)identifier {
+    
+    NSMutableArray *events = [[NSMutableArray alloc] init];
+    
+    for(LKEvent *event in self.events) {
+        
+        if([event.place.identifier isEqualToString:identifier]) {
+            
+            [events addObject:event];
+            
+        }
+        
+    }
+    
+    return events;
+    
+}
+
+- (LKPlace *)placeWithIdentifier:(NSString *)identifier { //looking for a LKPlace inside of _places array with the desired identifier and returns it.
+    
+    for(LKPlace *place in self.places) {
+        
+        if([place.identifier isEqualToString:identifier]) {
+            
+            return place;
+            
+        }
+        
+    }
+    
+    return nil;
+    
+}
 
 - (NSString *)description {
     

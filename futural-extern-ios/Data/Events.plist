@@ -4,17 +4,32 @@
 <array>
 	<dict>
 		<key>name</key>
-		<string>Super awesome lunch</string>
+		<string>Orkesterkamp</string>
 		<key>description</key>
-		<string>Kom hit och käka gratis lunch, begränsat antal.</string>
+		<string>Den storslagna kampen mellan årets orkestrar.</string>
 		<key>place</key>
-		<string>kroglaunchingpad</string>
+		<string>storascenen</string>
 		<key>date</key>
 		<dict>
 			<key>start</key>
-			<date>2014-04-16T09:30:05Z</date>
+			<date>2014-04-16T12:30:00Z</date>
 			<key>end</key>
-			<date>2014-04-16T10:30:42Z</date>
+			<date>2014-04-16T13:30:00Z</date>
+		</dict>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Invigning</string>
+		<key>description</key>
+		<string>Futuralt awesome invigning av Lundakarnevalen 2014</string>
+		<key>place</key>
+		<string>storascenen</string>
+		<key>date</key>
+		<dict>
+			<key>start</key>
+			<date>2014-04-16T11:00:00Z</date>
+			<key>end</key>
+			<date>2014-04-16T12:00:00Z</date>
 		</dict>
 	</dict>
 </array>

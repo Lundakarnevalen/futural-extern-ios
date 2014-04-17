@@ -20,4 +20,6 @@
 
 + (LKarneval *)sharedLKarneval; //USE THIS, it's stuffed with data about the karneval.
 
+- (NSArray *)eventsAtPlaceWithIdentifier:(NSString *)identifier; //get events associated with a place.
+
 @end

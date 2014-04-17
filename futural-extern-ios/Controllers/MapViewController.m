@@ -22,13 +22,42 @@
     self.mapView.mapType = MKMapTypeSatellite;
     self.mapView.region = MKCoordinateRegionMake(CLLocationCoordinate2DMake(MAP_VIEW_X, MAP_VIEW_Y), MKCoordinateSpanMake(MAP_VIEW_X_SPAN, MAP_VIEW_Y_SPAN));
     
+    [self printPlaces];
+    
 }
 
 - (MKOverlayView *)mapView:(MKMapView *)mapView viewForOverlay:(id<MKOverlay>)overlay {
 
-    NSLog(@"Hello World");
+    //richard, do your magic.
     
     return [[MKOverlayView alloc] init];
+    
+}
+
+- (void)printPlaces { //debug
+    
+    for(LKPlace *place in self.karneval.places) {
+        
+        MKPointAnnotation *pin = [[MKPointAnnotation alloc] init];
+        pin.coordinate = place.position;
+        pin.title = place.name;
+        [self.mapView addAnnotation:pin];
+        
+    }
+    
+}
+
+#pragma mark Lazy Instantiations
+
+- (LKarneval *)karneval {
+    
+    if(!_karneval) {
+        
+        _karneval = [LKarneval sharedLKarneval];
+        
+    }
+    
+    return _karneval;
     
 }
 

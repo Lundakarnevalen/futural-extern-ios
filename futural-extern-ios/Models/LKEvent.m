@@ -47,6 +47,12 @@
     
 }
 
+- (NSString *)description {
+    
+    return [NSString stringWithFormat:@"This event called %@ is taking place at %@", self.name, self.place.name];
+    
+}
+
 #pragma mark Lazy Instantiation
 
 - (LKPlace *)place {
@@ -60,17 +66,5 @@
     return _place;
     
 }
-
-/*- (LKSektion *)host {
-    
-    if(!_host) {
-        
-        _host = [[LKSektion alloc] init]; //fix to get the right data.
-        
-    }
-    
-    return _host;
-    
-}*/
 
 @end
