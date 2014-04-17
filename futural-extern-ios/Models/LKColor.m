@@ -69,7 +69,7 @@
     
     NSDictionary *textAttributes = @{
                                      NSForegroundColorAttributeName : [UIColor whiteColor],
-                                     NSFontAttributeName : [UIFont fontWithName:@"Futura-Bold" size:18]
+                                     NSFontAttributeName : [UIFont fontWithName:@"FuturaLT-Bold" size:18]
                                      };
     
     [navigationBar setBarTintColor:[self colorWithIdentifier:LKColorRed]];

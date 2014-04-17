@@ -8,6 +8,19 @@
 
 /* Begin PBXBuildFile section */
 		1A7DA8A318FF06C70025C677 /* App.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1A7DA8A218FF06C70025C677 /* App.xcassets */; };
+		1ABFF6E219002BBB00C575EE /* LKAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ABFF6DE19002BBB00C575EE /* LKAnnotation.m */; };
+		1ABFF6E319002BBB00C575EE /* LKAnnotation.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1ABFF6DF19002BBB00C575EE /* LKAnnotation.xib */; };
+		1ABFF6E419002BBB00C575EE /* LKAnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ABFF6E119002BBB00C575EE /* LKAnnotationView.m */; };
+		1ABFF6E719002BDD00C575EE /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ABFF6E619002BDD00C575EE /* MapViewController.m */; };
+		1ABFF6E919002DD100C575EE /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1ABFF6E819002DD100C575EE /* Images.xcassets */; };
+		1ABFF6ED1900646900C575EE /* ECSlidingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ABFF6EC1900646900C575EE /* ECSlidingViewController.m */; };
+		1ABFF6F01900649300C575EE /* InitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ABFF6EF1900649300C575EE /* InitViewController.m */; };
+		1ABFF6F819006E5400C575EE /* MapFilterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ABFF6F719006E5400C575EE /* MapFilterViewController.m */; };
+		1ABFF6FA1900713800C575EE /* LKColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ABFF6F91900713800C575EE /* LKColor.m */; };
+		1ABFF6FE19007CF800C575EE /* LKOverlay.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ABFF6FD19007CF800C575EE /* LKOverlay.m */; };
+		1ABFF70119007E2000C575EE /* LKOverlayRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ABFF70019007E2000C575EE /* LKOverlayRenderer.m */; };
+		1ABFF7031900887F00C575EE /* FuturaLT-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1ABFF7021900887F00C575EE /* FuturaLT-Bold.ttf */; };
+		1ABFF706190088F700C575EE /* UILabel+Shadow+FuturaBoldFont.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ABFF705190088F700C575EE /* UILabel+Shadow+FuturaBoldFont.m */; };
 		1AE8E55518F42FB50078EBDF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AE8E55418F42FB50078EBDF /* Foundation.framework */; };
 		1AE8E55718F42FB50078EBDF /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AE8E55618F42FB50078EBDF /* CoreGraphics.framework */; };
 		1AE8E55918F42FB50078EBDF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AE8E55818F42FB50078EBDF /* UIKit.framework */; };
@@ -17,10 +30,7 @@
 		1AE8E56818F42FB50078EBDF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1AE8E56618F42FB50078EBDF /* Main.storyboard */; };
 		5722E91018FD72F500BEE3A2 /* LKPlace.m in Sources */ = {isa = PBXBuildFile; fileRef = 5722E90F18FD72F500BEE3A2 /* LKPlace.m */; };
 		5722E91618FD7C3600BEE3A2 /* TabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5722E91518FD7C3600BEE3A2 /* TabBarViewController.m */; };
-		5722E91A18FD7C9000BEE3A2 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5722E91918FD7C9000BEE3A2 /* MapViewController.m */; };
 		5722E91C18FD7DF300BEE3A2 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5722E91B18FD7DF300BEE3A2 /* MapKit.framework */; };
-		5722E91F18FD80C700BEE3A2 /* LKColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 5722E91E18FD80C700BEE3A2 /* LKColor.m */; };
-		573797F518FFDCB900ABC2CD /* LKPlaceOverlay.m in Sources */ = {isa = PBXBuildFile; fileRef = 573797F418FFDCB900ABC2CD /* LKPlaceOverlay.m */; };
 		573797F8190014E700ABC2CD /* EntertainmentDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 573797F7190014E700ABC2CD /* EntertainmentDetailViewController.m */; };
 		57407D1518FD2A5A0003F787 /* LKEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 57407D1418FD2A5A0003F787 /* LKEvent.m */; };
 		57407D1718FD2B1A0003F787 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57407D1618FD2B1A0003F787 /* CoreLocation.framework */; };
@@ -29,7 +39,6 @@
 		575C949D18FE7F0000A341EE /* Places.plist in Resources */ = {isa = PBXBuildFile; fileRef = 575C949C18FE7F0000A341EE /* Places.plist */; };
 		575C949F18FE7F3D00A341EE /* Events.plist in Resources */ = {isa = PBXBuildFile; fileRef = 575C949E18FE7F3D00A341EE /* Events.plist */; };
 		575C94A318FE838E00A341EE /* TabBar.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 575C94A218FE838E00A341EE /* TabBar.xcassets */; };
-		575C94AE18FE90D900A341EE /* futura-bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 575C94AC18FE90D900A341EE /* futura-bold.ttf */; };
 		575C94AF18FE90D900A341EE /* robothead.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 575C94AD18FE90D900A341EE /* robothead.ttf */; };
 		575C94B818FEC9C600A341EE /* ScheduleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 575C94B718FEC9C600A341EE /* ScheduleViewController.m */; };
 		575C94BF18FED04F00A341EE /* EntertainmentNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 575C94BE18FED04F00A341EE /* EntertainmentNavigationViewController.m */; };
@@ -42,6 +51,28 @@
 
 /* Begin PBXFileReference section */
 		1A7DA8A218FF06C70025C677 /* App.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = App.xcassets; sourceTree = "<group>"; };
+		1ABFF6DD19002BBB00C575EE /* LKAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LKAnnotation.h; sourceTree = "<group>"; };
+		1ABFF6DE19002BBB00C575EE /* LKAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LKAnnotation.m; sourceTree = "<group>"; };
+		1ABFF6DF19002BBB00C575EE /* LKAnnotation.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LKAnnotation.xib; sourceTree = "<group>"; };
+		1ABFF6E019002BBB00C575EE /* LKAnnotationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LKAnnotationView.h; sourceTree = "<group>"; };
+		1ABFF6E119002BBB00C575EE /* LKAnnotationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LKAnnotationView.m; sourceTree = "<group>"; };
+		1ABFF6E519002BDD00C575EE /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MapViewController.h; path = Controllers/Map/MapViewController.h; sourceTree = "<group>"; };
+		1ABFF6E619002BDD00C575EE /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MapViewController.m; path = Controllers/Map/MapViewController.m; sourceTree = "<group>"; };
+		1ABFF6E819002DD100C575EE /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		1ABFF6EB1900646800C575EE /* ECSlidingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ECSlidingViewController.h; path = Controllers/Map/ECSlidingViewController.h; sourceTree = "<group>"; };
+		1ABFF6EC1900646900C575EE /* ECSlidingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ECSlidingViewController.m; path = Controllers/Map/ECSlidingViewController.m; sourceTree = "<group>"; };
+		1ABFF6EE1900649300C575EE /* InitViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = InitViewController.h; path = Controllers/Map/InitViewController.h; sourceTree = "<group>"; };
+		1ABFF6EF1900649300C575EE /* InitViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = InitViewController.m; path = Controllers/Map/InitViewController.m; sourceTree = "<group>"; };
+		1ABFF6F619006E5400C575EE /* MapFilterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MapFilterViewController.h; path = Controllers/Map/MapFilterViewController.h; sourceTree = "<group>"; };
+		1ABFF6F719006E5400C575EE /* MapFilterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MapFilterViewController.m; path = Controllers/Map/MapFilterViewController.m; sourceTree = "<group>"; };
+		1ABFF6F91900713800C575EE /* LKColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LKColor.m; path = Models/LKColor.m; sourceTree = "<group>"; };
+		1ABFF6FC19007CF800C575EE /* LKOverlay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LKOverlay.h; path = Models/Overlay/LKOverlay.h; sourceTree = "<group>"; };
+		1ABFF6FD19007CF800C575EE /* LKOverlay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LKOverlay.m; path = Models/Overlay/LKOverlay.m; sourceTree = "<group>"; };
+		1ABFF6FF19007E2000C575EE /* LKOverlayRenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LKOverlayRenderer.h; path = Models/Overlay/LKOverlayRenderer.h; sourceTree = "<group>"; };
+		1ABFF70019007E2000C575EE /* LKOverlayRenderer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LKOverlayRenderer.m; path = Models/Overlay/LKOverlayRenderer.m; sourceTree = "<group>"; };
+		1ABFF7021900887F00C575EE /* FuturaLT-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "FuturaLT-Bold.ttf"; path = "Data/Typefaces/FuturaLT-Bold.ttf"; sourceTree = "<group>"; };
+		1ABFF704190088F700C575EE /* UILabel+Shadow+FuturaBoldFont.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UILabel+Shadow+FuturaBoldFont.h"; path = "Models/UILabel+Shadow+FuturaBoldFont.h"; sourceTree = "<group>"; };
+		1ABFF705190088F700C575EE /* UILabel+Shadow+FuturaBoldFont.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UILabel+Shadow+FuturaBoldFont.m"; path = "Models/UILabel+Shadow+FuturaBoldFont.m"; sourceTree = "<group>"; };
 		1AE8E55118F42FB50078EBDF /* Lundakarnevalen.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lundakarnevalen.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1AE8E55418F42FB50078EBDF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		1AE8E55618F42FB50078EBDF /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -58,13 +89,9 @@
 		5722E90F18FD72F500BEE3A2 /* LKPlace.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; name = LKPlace.m; path = Models/LKPlace.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		5722E91418FD7C3600BEE3A2 /* TabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; name = TabBarViewController.h; path = Controllers/TabBarViewController.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		5722E91518FD7C3600BEE3A2 /* TabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; name = TabBarViewController.m; path = Controllers/TabBarViewController.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
-		5722E91818FD7C9000BEE3A2 /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; name = MapViewController.h; path = Controllers/MapViewController.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
-		5722E91918FD7C9000BEE3A2 /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; name = MapViewController.m; path = Controllers/MapViewController.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		5722E91B18FD7DF300BEE3A2 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		5722E91D18FD80C700BEE3A2 /* LKColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; name = LKColor.h; path = Models/LKColor.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
-		5722E91E18FD80C700BEE3A2 /* LKColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; name = LKColor.m; path = Models/LKColor.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
-		573797F318FFDCB900ABC2CD /* LKPlaceOverlay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LKPlaceOverlay.h; path = Models/LKPlaceOverlay.h; sourceTree = "<group>"; };
-		573797F418FFDCB900ABC2CD /* LKPlaceOverlay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LKPlaceOverlay.m; path = Models/LKPlaceOverlay.m; sourceTree = "<group>"; };
+		5722E91E18FD80C700BEE3A2 /* InitViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; name = InitViewController.m; path = Controllers/Map/InitViewController.m; sourceTree = "<group>"; };
 		573797F6190014E700ABC2CD /* EntertainmentDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EntertainmentDetailViewController.h; path = Controllers/EntertainmentDetailViewController.h; sourceTree = "<group>"; };
 		573797F7190014E700ABC2CD /* EntertainmentDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EntertainmentDetailViewController.m; path = Controllers/EntertainmentDetailViewController.m; sourceTree = "<group>"; };
 		57407D1318FD2A5A0003F787 /* LKEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; name = LKEvent.h; path = Models/LKEvent.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
@@ -77,7 +104,6 @@
 		575C949C18FE7F0000A341EE /* Places.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Places.plist; path = Data/Places.plist; sourceTree = "<group>"; };
 		575C949E18FE7F3D00A341EE /* Events.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Events.plist; path = Data/Events.plist; sourceTree = "<group>"; };
 		575C94A218FE838E00A341EE /* TabBar.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = TabBar.xcassets; path = Data/Sprites/TabBar.xcassets; sourceTree = "<group>"; };
-		575C94AC18FE90D900A341EE /* futura-bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "futura-bold.ttf"; path = "Data/Typefaces/futura-bold.ttf"; sourceTree = "<group>"; };
 		575C94AD18FE90D900A341EE /* robothead.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = robothead.ttf; path = Data/Typefaces/robothead.ttf; sourceTree = "<group>"; };
 		575C94B618FEC9C600A341EE /* ScheduleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ScheduleViewController.h; path = Controllers/ScheduleViewController.h; sourceTree = "<group>"; };
 		575C94B718FEC9C600A341EE /* ScheduleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ScheduleViewController.m; path = Controllers/ScheduleViewController.m; sourceTree = "<group>"; };
@@ -110,6 +136,44 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1ABFF6DC19002BBB00C575EE /* Annotation */ = {
+			isa = PBXGroup;
+			children = (
+				1ABFF6DD19002BBB00C575EE /* LKAnnotation.h */,
+				1ABFF6DE19002BBB00C575EE /* LKAnnotation.m */,
+				1ABFF6DF19002BBB00C575EE /* LKAnnotation.xib */,
+				1ABFF6E019002BBB00C575EE /* LKAnnotationView.h */,
+				1ABFF6E119002BBB00C575EE /* LKAnnotationView.m */,
+			);
+			path = Annotation;
+			sourceTree = "<group>";
+		};
+		1ABFF6EA1900645300C575EE /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				1ABFF6EE1900649300C575EE /* InitViewController.h */,
+				1ABFF6EF1900649300C575EE /* InitViewController.m */,
+				1ABFF6EB1900646800C575EE /* ECSlidingViewController.h */,
+				1ABFF6EC1900646900C575EE /* ECSlidingViewController.m */,
+				1ABFF6E519002BDD00C575EE /* MapViewController.h */,
+				1ABFF6E619002BDD00C575EE /* MapViewController.m */,
+				1ABFF6F619006E5400C575EE /* MapFilterViewController.h */,
+				1ABFF6F719006E5400C575EE /* MapFilterViewController.m */,
+			);
+			name = Map;
+			sourceTree = "<group>";
+		};
+		1ABFF6FB19007CB100C575EE /* Overlay */ = {
+			isa = PBXGroup;
+			children = (
+				1ABFF6FC19007CF800C575EE /* LKOverlay.h */,
+				1ABFF6FD19007CF800C575EE /* LKOverlay.m */,
+				1ABFF6FF19007E2000C575EE /* LKOverlayRenderer.h */,
+				1ABFF70019007E2000C575EE /* LKOverlayRenderer.m */,
+			);
+			name = Overlay;
+			sourceTree = "<group>";
+		};
 		1AE8E54818F42FB50078EBDF = {
 			isa = PBXGroup;
 			children = (
@@ -172,7 +236,10 @@
 			isa = PBXGroup;
 			children = (
 				5722E91D18FD80C700BEE3A2 /* LKColor.h */,
-				5722E91E18FD80C700BEE3A2 /* LKColor.m */,
+				1ABFF6F91900713800C575EE /* LKColor.m */,
+				5722E91E18FD80C700BEE3A2 /* InitViewController.m */,
+				1ABFF704190088F700C575EE /* UILabel+Shadow+FuturaBoldFont.h */,
+				1ABFF705190088F700C575EE /* UILabel+Shadow+FuturaBoldFont.m */,
 			);
 			name = Toolbox;
 			sourceTree = "<group>";
@@ -187,8 +254,8 @@
 		573797F218FFDC8700ABC2CD /* Map */ = {
 			isa = PBXGroup;
 			children = (
-				573797F318FFDCB900ABC2CD /* LKPlaceOverlay.h */,
-				573797F418FFDCB900ABC2CD /* LKPlaceOverlay.m */,
+				1ABFF6FB19007CB100C575EE /* Overlay */,
+				1ABFF6DC19002BBB00C575EE /* Annotation */,
 			);
 			name = Map;
 			sourceTree = "<group>";
@@ -242,11 +309,10 @@
 		57407D0F18FD29F20003F787 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				1ABFF6EA1900645300C575EE /* Map */,
 				575C94C918FED4B400A341EE /* FoodViewController.h */,
 				575C94CA18FED4B400A341EE /* FoodViewController.m */,
 				573797F91900156000ABC2CD /* Entertainment */,
-				5722E91818FD7C9000BEE3A2 /* MapViewController.h */,
-				5722E91918FD7C9000BEE3A2 /* MapViewController.m */,
 				575C94B618FEC9C600A341EE /* ScheduleViewController.h */,
 				575C94B718FEC9C600A341EE /* ScheduleViewController.m */,
 				575C94BC18FED02400A341EE /* Navigation */,
@@ -257,6 +323,7 @@
 		575C94A118FE835400A341EE /* Sprites */ = {
 			isa = PBXGroup;
 			children = (
+				1ABFF6E819002DD100C575EE /* Images.xcassets */,
 				575C94A218FE838E00A341EE /* TabBar.xcassets */,
 			);
 			name = Sprites;
@@ -265,7 +332,7 @@
 		575C94A818FE8D0000A341EE /* Typefaces */ = {
 			isa = PBXGroup;
 			children = (
-				575C94AC18FE90D900A341EE /* futura-bold.ttf */,
+				1ABFF7021900887F00C575EE /* FuturaLT-Bold.ttf */,
 				575C94AD18FE90D900A341EE /* robothead.ttf */,
 			);
 			name = Typefaces;
@@ -348,9 +415,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				575C94AE18FE90D900A341EE /* futura-bold.ttf in Resources */,
+				1ABFF6E319002BBB00C575EE /* LKAnnotation.xib in Resources */,
+				1ABFF7031900887F00C575EE /* FuturaLT-Bold.ttf in Resources */,
 				575C949F18FE7F3D00A341EE /* Events.plist in Resources */,
 				575C94AF18FE90D900A341EE /* robothead.ttf in Resources */,
+				1ABFF6E919002DD100C575EE /* Images.xcassets in Resources */,
 				576EA12F18FDD8F300D4166D /* OpeningHours.plist in Resources */,
 				1AE8E55F18F42FB50078EBDF /* InfoPlist.strings in Resources */,
 				575C949D18FE7F0000A341EE /* Places.plist in Resources */,
@@ -368,21 +437,28 @@
 			buildActionMask = 2147483647;
 			files = (
 				575C94C518FED18200A341EE /* FoodNavigationViewController.m in Sources */,
+				1ABFF6ED1900646900C575EE /* ECSlidingViewController.m in Sources */,
+				1ABFF6FE19007CF800C575EE /* LKOverlay.m in Sources */,
+				1ABFF706190088F700C575EE /* UILabel+Shadow+FuturaBoldFont.m in Sources */,
 				1AE8E56518F42FB50078EBDF /* AppDelegate.m in Sources */,
 				57407D1D18FD2F110003F787 /* LKarnevalist.m in Sources */,
+				1ABFF6E219002BBB00C575EE /* LKAnnotation.m in Sources */,
 				5722E91618FD7C3600BEE3A2 /* TabBarViewController.m in Sources */,
-				5722E91A18FD7C9000BEE3A2 /* MapViewController.m in Sources */,
 				575C94BF18FED04F00A341EE /* EntertainmentNavigationViewController.m in Sources */,
+				1ABFF6E719002BDD00C575EE /* MapViewController.m in Sources */,
+				1ABFF6F01900649300C575EE /* InitViewController.m in Sources */,
+				1ABFF6FA1900713800C575EE /* LKColor.m in Sources */,
 				575C94CB18FED4B400A341EE /* FoodViewController.m in Sources */,
 				57407D1518FD2A5A0003F787 /* LKEvent.m in Sources */,
+				1ABFF6F819006E5400C575EE /* MapFilterViewController.m in Sources */,
+				1ABFF6E419002BBB00C575EE /* LKAnnotationView.m in Sources */,
 				57407D1A18FD2B5C0003F787 /* LKSektion.m in Sources */,
-				573797F518FFDCB900ABC2CD /* LKPlaceOverlay.m in Sources */,
 				575C94B818FEC9C600A341EE /* ScheduleViewController.m in Sources */,
 				573797F8190014E700ABC2CD /* EntertainmentDetailViewController.m in Sources */,
 				5722E91018FD72F500BEE3A2 /* LKPlace.m in Sources */,
-				5722E91F18FD80C700BEE3A2 /* LKColor.m in Sources */,
 				576EA12C18FDD6BE00D4166D /* LKarneval.m in Sources */,
 				1AE8E56118F42FB50078EBDF /* main.m in Sources */,
+				1ABFF70119007E2000C575EE /* LKOverlayRenderer.m in Sources */,
 				575C94C818FED40000A341EE /* EntertainmentViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
