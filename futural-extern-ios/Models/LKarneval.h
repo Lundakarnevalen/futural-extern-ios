@@ -26,4 +26,6 @@
 
 - (NSArray *)eventsAtPlaceWithIdentifier:(NSString *)identifier; //get events associated with a place.
 
++ (NSArray *)LKPlaceFilterFood;
+
 @end

@@ -219,4 +219,18 @@
     
 }
 
+#pragma mark Class methods
+
++ (NSArray *)LKPlaceFilterFood {
+    
+    return @[@(LKPlaceCategoryFood), @(LKPlaceCategorySnacks), @(LKPlaceCategoryCoffee)];
+    
+}
+
++ (NSArray *)LKPlaceFilterEntertainment {
+    
+    return @[@(LKPlaceCategoryTent), @(LKPlaceCategoryScene), @(LKPlaceCategoryLottery), @(LKPlaceCategoryMinorEntertainment)];
+    
+}
+
 @end
