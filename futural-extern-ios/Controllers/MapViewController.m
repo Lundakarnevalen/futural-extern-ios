@@ -34,6 +34,12 @@
     
 }
 
+- (void)mapView:(MKMapView *)mapView didSelectAnnotationView:(MKAnnotationView *)view {
+    
+    NSLog(@"Pin tapped. %@", view);
+    
+}
+
 - (void)printPlaces { //debug
     
     for(LKPlace *place in self.karneval.places) {

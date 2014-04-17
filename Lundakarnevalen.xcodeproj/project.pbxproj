@@ -21,6 +21,7 @@
 		5722E91C18FD7DF300BEE3A2 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5722E91B18FD7DF300BEE3A2 /* MapKit.framework */; };
 		5722E91F18FD80C700BEE3A2 /* LKColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 5722E91E18FD80C700BEE3A2 /* LKColor.m */; };
 		573797F518FFDCB900ABC2CD /* LKPlaceOverlay.m in Sources */ = {isa = PBXBuildFile; fileRef = 573797F418FFDCB900ABC2CD /* LKPlaceOverlay.m */; };
+		573797F8190014E700ABC2CD /* EntertainmentDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 573797F7190014E700ABC2CD /* EntertainmentDetailViewController.m */; };
 		57407D1518FD2A5A0003F787 /* LKEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 57407D1418FD2A5A0003F787 /* LKEvent.m */; };
 		57407D1718FD2B1A0003F787 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57407D1618FD2B1A0003F787 /* CoreLocation.framework */; };
 		57407D1A18FD2B5C0003F787 /* LKSektion.m in Sources */ = {isa = PBXBuildFile; fileRef = 57407D1918FD2B5C0003F787 /* LKSektion.m */; };
@@ -64,6 +65,8 @@
 		5722E91E18FD80C700BEE3A2 /* LKColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; name = LKColor.m; path = Models/LKColor.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		573797F318FFDCB900ABC2CD /* LKPlaceOverlay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LKPlaceOverlay.h; path = Models/LKPlaceOverlay.h; sourceTree = "<group>"; };
 		573797F418FFDCB900ABC2CD /* LKPlaceOverlay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LKPlaceOverlay.m; path = Models/LKPlaceOverlay.m; sourceTree = "<group>"; };
+		573797F6190014E700ABC2CD /* EntertainmentDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EntertainmentDetailViewController.h; path = Controllers/EntertainmentDetailViewController.h; sourceTree = "<group>"; };
+		573797F7190014E700ABC2CD /* EntertainmentDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EntertainmentDetailViewController.m; path = Controllers/EntertainmentDetailViewController.m; sourceTree = "<group>"; };
 		57407D1318FD2A5A0003F787 /* LKEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; name = LKEvent.h; path = Models/LKEvent.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		57407D1418FD2A5A0003F787 /* LKEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; name = LKEvent.m; path = Models/LKEvent.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		57407D1618FD2B1A0003F787 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
@@ -190,6 +193,33 @@
 			name = Map;
 			sourceTree = "<group>";
 		};
+		573797F91900156000ABC2CD /* Entertainment */ = {
+			isa = PBXGroup;
+			children = (
+				573797FA1900156B00ABC2CD /* List */,
+				573797FB1900157C00ABC2CD /* Detail */,
+			);
+			name = Entertainment;
+			sourceTree = "<group>";
+		};
+		573797FA1900156B00ABC2CD /* List */ = {
+			isa = PBXGroup;
+			children = (
+				575C94C618FED40000A341EE /* EntertainmentViewController.h */,
+				575C94C718FED40000A341EE /* EntertainmentViewController.m */,
+			);
+			name = List;
+			sourceTree = "<group>";
+		};
+		573797FB1900157C00ABC2CD /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				573797F6190014E700ABC2CD /* EntertainmentDetailViewController.h */,
+				573797F7190014E700ABC2CD /* EntertainmentDetailViewController.m */,
+			);
+			name = Detail;
+			sourceTree = "<group>";
+		};
 		57407D0E18FD29EB0003F787 /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -214,8 +244,7 @@
 			children = (
 				575C94C918FED4B400A341EE /* FoodViewController.h */,
 				575C94CA18FED4B400A341EE /* FoodViewController.m */,
-				575C94C618FED40000A341EE /* EntertainmentViewController.h */,
-				575C94C718FED40000A341EE /* EntertainmentViewController.m */,
+				573797F91900156000ABC2CD /* Entertainment */,
 				5722E91818FD7C9000BEE3A2 /* MapViewController.h */,
 				5722E91918FD7C9000BEE3A2 /* MapViewController.m */,
 				575C94B618FEC9C600A341EE /* ScheduleViewController.h */,
@@ -349,6 +378,7 @@
 				57407D1A18FD2B5C0003F787 /* LKSektion.m in Sources */,
 				573797F518FFDCB900ABC2CD /* LKPlaceOverlay.m in Sources */,
 				575C94B818FEC9C600A341EE /* ScheduleViewController.m in Sources */,
+				573797F8190014E700ABC2CD /* EntertainmentDetailViewController.m in Sources */,
 				5722E91018FD72F500BEE3A2 /* LKPlace.m in Sources */,
 				5722E91F18FD80C700BEE3A2 /* LKColor.m in Sources */,
 				576EA12C18FDD6BE00D4166D /* LKarneval.m in Sources */,
