@@ -17,6 +17,24 @@
     if(self) {
         
         //create logic to read from a property list and store it in this model
+        NSLog(@"%@", propertyList);
+        self.name = propertyList[@"name"];
+        self.description = propertyList[@"description"];
+        self.category = [propertyList[@"category"] integerValue];
+        self.alcohol = [propertyList[@"alcohol"] boolValue];
+        
+        for(NSString *option in propertyList[@"payment_options"]) {
+            
+            NSNumber *paymentOption = [NSNumber numberWithInteger:[option integerValue]];
+            [self.paymentOptions addObject:paymentOption];
+            
+        }
+        
+        NSDictionary *position = propertyList[@"position"];
+        CLLocationDegrees latitude = [position[@"latitude"] doubleValue];
+        CLLocationDegrees longitude = [position[@"longitude"] doubleValue];
+        
+        self.position = CLLocationCoordinate2DMake(latitude, longitude);
         
     }
     
@@ -62,6 +80,14 @@
     }
     
     return _paymentOptions;
+    
+}
+
+#pragma mark Misc
+
+- (NSString *)description {
+    
+    return [NSString stringWithFormat:@"This is %@ and I'm located at %f&%f, our payment options are %@", self.name, self.position.latitude, self.position.longitude, self.paymentOptions];
     
 }
 

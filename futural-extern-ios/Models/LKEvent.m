@@ -16,6 +16,8 @@
     
     if(self) {
         
+        self.name = propertyList[@"name"];
+        self.description = propertyList[@"description"];
         //add logic to read a property list containing all the information about the event.
         
     }

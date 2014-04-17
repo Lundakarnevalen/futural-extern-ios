@@ -20,6 +20,7 @@
 		5722E91A18FD7C9000BEE3A2 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5722E91918FD7C9000BEE3A2 /* MapViewController.m */; };
 		5722E91C18FD7DF300BEE3A2 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5722E91B18FD7DF300BEE3A2 /* MapKit.framework */; };
 		5722E91F18FD80C700BEE3A2 /* LKColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 5722E91E18FD80C700BEE3A2 /* LKColor.m */; };
+		573797F518FFDCB900ABC2CD /* LKPlaceOverlay.m in Sources */ = {isa = PBXBuildFile; fileRef = 573797F418FFDCB900ABC2CD /* LKPlaceOverlay.m */; };
 		57407D1518FD2A5A0003F787 /* LKEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 57407D1418FD2A5A0003F787 /* LKEvent.m */; };
 		57407D1718FD2B1A0003F787 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57407D1618FD2B1A0003F787 /* CoreLocation.framework */; };
 		57407D1A18FD2B5C0003F787 /* LKSektion.m in Sources */ = {isa = PBXBuildFile; fileRef = 57407D1918FD2B5C0003F787 /* LKSektion.m */; };
@@ -61,6 +62,8 @@
 		5722E91B18FD7DF300BEE3A2 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		5722E91D18FD80C700BEE3A2 /* LKColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; name = LKColor.h; path = Models/LKColor.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		5722E91E18FD80C700BEE3A2 /* LKColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; name = LKColor.m; path = Models/LKColor.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		573797F318FFDCB900ABC2CD /* LKPlaceOverlay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LKPlaceOverlay.h; path = Models/LKPlaceOverlay.h; sourceTree = "<group>"; };
+		573797F418FFDCB900ABC2CD /* LKPlaceOverlay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LKPlaceOverlay.m; path = Models/LKPlaceOverlay.m; sourceTree = "<group>"; };
 		57407D1318FD2A5A0003F787 /* LKEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; name = LKEvent.h; path = Models/LKEvent.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		57407D1418FD2A5A0003F787 /* LKEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; name = LKEvent.m; path = Models/LKEvent.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		57407D1618FD2B1A0003F787 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
@@ -137,6 +140,7 @@
 		1AE8E55A18F42FB50078EBDF /* Lundakarnevalen */ = {
 			isa = PBXGroup;
 			children = (
+				573797EE18FFD57D00ABC2CD /* Views */,
 				576EA12D18FDD8D400D4166D /* Data */,
 				57407D0F18FD29F20003F787 /* Controllers */,
 				57407D0E18FD29EB0003F787 /* Models */,
@@ -170,9 +174,26 @@
 			name = Toolbox;
 			sourceTree = "<group>";
 		};
+		573797EE18FFD57D00ABC2CD /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		573797F218FFDC8700ABC2CD /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				573797F318FFDCB900ABC2CD /* LKPlaceOverlay.h */,
+				573797F418FFDCB900ABC2CD /* LKPlaceOverlay.m */,
+			);
+			name = Map;
+			sourceTree = "<group>";
+		};
 		57407D0E18FD29EB0003F787 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				573797F218FFDC8700ABC2CD /* Map */,
 				576EA12A18FDD6BE00D4166D /* LKarneval.h */,
 				576EA12B18FDD6BE00D4166D /* LKarneval.m */,
 				57407D1318FD2A5A0003F787 /* LKEvent.h */,
@@ -326,6 +347,7 @@
 				575C94CB18FED4B400A341EE /* FoodViewController.m in Sources */,
 				57407D1518FD2A5A0003F787 /* LKEvent.m in Sources */,
 				57407D1A18FD2B5C0003F787 /* LKSektion.m in Sources */,
+				573797F518FFDCB900ABC2CD /* LKPlaceOverlay.m in Sources */,
 				575C94B818FEC9C600A341EE /* ScheduleViewController.m in Sources */,
 				5722E91018FD72F500BEE3A2 /* LKPlace.m in Sources */,
 				5722E91F18FD80C700BEE3A2 /* LKColor.m in Sources */,

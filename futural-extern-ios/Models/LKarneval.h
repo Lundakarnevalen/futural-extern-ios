@@ -8,6 +8,9 @@
 
 #import <Foundation/Foundation.h>
 
+#import "LKPlace.h"
+#import "LKEvent.h"
+
 @interface LKarneval : NSObject
 
 @property (nonatomic) NSMutableArray *places;

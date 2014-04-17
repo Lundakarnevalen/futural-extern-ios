@@ -39,10 +39,16 @@ typedef enum {
 
 @interface LKPlace : NSObject
 
-@property (nonatomic) LKPlaceCategory *category;
-@property (nonatomic) CLLocationDegrees *position;
+@property (nonatomic) NSString *identifier; //has to be different from the other places.
+@property (nonatomic) NSString *name;
+@property (nonatomic) NSString *description;
+
+@property (nonatomic) LKPlaceCategory category;
+@property (nonatomic) CLLocationCoordinate2D position;
 
 @property (nonatomic, getter = isSellingAlcohol) BOOL alcohol; //selling alcoholic beverages?
 @property (nonatomic) NSMutableArray *paymentOptions; //of LKPaymentOption. what kind of payments are available (card, phone, futural). IF THE ARRAY IS EMPTY, IT'S FOR FREE.
+
+- (LKPlace *)initWithProperties:(NSDictionary *)propertyList;
 
 @end

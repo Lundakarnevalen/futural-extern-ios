@@ -10,10 +10,25 @@
 
 @implementation MapViewController
 
+#define MAP_VIEW_X 55.924332668033337
+#define MAP_VIEW_Y 13.551104518235233
+#define MAP_VIEW_X_SPAN 1.2522221323685514
+#define MAP_VIEW_Y_SPAN 2.0859175922040549
+
 - (void)viewDidLoad {
     
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    self.mapView.mapType = MKMapTypeSatellite;
+    self.mapView.region = MKCoordinateRegionMake(CLLocationCoordinate2DMake(MAP_VIEW_X, MAP_VIEW_Y), MKCoordinateSpanMake(MAP_VIEW_X_SPAN, MAP_VIEW_Y_SPAN));
+    
+}
+
+- (MKOverlayView *)mapView:(MKMapView *)mapView viewForOverlay:(id<MKOverlay>)overlay {
+
+    NSLog(@"Hello World");
+    
+    return [[MKOverlayView alloc] init];
     
 }
 

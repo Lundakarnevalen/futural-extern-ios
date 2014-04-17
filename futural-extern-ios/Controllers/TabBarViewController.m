@@ -21,7 +21,7 @@
     
     [self setSelectedIndex:TAB_INDEX_DEFAULT]; //switch to map.
     
-    NSLog(@"Karneval: %@", self.karneval);
+    NSLog(@"%@", self.karneval);
     
 }
 

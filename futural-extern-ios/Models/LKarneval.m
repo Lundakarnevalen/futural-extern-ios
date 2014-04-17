@@ -42,7 +42,6 @@
     if(self) {
         
         //load events, places and store it in specific arrays.
-        NSLog(@"Hello world");
         
     }
     
@@ -54,13 +53,75 @@
 
 - (NSDictionary *)openingHours {
     
-    if(_openingHours) {
+    if(!_openingHours) {
         
-        _openingHours = @{}; //store in plist
+        NSLog(@"%@: reading opening hours..", self.class);
+        NSString *path = [[NSBundle mainBundle] pathForResource:@"OpeningHours" ofType:@"plist"];
+        _openingHours = [NSDictionary dictionaryWithContentsOfFile:path];
         
     }
     
     return _openingHours;
+    
+}
+
+- (NSMutableArray *)places {
+    
+    if(!_places) {
+        
+        _places = [[NSMutableArray alloc] init];
+        
+        NSLog(@"%@: reading places..", self.class);
+        NSString *path = [[NSBundle mainBundle] pathForResource:@"Places" ofType:@"plist"];
+        NSDictionary *places = [NSDictionary dictionaryWithContentsOfFile:path];
+        
+        for(NSString *identifier in places) {
+            
+            LKPlace *place = [[LKPlace alloc] initWithProperties:places[identifier]];
+            place.identifier = identifier;
+            
+            NSLog(@"%@", place);
+            
+            [_places addObject:place];
+            
+        }
+        
+    }
+    
+    return _places;
+    
+}
+
+- (NSMutableArray *)events {
+    
+    if(!_events) {
+        
+        _events = [[NSMutableArray alloc] init];
+        
+        NSLog(@"%@: reading events..", self.class);
+        NSString *path = [[NSBundle mainBundle] pathForResource:@"Events" ofType:@"plist"];
+        NSArray *events = [NSArray arrayWithContentsOfFile:path];
+        
+        for(NSDictionary *eventProperties in events) {
+            
+            LKEvent *event = [[LKEvent alloc] initWithProperties:eventProperties];
+            //add place object as well.
+            
+            [_events addObject:event];
+            
+        }
+        
+    }
+    
+    return _events;
+    
+}
+
+#pragma mark Misc
+
+- (NSString *)description {
+    
+    return [NSString stringWithFormat:@"This is %@ and we're opening at %@, at the moment we have %d events and %d places to see.", self.class, self.openingHours, [self.places count], [self.events count]];
     
 }
 
