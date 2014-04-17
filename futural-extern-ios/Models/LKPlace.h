@@ -51,4 +51,7 @@ typedef enum {
 
 - (LKPlace *)initWithProperties:(NSDictionary *)propertyList;
 
+- (UIImage *)imageForPlace;
++ (UIImage *)imageForCategory:(LKPlaceCategory)category;
+
 @end

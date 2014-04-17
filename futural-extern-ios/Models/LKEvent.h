@@ -9,10 +9,9 @@
 #import <Foundation/Foundation.h>
 #import "CoreLocation/CoreLocation.h"
 
-#import "LKSektion.h"
-#import "LKPlace.h"
-
 @interface LKEvent : NSObject
+
+@property (nonatomic) NSString *identifier; //must be unique, used if there's an image to the event.
 
 @property (nonatomic) NSString *name;
 @property (nonatomic) NSString *description; //description of the event.
@@ -34,5 +33,7 @@
 - (BOOL)isOver; //check if the event has already taken place.
 - (NSInteger)secondsLeft; //calculate how many seconds until the event is taking place (for use with push messages).
 - (NSString *)timeLeft; //return the time left until launch date, thought that we could use the following format dd:hh:mm (for use with views)
+
+- (UIImage *)imageForEvent;
 
 @end

@@ -9,8 +9,6 @@
 #import <UIKit/UIKit.h>
 #import "MapKit/MapKit.h"
 
-#import "LKarneval.h"
-
 @interface MapViewController : UIViewController <MKMapViewDelegate>
 
 @property (weak, nonatomic) IBOutlet MKMapView *mapView;

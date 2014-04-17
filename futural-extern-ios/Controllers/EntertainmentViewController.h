@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-#import "LKarneval.h"
-
 @interface EntertainmentViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
 
 @property (nonatomic) LKarneval *karneval;

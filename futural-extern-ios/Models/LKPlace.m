@@ -68,6 +68,12 @@
     
 }
 
+- (UIImage *)imageForPlace {
+    
+    return [self.class imageForCategory:self.category];
+    
+}
+
 #pragma mark Lazy Instantiation
 
 - (NSMutableArray *)paymentOptions {
@@ -92,7 +98,6 @@
 
 #pragma mark Class methods
 
-#warning Insufficient images, add more when possible.
 + (UIImage *)imageForCategory:(LKPlaceCategory)category {
  
     NSString *imageName;

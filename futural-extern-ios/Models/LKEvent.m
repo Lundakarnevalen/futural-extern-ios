@@ -16,6 +16,7 @@
     
     if(self) {
         
+        self.identifier = propertyList[@"identifier"];
         self.name = propertyList[@"name"];
         self.description = propertyList[@"description"];
         //add logic to read a property list containing all the information about the event.
@@ -44,6 +45,20 @@
     
     //return the time left until launch date, thought that we could use the following format dd:hh:mm (for use with views)
     return @"dd:hh:mm";
+    
+}
+
+- (UIImage *)imageForEvent {
+    
+    UIImage *eventImage = [UIImage imageNamed:self.identifier];
+    
+    if(!eventImage) {
+        
+        return [LKPlace imageForCategory:self.place.category];
+        
+    }
+    
+    return eventImage;
     
 }
 

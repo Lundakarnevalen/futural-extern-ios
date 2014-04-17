@@ -6,8 +6,6 @@
 //  Copyright (c) 2014 Lundakarnevalen. All rights reserved.
 //
 
-#import "LKarneval.h"
-
 #define PLIST_PLACES "Places"
 #define PLIST_EVENTS "Events"
 
