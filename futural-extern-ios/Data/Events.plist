@@ -19,6 +19,21 @@
 	</dict>
 	<dict>
 		<key>name</key>
+		<string>Orkesterkamp</string>
+		<key>description</key>
+		<string>Den storslagna kampen mellan årets orkestrar.</string>
+		<key>place</key>
+		<string>storascenen</string>
+		<key>date</key>
+		<dict>
+			<key>start</key>
+			<date>2014-04-16T12:30:00Z</date>
+			<key>end</key>
+			<date>2014-04-16T13:30:00Z</date>
+		</dict>
+	</dict>
+	<dict>
+		<key>name</key>
 		<string>Invigning</string>
 		<key>description</key>
 		<string>Futuralt awesome invigning av Lundakarnevalen 2014</string>
