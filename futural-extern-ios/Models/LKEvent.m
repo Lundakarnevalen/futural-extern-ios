@@ -19,6 +19,11 @@
         self.identifier = propertyList[@"identifier"];
         self.name = propertyList[@"name"];
         self.description = propertyList[@"description"];
+        
+        NSDictionary *dates = propertyList[@"date"];
+        self.start = [dates objectForKey:@"start"];
+        self.end = [dates objectForKey:@"end"];
+        
         //add logic to read a property list containing all the information about the event.
         
     }
@@ -45,6 +50,24 @@
     
     //return the time left until launch date, thought that we could use the following format dd:hh:mm (for use with views)
     return @"dd:hh:mm";
+    
+}
+
+- (NSString *)formattedStartTime {
+    
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setDateFormat:@"HH:mm"];
+    
+    return [dateFormatter stringFromDate:self.start];
+    
+}
+
+- (NSString *)formattedEndTime {
+    
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setDateFormat:@"HH:mm"];
+    
+    return [dateFormatter stringFromDate:self.end];
     
 }
 
