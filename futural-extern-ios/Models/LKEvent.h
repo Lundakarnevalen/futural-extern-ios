@@ -11,7 +11,7 @@
 
 @interface LKEvent : NSObject
 
-@property (nonatomic) NSString *identifier; //must be unique, used if there's an image to the event.
+@property (nonatomic) NSString *identifier; //does not have to be unique, but this is the string that connects the event to an image.
 
 @property (nonatomic) NSString *name;
 @property (nonatomic) NSString *description; //description of the event.
@@ -19,10 +19,6 @@
 
 @property (nonatomic) NSDate *start;
 @property (nonatomic) NSDate *end;
-//@property (nonatomic) LKSektion *host; //the sektion that is hosting the event.
-
-//@property (nonatomic, getter = isCancelled) BOOL cancelled; //if the event is cancelled.
-//@property (nonatomic) NSString *reason; //a message telling the user why it's cancelled.
 
 @property (nonatomic, getter = isFavorite) BOOL favorite; //if the user set the event as a favorite.
 
@@ -34,9 +30,11 @@
 - (NSInteger)secondsLeft; //calculate how many seconds until the event is taking place (for use with push messages).
 - (NSString *)timeLeft; //return the time left until launch date, thought that we could use the following format dd:hh:mm (for use with views)
 
+//the following are in HH:mm format.
 - (NSString *)formattedStartTime;
 - (NSString *)formattedEndTime;
 
+//if there's no event image, it will grab the LKPlace image instead.
 - (UIImage *)imageForEvent;
 
 @end

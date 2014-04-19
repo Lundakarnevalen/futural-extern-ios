@@ -39,6 +39,7 @@
     
     if(self) {
         
+        NSLog(@"favorites: %@", [self favoriteEvents]);
         //the loading of places and events is taking place inside of the getters.
         
     }
@@ -107,6 +108,8 @@
             
         }
         
+        //sort by time and remove events that are past time (method in the LKEvent model) *todo*.
+        
     }
     
     return _events;
@@ -114,6 +117,27 @@
 }
 
 #pragma mark Methods
+
+- (NSArray *)favoriteEvents {
+    
+    NSMutableArray *favorites;
+    
+    for(LKEvent *event in self.events) {
+        
+        if([event isFavorite]) {
+            
+            if(!favorites)
+                favorites = [[NSMutableArray alloc] init];
+            
+            [favorites addObject:event];
+            
+        }
+        
+    }
+    
+    return favorites;
+    
+}
 
 - (NSArray *)placesFilteredByCategories:(NSArray *)categories {
     

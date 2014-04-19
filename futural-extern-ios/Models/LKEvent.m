@@ -10,6 +10,8 @@
 
 @implementation LKEvent
 
+@synthesize favorite = _favorite;
+
 - (LKEvent *)initWithProperties:(NSDictionary *)propertyList {
     
     self = [super init];
@@ -36,6 +38,35 @@
     
     //check if the event has already taken place.
     return NO;
+    
+}
+
+- (BOOL)isFavorite {
+    
+    if(!_favorite) { //check the database
+        
+        _favorite = (BOOL)[[NSUserDefaults standardUserDefaults] boolForKey:[self dataIdentifier]];
+        
+        if(!_favorite)
+            _favorite = NO; //default if there's none in the database.
+        
+    }
+    
+    return _favorite;
+    
+}
+
+- (void)setFavorite:(BOOL)favorite {
+    
+    _favorite = favorite;
+    [[NSUserDefaults standardUserDefaults] setBool:favorite forKey:[self dataIdentifier]];
+    [[NSUserDefaults standardUserDefaults] synchronize]; //important, or there may be some slight delays.
+    
+}
+
+- (NSString *)dataIdentifier { //the identifier that connects this event to the event in the database.
+    
+    return [NSString stringWithFormat:@"%@ %@:%@", [self.name lowercaseString], [self formattedStartTime], [self formattedEndTime]];
     
 }
 

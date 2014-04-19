@@ -15,6 +15,7 @@
 #define TAG_IMAGE 3
 #define TAG_TIME_START 4
 #define TAG_TIME_END 5
+#define TAG_FAVORITE 6
 
 @implementation ScheduleViewController
 
@@ -48,16 +49,31 @@
     UILabel *timeStart = (UILabel *)[[cell contentView] viewWithTag:TAG_TIME_START];
     UILabel *timeEnd = (UILabel *)[[cell contentView] viewWithTag:TAG_TIME_END];
     UIImageView *image = (UIImageView *)[[cell contentView] viewWithTag:TAG_IMAGE];
+    UIButton *favorite = (UIButton *)[[cell contentView] viewWithTag:TAG_FAVORITE];
     
     headerName.text = [NSString stringWithFormat:@"%@", event.name];
     headerPlace.text = [NSString stringWithFormat:@"%@", [event.place.name uppercaseString]];
     
     timeStart.text = [NSString stringWithFormat:@"%@", [event formattedStartTime]];
     timeEnd.text = [NSString stringWithFormat:@"%@", [event formattedEndTime]];
-    
+
     [image setImage:[event imageForEvent]];
     
+    [favorite setSelected:event.favorite];
+    [favorite setTag:favorite.tag * indexPath.row]; //to solve the equation of which object that was favorited. (ugly, but working, solved by dividing the tag with 6 a.k.a TAG_FAVORITE).
+    [favorite addTarget:self action:@selector(favoriteEventAtRow:) forControlEvents:UIControlEventTouchDown];
+    
     return cell;
+    
+}
+
+- (void)favoriteEventAtRow:(UIButton *)sender {
+    
+    NSInteger row = sender.tag / TAG_FAVORITE;
+    LKEvent *event = [self.karneval.events objectAtIndex:row];
+    
+    event.favorite = ![event isFavorite];
+    [sender setSelected:[event isFavorite]];
     
 }
 
