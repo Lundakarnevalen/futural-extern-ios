@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "UIKit/UIKit.h"
 
 #import "LKPlace.h"
 #import "LKEvent.h"
@@ -20,6 +21,13 @@
 
 + (LKarneval *)sharedLKarneval; //USE THIS, it's stuffed with data about the karneval.
 
+//filter places, the filters will look like @[@(LKPlaceCategory), @(LKPlaceCategory)];
+- (NSArray *)placesExcludedByCategories:(NSArray *)categories;
+- (NSArray *)placesFilteredByCategories:(NSArray *)categories;
+
 - (NSArray *)eventsAtPlaceWithIdentifier:(NSString *)identifier; //get events associated with a place.
+- (NSArray *)favoriteEvents;
+
++ (NSArray *)LKPlaceFilterFood;
 
 @end

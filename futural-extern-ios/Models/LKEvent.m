@@ -10,14 +10,22 @@
 
 @implementation LKEvent
 
+@synthesize favorite = _favorite;
+
 - (LKEvent *)initWithProperties:(NSDictionary *)propertyList {
     
     self = [super init];
     
     if(self) {
         
+        self.identifier = propertyList[@"identifier"];
         self.name = propertyList[@"name"];
         self.description = propertyList[@"description"];
+        
+        NSDictionary *dates = propertyList[@"date"];
+        self.start = [dates objectForKey:@"start"];
+        self.end = [dates objectForKey:@"end"];
+        
         //add logic to read a property list containing all the information about the event.
         
     }
@@ -33,6 +41,35 @@
     
 }
 
+- (BOOL)isFavorite {
+    
+    if(!_favorite) { //check the database
+        
+        _favorite = (BOOL)[[NSUserDefaults standardUserDefaults] boolForKey:[self dataIdentifier]];
+        
+        if(!_favorite)
+            _favorite = NO; //default if there's none in the database.
+        
+    }
+    
+    return _favorite;
+    
+}
+
+- (void)setFavorite:(BOOL)favorite {
+    
+    _favorite = favorite;
+    [[NSUserDefaults standardUserDefaults] setBool:favorite forKey:[self dataIdentifier]];
+    [[NSUserDefaults standardUserDefaults] synchronize]; //important, or there may be some slight delays.
+    
+}
+
+- (NSString *)dataIdentifier { //the identifier that connects this event to the event in the database.
+    
+    return [NSString stringWithFormat:@"%@ %@:%@", [self.name lowercaseString], [self formattedStartTime], [self formattedEndTime]];
+    
+}
+
 - (NSInteger)secondsLeft {
     
     //calculate how many seconds until the event is taking place (for use with push messages).
@@ -44,6 +81,38 @@
     
     //return the time left until launch date, thought that we could use the following format dd:hh:mm (for use with views)
     return @"dd:hh:mm";
+    
+}
+
+- (NSString *)formattedStartTime {
+    
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setDateFormat:@"HH:mm"];
+    
+    return [dateFormatter stringFromDate:self.start];
+    
+}
+
+- (NSString *)formattedEndTime {
+    
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setDateFormat:@"HH:mm"];
+    
+    return [dateFormatter stringFromDate:self.end];
+    
+}
+
+- (UIImage *)imageForEvent {
+    
+    UIImage *eventImage = [UIImage imageNamed:self.identifier];
+    
+    if(!eventImage) {
+        
+        return [LKPlace imageForCategory:self.place.category];
+        
+    }
+    
+    return eventImage;
     
 }
 

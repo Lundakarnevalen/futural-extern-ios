@@ -3,6 +3,25 @@
 <plist version="1.0">
 <array>
 	<dict>
+		<key>identifier</key>
+		<string>linneahenriksson</string>
+		<key>name</key>
+		<string>Linnéa Henriksson</string>
+		<key>description</key>
+		<string>Linnea Henriksson stod strålkastarljuset redan som nioåring men det var först efter hennes medverkan i Idol 2010 som hon fick sina första fans. Solodebutalbumet Till min älskade och älskare med hitar som Lyckligare nu gavs ut 2012 och samma år blev Linnea framröstad som Årets Artist på P3 Guldgalan. Linnea är just nu aktuell med sitt andra soloalbum Du söker bråk, jag kräver dans där bland annat Kaah och Lilla Namo medverkar.</string>
+		<key>place</key>
+		<string>storascenen</string>
+		<key>date</key>
+		<dict>
+			<key>start</key>
+			<date>2014-04-17T19:00:00Z</date>
+			<key>end</key>
+			<date>2014-04-17T20:00:00Z</date>
+		</dict>
+	</dict>
+	<dict>
+		<key>identifier</key>
+		<string></string>
 		<key>name</key>
 		<string>Orkesterkamp</string>
 		<key>description</key>
@@ -18,6 +37,8 @@
 		</dict>
 	</dict>
 	<dict>
+		<key>identifier</key>
+		<string></string>
 		<key>name</key>
 		<string>Invigning</string>
 		<key>description</key>

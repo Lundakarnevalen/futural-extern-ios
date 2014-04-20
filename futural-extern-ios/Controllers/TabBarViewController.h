@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-#import "LKarneval.h"
-
 @interface TabBarViewController : UITabBarController
 
 //this class is handling the switching between tabs.

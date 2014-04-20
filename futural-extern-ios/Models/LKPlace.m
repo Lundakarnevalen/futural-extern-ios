@@ -68,6 +68,12 @@
     
 }
 
+- (UIImage *)imageForPlace {
+    
+    return [self.class imageForCategory:self.category];
+    
+}
+
 #pragma mark Lazy Instantiation
 
 - (NSMutableArray *)paymentOptions {
@@ -87,6 +93,84 @@
 - (NSString *)description {
     
     return [NSString stringWithFormat:@"This is %@ and I'm located at %f&%f, our payment options are %@", self.name, self.position.latitude, self.position.longitude, self.paymentOptions];
+    
+}
+
+#pragma mark Class methods
+
++ (UIImage *)imageForCategory:(LKPlaceCategory)category {
+ 
+    NSString *imageName;
+    
+    switch(category) {
+            
+        case LKPlaceCategoryATM:
+            
+            break;
+            
+        case LKPlaceCategoryBeverage:
+            
+            break;
+            
+        case LKPlaceCategoryChargingStation:
+            
+            break;
+            
+        case LKPlaceCategoryCoffee:
+            
+            break;
+            
+        case LKPlaceCategoryFirstAid:
+            
+            break;
+            
+        case LKPlaceCategoryFood:
+            
+            imageName = @"food";
+            
+            break;
+            
+        case LKPlaceCategoryLottery:
+            
+            break;
+            
+        case LKPlaceCategoryMinorEntertainment:
+            
+            break;
+            
+        case LKPlaceCategoryParking:
+            
+            break;
+            
+        case LKPlaceCategoryScene:
+            
+            break;
+            
+        case LKPlaceCategoryShop:
+            
+            break;
+            
+        case LKPlaceCategorySnacks:
+            
+            break;
+            
+        case LKPlaceCategoryTent:
+            
+            break;
+            
+        case LKPlaceCategoryToilet:
+            
+            break;
+            
+        default:
+            
+            imageName = @"unknown";
+            
+            break;
+            
+    }
+    
+    return [UIImage imageNamed:imageName];
     
 }
 
