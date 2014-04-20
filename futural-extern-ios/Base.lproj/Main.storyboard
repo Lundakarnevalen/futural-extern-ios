@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13C64" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="C1T-Qq-mO7">
     <dependencies>
-        <deployment defaultVersion="1536" identifier="iOS"/>
+        <deployment defaultVersion="1552" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <scenes>
@@ -65,6 +65,7 @@
                     <tabBarItem key="tabBarItem" title="Nöjen" image="entertainment-active" id="oWT-ta-sAF"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="dD9-Fk-TXg">
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </navigationBar>
                     <connections>
                         <segue destination="FJw-wY-yLT" kind="relationship" relationship="rootViewController" id="jRv-AT-Xdd"/>
@@ -185,19 +186,16 @@
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="100"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4yR-vY-c99">
+                                                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4yR-vY-c99">
                                                     <rect key="frame" x="70" y="0.0" width="4" height="100"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <color key="backgroundColor" red="0.47450983520000001" green="0.79215693470000004" blue="0.6784313917" alpha="1" colorSpace="deviceRGB"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="4" id="vPU-rC-JYF"/>
-                                                    </constraints>
                                                 </view>
                                                 <imageView userInteractionEnabled="NO" tag="3" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="linneahenriksson" translatesAutoresizingMaskIntoConstraints="NO" id="yBU-0Q-BFk">
                                                     <rect key="frame" x="40" y="18" width="64" height="64"/>
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                 </imageView>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="4" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="12:00" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UQG-94-wx5">
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="4" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="12:00" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UQG-94-wx5">
                                                     <rect key="frame" x="14" y="18" width="37" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="10"/>
@@ -218,7 +216,7 @@
                                                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="deviceRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="13:30" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tv3-Py-8bt">
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="13:30" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tv3-Py-8bt">
                                                     <rect key="frame" x="14" y="66" width="37" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="10"/>
@@ -234,12 +232,6 @@
                                                     <state key="selected" image="heart-filled"/>
                                                 </button>
                                             </subviews>
-                                            <constraints>
-                                                <constraint firstAttribute="bottom" secondItem="Tv3-Py-8bt" secondAttribute="bottom" constant="13" id="DPr-ox-hAo"/>
-                                                <constraint firstItem="4yR-vY-c99" firstAttribute="top" secondItem="Al2-GH-3Jy" secondAttribute="top" id="Ej4-hV-OhT"/>
-                                                <constraint firstAttribute="bottom" secondItem="4yR-vY-c99" secondAttribute="bottom" id="T6c-dF-JRv"/>
-                                                <constraint firstItem="UQG-94-wx5" firstAttribute="top" secondItem="Al2-GH-3Jy" secondAttribute="top" constant="18" id="e1L-az-Ghp"/>
-                                            </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.29803922770000002" green="0.31764706970000001" blue="0.42352944609999998" alpha="1" colorSpace="deviceRGB"/>
                                         <connections>
