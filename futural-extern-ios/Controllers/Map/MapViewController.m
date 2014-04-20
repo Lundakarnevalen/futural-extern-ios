@@ -19,7 +19,6 @@
 @property (nonatomic, strong) NSDictionary *filter;
 
 @property (strong, nonatomic) IBOutlet MKMapView *mapView;
-@property (strong, nonatomic) IBOutlet UIImageView *img;
 
 @end
 
@@ -54,10 +53,10 @@
     [self reloadAnnotations];
 }
 
-- (void)logMap {
-    CGPoint point = self.img.frame.origin;
+- (IBAction)mapViewClicked:(UITapGestureRecognizer *)sender {
+    CGPoint point = [sender locationInView:self.mapView];
     CLLocationCoordinate2D coord = [self.mapView convertPoint:point toCoordinateFromView:self.view];
-    NSLog(@"\nx:\t%f\ty:\t%f\nla:\t%f\tln:\t%f", point.x, point.y, coord.latitude, coord.longitude);
+    NSLog(@"\nx:\t%f\ty:\t%f\nla:\t%.20f\tln:\t%.20f", point.x, point.y, coord.latitude, coord.longitude);
 }
 
 - (IBAction)showMapButtonClicked:(id)sender {

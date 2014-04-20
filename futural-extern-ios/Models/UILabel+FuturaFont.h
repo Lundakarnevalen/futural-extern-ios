@@ -1,5 +1,5 @@
 //
-//  UILabel+Shadow+FuturaBoldFont.h
+//  UILabel+FuturaFont.h
 //  Lundakarnevalen
 //
 //  Created by Richard Luong on 2014-04-18.
@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "UILabel+FuturaFont.h"
 
-@interface UILabel_Shadow_FuturaBoldFont : UILabel_FuturaFont
+@interface UILabel_FuturaFont : UILabel
+
 @end

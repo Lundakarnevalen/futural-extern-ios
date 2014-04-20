@@ -1,20 +1,20 @@
 //
-//  UILabel+Shadow+FuturaBoldFont.m
+//  UIView+Shadow.m
 //  Lundakarnevalen
 //
 //  Created by Richard Luong on 2014-04-18.
 //  Copyright (c) 2014 Lundakarnevalen. All rights reserved.
 //
 
-#import "UILabel+Shadow+FuturaBoldFont.h"
+#import "UIView+Shadow.h"
 
-@implementation UILabel_Shadow_FuturaBoldFont
+@implementation UIView_Shadow
 
 // Only override drawRect: if you perform custom drawing.
 // An empty implementation adversely affects performance during animation.
 - (void)drawRect:(CGRect)rect
 {
-    //[self setBackgroundColor:[[UIColor whiteColor] colorWithAlphaComponent:0.2]];
+    // Drawing code
     [super drawRect:rect];
     
     CGFloat width = rect.size.width;
@@ -26,8 +26,6 @@
     shadow.backgroundColor = [UIColor blackColor];
     shadow.alpha = 0.4;
     [self addSubview:shadow];
-    
-    // Drawing code
 }
 
 

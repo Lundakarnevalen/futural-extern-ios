@@ -47,7 +47,12 @@ NSString *const FilterMapTableViewRowDidSelect             = @"FilterMapTableVie
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"FilterCell" forIndexPath:indexPath];
+    UITableViewCell *cell = nil;
+    if (indexPath.row != 3) {
+        cell = [tableView dequeueReusableCellWithIdentifier:@"FilterCell" forIndexPath:indexPath];
+    } else {
+        cell = [tableView dequeueReusableCellWithIdentifier:@"ShowEverythingCell" forIndexPath:indexPath];
+    }
     
     cell.backgroundColor = [UIColor clearColor];
     
@@ -57,7 +62,7 @@ NSString *const FilterMapTableViewRowDidSelect             = @"FilterMapTableVie
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:NO];
     UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
-    NSLog(@"Du klickade på en rad.");
+    NSLog(@"Du klickade på rad %d.", (int) indexPath.row);
 }
 
 @end

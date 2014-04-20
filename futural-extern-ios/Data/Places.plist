@@ -33,12 +33,72 @@
 		<key>position</key>
 		<dict>
 			<key>longitude</key>
-			<real>13.193764</real>
+			<real>13.19365336887898</real>
 			<key>latitude</key>
-			<real>55.705703</real>
+			<real>55.70558532232642</real>
 		</dict>
 		<key>alcohol</key>
 		<false/>
+		<key>payment_options</key>
+		<array/>
+	</dict>
+	<key>cirkus</key>
+	<dict>
+		<key>name</key>
+		<string>Cirkusen</string>
+		<key>description</key>
+		<string>Lorem Ipsum</string>
+		<key>category</key>
+		<integer>4</integer>
+		<key>position</key>
+		<dict>
+			<key>longitude</key>
+			<real>13.19537105245979</real>
+			<key>latitude</key>
+			<real>55.7047557721988</real>
+		</dict>
+		<key>alcohol</key>
+		<false/>
+		<key>payment_options</key>
+		<array/>
+	</dict>
+	<key>shoppen</key>
+	<dict>
+		<key>name</key>
+		<string>Shoppen</string>
+		<key>description</key>
+		<string>Lorem Ipsum</string>
+		<key>category</key>
+		<integer>9</integer>
+		<key>position</key>
+		<dict>
+			<key>longitude</key>
+			<real>13.19512260551833</real>
+			<key>latitude</key>
+			<real>55.70557904967363</real>
+		</dict>
+		<key>alcohol</key>
+		<false/>
+		<key>payment_options</key>
+		<array/>
+	</dict>
+	<key>krog_undervatten</key>
+	<dict>
+		<key>name</key>
+		<string>Krog Undervatten</string>
+		<key>description</key>
+		<string>Lorem Ipsum</string>
+		<key>category</key>
+		<integer>2</integer>
+		<key>position</key>
+		<dict>
+			<key>longitude</key>
+			<real>13.19467199442641</real>
+			<key>latitude</key>
+			<real>55.70508561404364</real>
+		</dict>
+		<key>alcohol</key>
+		<true/>
 		<key>payment_options</key>
 		<array/>
 	</dict>
