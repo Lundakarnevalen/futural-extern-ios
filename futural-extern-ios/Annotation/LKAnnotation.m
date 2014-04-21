@@ -18,8 +18,8 @@
     self = [super init];
     if (self) {
         coordinate = place.position;
-        title = [place.name uppercaseString];
-        //self.image = place.image;
+        title = place.name;
+        self.image = [place imageForAnnotation];
     }
     return self;
 }

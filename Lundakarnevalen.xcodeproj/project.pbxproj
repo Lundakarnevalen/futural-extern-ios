@@ -31,6 +31,7 @@
 		1AE8E56118F42FB50078EBDF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AE8E56018F42FB50078EBDF /* main.m */; };
 		1AE8E56518F42FB50078EBDF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AE8E56418F42FB50078EBDF /* AppDelegate.m */; };
 		1AE8E56818F42FB50078EBDF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1AE8E56618F42FB50078EBDF /* Main.storyboard */; };
+		1AF152C819059592006F2896 /* Places.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1AF152C719059591006F2896 /* Places.plist */; };
 		5722E91018FD72F500BEE3A2 /* LKPlace.m in Sources */ = {isa = PBXBuildFile; fileRef = 5722E90F18FD72F500BEE3A2 /* LKPlace.m */; };
 		5722E91618FD7C3600BEE3A2 /* TabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5722E91518FD7C3600BEE3A2 /* TabBarViewController.m */; };
 		5722E91C18FD7DF300BEE3A2 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5722E91B18FD7DF300BEE3A2 /* MapKit.framework */; };
@@ -39,7 +40,6 @@
 		57407D1718FD2B1A0003F787 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57407D1618FD2B1A0003F787 /* CoreLocation.framework */; };
 		57407D1A18FD2B5C0003F787 /* LKSektion.m in Sources */ = {isa = PBXBuildFile; fileRef = 57407D1918FD2B5C0003F787 /* LKSektion.m */; };
 		57407D1D18FD2F110003F787 /* LKarnevalist.m in Sources */ = {isa = PBXBuildFile; fileRef = 57407D1C18FD2F110003F787 /* LKarnevalist.m */; };
-		575C949D18FE7F0000A341EE /* Places.plist in Resources */ = {isa = PBXBuildFile; fileRef = 575C949C18FE7F0000A341EE /* Places.plist */; };
 		575C949F18FE7F3D00A341EE /* Events.plist in Resources */ = {isa = PBXBuildFile; fileRef = 575C949E18FE7F3D00A341EE /* Events.plist */; };
 		575C94A318FE838E00A341EE /* TabBar.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 575C94A218FE838E00A341EE /* TabBar.xcassets */; };
 		575C94AF18FE90D900A341EE /* robothead.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 575C94AD18FE90D900A341EE /* robothead.ttf */; };
@@ -98,6 +98,7 @@
 		1AE8E56418F42FB50078EBDF /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = AppDelegate.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		1AE8E56718F42FB50078EBDF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1AE8E57318F42FB50078EBDF /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		1AF152C719059591006F2896 /* Places.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Places.plist; sourceTree = "<group>"; };
 		5722E90E18FD72F500BEE3A2 /* LKPlace.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; name = LKPlace.h; path = Models/LKPlace.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		5722E90F18FD72F500BEE3A2 /* LKPlace.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; name = LKPlace.m; path = Models/LKPlace.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		5722E91418FD7C3600BEE3A2 /* TabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; name = TabBarViewController.h; path = Controllers/TabBarViewController.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
@@ -114,7 +115,6 @@
 		57407D1918FD2B5C0003F787 /* LKSektion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; name = LKSektion.m; path = Models/LKSektion.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		57407D1B18FD2F110003F787 /* LKarnevalist.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; name = LKarnevalist.h; path = Models/LKarnevalist.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		57407D1C18FD2F110003F787 /* LKarnevalist.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; name = LKarnevalist.m; path = Models/LKarnevalist.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
-		575C949C18FE7F0000A341EE /* Places.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Places.plist; path = Data/Places.plist; sourceTree = "<group>"; };
 		575C949E18FE7F3D00A341EE /* Events.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Events.plist; path = Data/Events.plist; sourceTree = "<group>"; };
 		575C94A218FE838E00A341EE /* TabBar.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = TabBar.xcassets; path = Data/Sprites/TabBar.xcassets; sourceTree = "<group>"; };
 		575C94AD18FE90D900A341EE /* robothead.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = robothead.ttf; path = Data/Typefaces/robothead.ttf; sourceTree = "<group>"; };
@@ -386,7 +386,7 @@
 				575C94A818FE8D0000A341EE /* Typefaces */,
 				575C94A118FE835400A341EE /* Sprites */,
 				576EA12E18FDD8F300D4166D /* OpeningHours.plist */,
-				575C949C18FE7F0000A341EE /* Places.plist */,
+				1AF152C719059591006F2896 /* Places.plist */,
 				575C949E18FE7F3D00A341EE /* Events.plist */,
 			);
 			name = Data;
@@ -445,15 +445,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				1ABFF6E319002BBB00C575EE /* LKAnnotation.xib in Resources */,
+				1AF152C819059592006F2896 /* Places.plist in Resources */,
 				1ABFF7031900887F00C575EE /* FuturaLT-Bold.ttf in Resources */,
 				575C949F18FE7F3D00A341EE /* Events.plist in Resources */,
 				57DB443E190291D0009C3D37 /* Schedule.xcassets in Resources */,
 				578929C91900839A002AA116 /* Events.xcassets in Resources */,
 				575C94AF18FE90D900A341EE /* robothead.ttf in Resources */,
 				1ABFF6E919002DD100C575EE /* Images.xcassets in Resources */,
+				578929C519007BD4002AA116 /* PlaceCategories.xcassets in Resources */,
 				576EA12F18FDD8F300D4166D /* OpeningHours.plist in Resources */,
 				1AE8E55F18F42FB50078EBDF /* InfoPlist.strings in Resources */,
-				575C949D18FE7F0000A341EE /* Places.plist in Resources */,
 				1AE8E56818F42FB50078EBDF /* Main.storyboard in Resources */,
 				575C94A318FE838E00A341EE /* TabBar.xcassets in Resources */,
 				1A7DA8A318FF06C70025C677 /* App.xcassets in Resources */,
@@ -474,6 +475,7 @@
 				1AE8E56518F42FB50078EBDF /* AppDelegate.m in Sources */,
 				57407D1D18FD2F110003F787 /* LKarnevalist.m in Sources */,
 				1ABFF6E219002BBB00C575EE /* LKAnnotation.m in Sources */,
+				57B2F29E1901A54600CE1EAE /* ScheduleNavigationViewController.m in Sources */,
 				5722E91618FD7C3600BEE3A2 /* TabBarViewController.m in Sources */,
 				575C94BF18FED04F00A341EE /* EntertainmentNavigationViewController.m in Sources */,
 				1ABFF6E719002BDD00C575EE /* MapViewController.m in Sources */,

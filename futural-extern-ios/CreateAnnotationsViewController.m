@@ -7,7 +7,7 @@
 //
 
 #import "CreateAnnotationsViewController.h"
-#import "SkaneAnnotation.h"
+#import "LKAnnotation.h"
 
 @interface CreateAnnotationsViewController ()
 
@@ -17,8 +17,12 @@
 @property (weak, nonatomic) IBOutlet UITextField *latTextField;
 @property (weak, nonatomic) IBOutlet UITextField *lngTextField;
 @property (weak, nonatomic) IBOutlet UITextField *titleTextField;
-@property (weak, nonatomic) IBOutlet UITextField *subtitleTextField;
 @property (weak, nonatomic) IBOutlet UITextField *imageTextField;
+@property (weak, nonatomic) IBOutlet UITextField *aimgTextField;
+@property (weak, nonatomic) IBOutlet UITextField *descTextField;
+@property (weak, nonatomic) IBOutlet UITextField *catTextField;
+@property (weak, nonatomic) IBOutlet UITextField *alcoholTextField;
+
 
 @end
 
@@ -36,26 +40,42 @@
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 - (IBAction)doneButtonPressed:(id)sender {
-    NSDictionary *coord = [[NSDictionary alloc] initWithObjectsAndKeys:self.latTextField.text, @"lat", self.lngTextField.text, @"lng", nil];
-    NSDictionary *anno = [[NSDictionary alloc] initWithObjectsAndKeys:
-                          self.titleTextField.text, @"title",
-                          self.subtitleTextField.text, @"subtitle",
-                          self.imageTextField.text, @"image",
-                          coord, @"coordinates",
+    NSDictionary *position = [[NSDictionary alloc] initWithObjectsAndKeys:[NSNumber numberWithFloat:[self.latTextField.text floatValue]], @"latitude", [NSNumber numberWithFloat:[self.lngTextField.text floatValue]], @"longitude", nil];
+    NSString *title = self.titleTextField.text;
+    NSString *image = self.imageTextField.text;
+    NSString *aimg = self.aimgTextField.text;
+    NSString *desc = self.descTextField.text;
+    NSNumber *category = [NSNumber numberWithInt:[self.catTextField.text integerValue]];
+    NSNumber *alcohol = [NSNumber numberWithBool:[self.alcoholTextField.text boolValue]];
+    NSArray *pay = [[NSArray alloc] init];
+    
+    NSDictionary *place = [[NSDictionary alloc] initWithObjectsAndKeys:
+                           title, @"name",
+                           image, @"image",
+                           aimg, @"annotation_image",
+                           desc, @"description",
+                           category, @"category",
+                           pay, @"payment_options",
+                           alcohol, @"alcohol",
+                           position, @"position",
                           nil];
     
-    NSString *path = [[NSBundle mainBundle] pathForResource:@"annotations" ofType:@"plist"];
+    for (id key in place) {
+        NSLog(@"key: %@, value: %@ \n", key, [place objectForKey:key]);
+    }
+
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"Places" ofType:@"plist"];
     NSString *docsFolder = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)[0];
     
-    NSMutableArray *array = nil;
-    NSString *docsPath = [docsFolder stringByAppendingString:@"/annotations.plist"];
+    NSMutableDictionary *array = nil;
+    NSString *docsPath = [docsFolder stringByAppendingString:@"/Places.plist"];
     if ([[NSFileManager defaultManager] fileExistsAtPath:docsPath]) {
-        array = [NSMutableArray arrayWithContentsOfFile:docsPath];
+        array = [NSMutableDictionary dictionaryWithContentsOfFile:docsPath];
     } else {
-        array = [NSMutableArray arrayWithContentsOfFile:path];
+        array = [NSMutableDictionary dictionaryWithContentsOfFile:path];
     }
     
-    [array addObject:anno];
+    [array setObject:place forKey:[title lowercaseString]];
     
     NSLog(@"%d", [array writeToFile:docsPath atomically:YES]);
     [self dismissViewControllerAnimated:YES completion:nil];
@@ -67,8 +87,8 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    self.latTextField.text = [NSString stringWithFormat:@"%f", self.lat];
-    self.lngTextField.text = [NSString stringWithFormat:@"%f", self.lng];
+    self.latTextField.text = [NSString stringWithFormat:@"%.20f", self.lat];
+    self.lngTextField.text = [NSString stringWithFormat:@"%.20f", self.lng];
 }
 
 - (void)didReceiveMemoryWarning

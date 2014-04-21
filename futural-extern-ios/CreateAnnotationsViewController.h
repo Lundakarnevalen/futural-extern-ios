@@ -6,9 +6,9 @@
 //  Copyright (c) 2014 Richard Luong. All rights reserved.
 //
 
-#import "ViewController.h"
+#import <UIKit/UIKit.h>
 
-@interface CreateAnnotationsViewController : ViewController
+@interface CreateAnnotationsViewController : UIViewController
 
 @property (nonatomic) CGFloat lat;
 @property (nonatomic) CGFloat lng;

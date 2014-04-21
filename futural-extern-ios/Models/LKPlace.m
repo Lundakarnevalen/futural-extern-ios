@@ -21,6 +21,8 @@
         self.description = propertyList[@"description"];
         self.category = [propertyList[@"category"] integerValue];
         self.alcohol = [propertyList[@"alcohol"] boolValue];
+        self.image = [UIImage imageNamed:propertyList[@"image"]];
+        self.annotationImage = [UIImage imageNamed:propertyList[@"annotation_image"]];
         
         for(NSString *option in propertyList[@"payment_options"]) {
             
@@ -70,8 +72,20 @@
 
 - (UIImage *)imageForPlace {
     
-    return [self.class imageForCategory:self.category];
+    if (self.image) {
+        return self.image;
+    } else {
+        return [self.class imageForCategory:self.category];
+    }
+}
+
+- (UIImage *)imageForAnnotation {
     
+    if (self.annotationImage) {
+        return self.annotationImage;
+    } else {
+        return [self.class imageForCategory:self.category];
+    }
 }
 
 #pragma mark Lazy Instantiation
@@ -126,7 +140,7 @@
             
         case LKPlaceCategoryFood:
             
-            imageName = @"food";
+            imageName = @"hamburger-drink";
             
             break;
             

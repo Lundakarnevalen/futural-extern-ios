@@ -42,6 +42,8 @@ typedef enum {
 @property (nonatomic) NSString *identifier; //has to be different from the other places.
 @property (nonatomic) NSString *name;
 @property (nonatomic) NSString *description;
+@property (nonatomic) UIImage *image;
+@property (nonatomic) UIImage *annotationImage;
 
 @property (nonatomic) LKPlaceCategory category;
 @property (nonatomic) CLLocationCoordinate2D position;
@@ -51,7 +53,8 @@ typedef enum {
 
 - (LKPlace *)initWithProperties:(NSDictionary *)propertyList;
 
-- (UIImage *)imageForPlace;
+- (UIImage *)image;
+- (UIImage *)imageForAnnotation;
 + (UIImage *)imageForCategory:(LKPlaceCategory)category;
 
 @end

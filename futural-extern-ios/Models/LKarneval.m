@@ -9,6 +9,8 @@
 #define PLIST_PLACES "Places"
 #define PLIST_EVENTS "Events"
 
+const int NumberOfFilters = 2;
+
 @implementation LKarneval
 
 #pragma mark Singleton
@@ -71,8 +73,20 @@
         _places = [[NSMutableArray alloc] init];
         
         NSLog(@"%@: reading places..", self.class);
+        
+        
+        
         NSString *path = [[NSBundle mainBundle] pathForResource:@"Places" ofType:@"plist"];
-        NSDictionary *places = [NSDictionary dictionaryWithContentsOfFile:path];
+        NSDictionary *places;
+        
+        NSString *docsFolder = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)[0];
+        NSString *docsPath = [docsFolder stringByAppendingString:@"/Places.plist"];
+        // checks if file exists at the documents path, if so it takes the file, otherwise it takes the paht of the bundle.
+        if ([[NSFileManager defaultManager] fileExistsAtPath:docsPath]) {
+            places = [NSDictionary dictionaryWithContentsOfFile:docsPath];
+        } else {
+            places = [NSDictionary dictionaryWithContentsOfFile:path];
+        }
         
         for(NSString *identifier in places) { //dictionary enumerates with the key (NSString).
             

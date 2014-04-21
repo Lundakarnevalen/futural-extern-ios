@@ -14,9 +14,12 @@
 #import "LKOverlay.h"
 #import "LKOverlayRenderer.h"
 
+#import "MapFilterViewController.h"
+#import "CreateAnnotationsViewController.h"
+
 @interface MapViewController ()
 
-@property (nonatomic, strong) NSDictionary *filter;
+@property (nonatomic, strong) NSMutableDictionary *filter;
 
 @property (strong, nonatomic) IBOutlet MKMapView *mapView;
 
@@ -38,6 +41,8 @@
     self.mapView.region = MKCoordinateRegionMake(
                                              CLLocationCoordinate2DMake(55.705282871899165, 13.194099413861689),
                                              MKCoordinateSpanMake(0.0048452481526979341, 0.0081815629812922452));
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(filterMapTableViewRowDidSelect:) name:FilterMapTableViewRowDidSelect object:nil];
 
     
 }
@@ -53,14 +58,39 @@
     [self reloadAnnotations];
 }
 
+-(void)filterMapTableViewRowDidSelect:(NSNotification *)notification {
+    [self reloadAnnotations];
+    NSLog(@"Filter row selected.");
+}
+
 - (IBAction)mapViewClicked:(UITapGestureRecognizer *)sender {
     CGPoint point = [sender locationInView:self.mapView];
     CLLocationCoordinate2D coord = [self.mapView convertPoint:point toCoordinateFromView:self.view];
     NSLog(@"\nx:\t%f\ty:\t%f\nla:\t%.20f\tln:\t%.20f", point.x, point.y, coord.latitude, coord.longitude);
+    CLLocation *location = [[CLLocation alloc] initWithLatitude:coord.latitude longitude:coord.longitude];
+    [self performSegueWithIdentifier:@"createAnnotationSegue" sender:location];
 }
 
 - (IBAction)showMapButtonClicked:(id)sender {
     [self.slidingViewController anchorTopViewTo:ECLeft];
+}
+
+// This will get called too before the view appears
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([[segue identifier] isEqualToString:@"toDetailedViewSegue"]) {
+//        // Get destination view
+//        DetailedAnnotationViewController *vc = [segue destinationViewController];
+//        
+//        // Pass the information to your destination view
+//        vc.title = ((SkaneAnnotation *)sender).title;
+    } else if ([[segue identifier] isEqualToString:@"createAnnotationSegue"]) {
+        CreateAnnotationsViewController *vc = [segue destinationViewController];
+        
+        // Pass the information to your destination view
+        vc.lat = ((CLLocation *)sender).coordinate.latitude;
+        vc.lng = ((CLLocation *)sender).coordinate.longitude;
+    }
 }
 
 -(void)reloadAnnotations {
@@ -85,8 +115,26 @@
 //    }
     
     LKarneval *karneval = [LKarneval sharedLKarneval];
+    NSMutableArray *places = [[NSMutableArray alloc] init];
+    [self.mapView removeAnnotations:[self.mapView annotations]];
     
-    for (LKPlace *place in karneval.places) {
+    self.filter = (NSMutableDictionary *)[[NSUserDefaults standardUserDefaults] dictionaryForKey:@"filter"];
+    if (!self.filter) {
+        self.filter = [[NSMutableDictionary alloc] init];
+        [self.filter setValue:[NSNumber numberWithBool:YES] forKey:@"food"];
+        [self.filter setValue:[NSNumber numberWithBool:YES] forKey:@"entertainment"];
+        [[NSUserDefaults standardUserDefaults] setObject:self.filter forKey:@"filter"];
+    }
+    
+    if ([self.filter[@"food"] boolValue]) {
+        [places addObjectsFromArray:[LKarneval LKPlaceFilterFood]];
+    }
+    
+    if ([self.filter[@"entertainment"] boolValue]) {
+        [places addObjectsFromArray:[LKarneval LKPlaceFilterEntertainment]];
+    }
+    
+    for (LKPlace *place in [karneval placesFilteredByCategories:places]) {
         LKAnnotation *anno = [[LKAnnotation alloc] initWithPlace:place];
         [self.mapView addAnnotation:anno];
     }

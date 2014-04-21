@@ -19,6 +19,8 @@
 
 @property (nonatomic) NSDictionary *openingHours;
 
+extern const int NumberOfFilters;
+
 + (LKarneval *)sharedLKarneval; //USE THIS, it's stuffed with data about the karneval.
 
 //filter places, the filters will look like @[@(LKPlaceCategory), @(LKPlaceCategory)];
@@ -29,5 +31,6 @@
 - (NSArray *)favoriteEvents;
 
 + (NSArray *)LKPlaceFilterFood;
++ (NSArray *)LKPlaceFilterEntertainment;
 
 @end
