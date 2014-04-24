@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
+#import "LKButton.h"
+#import "LKColor.h"
+
 @interface FoodViewController : UIViewController
+@property (weak, nonatomic) IBOutlet LKButton *circleButton;
 
 @end
