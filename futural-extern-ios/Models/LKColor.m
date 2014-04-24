@@ -65,17 +65,4 @@
     
 }
 
-+ (void)customizeNavigationBar:(UINavigationBar *)navigationBar {
-    
-    NSDictionary *textAttributes = @{
-                                     NSForegroundColorAttributeName : [UIColor whiteColor],
-                                     NSFontAttributeName : [UIFont fontWithName:@"Futura-Bold" size:18]
-                                     };
-    
-    [navigationBar setTranslucent:NO];
-    [navigationBar setBarTintColor:[self colorWithIdentifier:LKColorRed]];
-    [navigationBar setTitleTextAttributes:textAttributes];
-    
-}
-
 @end

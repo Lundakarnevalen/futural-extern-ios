@@ -53,5 +53,124 @@
 			<date>2014-04-16T12:00:00Z</date>
 		</dict>
 	</dict>
+	<dict>
+		<key>identifier</key>
+		<string></string>
+		<key>name</key>
+		<string>Invigning</string>
+		<key>description</key>
+		<string>Futuralt awesome invigning av Lundakarnevalen 2014</string>
+		<key>place</key>
+		<string>storascenen</string>
+		<key>date</key>
+		<dict>
+			<key>start</key>
+			<date>2014-04-16T11:00:00Z</date>
+			<key>end</key>
+			<date>2014-04-16T12:00:00Z</date>
+		</dict>
+	</dict>
+	<dict>
+		<key>identifier</key>
+		<string></string>
+		<key>name</key>
+		<string>Invigning</string>
+		<key>description</key>
+		<string>Futuralt awesome invigning av Lundakarnevalen 2014</string>
+		<key>place</key>
+		<string>storascenen</string>
+		<key>date</key>
+		<dict>
+			<key>start</key>
+			<date>2014-04-16T11:00:00Z</date>
+			<key>end</key>
+			<date>2014-04-16T12:00:00Z</date>
+		</dict>
+	</dict>
+	<dict>
+		<key>identifier</key>
+		<string></string>
+		<key>name</key>
+		<string>Invigning</string>
+		<key>description</key>
+		<string>Futuralt awesome invigning av Lundakarnevalen 2014</string>
+		<key>place</key>
+		<string>storascenen</string>
+		<key>date</key>
+		<dict>
+			<key>start</key>
+			<date>2014-04-16T11:00:00Z</date>
+			<key>end</key>
+			<date>2014-04-16T12:00:00Z</date>
+		</dict>
+	</dict>
+	<dict>
+		<key>identifier</key>
+		<string></string>
+		<key>name</key>
+		<string>Invigning</string>
+		<key>description</key>
+		<string>Futuralt awesome invigning av Lundakarnevalen 2014</string>
+		<key>place</key>
+		<string>storascenen</string>
+		<key>date</key>
+		<dict>
+			<key>start</key>
+			<date>2014-04-16T11:00:00Z</date>
+			<key>end</key>
+			<date>2014-04-16T12:00:00Z</date>
+		</dict>
+	</dict>
+	<dict>
+		<key>identifier</key>
+		<string></string>
+		<key>name</key>
+		<string>Invigning</string>
+		<key>description</key>
+		<string>Futuralt awesome invigning av Lundakarnevalen 2014</string>
+		<key>place</key>
+		<string>storascenen</string>
+		<key>date</key>
+		<dict>
+			<key>start</key>
+			<date>2014-04-16T11:00:00Z</date>
+			<key>end</key>
+			<date>2014-04-16T12:00:00Z</date>
+		</dict>
+	</dict>
+	<dict>
+		<key>identifier</key>
+		<string></string>
+		<key>name</key>
+		<string>Invigning</string>
+		<key>description</key>
+		<string>Futuralt awesome invigning av Lundakarnevalen 2014</string>
+		<key>place</key>
+		<string>storascenen</string>
+		<key>date</key>
+		<dict>
+			<key>start</key>
+			<date>2014-04-16T11:00:00Z</date>
+			<key>end</key>
+			<date>2014-04-16T12:00:00Z</date>
+		</dict>
+	</dict>
+	<dict>
+		<key>identifier</key>
+		<string></string>
+		<key>name</key>
+		<string>Invigning</string>
+		<key>description</key>
+		<string>Futuralt awesome invigning av Lundakarnevalen 2014</string>
+		<key>place</key>
+		<string>storascenen</string>
+		<key>date</key>
+		<dict>
+			<key>start</key>
+			<date>2014-04-16T11:00:00Z</date>
+			<key>end</key>
+			<date>2014-04-16T12:00:00Z</date>
+		</dict>
+	</dict>
 </array>
 </plist>

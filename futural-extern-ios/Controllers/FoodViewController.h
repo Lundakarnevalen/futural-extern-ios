@@ -10,8 +10,13 @@
 
 #import "LKButton.h"
 #import "LKColor.h"
+#import "LKGrid.h"
 
 @interface FoodViewController : UIViewController
-@property (weak, nonatomic) IBOutlet LKButton *circleButton;
+
+@property (nonatomic) LKGrid *grid;
+@property (nonatomic) LKarneval *karneval;
+
+@property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 
 @end

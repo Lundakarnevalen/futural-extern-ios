@@ -21,8 +21,6 @@
     
     [self setSelectedIndex:TAB_INDEX_DEFAULT]; //switch to map.
     
-    NSLog(@"%@", self.karneval);
-    
 }
 
 - (void)customizeTabBar {
@@ -45,7 +43,7 @@
     
     [self.tabBar setBarTintColor:[LKColor colorWithIdentifier:LKColorRed]];
     
-    for(UITabBarItem *item in self.tabBar.items) {
+    for(UITabBarItem *item in self.tabBar.items) { //set active and standby icons.
         
         item.title = [item.title uppercaseString];
         
@@ -63,18 +61,6 @@
         }
         
     }
-    
-}
-
-- (LKarneval *)karneval {
-    
-    if(!_karneval) {
-        
-        _karneval = [LKarneval sharedLKarneval];
-        
-    }
-    
-    return _karneval;
     
 }
 

@@ -1,19 +1,19 @@
 //
-//  EntertainmentViewController.m
+//  MiscellaneousViewController.m
 //  Lundakarnevalen
 //
 //  Created by Victor Ingman on 2014-04-24.
 //  Copyright (c) 2014 Lundakarnevalen. All rights reserved.
 //
 
-#import "EntertainmentViewController.h"
+#import "MiscellaneousViewController.h"
 
-@implementation EntertainmentViewController
+@implementation MiscellaneousViewController
 
 - (void)viewDidLoad {
     
     [super viewDidLoad];
-    
+
 }
 
 @end

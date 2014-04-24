@@ -1,5 +1,5 @@
 //
-//  EntertainmentViewController.h
+//  NavigationViewController.h
 //  Lundakarnevalen
 //
 //  Created by Victor Ingman on 2014-04-24.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface EntertainmentViewController : UIViewController
+@interface NavigationViewController : UINavigationController
 
 @end
