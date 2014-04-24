@@ -10,6 +10,8 @@
 
 @interface LKButton : UIButton
 
+@property (nonatomic) UIImage *backgroundImage;
+
 - (void)drawCircleButton:(UIColor *)color;
 
 @end

@@ -60,7 +60,23 @@
 
 - (CGSize)contentSize {
     
-    return CGSizeMake(self.frame.size.width, self.frame.size.height * 2); //fix
+    NSInteger height = 0;
+    NSInteger rows = (NSInteger) (([self.cells count] / COUNT_COLUMNS) + 0.5);
+    
+    for(LKCell *cell in self.cells) {
+        
+        height += (cell.size.height + SPACING_ROW);
+        
+    }
+    
+    height /= COUNT_COLUMNS;
+    height += SPACING_ROW;
+    
+    CGSize size;
+    size.width = self.frame.size.width;
+    size.height = height;
+    
+    return size;
     
 }
 

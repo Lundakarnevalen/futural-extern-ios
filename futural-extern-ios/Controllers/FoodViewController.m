@@ -9,6 +9,7 @@
 #import "FoodViewController.h"
 
 #define RADIUS_DEFAULT 80
+#define FONT_SIZE 12
 
 @implementation FoodViewController
 
@@ -16,21 +17,13 @@
     
     [super viewDidLoad];
     
-    [self resetScrollView];
     [self renderGrid];
-    //[self.circleButton drawCircleButton:[LKColor colorWithIdentifier:LKColorGreen]];
-    
-}
-
-- (void)resetScrollView { //remove prototypes.
-    
-    for(UIView *subview in [self.scrollView subviews]) {
-        [subview removeFromSuperview];
-    }
     
 }
 
 - (NSMutableArray *)cells {
+    
+    //filter food only.
     
     NSMutableArray *cells = [[NSMutableArray alloc] init];
     
@@ -50,15 +43,40 @@
     UIColor *strokeColor = [LKColor colorWithIdentifier:LKColorGreen];
     [self.scrollView setContentSize:[self.grid contentSize]];
     
-    for(LKCell *cell in self.grid.cells) {
+    [self.grid.cells enumerateObjectsUsingBlock:^(id object, NSUInteger index, BOOL *stop) {
+       
+        LKCell *cell = (LKCell *)object;
+        LKEvent *event = [self.karneval.events objectAtIndex:index];
         
+        //BUTTON
         LKButton *button = [[LKButton alloc] init];
         button.frame = CGRectMake(cell.position.x, cell.position.y, cell.size.width, cell.size.height);
+        button.backgroundImage = [event imageForEvent];
         [button drawCircleButton:strokeColor];
         
-        [self.scrollView addSubview:button];
+        //LABEL
+        CGSize titleSize;
+        titleSize.width = RADIUS_DEFAULT;
+        titleSize.height = FONT_SIZE;
         
-    }
+        CGPoint titlePosition;
+        titlePosition.x = cell.position.x;
+        titlePosition.y = cell.position.y + (RADIUS_DEFAULT / 0.9);
+        
+        CGRect titleFrame;
+        titleFrame.origin = titlePosition;
+        titleFrame.size = titleSize;
+        
+        UILabel *title = [[UILabel alloc] initWithFrame:titleFrame];
+        title.font = [UIFont fontWithName:@"Futura-Bold" size:FONT_SIZE];
+        title.textColor = [UIColor whiteColor];
+        title.textAlignment = NSTextAlignmentCenter;
+        title.text = [event.name uppercaseString];
+        
+        [self.scrollView addSubview:button];
+        [self.scrollView addSubview:title];
+        
+    }];
     
 }
 

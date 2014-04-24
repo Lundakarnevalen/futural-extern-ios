@@ -29,8 +29,7 @@
     [self.layer setMasksToBounds:YES]; //crops the image.
     [self.layer setBorderWidth:STROKE_DEFAULT];
     [self.layer setBorderColor:color.CGColor];
-    
-    [self setImage:[[[[LKarneval sharedLKarneval] events] firstObject] imageForEvent] forState:UIControlStateNormal];
+    [self setImage:self.backgroundImage forState:UIControlStateNormal];
 
 }
 
