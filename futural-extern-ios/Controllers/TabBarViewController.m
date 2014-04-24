@@ -43,6 +43,8 @@
     [[UITabBarItem appearance] setTitleTextAttributes:selectedProperties forState:UIControlStateSelected];
     [[UITabBarItem appearance] setTitleTextAttributes:normalProperties forState:UIControlStateNormal];
     
+    [self.tabBar setBarTintColor:[LKColor colorWithIdentifier:LKColorRed]];
+    
     for(UITabBarItem *item in self.tabBar.items) {
         
         item.title = [item.title uppercaseString];

@@ -21,9 +21,9 @@
             
         case LKColorRed:
             
-            red = 199.0;
+            red = 240.0;
             green = 82.0;
-            blue = 69.0;
+            blue = 63.0;
             
             break;
             
@@ -72,6 +72,7 @@
                                      NSFontAttributeName : [UIFont fontWithName:@"FuturaLT-Bold" size:18]
                                      };
     
+    [navigationBar setTranslucent:NO];
     [navigationBar setBarTintColor:[self colorWithIdentifier:LKColorRed]];
     [navigationBar setTitleTextAttributes:textAttributes];
     

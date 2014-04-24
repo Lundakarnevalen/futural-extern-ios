@@ -14,6 +14,8 @@
     
     [super viewDidLoad];
     
+    [self.circleButton drawCircleButton:[LKColor colorWithIdentifier:LKColorGreen]];
+    
 }
 
 @end
