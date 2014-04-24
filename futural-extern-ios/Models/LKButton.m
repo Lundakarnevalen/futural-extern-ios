@@ -37,7 +37,9 @@
     [self.circleLayer setStrokeColor:[color CGColor]];
     [self setTitle:nil forState:UIControlStateNormal];
     
-    [self.circleLayer setLineWidth:STROKE_DEFAULT];
+    [self.layer setCornerRadius:self.frame.size.height / 2];
+    [self.layer setMasksToBounds:YES];
+    
     [self.circleLayer setFillColor:[[UIColor clearColor] CGColor]];
     [self setImage:[[[[LKarneval sharedLKarneval] events] firstObject] imageForEvent] forState:UIControlStateNormal];
     
