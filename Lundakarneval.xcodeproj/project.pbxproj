@@ -47,6 +47,7 @@
 		57908F0A1909423700388C1A /* LKButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 57908F091909423700388C1A /* LKButton.m */; };
 		57DB443E190291D0009C3D37 /* Schedule.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 57DB443D190291D0009C3D37 /* Schedule.xcassets */; };
 		57FB7465190AD08E0059CA82 /* LKLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 57FB7464190AD08E0059CA82 /* LKLayout.m */; };
+		57FB7468190B06F80059CA82 /* MiscellaneousDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 57FB7467190B06F80059CA82 /* MiscellaneousDetailViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -114,6 +115,8 @@
 		57DB443D190291D0009C3D37 /* Schedule.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Schedule.xcassets; path = Data/Sprites/Schedule.xcassets; sourceTree = "<group>"; };
 		57FB7463190AD08E0059CA82 /* LKLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LKLayout.h; path = Models/LKLayout.h; sourceTree = "<group>"; };
 		57FB7464190AD08E0059CA82 /* LKLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LKLayout.m; path = Models/LKLayout.m; sourceTree = "<group>"; };
+		57FB7466190B06F80059CA82 /* MiscellaneousDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MiscellaneousDetailViewController.h; path = Controllers/MiscellaneousDetailViewController.h; sourceTree = "<group>"; };
+		57FB7467190B06F80059CA82 /* MiscellaneousDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MiscellaneousDetailViewController.m; path = Controllers/MiscellaneousDetailViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -255,8 +258,7 @@
 				575C94B718FEC9C600A341EE /* ScheduleViewController.m */,
 				5776211F1909932800B99E8E /* EntertainmentViewController.h */,
 				577621201909932800B99E8E /* EntertainmentViewController.m */,
-				57762122190993DB00B99E8E /* MiscellaneousViewController.h */,
-				57762123190993DB00B99E8E /* MiscellaneousViewController.m */,
+				57FB7469190B07020059CA82 /* Miscellaneous */,
 				575C94BC18FED02400A341EE /* Navigation */,
 			);
 			name = Controllers;
@@ -305,6 +307,17 @@
 				575C949E18FE7F3D00A341EE /* Events.plist */,
 			);
 			name = Data;
+			sourceTree = "<group>";
+		};
+		57FB7469190B07020059CA82 /* Miscellaneous */ = {
+			isa = PBXGroup;
+			children = (
+				57762122190993DB00B99E8E /* MiscellaneousViewController.h */,
+				57762123190993DB00B99E8E /* MiscellaneousViewController.m */,
+				57FB7466190B06F80059CA82 /* MiscellaneousDetailViewController.h */,
+				57FB7467190B06F80059CA82 /* MiscellaneousDetailViewController.m */,
+			);
+			name = Miscellaneous;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -395,6 +408,7 @@
 				57FB7465190AD08E0059CA82 /* LKLayout.m in Sources */,
 				577621211909932800B99E8E /* EntertainmentViewController.m in Sources */,
 				57407D1518FD2A5A0003F787 /* LKEvent.m in Sources */,
+				57FB7468190B06F80059CA82 /* MiscellaneousDetailViewController.m in Sources */,
 				57407D1A18FD2B5C0003F787 /* LKSektion.m in Sources */,
 				573797F518FFDCB900ABC2CD /* LKPlaceOverlay.m in Sources */,
 				575C94B818FEC9C600A341EE /* ScheduleViewController.m in Sources */,

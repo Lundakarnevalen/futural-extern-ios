@@ -16,6 +16,9 @@
     [super viewDidLoad];
     
     [self setNeedsStatusBarAppearanceUpdate];
+    [self.toolbar setTintColor:[LKColor colorWithIdentifier:LKColorRed]];
+    [self.toolbar setTranslucent:NO];
+    
     [self customizeNavigationbar];
     
 }
@@ -29,6 +32,7 @@
                                      NSFontAttributeName : [UIFont fontWithName:@"Robot!Head" size:28]
                                      };
     
+    [self.navigationBar.topItem setTitle:@"LUNDAKARNEVALEN"];
     [self.navigationBar setTranslucent:NO];
     [self.navigationBar setBarTintColor:[LKColor colorWithIdentifier:LKColorRed]];
     [self.navigationBar setTitleTextAttributes:textAttributes];

@@ -16,6 +16,8 @@
     
     [super viewDidLoad];
     
+    self.hidesBottomBarWhenPushed = NO;
+    
     [self renderGrid];
 
 }
@@ -33,6 +35,7 @@
                                    withStrokeColor:[LKColor colorWithIdentifier:LKColorBeige]
                                           andImage:[place imageForPlace]];
         button.tag = index; //identifier
+        [button addTarget:self action:@selector(cellClick:) forControlEvents:UIControlEventTouchUpInside];
         
         UILabel *title = [LKLayout titleLabelForCell:cell
                                            withTitle:place.name];
@@ -41,6 +44,23 @@
         [self.scrollView addSubview:title];
         
     }];
+    
+}
+
+- (void)cellClick:(id)sender {
+    
+    LKButton *button = (LKButton *)sender;
+    
+    LKPlace *place = [self.karneval.places objectAtIndex:button.tag];
+    NSLog(@"name tapped:%@", place.name);
+    
+    [self performSegueWithIdentifier:@"misc.detail" sender:self];
+    
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    
+    NSLog(@"segue time!");
     
 }
 
