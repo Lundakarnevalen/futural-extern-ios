@@ -50,13 +50,14 @@
 }
 
 -(void)viewDidAppear:(BOOL)animated {
-    
-    if (self.navigationController.navigationBar.alpha != 0) {
+
+    //Skum svart bakgrund. /V
+    /*if (self.navigationController.navigationBar.alpha != 0) {
         [UIView animateWithDuration:0.3
                          animations:^(void) { self.navigationController.navigationBar.alpha = 0; }
                          completion:nil];
     }
-    [super viewDidAppear:animated];
+    [super viewDidAppear:animated];*/
     [self reloadAnnotations];
 }
 
