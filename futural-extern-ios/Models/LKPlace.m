@@ -112,6 +112,12 @@
 
 #pragma mark Class methods
 
++ (UIImage *)imageForIdentifier:(NSString *)identifier {
+    
+    return [UIImage imageNamed:identifier];
+    
+}
+
 + (UIImage *)imageForCategory:(LKPlaceCategory)category {
  
     NSString *imageName;
@@ -157,6 +163,8 @@
             break;
             
         case LKPlaceCategoryScene:
+            
+            imageName = @"show";
             
             break;
             

@@ -15,49 +15,34 @@
 
 @end
 
-#define STROKE_DEFAULT 5.0
-
 @implementation LKButton
 
-- (void)drawCircleButton:(UIColor *)color {
+- (void)drawCircleButton:(UIColor *)color withStrokeWidth:(NSInteger)strokeWidth {
     
     self.color = color;
     
-    [self setTitleColor:color forState:UIControlStateNormal];
-    
-    self.circleLayer = [CAShapeLayer layer];
-    
-    [self.circleLayer setBounds:CGRectMake(0.0f, 0.0f, [self bounds].size.width, [self bounds].size.height)];
-    [self.circleLayer setPosition:CGPointMake(CGRectGetMidX([self bounds]),CGRectGetMidY([self bounds]))];
-    
-    UIBezierPath *path = [UIBezierPath bezierPathWithOvalInRect:CGRectMake(0, 0, CGRectGetWidth(self.frame), CGRectGetHeight(self.frame))];
-    
-    [self.circleLayer setPath:[path CGPath]];
-    
-    [self.circleLayer setStrokeColor:[color CGColor]];
     [self setTitle:nil forState:UIControlStateNormal];
     
-    [self.layer setCornerRadius:self.frame.size.height / 2];
-    [self.layer setMasksToBounds:YES];
-    
-    [self.circleLayer setFillColor:[[UIColor clearColor] CGColor]];
-    [self setImage:[[[[LKarneval sharedLKarneval] events] firstObject] imageForEvent] forState:UIControlStateNormal];
-    
-    [[self layer] addSublayer:self.circleLayer];
+    [self.layer setCornerRadius:self.frame.size.height / 2]; //makes the button circular.
+    [self.layer setMasksToBounds:YES]; //crops the image.
+    [self.layer setBorderWidth:strokeWidth];
+    [self.layer setBorderColor:color.CGColor];
+    [self setImage:self.backgroundImage forState:UIControlStateNormal];
+
 }
 
 - (void)setHighlighted:(BOOL)highlighted {
     
-    if (highlighted)
-    {
-        self.titleLabel.textColor = [UIColor whiteColor];
-        [self.circleLayer setFillColor:self.color.CGColor];
+    if (highlighted) {
+        
+        self.alpha = 0.25;
+        
+    } else {
+        
+        self.alpha = 1;
+        
     }
-    else
-    {
-        [self.circleLayer setFillColor:[UIColor clearColor].CGColor];
-        self.titleLabel.textColor = self.color;
-    }
+    
 }
 
 @end

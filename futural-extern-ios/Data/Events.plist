@@ -4,6 +4,295 @@
 <array>
 	<dict>
 		<key>identifier</key>
+		<string>partiet</string>
+		<key>name</key>
+		<string>Partiet</string>
+		<key>description</key>
+		<string>Partiet är en konstellation på sju personer med partiledare Fredrik Boltes i spetsen. De släppte sin första singel ”Ensamkommande Flyktingbanan” år 2012 och gjorde på ett år över 110 spelningar. Man spelade även en hel del på gatorna och uppfann under sina resor konceptet reggae drive-by. Det går ut på att bandet riggar upp sina instrument inuti en minibuss, åker spelandes runt och stannar till vid folksamlingar. Nu för bara ett litet tag sedan släppte de sitt första fullängdsalbum ”Kulturpolitik” och vi har även en helt ny EP att vänta i början på maj!</string>
+		<key>place</key>
+		<string>lillascenen</string>
+		<key>date</key>
+		<dict>
+			<key>start</key>
+			<date>2014-05-18T11:37:00Z</date>
+			<key>end</key>
+			<date>2014-05-18T11:37:00Z</date>
+		</dict>
+	</dict>
+	<dict>
+		<key>identifier</key>
+		<string>theblandband</string>
+		<key>name</key>
+		<string>The Bland Band</string>
+		<key>description</key>
+		<string>The Bland Band är ett Uppsala-baserat band bestående av fem killar, som träffades på Nya Zealand och bildade ett tilfälligt band. De bröt upp och for åt olika håll men träffades av en slump igen i Uppsala där de bestämde sig för att ta uppehåll från studierna för att satsa på musiken. Tur tycker vi såklart! Bandets sound är en blandning av gammalt och nytt, framförallt med influenser från 60- och 70-talen. Spännande!</string>
+		<key>place</key>
+		<string>lillascenen</string>
+		<key>date</key>
+		<dict>
+			<key>start</key>
+			<date>2014-05-18T11:37:00Z</date>
+			<key>end</key>
+			<date>2014-05-18T11:37:00Z</date>
+		</dict>
+	</dict>
+	<dict>
+		<key>identifier</key>
+		<string>sandramosh</string>
+		<key>name</key>
+		<string>Sandra Mosh</string>
+		<key>description</key>
+		<string>Sandra har haft eget program i P3:s Musikguiden tidigare, som var mycket uppskattat. Hon har nu gått över till Elektroniskt i P2, och fokuserar parallellt på sitt eget producerande. Efter spelningar på klubbar i hela världen gjorde hon en spelning på Sonar Stockholm i februari, som jag själv var på och blev helt frälst. Sandra Mosh spelar väldigt blandad elektronisk musik med inspiration från alla håll och kanter, väldigt spännande, så håll utkik efter henne!</string>
+		<key>place</key>
+		<string>lillascenen</string>
+		<key>date</key>
+		<dict>
+			<key>start</key>
+			<date>2014-05-17T11:37:00Z</date>
+			<key>end</key>
+			<date>2014-05-17T11:37:00Z</date>
+		</dict>
+	</dict>
+	<dict>
+		<key>identifier</key>
+		<string>emilochdavid</string>
+		<key>name</key>
+		<string>Emil Sunesson &amp; David Strömbäck</string>
+		<key>description</key>
+		<string>Emil Sunesson och David Strömbäck är två killar från Malmö som kommer att spela på lördagen på Foodstock. Emil har precis blivit signad och släppt sin första EP, den rekommenderar jag er verkligen att gå in och lyssna på! ”Dans” är min favorit. David spelar gärna vinylskivor vilket vi uppskattar enormt, såhär på futuralkarneval är det kul att inte bara blanda stilar utan även tidsåldrar!</string>
+		<key>place</key>
+		<string>lillascenen</string>
+		<key>date</key>
+		<dict>
+			<key>start</key>
+			<date>2014-05-17T11:37:00Z</date>
+			<key>end</key>
+			<date>2014-05-17T11:37:00Z</date>
+		</dict>
+	</dict>
+	<dict>
+		<key>identifier</key>
+		<string>perhammar</string>
+		<key>name</key>
+		<string>Per Hammar</string>
+		<key>description</key>
+		<string>Per Hammar heter egentligen Erik och är ett av Malmös mest välkända namn inom klubbvärlden. Med sina klubbar Kiloton på Babel har han gjort elektronisk dansmusik lättillgängligt och nu kommer även karnevalsbesökarna få ta del av hans peppande toner. Per Hammar har gjort många egna låtar och släppte t ex ”Tunnel” på labeln Break New Soil för ett par månader sen som är riktigt bra.</string>
+		<key>place</key>
+		<string>lillascenen</string>
+		<key>date</key>
+		<dict>
+			<key>start</key>
+			<date>2014-05-16T11:37:00Z</date>
+			<key>end</key>
+			<date>2014-05-16T11:37:00Z</date>
+		</dict>
+	</dict>
+	<dict>
+		<key>identifier</key>
+		<string>brothersamongwera</string>
+		<key>name</key>
+		<string>Brothers among Wera</string>
+		<key>description</key>
+		<string>Två killar och en tjej från Stockholm som nu kommer ner med hela sin ensemble, totalt sju personer, för att bjuda oss på indiemusik med inspiration från både folk, rock och soul. De släppte för inte allt för länge sedan sin första EP som är helt skriven och producerad av bandet självt. Rekommenderar att lyssna på Land of the Free som från början var en live session som filmades och fick över 10 000 visningar på YouTube bara första veckan!</string>
+		<key>place</key>
+		<string>lillascenen</string>
+		<key>date</key>
+		<dict>
+			<key>start</key>
+			<date>2014-05-16T11:37:00Z</date>
+			<key>end</key>
+			<date>2014-05-16T11:37:00Z</date>
+		</dict>
+	</dict>
+	<dict>
+		<key>identifier</key>
+		<string>discotekayugostyle</string>
+		<key>name</key>
+		<string>Discoteka Yugostyle</string>
+		<key>description</key>
+		<string>De är definitionen av yugo-trance-disco när det är som bäst och har under sina elva år som band utvecklats till ett dansgolvsmonster som matar sin publik med psykedelisk balkanbrass. En svettig fest och kaotisk spelning utlovas när detta tiomannaband från Lund intar stora scen i Lundagård.</string>
+		<key>place</key>
+		<string>storascenen</string>
+		<key>date</key>
+		<dict>
+			<key>start</key>
+			<date>2014-05-18T21:00:00Z</date>
+			<key>end</key>
+			<date>2014-05-17T22:00:00Z</date>
+		</dict>
+	</dict>
+	<dict>
+		<key>identifier</key>
+		<string>timbuktuochdamn</string>
+		<key>name</key>
+		<string>Timbuktu &amp; Damn!</string>
+		<key>description</key>
+		<string>Rapparen och Lundasonen Jason ”Timbuktu” Diakité släppte sitt första album år 2000 och har sedan dess toppat hitlistor, tilldelats prestigefyllda priser och fångat publikens hjärtan. Tillsammans med det hyllade funkbandet Damn! har Timbuktu turnerat land och rike runt med låtar som MVH, The botten is nådd, Strö lite socker på mig och Alla vill till himmelen men ingen vill dö i bagaget. Nu är de äntligen tillbaka på hemmaplan och kommer bjuda på en oförglömlig spelning på Lundakarnevalen.</string>
+		<key>place</key>
+		<string>storascenen</string>
+		<key>date</key>
+		<dict>
+			<key>start</key>
+			<date>2014-05-18T18:30:00Z</date>
+			<key>end</key>
+			<date>2014-05-18T19:30:00Z</date>
+		</dict>
+	</dict>
+	<dict>
+		<key>identifier</key>
+		<string>wintergatan</string>
+		<key>name</key>
+		<string>Wintergatan</string>
+		<key>description</key>
+		<string>Nu är Martin Mohlin, Evelina Hägglund, Marcus Sjöberg och David Zandén tillbaka i en futuristisk kostym! Med förra årets kritikerrosade debutalbum tar Wintergatans elektroniska och experimentella ljudbild form där det forna Dektektivbyrån lämnade oss 2010. Med dragspel, xylofoner, trummor en skrivmaskin och ytterligare ett 10-tal instrument tar Wintergatan oss till en värld som liknats med en korsning av drömska Yann Tiersen och housegudarna i Swedish House Maffia.</string>
+		<key>place</key>
+		<string>storascenen</string>
+		<key>date</key>
+		<dict>
+			<key>start</key>
+			<date>2014-05-18T16:30:00Z</date>
+			<key>end</key>
+			<date>2014-05-18T17:15:00Z</date>
+		</dict>
+	</dict>
+	<dict>
+		<key>identifier</key>
+		<string>fridasundemo</string>
+		<key>name</key>
+		<string>Frida Sundemo</string>
+		<key>description</key>
+		<string>Pausen från läkarstudierna blev längre än väntat. Frida Sundemo är stjärnskottet som är här för att stanna. Fridas drömmande och klara röst är lika smärtande vacker i akustisk tappning som när den omfamnar den elektroniska ljudmattan. Förra våren släpptes hyllade EPn Indigo på det brittiska skivbolaget Parlophone som bland annat har släppt skivor av Coldplay och The Beatles. Det ryktats om att ytterligare en EP kommer att släppas i maj och Lundakarnevalen bjuder på premiären av Fridas vårturné.</string>
+		<key>place</key>
+		<string>storascenen</string>
+		<key>date</key>
+		<dict>
+			<key>start</key>
+			<date>2014-05-18T15:00:00Z</date>
+			<key>end</key>
+			<date>2014-05-18T15:45:00Z</date>
+		</dict>
+	</dict>
+	<dict>
+		<key>identifier</key>
+		<string>movits</string>
+		<key>name</key>
+		<string>Movits!</string>
+		<key>description</key>
+		<string>Bröderna Rensfeldt tillsammans med Joakim Nilsson släppte debutalbumet Äppelknyckarjazz 2008. Skivan fick stort genomslag i Sverige och efter medverkan i den amerikanska TV-showen The Colbert Report var det internationella genombrottet ett faktum. Efter turnéer i Europa, Asien och USA tar fortfarande Movits! med sin svenskspråkiga swing-hiphop publiken med storm.</string>
+		<key>place</key>
+		<string>storascenen</string>
+		<key>date</key>
+		<dict>
+			<key>start</key>
+			<date>2014-05-17T21:00:00Z</date>
+			<key>end</key>
+			<date>2014-05-16T22:00:00Z</date>
+		</dict>
+	</dict>
+	<dict>
+		<key>identifier</key>
+		<string>hurricanelove</string>
+		<key>name</key>
+		<string>Hurricane Love</string>
+		<key>description</key>
+		<string>Det Malmöbaserade sexmannabandet segrade år 2012 över 4000 band i livemusiktävlingen Emergenza. Därefter blev deras akustiska singel Only human ett YouTube-fenomen med över 150 000 visningar och sedan dess har bandet turnerat i Sverige, Tyskland och Storbritannien. Nu är det äntligen Lundkarnevalens tur att förgyllas av deras arenapop och få sina hjärtan att värka.</string>
+		<key>place</key>
+		<string>storascenen</string>
+		<key>date</key>
+		<dict>
+			<key>start</key>
+			<date>2014-05-17T17:00:00Z</date>
+			<key>end</key>
+			<date>2014-05-17T18:00:00Z</date>
+		</dict>
+	</dict>
+	<dict>
+		<key>identifier</key>
+		<string>idaredig</string>
+		<key>name</key>
+		<string>Ida Redig</string>
+		<key>description</key>
+		<string>Sedan skivdebuten 2010 har det mjuka singer-songwriter tonerna övergått till en kaxig electro-pop. Tillsammans med Kristofer Östergren, frontfiguren i Melody Club, formades det nya soundet till albumet Thou Shall Not Be A Pussy som släpptes den 5 mars i år. Med singlar som I’m In trouble now och Shout, visar Ida Redig att dansant och attitydrik synth-pop går hem på dansgolven.</string>
+		<key>place</key>
+		<string>storascenen</string>
+		<key>date</key>
+		<dict>
+			<key>start</key>
+			<date>2014-05-17T15:15:00Z</date>
+			<key>end</key>
+			<date>2014-05-17T16:00:00Z</date>
+		</dict>
+	</dict>
+	<dict>
+		<key>identifier</key>
+		<string>sousoumahercissoko</string>
+		<key>name</key>
+		<string>Sousou och Maher Cissoko</string>
+		<key>description</key>
+		<string>Lundakarnevalen är oerhört stolta att få presentera denna unika duo som för den afrikanska musiktraditionen vidare med rytmisk energi och intim sång. Det är med det afrikanska stränginstrumentet kora i fokus som de för fram både nyskriven och traditionell musik som ger en magisk upplevelse.</string>
+		<key>place</key>
+		<string>storascenen</string>
+		<key>date</key>
+		<dict>
+			<key>start</key>
+			<date>2014-05-16T15:15:00Z</date>
+			<key>end</key>
+			<date>2014-05-16T16:00:00Z</date>
+		</dict>
+	</dict>
+	<dict>
+		<key>identifier</key>
+		<string>bokaspersorkester</string>
+		<key>name</key>
+		<string>Bo Kaspers orkester</string>
+		<key>description</key>
+		<string>Bo Kaspers orkester debuterade 1993 med albumet Söndag i sängen, och har sedan dess givit ut ytterligare åtta album. Bandet räknas till ett av Sveriges mest hyllade liveband och hade 2009 sålt över en miljon skivor. De fyra bandmedlemmarna Bo Sundström, Michael Malmgren, Fredrik Dahl och Mats Schubert beskriver deras musikgenre som en blandning av jazz, pop, rock och latinamerikansk musik. Några av gruppens mest kända låtar är I samma bil, Ett och noll och Undantag.</string>
+		<key>place</key>
+		<string>storascenen</string>
+		<key>date</key>
+		<dict>
+			<key>start</key>
+			<date>2014-05-16T17:15:00Z</date>
+			<key>end</key>
+			<date>2014-05-16T18:00:00Z</date>
+		</dict>
+	</dict>
+	<dict>
+		<key>identifier</key>
+		<string>lucylove</string>
+		<key>name</key>
+		<string>Lucy Love</string>
+		<key>description</key>
+		<string>Med turnéer i Europa, USA och Australien och tre album i bagaget kommer Köpenhamnsbaserade grime-stjärnan till Lundakarnevalen. Med influenser av electro-dance, drum ’n’ base och rap blir ljudbilden explosiv och lekfull. Samtidigt finns det ett djup i texterna som särskilt speglas i senaste albumet. Musikmässigt rör sig Lucy Love någonstans mellan M.I.A och Robyn och lika självsäkert befriar artisten sin publik i ett euforiskt kaos.</string>
+		<key>place</key>
+		<string>storascenen</string>
+		<key>date</key>
+		<dict>
+			<key>start</key>
+			<date>2014-05-16T19:15:00Z</date>
+			<key>end</key>
+			<date>2014-05-16T20:00:00Z</date>
+		</dict>
+	</dict>
+	<dict>
+		<key>identifier</key>
+		<string>etype</string>
+		<key>name</key>
+		<string>E-Type</string>
+		<key>description</key>
+		<string>Tre karnevaler senare är legenden är tillbaka i Lundagård. Martin ”E-Type” Eriksson debuterade 1991 och saknar fortfarande motstycke inom sin musikgenre Eurodance och vikingabeat. E-type är kanske mest känd får sina hitlåtar True Believer, Here I Go Again och den officiella EM-fotbollslåten Campione. Vad mer behöver vi säga; This Is The Way det kommer bli!</string>
+		<key>place</key>
+		<string>storascenen</string>
+		<key>date</key>
+		<dict>
+			<key>start</key>
+			<date>2014-05-16T21:00:00Z</date>
+			<key>end</key>
+			<date>2014-05-15T22:00:00Z</date>
+		</dict>
+	</dict>
+	<dict>
+		<key>identifier</key>
 		<string>linneahenriksson</string>
 		<key>name</key>
 		<string>Linnéa Henriksson</string>
@@ -14,9 +303,9 @@
 		<key>date</key>
 		<dict>
 			<key>start</key>
-			<date>2014-04-17T19:00:00Z</date>
+			<date>2014-05-17T19:00:00Z</date>
 			<key>end</key>
-			<date>2014-04-17T20:00:00Z</date>
+			<date>2014-05-17T20:00:00Z</date>
 		</dict>
 	</dict>
 	<dict>

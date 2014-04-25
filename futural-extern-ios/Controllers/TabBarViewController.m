@@ -21,8 +21,6 @@
     
     [self setSelectedIndex:TAB_INDEX_DEFAULT]; //switch to map.
     
-    NSLog(@"%@", self.karneval);
-    
 }
 
 - (void)customizeTabBar {
@@ -43,9 +41,17 @@
     [[UITabBarItem appearance] setTitleTextAttributes:selectedProperties forState:UIControlStateSelected];
     [[UITabBarItem appearance] setTitleTextAttributes:normalProperties forState:UIControlStateNormal];
     
+    //remove 1px default shadow.
+    [[UITabBar appearance] setShadowImage:[[UIImage alloc] init]];
+    [[UITabBar appearance] setBackgroundImage:[[UIImage alloc] init]];
     [self.tabBar setBarTintColor:[LKColor colorWithIdentifier:LKColorRed]];
     
-    for(UITabBarItem *item in self.tabBar.items) {
+    //inner shadow.
+    UIView *shadow = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.tabBar.frame.size.width, 3)];
+    [shadow setBackgroundColor:[UIColor colorWithWhite:0 alpha:0.15]];
+    [self.tabBar addSubview:shadow];
+    
+    for(UITabBarItem *item in self.tabBar.items) { //set active and standby icons.
         
         item.title = [item.title uppercaseString];
         
@@ -63,18 +69,6 @@
         }
         
     }
-    
-}
-
-- (LKarneval *)karneval {
-    
-    if(!_karneval) {
-        
-        _karneval = [LKarneval sharedLKarneval];
-        
-    }
-    
-    return _karneval;
     
 }
 

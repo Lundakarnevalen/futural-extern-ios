@@ -14,13 +14,13 @@ typedef enum {
     LKColorBlue = 2,
     LKColorGreen = 3,
     LKColorYellow = 4,
-    LKColorLightRed = 5
+    LKColorLightRed = 5,
+    LKColorBeige = 6
     
 } LKColorIdentifier;
 
 @interface LKColor : NSObject
 
 + (UIColor *)colorWithIdentifier:(LKColorIdentifier)identifier;
-+ (void)customizeNavigationBar:(UINavigationBar *)navigationBar; //consistent colors and fonts throughout the app.
 
 @end

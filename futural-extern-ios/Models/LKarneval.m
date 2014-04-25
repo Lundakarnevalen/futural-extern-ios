@@ -185,7 +185,7 @@ const int NumberOfFilters = 2;
     
     for(LKPlace *place in self.places) {
         
-        BOOL includeFile = YES;
+        BOOL includePlace = YES;
         
         for(NSNumber *typeContainer in categories) {
             
@@ -193,14 +193,14 @@ const int NumberOfFilters = 2;
             
             if(place.category == category) {
 
-                includeFile = NO;
+                includePlace = NO;
                 break;
                 
             }
             
         }
         
-        if(includeFile) {
+        if(includePlace) {
          
             if(!places)
                 places = [[NSMutableArray alloc] init]; //lazy mofo.
@@ -212,6 +212,24 @@ const int NumberOfFilters = 2;
     }
     
     return places;
+    
+}
+
+- (NSArray *)placesWithoutAlcohol { //*sobs*
+    
+    NSMutableArray *nonAlcoholic = [[NSMutableArray alloc] init];
+    
+    for(LKPlace *place in self.places) {
+        
+        if(!place.alcohol) {
+            
+            [nonAlcoholic addObject:place];
+            
+        }
+        
+    }
+    
+    return nonAlcoholic;
     
 }
 
@@ -259,7 +277,7 @@ const int NumberOfFilters = 2;
 
 + (NSArray *)LKPlaceFilterFood {
     
-    return @[@(LKPlaceCategoryFood), @(LKPlaceCategorySnacks), @(LKPlaceCategoryCoffee)];
+    return @[@(LKPlaceCategoryFood), @(LKPlaceCategorySnacks), @(LKPlaceCategoryCoffee), @(LKPlaceCategoryBeverage)];
     
 }
 
