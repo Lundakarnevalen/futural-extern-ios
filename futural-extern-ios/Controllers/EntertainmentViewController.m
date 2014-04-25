@@ -8,7 +8,6 @@
 
 #import "EntertainmentViewController.h"
 
-#define RADIUS_DEFAULT 80
 #define FONT_SIZE 12
 
 @implementation EntertainmentViewController
@@ -39,12 +38,12 @@
         
         //LABEL
         CGSize titleSize;
-        titleSize.width = RADIUS_DEFAULT;
+        titleSize.width = cell.size.width;
         titleSize.height = FONT_SIZE;
         
         CGPoint titlePosition;
         titlePosition.x = cell.position.x;
-        titlePosition.y = cell.position.y + (RADIUS_DEFAULT / 0.9);
+        titlePosition.y = cell.position.y + (cell.size.height / 0.9);
         
         CGRect titleFrame;
         titleFrame.origin = titlePosition;
@@ -63,26 +62,11 @@
     
 }
 
-- (NSArray *)cells {
-    
-    NSMutableArray *cells = [[NSMutableArray alloc] init];
-    
-    for(NSInteger index = 0; index < [self.karneval.places count]; index++) {
-        
-        LKCell *cell = [[LKCell alloc] initWithRadius:RADIUS_DEFAULT];
-        [cells addObject:cell];
-        
-    }
-    
-    return cells;
-    
-}
-
 - (LKGrid *)grid {
     
     if(!_grid) {
         
-        _grid = [[LKGrid alloc] initWithFrame:self.view.frame andGridCells:[self cells]];
+        _grid = [[LKGrid alloc] initWithFrame:self.view.frame andGridCells:[LKGrid cellsFromArray:self.karneval.places]];
         
     }
     

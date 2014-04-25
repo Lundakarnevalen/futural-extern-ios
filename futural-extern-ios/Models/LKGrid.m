@@ -10,6 +10,7 @@
 
 #define SPACING_ROW 40
 #define COUNT_COLUMNS 2
+#define RADIUS_DEFAULT 80
 
 @implementation LKGrid
 
@@ -88,6 +89,20 @@
     }
     
     return _cells;
+    
+}
+
++ (NSArray *)cellsFromArray:(NSArray *)array {
+    
+    NSMutableArray *cells = [[NSMutableArray alloc] init];
+    
+    for(NSInteger index = 0; index < [array count]; index++) {
+        
+        [cells addObject:[[LKCell alloc] initWithRadius:RADIUS_DEFAULT]];
+        
+    }
+    
+    return cells;
     
 }
 

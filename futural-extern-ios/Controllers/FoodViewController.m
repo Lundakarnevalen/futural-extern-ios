@@ -27,25 +27,6 @@
     
 }
 
-- (NSMutableArray *)cells {
-    
-    //filter food only.
-    
-    NSMutableArray *cells = [[NSMutableArray alloc] init];
-    
-    NSArray *foodPlaces = [self foodPlaces];
-    
-    for(NSInteger index = 0; index < [foodPlaces count]; index++) {
-        
-        LKCell *cell = [[LKCell alloc] initWithRadius:RADIUS_DEFAULT];
-        [cells addObject:cell];
-        
-    }
-    
-    return cells;
-    
-}
-
 - (void)renderGrid {
     
     UIColor *strokeColor = [LKColor colorWithIdentifier:LKColorGreen];
@@ -92,7 +73,7 @@
     
     if(!_grid) {
         
-        _grid = [[LKGrid alloc] initWithFrame:self.view.frame andGridCells:[self cells]];
+        _grid = [[LKGrid alloc] initWithFrame:self.view.frame andGridCells:[LKGrid cellsFromArray:[self foodPlaces]]];
         
     }
     

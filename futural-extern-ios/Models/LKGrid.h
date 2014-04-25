@@ -19,4 +19,6 @@
 
 - (CGSize)contentSize;
 
++ (NSArray *)cellsFromArray:(NSArray *)array;
+
 @end

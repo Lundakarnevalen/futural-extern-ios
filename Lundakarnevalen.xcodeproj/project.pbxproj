@@ -25,6 +25,7 @@
 		57407D1718FD2B1A0003F787 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57407D1618FD2B1A0003F787 /* CoreLocation.framework */; };
 		57407D1A18FD2B5C0003F787 /* LKSektion.m in Sources */ = {isa = PBXBuildFile; fileRef = 57407D1918FD2B5C0003F787 /* LKSektion.m */; };
 		57407D1D18FD2F110003F787 /* LKarnevalist.m in Sources */ = {isa = PBXBuildFile; fileRef = 57407D1C18FD2F110003F787 /* LKarnevalist.m */; };
+		57515826190A7361009E88EB /* Places.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 57515825190A7361009E88EB /* Places.xcassets */; };
 		575C949D18FE7F0000A341EE /* Places.plist in Resources */ = {isa = PBXBuildFile; fileRef = 575C949C18FE7F0000A341EE /* Places.plist */; };
 		575C949F18FE7F3D00A341EE /* Events.plist in Resources */ = {isa = PBXBuildFile; fileRef = 575C949E18FE7F3D00A341EE /* Events.plist */; };
 		575C94A318FE838E00A341EE /* TabBar.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 575C94A218FE838E00A341EE /* TabBar.xcassets */; };
@@ -78,6 +79,7 @@
 		57407D1918FD2B5C0003F787 /* LKSektion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; name = LKSektion.m; path = Models/LKSektion.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		57407D1B18FD2F110003F787 /* LKarnevalist.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; name = LKarnevalist.h; path = Models/LKarnevalist.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		57407D1C18FD2F110003F787 /* LKarnevalist.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; name = LKarnevalist.m; path = Models/LKarnevalist.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		57515825190A7361009E88EB /* Places.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Places.xcassets; path = Data/Sprites/Places.xcassets; sourceTree = "<group>"; };
 		575C949C18FE7F0000A341EE /* Places.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Places.plist; path = Data/Places.plist; sourceTree = "<group>"; };
 		575C949E18FE7F3D00A341EE /* Events.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Events.plist; path = Data/Events.plist; sourceTree = "<group>"; };
 		575C94A218FE838E00A341EE /* TabBar.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = TabBar.xcassets; path = Data/Sprites/TabBar.xcassets; sourceTree = "<group>"; };
@@ -258,6 +260,7 @@
 				578929C81900839A002AA116 /* Events.xcassets */,
 				57DB443D190291D0009C3D37 /* Schedule.xcassets */,
 				5776211A190989C800B99E8E /* Layout.xcassets */,
+				57515825190A7361009E88EB /* Places.xcassets */,
 			);
 			name = Sprites;
 			sourceTree = "<group>";
@@ -359,6 +362,7 @@
 				1AE8E56818F42FB50078EBDF /* Main.storyboard in Resources */,
 				575C94A318FE838E00A341EE /* TabBar.xcassets in Resources */,
 				1A7DA8A318FF06C70025C677 /* App.xcassets in Resources */,
+				57515826190A7361009E88EB /* Places.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
