@@ -36,7 +36,6 @@
 		5722E91018FD72F500BEE3A2 /* LKPlace.m in Sources */ = {isa = PBXBuildFile; fileRef = 5722E90F18FD72F500BEE3A2 /* LKPlace.m */; };
 		5722E91618FD7C3600BEE3A2 /* TabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5722E91518FD7C3600BEE3A2 /* TabBarViewController.m */; };
 		5722E91C18FD7DF300BEE3A2 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5722E91B18FD7DF300BEE3A2 /* MapKit.framework */; };
-		573797F8190014E700ABC2CD /* EntertainmentDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 573797F7190014E700ABC2CD /* EntertainmentDetailViewController.m */; };
 		57407D1518FD2A5A0003F787 /* LKEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 57407D1418FD2A5A0003F787 /* LKEvent.m */; };
 		57407D1718FD2B1A0003F787 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57407D1618FD2B1A0003F787 /* CoreLocation.framework */; };
 		57407D1A18FD2B5C0003F787 /* LKSektion.m in Sources */ = {isa = PBXBuildFile; fileRef = 57407D1918FD2B5C0003F787 /* LKSektion.m */; };
@@ -48,18 +47,17 @@
 		575C94CB18FED4B400A341EE /* FoodViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 575C94CA18FED4B400A341EE /* FoodViewController.m */; };
 		576EA12C18FDD6BE00D4166D /* LKarneval.m in Sources */ = {isa = PBXBuildFile; fileRef = 576EA12B18FDD6BE00D4166D /* LKarneval.m */; };
 		576EA12F18FDD8F300D4166D /* OpeningHours.plist in Resources */ = {isa = PBXBuildFile; fileRef = 576EA12E18FDD8F300D4166D /* OpeningHours.plist */; };
-		57762119190983E900B99E8E /* LKGrid.m in Sources */ = {isa = PBXBuildFile; fileRef = 57762118190983E900B99E8E /* LKGrid.m */; };
 		5776211B190989C800B99E8E /* Layout.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5776211A190989C800B99E8E /* Layout.xcassets */; };
-		5776211E19098C2100B99E8E /* NavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5776211D19098C2100B99E8E /* NavigationViewController.m */; };
 		577621211909932800B99E8E /* EntertainmentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 577621201909932800B99E8E /* EntertainmentViewController.m */; };
 		57762124190993DB00B99E8E /* MiscellaneousViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 57762123190993DB00B99E8E /* MiscellaneousViewController.m */; };
-		577621271909A3D900B99E8E /* LKCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 577621261909A3D900B99E8E /* LKCell.m */; };
 		578929C519007BD4002AA116 /* PlaceCategories.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 578929C419007BD4002AA116 /* PlaceCategories.xcassets */; };
 		578929C91900839A002AA116 /* Events.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 578929C81900839A002AA116 /* Events.xcassets */; };
-		57B2F29E1901A54600CE1EAE /* ScheduleNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 57B2F29D1901A54600CE1EAE /* ScheduleNavigationViewController.m */; };
 		57DB443E190291D0009C3D37 /* Schedule.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 57DB443D190291D0009C3D37 /* Schedule.xcassets */; };
-		57FB7465190AD08E0059CA82 /* LKLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 57FB7464190AD08E0059CA82 /* LKLayout.m */; };
-		57FB7468190B06F80059CA82 /* MiscellaneousDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 57FB7467190B06F80059CA82 /* MiscellaneousDetailViewController.m */; };
+		57FB7472190B150A0059CA82 /* LKCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 57FB746B190B150A0059CA82 /* LKCell.m */; };
+		57FB7473190B150A0059CA82 /* LKGrid.m in Sources */ = {isa = PBXBuildFile; fileRef = 57FB746D190B150A0059CA82 /* LKGrid.m */; };
+		57FB7474190B150A0059CA82 /* LKImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 57FB746F190B150A0059CA82 /* LKImage.m */; };
+		57FB7475190B150A0059CA82 /* LKLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 57FB7471190B150A0059CA82 /* LKLayout.m */; };
+		57FB7476190B15C10059CA82 /* NavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5776211D19098C2100B99E8E /* NavigationViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -114,8 +112,6 @@
 		5722E91B18FD7DF300BEE3A2 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		5722E91D18FD80C700BEE3A2 /* LKColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; name = LKColor.h; path = Models/LKColor.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		5722E91E18FD80C700BEE3A2 /* InitViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; name = InitViewController.m; path = Controllers/Map/InitViewController.m; sourceTree = "<group>"; };
-		573797F6190014E700ABC2CD /* EntertainmentDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EntertainmentDetailViewController.h; path = Controllers/EntertainmentDetailViewController.h; sourceTree = "<group>"; };
-		573797F7190014E700ABC2CD /* EntertainmentDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EntertainmentDetailViewController.m; path = Controllers/EntertainmentDetailViewController.m; sourceTree = "<group>"; };
 		57407D1318FD2A5A0003F787 /* LKEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; name = LKEvent.h; path = Models/LKEvent.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		57407D1418FD2A5A0003F787 /* LKEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; name = LKEvent.m; path = Models/LKEvent.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		57407D1618FD2B1A0003F787 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
@@ -133,8 +129,6 @@
 		576EA12A18FDD6BE00D4166D /* LKarneval.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; name = LKarneval.h; path = Models/LKarneval.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		576EA12B18FDD6BE00D4166D /* LKarneval.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; name = LKarneval.m; path = Models/LKarneval.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		576EA12E18FDD8F300D4166D /* OpeningHours.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = OpeningHours.plist; path = Data/OpeningHours.plist; sourceTree = "<group>"; };
-		57762117190983E900B99E8E /* LKGrid.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LKGrid.h; path = Models/LKGrid.h; sourceTree = "<group>"; };
-		57762118190983E900B99E8E /* LKGrid.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LKGrid.m; path = Models/LKGrid.m; sourceTree = "<group>"; };
 		5776211A190989C800B99E8E /* Layout.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Layout.xcassets; path = Data/Sprites/Layout.xcassets; sourceTree = "<group>"; };
 		5776211C19098C2100B99E8E /* NavigationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NavigationViewController.h; path = Controllers/NavigationViewController.h; sourceTree = "<group>"; };
 		5776211D19098C2100B99E8E /* NavigationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NavigationViewController.m; path = Controllers/NavigationViewController.m; sourceTree = "<group>"; };
@@ -142,17 +136,19 @@
 		577621201909932800B99E8E /* EntertainmentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EntertainmentViewController.m; path = Controllers/EntertainmentViewController.m; sourceTree = "<group>"; };
 		57762122190993DB00B99E8E /* MiscellaneousViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MiscellaneousViewController.h; path = Controllers/MiscellaneousViewController.h; sourceTree = "<group>"; };
 		57762123190993DB00B99E8E /* MiscellaneousViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MiscellaneousViewController.m; path = Controllers/MiscellaneousViewController.m; sourceTree = "<group>"; };
-		577621251909A3D900B99E8E /* LKCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LKCell.h; path = Models/LKCell.h; sourceTree = "<group>"; };
-		577621261909A3D900B99E8E /* LKCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LKCell.m; path = Models/LKCell.m; sourceTree = "<group>"; };
 		578929C419007BD4002AA116 /* PlaceCategories.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = PlaceCategories.xcassets; path = Data/Sprites/PlaceCategories.xcassets; sourceTree = "<group>"; };
 		578929C81900839A002AA116 /* Events.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Events.xcassets; path = Data/Sprites/Events.xcassets; sourceTree = "<group>"; };
-		57B2F29C1901A54600CE1EAE /* ScheduleNavigationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ScheduleNavigationViewController.h; path = Controllers/ScheduleNavigationViewController.h; sourceTree = "<group>"; };
-		57B2F29D1901A54600CE1EAE /* ScheduleNavigationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ScheduleNavigationViewController.m; path = Controllers/ScheduleNavigationViewController.m; sourceTree = "<group>"; };
 		57DB443D190291D0009C3D37 /* Schedule.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Schedule.xcassets; path = Data/Sprites/Schedule.xcassets; sourceTree = "<group>"; };
-		57FB7463190AD08E0059CA82 /* LKLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LKLayout.h; path = Models/LKLayout.h; sourceTree = "<group>"; };
-		57FB7464190AD08E0059CA82 /* LKLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LKLayout.m; path = Models/LKLayout.m; sourceTree = "<group>"; };
 		57FB7466190B06F80059CA82 /* MiscellaneousDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MiscellaneousDetailViewController.h; path = Controllers/MiscellaneousDetailViewController.h; sourceTree = "<group>"; };
 		57FB7467190B06F80059CA82 /* MiscellaneousDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MiscellaneousDetailViewController.m; path = Controllers/MiscellaneousDetailViewController.m; sourceTree = "<group>"; };
+		57FB746A190B150A0059CA82 /* LKCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LKCell.h; path = Models/LKCell.h; sourceTree = "<group>"; };
+		57FB746B190B150A0059CA82 /* LKCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LKCell.m; path = Models/LKCell.m; sourceTree = "<group>"; };
+		57FB746C190B150A0059CA82 /* LKGrid.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LKGrid.h; path = Models/LKGrid.h; sourceTree = "<group>"; };
+		57FB746D190B150A0059CA82 /* LKGrid.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LKGrid.m; path = Models/LKGrid.m; sourceTree = "<group>"; };
+		57FB746E190B150A0059CA82 /* LKImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LKImage.h; path = Models/LKImage.h; sourceTree = "<group>"; };
+		57FB746F190B150A0059CA82 /* LKImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LKImage.m; path = Models/LKImage.m; sourceTree = "<group>"; };
+		57FB7470190B150A0059CA82 /* LKLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LKLayout.h; path = Models/LKLayout.h; sourceTree = "<group>"; };
+		57FB7471190B150A0059CA82 /* LKLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LKLayout.m; path = Models/LKLayout.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -272,6 +268,14 @@
 		5722E92018FD81B300BEE3A2 /* Toolbox */ = {
 			isa = PBXGroup;
 			children = (
+				57FB746A190B150A0059CA82 /* LKCell.h */,
+				57FB746B190B150A0059CA82 /* LKCell.m */,
+				57FB746C190B150A0059CA82 /* LKGrid.h */,
+				57FB746D190B150A0059CA82 /* LKGrid.m */,
+				57FB746E190B150A0059CA82 /* LKImage.h */,
+				57FB746F190B150A0059CA82 /* LKImage.m */,
+				57FB7470190B150A0059CA82 /* LKLayout.h */,
+				57FB7471190B150A0059CA82 /* LKLayout.m */,
 				5722E91D18FD80C700BEE3A2 /* LKColor.h */,
 				1ABFF6F91900713800C575EE /* LKColor.m */,
 				5722E91E18FD80C700BEE3A2 /* InitViewController.m */,
@@ -328,7 +332,6 @@
 				1ABFF6EA1900645300C575EE /* Map */,
 				575C94C918FED4B400A341EE /* FoodViewController.h */,
 				575C94CA18FED4B400A341EE /* FoodViewController.m */,
-				573797F91900156000ABC2CD /* Entertainment */,
 				575C94B618FEC9C600A341EE /* ScheduleViewController.h */,
 				575C94B718FEC9C600A341EE /* ScheduleViewController.m */,
 				5776211F1909932800B99E8E /* EntertainmentViewController.h */,
@@ -348,7 +351,6 @@
 				578929C81900839A002AA116 /* Events.xcassets */,
 				57DB443D190291D0009C3D37 /* Schedule.xcassets */,
 				5776211A190989C800B99E8E /* Layout.xcassets */,
-				57515825190A7361009E88EB /* Places.xcassets */,
 			);
 			name = Sprites;
 			sourceTree = "<group>";
@@ -463,7 +465,6 @@
 				1AE8E56818F42FB50078EBDF /* Main.storyboard in Resources */,
 				575C94A318FE838E00A341EE /* TabBar.xcassets in Resources */,
 				1A7DA8A318FF06C70025C677 /* App.xcassets in Resources */,
-				57515826190A7361009E88EB /* Places.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -474,7 +475,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				575C94C518FED18200A341EE /* FoodNavigationViewController.m in Sources */,
+				57FB7476190B15C10059CA82 /* NavigationViewController.m in Sources */,
 				1ABFF6ED1900646900C575EE /* ECSlidingViewController.m in Sources */,
 				1A4A83CA190996AE00D7C466 /* LKButton.m in Sources */,
 				1ABFF6FE19007CF800C575EE /* LKOverlay.m in Sources */,
@@ -482,16 +483,15 @@
 				1AE8E56518F42FB50078EBDF /* AppDelegate.m in Sources */,
 				57407D1D18FD2F110003F787 /* LKarnevalist.m in Sources */,
 				1ABFF6E219002BBB00C575EE /* LKAnnotation.m in Sources */,
-				57B2F29E1901A54600CE1EAE /* ScheduleNavigationViewController.m in Sources */,
+				57FB7472190B150A0059CA82 /* LKCell.m in Sources */,
 				5722E91618FD7C3600BEE3A2 /* TabBarViewController.m in Sources */,
-				575C94BF18FED04F00A341EE /* EntertainmentNavigationViewController.m in Sources */,
 				1ABFF6E719002BDD00C575EE /* MapViewController.m in Sources */,
 				1ABFF6F01900649300C575EE /* InitViewController.m in Sources */,
 				1ABFF6FA1900713800C575EE /* LKColor.m in Sources */,
 				575C94CB18FED4B400A341EE /* FoodViewController.m in Sources */,
 				57762124190993DB00B99E8E /* MiscellaneousViewController.m in Sources */,
-				57FB7465190AD08E0059CA82 /* LKLayout.m in Sources */,
 				577621211909932800B99E8E /* EntertainmentViewController.m in Sources */,
+				57FB7473190B150A0059CA82 /* LKGrid.m in Sources */,
 				57407D1518FD2A5A0003F787 /* LKEvent.m in Sources */,
 				1A411FF21901B1C700FF39F9 /* CreateAnnotationsViewController.m in Sources */,
 				1ABFF6F819006E5400C575EE /* MapFilterViewController.m in Sources */,
@@ -500,12 +500,12 @@
 				575C94B818FEC9C600A341EE /* ScheduleViewController.m in Sources */,
 				5722E91018FD72F500BEE3A2 /* LKPlace.m in Sources */,
 				576EA12C18FDD6BE00D4166D /* LKarneval.m in Sources */,
-				577621271909A3D900B99E8E /* LKCell.m in Sources */,
+				57FB7475190B150A0059CA82 /* LKLayout.m in Sources */,
 				1AE8E56118F42FB50078EBDF /* main.m in Sources */,
 				1A411FEF1901A98D00FF39F9 /* UIView+Shadow.m in Sources */,
 				1ABFF70119007E2000C575EE /* LKOverlayRenderer.m in Sources */,
+				57FB7474190B150A0059CA82 /* LKImage.m in Sources */,
 				1A411FEC1901A7BC00FF39F9 /* UILabel+FuturaFont.m in Sources */,
-				575C94C818FED40000A341EE /* EntertainmentViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

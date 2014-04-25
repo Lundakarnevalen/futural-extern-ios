@@ -72,10 +72,16 @@
 
 - (UIImage *)imageForPlace {
     
-    if (self.image) {
-        return self.image;
-    } else {
+    UIImage *identifierImage = [self.class imageForIdentifier:self.identifier];
+    
+    if(identifierImage) {
+        
+        return identifierImage;
+        
+    } else { //fallback if no specific image/logotype.
+        
         return [self.class imageForCategory:self.category];
+        
     }
 }
 
@@ -85,7 +91,9 @@
         return self.annotationImage;
     } else {
         return [self.class imageForCategory:self.category];
+        
     }
+    
 }
 
 #pragma mark Lazy Instantiation
