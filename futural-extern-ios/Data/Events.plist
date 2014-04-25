@@ -4,6 +4,108 @@
 <array>
 	<dict>
 		<key>identifier</key>
+		<string>partiet</string>
+		<key>name</key>
+		<string>Partiet</string>
+		<key>description</key>
+		<string>Partiet är en konstellation på sju personer med partiledare Fredrik Boltes i spetsen. De släppte sin första singel ”Ensamkommande Flyktingbanan” år 2012 och gjorde på ett år över 110 spelningar. Man spelade även en hel del på gatorna och uppfann under sina resor konceptet reggae drive-by. Det går ut på att bandet riggar upp sina instrument inuti en minibuss, åker spelandes runt och stannar till vid folksamlingar. Nu för bara ett litet tag sedan släppte de sitt första fullängdsalbum ”Kulturpolitik” och vi har även en helt ny EP att vänta i början på maj!</string>
+		<key>place</key>
+		<string>lillascenen</string>
+		<key>date</key>
+		<dict>
+			<key>start</key>
+			<date>2014-05-18T11:37:00Z</date>
+			<key>end</key>
+			<date>2014-05-18T11:37:00Z</date>
+		</dict>
+	</dict>
+	<dict>
+		<key>identifier</key>
+		<string>theblandband</string>
+		<key>name</key>
+		<string>The Bland Band</string>
+		<key>description</key>
+		<string>The Bland Band är ett Uppsala-baserat band bestående av fem killar, som träffades på Nya Zealand och bildade ett tilfälligt band. De bröt upp och for åt olika håll men träffades av en slump igen i Uppsala där de bestämde sig för att ta uppehåll från studierna för att satsa på musiken. Tur tycker vi såklart! Bandets sound är en blandning av gammalt och nytt, framförallt med influenser från 60- och 70-talen. Spännande!</string>
+		<key>place</key>
+		<string>lillascenen</string>
+		<key>date</key>
+		<dict>
+			<key>start</key>
+			<date>2014-05-18T11:37:00Z</date>
+			<key>end</key>
+			<date>2014-05-18T11:37:00Z</date>
+		</dict>
+	</dict>
+	<dict>
+		<key>identifier</key>
+		<string>sandramosh</string>
+		<key>name</key>
+		<string>Sandra Mosh</string>
+		<key>description</key>
+		<string>Sandra har haft eget program i P3:s Musikguiden tidigare, som var mycket uppskattat. Hon har nu gått över till Elektroniskt i P2, och fokuserar parallellt på sitt eget producerande. Efter spelningar på klubbar i hela världen gjorde hon en spelning på Sonar Stockholm i februari, som jag själv var på och blev helt frälst. Sandra Mosh spelar väldigt blandad elektronisk musik med inspiration från alla håll och kanter, väldigt spännande, så håll utkik efter henne!</string>
+		<key>place</key>
+		<string>lillascenen</string>
+		<key>date</key>
+		<dict>
+			<key>start</key>
+			<date>2014-05-17T11:37:00Z</date>
+			<key>end</key>
+			<date>2014-05-17T11:37:00Z</date>
+		</dict>
+	</dict>
+	<dict>
+		<key>identifier</key>
+		<string>emilochdavid</string>
+		<key>name</key>
+		<string>Emil Sunesson &amp; David Strömbäck</string>
+		<key>description</key>
+		<string>Emil Sunesson och David Strömbäck är två killar från Malmö som kommer att spela på lördagen på Foodstock. Emil har precis blivit signad och släppt sin första EP, den rekommenderar jag er verkligen att gå in och lyssna på! ”Dans” är min favorit. David spelar gärna vinylskivor vilket vi uppskattar enormt, såhär på futuralkarneval är det kul att inte bara blanda stilar utan även tidsåldrar!</string>
+		<key>place</key>
+		<string>lillascenen</string>
+		<key>date</key>
+		<dict>
+			<key>start</key>
+			<date>2014-05-17T11:37:00Z</date>
+			<key>end</key>
+			<date>2014-05-17T11:37:00Z</date>
+		</dict>
+	</dict>
+	<dict>
+		<key>identifier</key>
+		<string>perhammar</string>
+		<key>name</key>
+		<string>Per Hammar</string>
+		<key>description</key>
+		<string>Per Hammar heter egentligen Erik och är ett av Malmös mest välkända namn inom klubbvärlden. Med sina klubbar Kiloton på Babel har han gjort elektronisk dansmusik lättillgängligt och nu kommer även karnevalsbesökarna få ta del av hans peppande toner. Per Hammar har gjort många egna låtar och släppte t ex ”Tunnel” på labeln Break New Soil för ett par månader sen som är riktigt bra.</string>
+		<key>place</key>
+		<string>lillascenen</string>
+		<key>date</key>
+		<dict>
+			<key>start</key>
+			<date>2014-05-16T11:37:00Z</date>
+			<key>end</key>
+			<date>2014-05-16T11:37:00Z</date>
+		</dict>
+	</dict>
+	<dict>
+		<key>identifier</key>
+		<string>brothersamongwera</string>
+		<key>name</key>
+		<string>Brothers among Wera</string>
+		<key>description</key>
+		<string>Två killar och en tjej från Stockholm som nu kommer ner med hela sin ensemble, totalt sju personer, för att bjuda oss på indiemusik med inspiration från både folk, rock och soul. De släppte för inte allt för länge sedan sin första EP som är helt skriven och producerad av bandet självt. Rekommenderar att lyssna på Land of the Free som från början var en live session som filmades och fick över 10 000 visningar på YouTube bara första veckan!</string>
+		<key>place</key>
+		<string>lillascenen</string>
+		<key>date</key>
+		<dict>
+			<key>start</key>
+			<date>2014-05-16T11:37:00Z</date>
+			<key>end</key>
+			<date>2014-05-16T11:37:00Z</date>
+		</dict>
+	</dict>
+	<dict>
+		<key>identifier</key>
 		<string>discotekayugostyle</string>
 		<key>name</key>
 		<string>Discoteka Yugostyle</string>

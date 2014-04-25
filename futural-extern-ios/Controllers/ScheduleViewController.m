@@ -8,6 +8,9 @@
 
 #import "ScheduleViewController.h"
 
+#import "LKImage.h"
+#import "LKColor.h"
+
 #define CELL_IDENTIFIER "event"
 
 #define TAG_HEADER_NAME 1
@@ -33,6 +36,16 @@
     
 }
 
+- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    [[cell contentView] setBackgroundColor:[UIColor clearColor]];
+    [[cell backgroundView] setBackgroundColor:[UIColor clearColor]];
+    [cell setBackgroundColor:[UIColor clearColor]];
+    
+    [tableView setBackgroundColor:[UIColor clearColor]];
+    
+}
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
     LKEvent *event = [self.karneval.events objectAtIndex:indexPath.row];
@@ -48,7 +61,7 @@
     UILabel *headerPlace = (UILabel *)[[cell contentView] viewWithTag:TAG_HEADER_PLACE];
     UILabel *timeStart = (UILabel *)[[cell contentView] viewWithTag:TAG_TIME_START];
     UILabel *timeEnd = (UILabel *)[[cell contentView] viewWithTag:TAG_TIME_END];
-    UIImageView *image = (UIImageView *)[[cell contentView] viewWithTag:TAG_IMAGE];
+    LKImage *image = (LKImage *)[[cell contentView] viewWithTag:TAG_IMAGE];
     UIButton *favorite = (UIButton *)[[cell contentView] viewWithTag:TAG_FAVORITE];
     
     headerName.text = [NSString stringWithFormat:@"%@", event.name];
@@ -58,6 +71,7 @@
     timeEnd.text = [NSString stringWithFormat:@"%@", [event formattedEndTime]];
 
     [image setImage:[event imageForEvent]];
+    [image drawCircularImage:[UIColor whiteColor]];
     
     [favorite setSelected:event.favorite];
     [favorite setTag:favorite.tag * indexPath.row]; //to solve the equation of which object that was favorited. (ugly, but working, solved by dividing the tag with 6 a.k.a TAG_FAVORITE).

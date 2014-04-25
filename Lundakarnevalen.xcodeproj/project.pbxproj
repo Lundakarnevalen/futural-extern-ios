@@ -26,6 +26,7 @@
 		57407D1A18FD2B5C0003F787 /* LKSektion.m in Sources */ = {isa = PBXBuildFile; fileRef = 57407D1918FD2B5C0003F787 /* LKSektion.m */; };
 		57407D1D18FD2F110003F787 /* LKarnevalist.m in Sources */ = {isa = PBXBuildFile; fileRef = 57407D1C18FD2F110003F787 /* LKarnevalist.m */; };
 		57515826190A7361009E88EB /* Places.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 57515825190A7361009E88EB /* Places.xcassets */; };
+		57515829190A9D1B009E88EB /* LKImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 57515828190A9D1B009E88EB /* LKImage.m */; };
 		575C949D18FE7F0000A341EE /* Places.plist in Resources */ = {isa = PBXBuildFile; fileRef = 575C949C18FE7F0000A341EE /* Places.plist */; };
 		575C949F18FE7F3D00A341EE /* Events.plist in Resources */ = {isa = PBXBuildFile; fileRef = 575C949E18FE7F3D00A341EE /* Events.plist */; };
 		575C94A318FE838E00A341EE /* TabBar.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 575C94A218FE838E00A341EE /* TabBar.xcassets */; };
@@ -80,6 +81,8 @@
 		57407D1B18FD2F110003F787 /* LKarnevalist.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; name = LKarnevalist.h; path = Models/LKarnevalist.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		57407D1C18FD2F110003F787 /* LKarnevalist.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; name = LKarnevalist.m; path = Models/LKarnevalist.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		57515825190A7361009E88EB /* Places.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Places.xcassets; path = Data/Sprites/Places.xcassets; sourceTree = "<group>"; };
+		57515827190A9D1B009E88EB /* LKImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LKImage.h; path = Models/LKImage.h; sourceTree = "<group>"; };
+		57515828190A9D1B009E88EB /* LKImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LKImage.m; path = Models/LKImage.m; sourceTree = "<group>"; };
 		575C949C18FE7F0000A341EE /* Places.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Places.plist; path = Data/Places.plist; sourceTree = "<group>"; };
 		575C949E18FE7F3D00A341EE /* Events.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Events.plist; path = Data/Events.plist; sourceTree = "<group>"; };
 		575C94A218FE838E00A341EE /* TabBar.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = TabBar.xcassets; path = Data/Sprites/TabBar.xcassets; sourceTree = "<group>"; };
@@ -195,6 +198,8 @@
 				57762118190983E900B99E8E /* LKGrid.m */,
 				577621251909A3D900B99E8E /* LKCell.h */,
 				577621261909A3D900B99E8E /* LKCell.m */,
+				57515827190A9D1B009E88EB /* LKImage.h */,
+				57515828190A9D1B009E88EB /* LKImage.m */,
 			);
 			name = Toolbox;
 			sourceTree = "<group>";
@@ -379,6 +384,7 @@
 				57407D1D18FD2F110003F787 /* LKarnevalist.m in Sources */,
 				5722E91618FD7C3600BEE3A2 /* TabBarViewController.m in Sources */,
 				5722E91A18FD7C9000BEE3A2 /* MapViewController.m in Sources */,
+				57515829190A9D1B009E88EB /* LKImage.m in Sources */,
 				575C94CB18FED4B400A341EE /* FoodViewController.m in Sources */,
 				57762124190993DB00B99E8E /* MiscellaneousViewController.m in Sources */,
 				577621211909932800B99E8E /* EntertainmentViewController.m in Sources */,
