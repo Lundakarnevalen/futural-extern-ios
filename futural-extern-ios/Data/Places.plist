@@ -46,6 +46,8 @@
 	<dict>
 		<key>alcohol</key>
 		<false/>
+		<key>annotation_image</key>
+		<string></string>
 		<key>category</key>
 		<integer>11</integer>
 		<key>description</key>
@@ -82,68 +84,6 @@
 			<real>55.70557904967363</real>
 			<key>longitude</key>
 			<real>13.19512260551833</real>
-		</dict>
-	</dict>
-	<key>lillascenen</key>
-	<dict>
-		<key>alcohol</key>
-		<false/>
-		<key>annotation_image</key>
-		<string>unknown</string>
-		<key>category</key>
-		<integer>4</integer>
-		<key>description</key>
-		<string>Lorem Ipsum</string>
-		<key>name</key>
-		<string>Cirkusen</string>
-		<key>payment_options</key>
-		<array/>
-		<key>position</key>
-		<dict>
-			<key>latitude</key>
-			<real>55.7047557721988</real>
-			<key>longitude</key>
-			<real>13.19537105245979</real>
-		</dict>
-	</dict>
-	<key>krog_undervatten</key>
-	<dict>
-		<key>alcohol</key>
-		<true/>
-		<key>category</key>
-		<integer>2</integer>
-		<key>description</key>
-		<string>Lorem Ipsum</string>
-		<key>name</key>
-		<string>Krog Undervatten</string>
-		<key>payment_options</key>
-		<array/>
-		<key>position</key>
-		<dict>
-			<key>latitude</key>
-			<real>55.70508561404364</real>
-			<key>longitude</key>
-			<real>13.19467199442641</real>
-		</dict>
-	</dict>
-	<key>launchingpad</key>
-	<dict>
-		<key>alcohol</key>
-		<true/>
-		<key>category</key>
-		<integer>1</integer>
-		<key>description</key>
-		<string>Lorem Ipsum</string>
-		<key>name</key>
-		<string>Krog L[a]unchingpad</string>
-		<key>payment_options</key>
-		<array/>
-		<key>position</key>
-		<dict>
-			<key>latitude</key>
-			<real>55.707242</real>
-			<key>longitude</key>
-			<real>13.1965</real>
 		</dict>
 	</dict>
 	<key>lillascenen</key>
@@ -166,48 +106,24 @@
 			<real>13.195958</real>
 		</dict>
 	</dict>
-	<key>revyn</key>
+	<key>launchingpad</key>
 	<dict>
 		<key>alcohol</key>
-		<false/>
-		<key>annotation_image</key>
-		<string></string>
+		<true/>
 		<key>category</key>
-		<integer>11</integer>
-		<key>description</key>
-		<string>Revyn</string>
-		<key>image</key>
-		<string></string>
-		<key>name</key>
-		<string>Revyn</string>
-		<key>payment_options</key>
-		<array/>
-		<key>position</key>
-		<dict>
-			<key>latitude</key>
-			<real>55.70556259155273</real>
-			<key>longitude</key>
-			<real>13.19296550750732</real>
-		</dict>
-	</dict>
-	<key>shoppen</key>
-	<dict>
-		<key>alcohol</key>
-		<false/>
-		<key>category</key>
-		<integer>9</integer>
+		<integer>1</integer>
 		<key>description</key>
 		<string>Lorem Ipsum</string>
 		<key>name</key>
-		<string>Shoppen</string>
+		<string>Krog L[a]unchingpad</string>
 		<key>payment_options</key>
 		<array/>
 		<key>position</key>
 		<dict>
 			<key>latitude</key>
-			<real>55.70557904967363</real>
+			<real>55.707242</real>
 			<key>longitude</key>
-			<real>13.19512260551833</real>
+			<real>13.1965</real>
 		</dict>
 	</dict>
 	<key>storascenen</key>

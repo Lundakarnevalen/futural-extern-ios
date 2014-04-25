@@ -16,8 +16,6 @@
     [super viewDidLoad];
     
     [self setNeedsStatusBarAppearanceUpdate];
-    [self.toolbar setTintColor:[LKColor colorWithIdentifier:LKColorRed]];
-    [self.toolbar setTranslucent:NO];
     
     [self customizeNavigationbar];
     

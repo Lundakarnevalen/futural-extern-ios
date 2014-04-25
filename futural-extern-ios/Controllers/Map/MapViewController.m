@@ -32,7 +32,9 @@
     [super viewDidLoad];
     
     self.slidingViewController.underRightViewController  = [self.storyboard instantiateViewControllerWithIdentifier:@"Filter"];
+    
     [self.view addGestureRecognizer:self.slidingViewController.panGesture];
+    
     [self.slidingViewController setAnchorLeftRevealAmount:150.0f];
     
     LKOverlay *map = [[LKOverlay alloc] initWithImage:[UIImage imageNamed:@"Lundakarnevalen"]];

@@ -12,7 +12,7 @@
 
 + (UIFont *)gridFont {
     
-    return [UIFont fontWithName:@"Futura-Bold" size:[self gridFontSize]];
+    return [UIFont fontWithName:@"FuturaLT-Bold" size:[self gridFontSize]];
     
 }
 
@@ -79,7 +79,7 @@
     titleFrame.size = titleSize;
     
     UILabel *titleLabel = [[UILabel alloc] initWithFrame:titleFrame];
-    titleLabel.font = [UIFont fontWithName:@"Futura-Bold" size:[self gridFontSize]];
+    titleLabel.font = [self gridFont];
     titleLabel.textColor = [UIColor whiteColor];
     titleLabel.textAlignment = NSTextAlignmentCenter;
     titleLabel.text = [title uppercaseString];
