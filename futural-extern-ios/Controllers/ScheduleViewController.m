@@ -9,7 +9,6 @@
 #import "ScheduleViewController.h"
 
 #import "LKImage.h"
-#import "LKColor.h"
 #import "LKLayout.h"
 
 #define CELL_IDENTIFIER "event"

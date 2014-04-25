@@ -33,6 +33,16 @@
     [self.navigationBar setBarTintColor:[LKColor colorWithIdentifier:LKColorRed]];
     [self.navigationBar setTitleTextAttributes:textAttributes];
     
+    UIView *shadow = [[UIView alloc] init];
+    shadow.frame = CGRectMake(0, self.navigationBar.frame.size.height, self.navigationBar.frame.size.width, 3);
+    shadow.backgroundColor = [UIColor colorWithWhite:0 alpha:0.15];
+    
+    [self.navigationBar addSubview:shadow];
+    
+    //remove 1px default shadow.
+    [[UINavigationBar appearance] setShadowImage:[[UIImage alloc] init]];
+    [[UINavigationBar appearance] setBackgroundImage:[[UIImage alloc] init] forBarMetrics:UIBarMetricsDefault];
+    
 }
 
 @end

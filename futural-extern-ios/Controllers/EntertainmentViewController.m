@@ -10,8 +10,6 @@
 
 #import "LKLayout.h"
 
-#define FONT_SIZE 12
-
 @implementation EntertainmentViewController
 
 - (void)viewDidLoad {

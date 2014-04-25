@@ -8,8 +8,8 @@
 
 #import "FoodViewController.h"
 
-#define RADIUS_DEFAULT 80
-#define FONT_SIZE 12
+#import "LKLayout.h"
+#import "LKColor.h"
 
 @implementation FoodViewController
 
@@ -37,10 +37,9 @@
         LKCell *cell = (LKCell *)object;
         LKPlace *place = [[self foodPlaces] objectAtIndex:index];
         
-        //BUTTON
         LKButton *button = [LKLayout buttonForCell:cell withStrokeColor:strokeColor andImage:[place imageForPlace]];
+        button.tag = index; //identifier
         
-        //LABEL
         UILabel *title = [LKLayout titleLabelForCell:cell withTitle:place.name];
         
         [self.scrollView addSubview:button];
