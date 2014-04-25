@@ -51,14 +51,14 @@
 
 /* Begin PBXFileReference section */
 		1A7DA8A218FF06C70025C677 /* App.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = App.xcassets; sourceTree = "<group>"; };
-		1AE8E55118F42FB50078EBDF /* Lundakarnevalen.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lundakarnevalen.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1AE8E55118F42FB50078EBDF /* Lundakarneval.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lundakarneval.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1AE8E55418F42FB50078EBDF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		1AE8E55618F42FB50078EBDF /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		1AE8E55818F42FB50078EBDF /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		1AE8E55C18F42FB50078EBDF /* Lundakarnevalen-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Lundakarnevalen-Info.plist"; sourceTree = "<group>"; };
+		1AE8E55C18F42FB50078EBDF /* Lundakarneval-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Lundakarneval-Info.plist"; sourceTree = "<group>"; };
 		1AE8E55E18F42FB50078EBDF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		1AE8E56018F42FB50078EBDF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = main.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
-		1AE8E56218F42FB50078EBDF /* Lundakarnevalen-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Lundakarnevalen-Prefix.pch"; sourceTree = "<group>"; };
+		1AE8E56218F42FB50078EBDF /* Lundakarneval-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Lundakarneval-Prefix.pch"; sourceTree = "<group>"; };
 		1AE8E56318F42FB50078EBDF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = AppDelegate.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		1AE8E56418F42FB50078EBDF /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = AppDelegate.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		1AE8E56718F42FB50078EBDF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -144,7 +144,7 @@
 		1AE8E55218F42FB50078EBDF /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				1AE8E55118F42FB50078EBDF /* Lundakarnevalen.app */,
+				1AE8E55118F42FB50078EBDF /* Lundakarneval.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -182,10 +182,10 @@
 		1AE8E55B18F42FB50078EBDF /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				1AE8E55C18F42FB50078EBDF /* Lundakarnevalen-Info.plist */,
+				1AE8E55C18F42FB50078EBDF /* Lundakarneval-Info.plist */,
 				1AE8E55D18F42FB50078EBDF /* InfoPlist.strings */,
 				1AE8E56018F42FB50078EBDF /* main.m */,
-				1AE8E56218F42FB50078EBDF /* Lundakarnevalen-Prefix.pch */,
+				1AE8E56218F42FB50078EBDF /* Lundakarneval-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -310,9 +310,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		1AE8E55018F42FB50078EBDF /* Lundakarnevalen */ = {
+		1AE8E55018F42FB50078EBDF /* Lundakarneval */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1AE8E58318F42FB50078EBDF /* Build configuration list for PBXNativeTarget "Lundakarnevalen" */;
+			buildConfigurationList = 1AE8E58318F42FB50078EBDF /* Build configuration list for PBXNativeTarget "Lundakarneval" */;
 			buildPhases = (
 				1AE8E54D18F42FB50078EBDF /* Sources */,
 				1AE8E54E18F42FB50078EBDF /* Frameworks */,
@@ -322,9 +322,9 @@
 			);
 			dependencies = (
 			);
-			name = Lundakarnevalen;
+			name = Lundakarneval;
 			productName = "futural-extern-ios";
-			productReference = 1AE8E55118F42FB50078EBDF /* Lundakarnevalen.app */;
+			productReference = 1AE8E55118F42FB50078EBDF /* Lundakarneval.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -336,7 +336,7 @@
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = Lundakarnevalen;
 			};
-			buildConfigurationList = 1AE8E54C18F42FB50078EBDF /* Build configuration list for PBXProject "Lundakarnevalen" */;
+			buildConfigurationList = 1AE8E54C18F42FB50078EBDF /* Build configuration list for PBXProject "Lundakarneval" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -349,7 +349,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				1AE8E55018F42FB50078EBDF /* Lundakarnevalen */,
+				1AE8E55018F42FB50078EBDF /* Lundakarneval */,
 			);
 		};
 /* End PBXProject section */
@@ -509,10 +509,10 @@
 					"$(PROJECT_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "futural-extern-ios/Lundakarnevalen-Prefix.pch";
-				INFOPLIST_FILE = "futural-extern-ios/Lundakarnevalen-Info.plist";
+				GCC_PREFIX_HEADER = "futural-extern-ios/Lundakarneval-Prefix.pch";
+				INFOPLIST_FILE = "futural-extern-ios/Lundakarneval-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
-				PRODUCT_NAME = Lundakarnevalen;
+				PRODUCT_NAME = Lundakarneval;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -527,10 +527,10 @@
 					"$(PROJECT_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "futural-extern-ios/Lundakarnevalen-Prefix.pch";
-				INFOPLIST_FILE = "futural-extern-ios/Lundakarnevalen-Info.plist";
+				GCC_PREFIX_HEADER = "futural-extern-ios/Lundakarneval-Prefix.pch";
+				INFOPLIST_FILE = "futural-extern-ios/Lundakarneval-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
-				PRODUCT_NAME = Lundakarnevalen;
+				PRODUCT_NAME = Lundakarneval;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -538,7 +538,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		1AE8E54C18F42FB50078EBDF /* Build configuration list for PBXProject "Lundakarnevalen" */ = {
+		1AE8E54C18F42FB50078EBDF /* Build configuration list for PBXProject "Lundakarneval" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1AE8E58118F42FB50078EBDF /* Debug */,
@@ -547,7 +547,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		1AE8E58318F42FB50078EBDF /* Build configuration list for PBXNativeTarget "Lundakarnevalen" */ = {
+		1AE8E58318F42FB50078EBDF /* Build configuration list for PBXNativeTarget "Lundakarneval" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1AE8E58418F42FB50078EBDF /* Debug */,
