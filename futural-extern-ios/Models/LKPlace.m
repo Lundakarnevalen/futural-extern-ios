@@ -76,7 +76,7 @@
         
         return identifierImage;
         
-    } else { //fallback if no specific image.
+    } else { //fallback if no specific image/logotype.
         
         return [self.class imageForCategory:self.category];
         
@@ -159,6 +159,8 @@
             break;
             
         case LKPlaceCategoryScene:
+            
+            imageName = @"show";
             
             break;
             
