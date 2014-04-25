@@ -38,6 +38,7 @@
         LKButton *button = [LKLayout buttonForCell:cell
                                    withStrokeColor:[LKColor colorWithIdentifier:LKColorGreen]
                                           andImage:[place imageForPlace]];
+        button.tag = index; //identifier
         
         UILabel *title = [LKLayout titleLabelForCell:cell
                                            withTitle:place.name];

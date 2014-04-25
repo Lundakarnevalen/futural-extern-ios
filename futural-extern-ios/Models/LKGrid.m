@@ -9,7 +9,7 @@
 #import "LKGrid.h"
 
 #define SPACING_ROW 40
-#define COUNT_COLUMNS 2
+#define COUNT_COLUMNS 2 //make it dynamic.
 #define RADIUS_DEFAULT 80
 
 @implementation LKGrid
@@ -61,15 +61,21 @@
 
 - (CGSize)contentSize {
     
-    NSInteger height = 0;
+    float height = 0;
     
-    for(LKCell *cell in self.cells) {
+    for(NSInteger index = 0; index < [self.cells count]; index++) {
         
-        height += (cell.size.height + SPACING_ROW);
+        NSInteger modulus = index % COUNT_COLUMNS;
+        
+        if(modulus == 0) { //once every row.
+        
+            LKCell *cell = [self.cells objectAtIndex:index];
+            height += (cell.size.height + SPACING_ROW);
+            
+        }
         
     }
     
-    height /= COUNT_COLUMNS;
     height += SPACING_ROW;
     
     CGSize size;

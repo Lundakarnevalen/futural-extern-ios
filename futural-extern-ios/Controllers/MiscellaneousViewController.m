@@ -29,8 +29,13 @@
         LKCell *cell = (LKCell *)object;
         LKPlace *place = [self.karneval.places objectAtIndex:index];
         
-        LKButton *button = [LKLayout buttonForCell:cell withStrokeColor:[LKColor colorWithIdentifier:LKColorBeige] andImage:[place imageForPlace]];
-        UILabel *title = [LKLayout titleLabelForCell:cell withTitle:place.name];
+        LKButton *button = [LKLayout buttonForCell:cell
+                                   withStrokeColor:[LKColor colorWithIdentifier:LKColorBeige]
+                                          andImage:[place imageForPlace]];
+        button.tag = index; //identifier
+        
+        UILabel *title = [LKLayout titleLabelForCell:cell
+                                           withTitle:place.name];
         
         [self.scrollView addSubview:button];
         [self.scrollView addSubview:title];

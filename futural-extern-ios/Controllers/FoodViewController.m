@@ -37,10 +37,13 @@
         LKCell *cell = (LKCell *)object;
         LKPlace *place = [[self foodPlaces] objectAtIndex:index];
         
-        LKButton *button = [LKLayout buttonForCell:cell withStrokeColor:strokeColor andImage:[place imageForPlace]];
+        LKButton *button = [LKLayout buttonForCell:cell
+                                   withStrokeColor:strokeColor
+                                          andImage:[place imageForPlace]];
         button.tag = index; //identifier
         
-        UILabel *title = [LKLayout titleLabelForCell:cell withTitle:place.name];
+        UILabel *title = [LKLayout titleLabelForCell:cell
+                                           withTitle:place.name];
         
         [self.scrollView addSubview:button];
         [self.scrollView addSubview:title];
