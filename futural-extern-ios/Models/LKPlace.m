@@ -70,7 +70,17 @@
 
 - (UIImage *)imageForPlace {
     
-    return [self.class imageForCategory:self.category];
+    UIImage *identifierImage = [self.class imageForIdentifier:self.identifier];
+    
+    if(identifierImage) {
+        
+        return identifierImage;
+        
+    } else { //fallback if no specific image.
+        
+        return [self.class imageForCategory:self.category];
+        
+    }
     
 }
 
@@ -97,6 +107,12 @@
 }
 
 #pragma mark Class methods
+
++ (UIImage *)imageForIdentifier:(NSString *)identifier {
+    
+    return [UIImage imageNamed:identifier];
+    
+}
 
 + (UIImage *)imageForCategory:(LKPlaceCategory)category {
  
@@ -126,7 +142,7 @@
             
         case LKPlaceCategoryFood:
             
-            imageName = @"food";
+            imageName = @"hamburger-drink";
             
             break;
             
