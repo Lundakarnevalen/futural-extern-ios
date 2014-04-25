@@ -46,6 +46,7 @@
 		578929C91900839A002AA116 /* Events.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 578929C81900839A002AA116 /* Events.xcassets */; };
 		57908F0A1909423700388C1A /* LKButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 57908F091909423700388C1A /* LKButton.m */; };
 		57DB443E190291D0009C3D37 /* Schedule.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 57DB443D190291D0009C3D37 /* Schedule.xcassets */; };
+		57FB7465190AD08E0059CA82 /* LKLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 57FB7464190AD08E0059CA82 /* LKLayout.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -111,6 +112,8 @@
 		57908F081909423700388C1A /* LKButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LKButton.h; path = Models/LKButton.h; sourceTree = "<group>"; };
 		57908F091909423700388C1A /* LKButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LKButton.m; path = Models/LKButton.m; sourceTree = "<group>"; };
 		57DB443D190291D0009C3D37 /* Schedule.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Schedule.xcassets; path = Data/Sprites/Schedule.xcassets; sourceTree = "<group>"; };
+		57FB7463190AD08E0059CA82 /* LKLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LKLayout.h; path = Models/LKLayout.h; sourceTree = "<group>"; };
+		57FB7464190AD08E0059CA82 /* LKLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LKLayout.m; path = Models/LKLayout.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -200,6 +203,8 @@
 				577621261909A3D900B99E8E /* LKCell.m */,
 				57515827190A9D1B009E88EB /* LKImage.h */,
 				57515828190A9D1B009E88EB /* LKImage.m */,
+				57FB7463190AD08E0059CA82 /* LKLayout.h */,
+				57FB7464190AD08E0059CA82 /* LKLayout.m */,
 			);
 			name = Toolbox;
 			sourceTree = "<group>";
@@ -387,6 +392,7 @@
 				57515829190A9D1B009E88EB /* LKImage.m in Sources */,
 				575C94CB18FED4B400A341EE /* FoodViewController.m in Sources */,
 				57762124190993DB00B99E8E /* MiscellaneousViewController.m in Sources */,
+				57FB7465190AD08E0059CA82 /* LKLayout.m in Sources */,
 				577621211909932800B99E8E /* EntertainmentViewController.m in Sources */,
 				57407D1518FD2A5A0003F787 /* LKEvent.m in Sources */,
 				57407D1A18FD2B5C0003F787 /* LKSektion.m in Sources */,

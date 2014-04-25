@@ -12,6 +12,6 @@
 
 @property (nonatomic) UIImage *backgroundImage;
 
-- (void)drawCircleButton:(UIColor *)color;
+- (void)drawCircleButton:(UIColor *)color withStrokeWidth:(NSInteger)strokeWidth;
 
 @end

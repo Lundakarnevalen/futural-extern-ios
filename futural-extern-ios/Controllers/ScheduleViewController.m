@@ -10,6 +10,7 @@
 
 #import "LKImage.h"
 #import "LKColor.h"
+#import "LKLayout.h"
 
 #define CELL_IDENTIFIER "event"
 
@@ -64,7 +65,7 @@
     LKImage *image = (LKImage *)[[cell contentView] viewWithTag:TAG_IMAGE];
     UIButton *favorite = (UIButton *)[[cell contentView] viewWithTag:TAG_FAVORITE];
     
-    headerName.text = [NSString stringWithFormat:@"%@", event.name];
+    headerName.text = [NSString stringWithFormat:@"%@", [event.name uppercaseString]];
     headerPlace.text = [NSString stringWithFormat:@"%@", [event.place.name uppercaseString]];
     
     timeStart.text = [NSString stringWithFormat:@"%@", [event formattedStartTime]];

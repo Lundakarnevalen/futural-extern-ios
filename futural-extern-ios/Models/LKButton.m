@@ -15,11 +15,9 @@
 
 @end
 
-#define STROKE_DEFAULT 5.0
-
 @implementation LKButton
 
-- (void)drawCircleButton:(UIColor *)color {
+- (void)drawCircleButton:(UIColor *)color withStrokeWidth:(NSInteger)strokeWidth {
     
     self.color = color;
     
@@ -27,7 +25,7 @@
     
     [self.layer setCornerRadius:self.frame.size.height / 2]; //makes the button circular.
     [self.layer setMasksToBounds:YES]; //crops the image.
-    [self.layer setBorderWidth:STROKE_DEFAULT];
+    [self.layer setBorderWidth:strokeWidth];
     [self.layer setBorderColor:color.CGColor];
     [self setImage:self.backgroundImage forState:UIControlStateNormal];
 

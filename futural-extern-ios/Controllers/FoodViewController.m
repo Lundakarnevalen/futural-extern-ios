@@ -29,7 +29,7 @@
 
 - (void)renderGrid {
     
-    UIColor *strokeColor = [LKColor colorWithIdentifier:LKColorGreen];
+    UIColor *strokeColor = [LKColor colorWithIdentifier:LKColorBeige];
     [self.scrollView setContentSize:[self.grid contentSize]];
     
     [self.grid.cells enumerateObjectsUsingBlock:^(id object, NSUInteger index, BOOL *stop) {
@@ -38,29 +38,10 @@
         LKPlace *place = [[self foodPlaces] objectAtIndex:index];
         
         //BUTTON
-        LKButton *button = [[LKButton alloc] init];
-        button.frame = CGRectMake(cell.position.x, cell.position.y, cell.size.width, cell.size.height);
-        button.backgroundImage = [place imageForPlace];
-        [button drawCircleButton:strokeColor];
+        LKButton *button = [LKLayout buttonForCell:cell withStrokeColor:strokeColor andImage:[place imageForPlace]];
         
         //LABEL
-        CGSize titleSize;
-        titleSize.width = RADIUS_DEFAULT;
-        titleSize.height = FONT_SIZE;
-        
-        CGPoint titlePosition;
-        titlePosition.x = cell.position.x;
-        titlePosition.y = cell.position.y + (RADIUS_DEFAULT / 0.9);
-        
-        CGRect titleFrame;
-        titleFrame.origin = titlePosition;
-        titleFrame.size = titleSize;
-        
-        UILabel *title = [[UILabel alloc] initWithFrame:titleFrame];
-        title.font = [UIFont fontWithName:@"Futura-Bold" size:FONT_SIZE];
-        title.textColor = [UIColor whiteColor];
-        title.textAlignment = NSTextAlignmentCenter;
-        title.text = [place.name uppercaseString];
+        UILabel *title = [LKLayout titleLabelForCell:cell withTitle:place.name];
         
         [self.scrollView addSubview:button];
         [self.scrollView addSubview:title];

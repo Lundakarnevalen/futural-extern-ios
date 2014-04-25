@@ -29,5 +29,6 @@
 - (NSArray *)favoriteEvents;
 
 + (NSArray *)LKPlaceFilterFood;
++ (NSArray *)LKPlaceFilterEntertainment;
 
 @end

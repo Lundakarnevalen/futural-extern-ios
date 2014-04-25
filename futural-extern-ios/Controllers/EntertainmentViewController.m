@@ -8,6 +8,8 @@
 
 #import "EntertainmentViewController.h"
 
+#import "LKLayout.h"
+
 #define FONT_SIZE 12
 
 @implementation EntertainmentViewController
@@ -20,9 +22,14 @@
     
 }
 
+- (NSArray *)entertainmentPlaces {
+    
+    return  [self.karneval placesFilteredByCategories:[LKarneval LKPlaceFilterEntertainment]];
+    
+}
+
 - (void)renderGrid {
     
-    UIColor *strokeColor = [LKColor colorWithIdentifier:LKColorRed];
     [self.scrollView setContentSize:[self.grid contentSize]];
     
     [self.grid.cells enumerateObjectsUsingBlock:^(id object, NSUInteger index, BOOL *stop) {
@@ -30,30 +37,12 @@
         LKCell *cell = (LKCell *)object;
         LKPlace *place = [self.karneval.places objectAtIndex:index];
         
-        //BUTTON
-        LKButton *button = [[LKButton alloc] init];
-        button.frame = CGRectMake(cell.position.x, cell.position.y, cell.size.width, cell.size.height);
-        button.backgroundImage = [place imageForPlace];
-        [button drawCircleButton:strokeColor];
+        LKButton *button = [LKLayout buttonForCell:cell
+                                   withStrokeColor:[LKColor colorWithIdentifier:LKColorGreen]
+                                          andImage:[place imageForPlace]];
         
-        //LABEL
-        CGSize titleSize;
-        titleSize.width = cell.size.width;
-        titleSize.height = FONT_SIZE;
-        
-        CGPoint titlePosition;
-        titlePosition.x = cell.position.x;
-        titlePosition.y = cell.position.y + (cell.size.height / 0.9);
-        
-        CGRect titleFrame;
-        titleFrame.origin = titlePosition;
-        titleFrame.size = titleSize;
-        
-        UILabel *title = [[UILabel alloc] initWithFrame:titleFrame];
-        title.font = [UIFont fontWithName:@"Futura-Bold" size:FONT_SIZE];
-        title.textColor = [UIColor whiteColor];
-        title.textAlignment = NSTextAlignmentCenter;
-        title.text = [place.name uppercaseString];
+        UILabel *title = [LKLayout titleLabelForCell:cell
+                                           withTitle:place.name];
         
         [self.scrollView addSubview:button];
         [self.scrollView addSubview:title];
@@ -66,7 +55,7 @@
     
     if(!_grid) {
         
-        _grid = [[LKGrid alloc] initWithFrame:self.view.frame andGridCells:[LKGrid cellsFromArray:self.karneval.places]];
+        _grid = [[LKGrid alloc] initWithFrame:self.view.frame andGridCells:[LKGrid cellsFromArray:[self entertainmentPlaces]]];
         
     }
     

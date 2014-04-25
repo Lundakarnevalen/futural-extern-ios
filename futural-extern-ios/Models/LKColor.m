@@ -59,6 +59,14 @@
             
             break;
             
+        case LKColorBeige:
+            
+            red = 248;
+            green = 235;
+            blue = 216;
+            
+            break;
+            
     }
     
     return [UIColor colorWithRed:red/255.0 green:green/255.0 blue:blue/255.0 alpha:alpha];
