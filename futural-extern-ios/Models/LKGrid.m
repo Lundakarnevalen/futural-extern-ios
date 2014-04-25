@@ -61,7 +61,6 @@
 - (CGSize)contentSize {
     
     NSInteger height = 0;
-    NSInteger rows = (NSInteger) (([self.cells count] / COUNT_COLUMNS) + 0.5);
     
     for(LKCell *cell in self.cells) {
         

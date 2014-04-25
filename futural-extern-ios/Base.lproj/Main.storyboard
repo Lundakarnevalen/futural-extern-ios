@@ -74,6 +74,9 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Nöjen" image="entertainment" id="W9D-W2-wwR"/>
+                    <connections>
+                        <outlet property="scrollView" destination="Ga3-Ta-MVw" id="sSJ-ox-mQt"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5h6-vH-47q" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

@@ -21,13 +21,21 @@
     
 }
 
+- (NSArray *)foodPlaces {
+    
+    return [self.karneval placesFilteredByCategories:[LKarneval LKPlaceFilterFood]];
+    
+}
+
 - (NSMutableArray *)cells {
     
     //filter food only.
     
     NSMutableArray *cells = [[NSMutableArray alloc] init];
     
-    for(NSInteger index = 0; index < [self.karneval.events count]; index++) {
+    NSArray *foodPlaces = [self foodPlaces];
+    
+    for(NSInteger index = 0; index < [foodPlaces count]; index++) {
         
         LKCell *cell = [[LKCell alloc] initWithRadius:RADIUS_DEFAULT];
         [cells addObject:cell];
@@ -46,12 +54,12 @@
     [self.grid.cells enumerateObjectsUsingBlock:^(id object, NSUInteger index, BOOL *stop) {
        
         LKCell *cell = (LKCell *)object;
-        LKEvent *event = [self.karneval.events objectAtIndex:index];
+        LKPlace *place = [[self foodPlaces] objectAtIndex:index];
         
         //BUTTON
         LKButton *button = [[LKButton alloc] init];
         button.frame = CGRectMake(cell.position.x, cell.position.y, cell.size.width, cell.size.height);
-        button.backgroundImage = [event imageForEvent];
+        button.backgroundImage = [place imageForPlace];
         [button drawCircleButton:strokeColor];
         
         //LABEL
@@ -71,7 +79,7 @@
         title.font = [UIFont fontWithName:@"Futura-Bold" size:FONT_SIZE];
         title.textColor = [UIColor whiteColor];
         title.textAlignment = NSTextAlignmentCenter;
-        title.text = [event.name uppercaseString];
+        title.text = [place.name uppercaseString];
         
         [self.scrollView addSubview:button];
         [self.scrollView addSubview:title];
