@@ -41,6 +41,7 @@
                                    withStrokeColor:strokeColor
                                           andImage:[place imageForPlace]];
         button.tag = index; //identifier
+        [button addTarget:self action:@selector(cellClick:) forControlEvents:UIControlEventTouchUpInside];
         
         UILabel *title = [LKLayout titleLabelForCell:cell
                                            withTitle:place.name];
@@ -49,6 +50,17 @@
         [self.scrollView addSubview:title];
         
     }];
+    
+}
+
+- (void)cellClick:(id)sender {
+    
+    LKButton *button = (LKButton *)sender;
+    LKPlace *place = [[self foodPlaces] objectAtIndex:button.tag];
+    
+    NSLog(@"Food tap: %@", place.name);
+    
+    [self performSegueWithIdentifier:@"food.detail" sender:self];
     
 }
 

@@ -23,7 +23,7 @@
 		1ABFF6FA1900713800C575EE /* LKColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ABFF6F91900713800C575EE /* LKColor.m */; };
 		1ABFF6FE19007CF800C575EE /* LKOverlay.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ABFF6FD19007CF800C575EE /* LKOverlay.m */; };
 		1ABFF70119007E2000C575EE /* LKOverlayRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ABFF70019007E2000C575EE /* LKOverlayRenderer.m */; };
-		1ABFF7031900887F00C575EE /* FuturaLT-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1ABFF7021900887F00C575EE /* FuturaLT-Bold.ttf */; };
+		1ABFF7031900887F00C575EE /* futuralt-bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1ABFF7021900887F00C575EE /* futuralt-bold.ttf */; };
 		1ABFF706190088F700C575EE /* UILabel+Shadow+FuturaBoldFont.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ABFF705190088F700C575EE /* UILabel+Shadow+FuturaBoldFont.m */; };
 		1AE8E55518F42FB50078EBDF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AE8E55418F42FB50078EBDF /* Foundation.framework */; };
 		1AE8E55718F42FB50078EBDF /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AE8E55618F42FB50078EBDF /* CoreGraphics.framework */; };
@@ -54,6 +54,7 @@
 		578929C91900839A002AA116 /* Events.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 578929C81900839A002AA116 /* Events.xcassets */; };
 		57994785190B18B60098BEA3 /* Places.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 57994784190B18B60098BEA3 /* Places.xcassets */; };
 		57BD3482190B1A8E001BE9B2 /* MiscellaneousDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 57FB7467190B06F80059CA82 /* MiscellaneousDetailViewController.m */; };
+		57CC6F5C190C5DD30006DE48 /* FoodDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 57CC6F5B190C5DD30006DE48 /* FoodDetailViewController.m */; };
 		57DB443E190291D0009C3D37 /* Schedule.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 57DB443D190291D0009C3D37 /* Schedule.xcassets */; };
 		57FB7472190B150A0059CA82 /* LKCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 57FB746B190B150A0059CA82 /* LKCell.m */; };
 		57FB7473190B150A0059CA82 /* LKGrid.m in Sources */ = {isa = PBXBuildFile; fileRef = 57FB746D190B150A0059CA82 /* LKGrid.m */; };
@@ -91,7 +92,7 @@
 		1ABFF6FD19007CF800C575EE /* LKOverlay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LKOverlay.m; path = Models/Overlay/LKOverlay.m; sourceTree = "<group>"; };
 		1ABFF6FF19007E2000C575EE /* LKOverlayRenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LKOverlayRenderer.h; path = Models/Overlay/LKOverlayRenderer.h; sourceTree = "<group>"; };
 		1ABFF70019007E2000C575EE /* LKOverlayRenderer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LKOverlayRenderer.m; path = Models/Overlay/LKOverlayRenderer.m; sourceTree = "<group>"; };
-		1ABFF7021900887F00C575EE /* FuturaLT-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "FuturaLT-Bold.ttf"; path = "Data/Typefaces/FuturaLT-Bold.ttf"; sourceTree = "<group>"; };
+		1ABFF7021900887F00C575EE /* futuralt-bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "futuralt-bold.ttf"; path = "Data/Typefaces/futuralt-bold.ttf"; sourceTree = "<group>"; };
 		1ABFF704190088F700C575EE /* UILabel+Shadow+FuturaBoldFont.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UILabel+Shadow+FuturaBoldFont.h"; path = "Models/UILabel+Shadow+FuturaBoldFont.h"; sourceTree = "<group>"; };
 		1ABFF705190088F700C575EE /* UILabel+Shadow+FuturaBoldFont.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UILabel+Shadow+FuturaBoldFont.m"; path = "Models/UILabel+Shadow+FuturaBoldFont.m"; sourceTree = "<group>"; };
 		1AE8E55118F42FB50078EBDF /* Lundakarneval.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lundakarneval.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -141,6 +142,8 @@
 		578929C419007BD4002AA116 /* PlaceCategories.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = PlaceCategories.xcassets; path = Data/Sprites/PlaceCategories.xcassets; sourceTree = "<group>"; };
 		578929C81900839A002AA116 /* Events.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Events.xcassets; path = Data/Sprites/Events.xcassets; sourceTree = "<group>"; };
 		57994784190B18B60098BEA3 /* Places.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Places.xcassets; path = Data/Sprites/Places.xcassets; sourceTree = "<group>"; };
+		57CC6F5A190C5DD30006DE48 /* FoodDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FoodDetailViewController.h; path = Controllers/FoodDetailViewController.h; sourceTree = "<group>"; };
+		57CC6F5B190C5DD30006DE48 /* FoodDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FoodDetailViewController.m; path = Controllers/FoodDetailViewController.m; sourceTree = "<group>"; };
 		57DB443D190291D0009C3D37 /* Schedule.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Schedule.xcassets; path = Data/Sprites/Schedule.xcassets; sourceTree = "<group>"; };
 		57FB7466190B06F80059CA82 /* MiscellaneousDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MiscellaneousDetailViewController.h; path = Controllers/MiscellaneousDetailViewController.h; sourceTree = "<group>"; };
 		57FB7467190B06F80059CA82 /* MiscellaneousDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MiscellaneousDetailViewController.m; path = Controllers/MiscellaneousDetailViewController.m; sourceTree = "<group>"; };
@@ -333,8 +336,7 @@
 			isa = PBXGroup;
 			children = (
 				1ABFF6EA1900645300C575EE /* Map */,
-				575C94C918FED4B400A341EE /* FoodViewController.h */,
-				575C94CA18FED4B400A341EE /* FoodViewController.m */,
+				57CC6F5D190C5DEA0006DE48 /* Food */,
 				575C94B618FEC9C600A341EE /* ScheduleViewController.h */,
 				575C94B718FEC9C600A341EE /* ScheduleViewController.m */,
 				5776211F1909932800B99E8E /* EntertainmentViewController.h */,
@@ -362,7 +364,7 @@
 		575C94A818FE8D0000A341EE /* Typefaces */ = {
 			isa = PBXGroup;
 			children = (
-				1ABFF7021900887F00C575EE /* FuturaLT-Bold.ttf */,
+				1ABFF7021900887F00C575EE /* futuralt-bold.ttf */,
 				575C94AD18FE90D900A341EE /* robothead.ttf */,
 			);
 			name = Typefaces;
@@ -389,6 +391,17 @@
 				575C949E18FE7F3D00A341EE /* Events.plist */,
 			);
 			name = Data;
+			sourceTree = "<group>";
+		};
+		57CC6F5D190C5DEA0006DE48 /* Food */ = {
+			isa = PBXGroup;
+			children = (
+				575C94C918FED4B400A341EE /* FoodViewController.h */,
+				575C94CA18FED4B400A341EE /* FoodViewController.m */,
+				57CC6F5A190C5DD30006DE48 /* FoodDetailViewController.h */,
+				57CC6F5B190C5DD30006DE48 /* FoodDetailViewController.m */,
+			);
+			name = Food;
 			sourceTree = "<group>";
 		};
 		57FB7469190B07020059CA82 /* Miscellaneous */ = {
@@ -456,7 +469,7 @@
 			files = (
 				1ABFF6E319002BBB00C575EE /* LKAnnotation.xib in Resources */,
 				1AF152C819059592006F2896 /* Places.plist in Resources */,
-				1ABFF7031900887F00C575EE /* FuturaLT-Bold.ttf in Resources */,
+				1ABFF7031900887F00C575EE /* futuralt-bold.ttf in Resources */,
 				57994785190B18B60098BEA3 /* Places.xcassets in Resources */,
 				575C949F18FE7F3D00A341EE /* Events.plist in Resources */,
 				57DB443E190291D0009C3D37 /* Schedule.xcassets in Resources */,
@@ -487,6 +500,7 @@
 				1ABFF6FE19007CF800C575EE /* LKOverlay.m in Sources */,
 				1ABFF706190088F700C575EE /* UILabel+Shadow+FuturaBoldFont.m in Sources */,
 				1AE8E56518F42FB50078EBDF /* AppDelegate.m in Sources */,
+				57CC6F5C190C5DD30006DE48 /* FoodDetailViewController.m in Sources */,
 				57407D1D18FD2F110003F787 /* LKarnevalist.m in Sources */,
 				1ABFF6E219002BBB00C575EE /* LKAnnotation.m in Sources */,
 				57FB7472190B150A0059CA82 /* LKCell.m in Sources */,

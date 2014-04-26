@@ -33,8 +33,10 @@
     [self.navigationBar.topItem setTitle:@"LUNDAKARNEVALEN"];
     [self.navigationBar setTranslucent:NO];
     [self.navigationBar setBarTintColor:[LKColor colorWithIdentifier:LKColorRed]];
+    [self.navigationBar setTintColor:[UIColor whiteColor]];
     [self.navigationBar setTitleTextAttributes:textAttributes];
     
+    //shadow beneath navbar.
     UIView *shadow = [[UIView alloc] init];
     shadow.frame = CGRectMake(0, self.navigationBar.frame.size.height, self.navigationBar.frame.size.width, 3);
     shadow.backgroundColor = [UIColor colorWithWhite:0 alpha:0.15];
