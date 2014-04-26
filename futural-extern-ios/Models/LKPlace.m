@@ -31,11 +31,19 @@
             
         }
         
-        NSDictionary *position = propertyList[@"position"];
-        CLLocationDegrees latitude = [position[@"latitude"] doubleValue];
-        CLLocationDegrees longitude = [position[@"longitude"] doubleValue];
+        //NSDictionary *position = propertyList[@"position"];
+        NSArray *positions = propertyList[@"positions"];
         
-        self.position = CLLocationCoordinate2DMake(latitude, longitude);
+        for(NSDictionary *position in positions) {
+            
+            CLLocationDegrees latitude = [position[@"latitude"] doubleValue];
+            CLLocationDegrees longitude = [position[@"longitude"] doubleValue];
+            
+            CLLocation *coordinates = [[CLLocation alloc] initWithLatitude:latitude longitude:longitude]; //send message 'coordinate' to get the CLLocation2D blublub.
+            
+            [self.positions addObject:coordinates];
+            
+        }
         
     }
     
@@ -67,6 +75,14 @@
     
     //look at acceptsCard
     return NO;
+    
+}
+
+- (CLLocationCoordinate2D)position {
+    
+    //as for now.
+    _position = [[_positions firstObject] coordinate];
+    return _position;
     
 }
 
@@ -118,6 +134,18 @@
     }
     
     return _paymentOptions;
+    
+}
+
+- (NSMutableArray *)positions {
+    
+    if(!_positions) {
+        
+        _positions = [[NSMutableArray alloc] init];
+        
+    }
+    
+    return _positions;
     
 }
 

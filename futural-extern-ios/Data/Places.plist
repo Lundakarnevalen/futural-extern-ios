@@ -4,6 +4,15 @@
 <dict>
 	<key>cirkusen</key>
 	<dict>
+		<key>positions</key>
+		<array>
+			<dict>
+				<key>latitude</key>
+				<real>55.7047557721988</real>
+				<key>longitude</key>
+				<real>13.19537105245979</real>
+			</dict>
+		</array>
 		<key>alcohol</key>
 		<false/>
 		<key>category</key>
@@ -14,13 +23,6 @@
 		<string>Cirkusen</string>
 		<key>payment_options</key>
 		<array/>
-		<key>position</key>
-		<dict>
-			<key>latitude</key>
-			<real>55.7047557721988</real>
-			<key>longitude</key>
-			<real>13.19537105245979</real>
-		</dict>
 	</dict>
 	<key>krogundervatten</key>
 	<dict>
@@ -34,16 +36,27 @@
 		<string>Krog Undervatten</string>
 		<key>payment_options</key>
 		<array/>
-		<key>position</key>
-		<dict>
-			<key>latitude</key>
-			<real>55.70508561404364</real>
-			<key>longitude</key>
-			<real>13.19467199442641</real>
-		</dict>
+		<key>positions</key>
+		<array>
+			<dict>
+				<key>latitude</key>
+				<real>55.70508561404364</real>
+				<key>longitude</key>
+				<real>13.19467199442641</real>
+			</dict>
+		</array>
 	</dict>
 	<key>revyn</key>
 	<dict>
+		<key>positions</key>
+		<array>
+			<dict>
+				<key>latitude</key>
+				<real>55.70556259155273</real>
+				<key>longitude</key>
+				<real>13.19296550750732</real>
+			</dict>
+		</array>
 		<key>alcohol</key>
 		<false/>
 		<key>annotation_image</key>
@@ -58,16 +71,18 @@
 		<string>Revyn</string>
 		<key>payment_options</key>
 		<array/>
-		<key>position</key>
-		<dict>
-			<key>latitude</key>
-			<real>55.70556259155273</real>
-			<key>longitude</key>
-			<real>13.19296550750732</real>
-		</dict>
 	</dict>
 	<key>shoppen</key>
 	<dict>
+		<key>positions</key>
+		<array>
+			<dict>
+				<key>latitude</key>
+				<real>55.70557904967363</real>
+				<key>longitude</key>
+				<real>13.19512260551833</real>
+			</dict>
+		</array>
 		<key>alcohol</key>
 		<false/>
 		<key>category</key>
@@ -78,16 +93,18 @@
 		<string>Shoppen</string>
 		<key>payment_options</key>
 		<array/>
-		<key>position</key>
-		<dict>
-			<key>latitude</key>
-			<real>55.70557904967363</real>
-			<key>longitude</key>
-			<real>13.19512260551833</real>
-		</dict>
 	</dict>
 	<key>lillascenen</key>
 	<dict>
+		<key>positions</key>
+		<array>
+			<dict>
+				<key>latitude</key>
+				<real>55.707242</real>
+				<key>longitude</key>
+				<real>13.195958</real>
+			</dict>
+		</array>
 		<key>alcohol</key>
 		<false/>
 		<key>category</key>
@@ -98,16 +115,18 @@
 		<string>Lilla scenen</string>
 		<key>payment_options</key>
 		<array/>
-		<key>position</key>
-		<dict>
-			<key>latitude</key>
-			<real>55.707242</real>
-			<key>longitude</key>
-			<real>13.195958</real>
-		</dict>
 	</dict>
 	<key>launchingpad</key>
 	<dict>
+		<key>positions</key>
+		<array>
+			<dict>
+				<key>latitude</key>
+				<real>55.707242</real>
+				<key>longitude</key>
+				<real>13.1965</real>
+			</dict>
+		</array>
 		<key>alcohol</key>
 		<true/>
 		<key>category</key>
@@ -118,16 +137,18 @@
 		<string>Krog L[a]unchingpad</string>
 		<key>payment_options</key>
 		<array/>
-		<key>position</key>
-		<dict>
-			<key>latitude</key>
-			<real>55.707242</real>
-			<key>longitude</key>
-			<real>13.1965</real>
-		</dict>
 	</dict>
 	<key>storascenen</key>
 	<dict>
+		<key>positions</key>
+		<array>
+			<dict>
+				<key>latitude</key>
+				<real>55.70558532232642</real>
+				<key>longitude</key>
+				<real>13.19365336887898</real>
+			</dict>
+		</array>
 		<key>alcohol</key>
 		<false/>
 		<key>category</key>
@@ -138,13 +159,6 @@
 		<string>Stora Scenen</string>
 		<key>payment_options</key>
 		<array/>
-		<key>position</key>
-		<dict>
-			<key>latitude</key>
-			<real>55.70558532232642</real>
-			<key>longitude</key>
-			<real>13.19365336887898</real>
-		</dict>
 	</dict>
 </dict>
 </plist>
