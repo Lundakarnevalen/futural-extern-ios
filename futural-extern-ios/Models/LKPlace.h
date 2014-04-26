@@ -57,5 +57,6 @@ typedef enum {
 - (UIImage *)imageForAnnotation;
 + (UIImage *)imageForCategory:(LKPlaceCategory)category;
 - (UIImage *)imageForPlace;
+- (UIImage *)coverImage;
 
 @end

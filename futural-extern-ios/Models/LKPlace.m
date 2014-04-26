@@ -70,6 +70,22 @@
     
 }
 
+- (UIImage *)coverImage {
+    
+    UIImage *cover = [UIImage imageNamed:[NSString stringWithFormat:@"cover-%@", self.identifier]];
+    
+    if(cover) {
+        
+        return cover;
+        
+    } else {
+        
+        return [UIImage imageNamed:@"unknown"];
+        
+    }
+    
+}
+
 - (UIImage *)imageForPlace {
     
     UIImage *identifierImage = [self.class imageForIdentifier:self.identifier];
@@ -87,12 +103,7 @@
 
 - (UIImage *)imageForAnnotation {
     
-    if (self.annotationImage) {
-        return self.annotationImage;
-    } else {
-        return [self.class imageForCategory:self.category];
-        
-    }
+    return [self imageForPlace];
     
 }
 

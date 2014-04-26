@@ -16,10 +16,4 @@
 
 }
 
-- (void)viewWillAppear:(BOOL)animated {
-    
-    NSLog(@"Hello world");
-    
-}
-
 @end

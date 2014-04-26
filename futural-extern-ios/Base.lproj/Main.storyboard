@@ -480,7 +480,7 @@
                         <rect key="frame" x="0.0" y="64" width="320" height="455"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7kH-AA-dN3">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="cover-nangilima" translatesAutoresizingMaskIntoConstraints="NO" id="7kH-AA-dN3">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="173"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
@@ -500,6 +500,20 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                     </view>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cby-QK-f5f">
+                                        <rect key="frame" x="152" y="10" width="64" height="20"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <subviews>
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ÖPPET" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UA4-CU-MrZ">
+                                                <rect key="frame" x="4" y="0.0" width="56" height="21"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="12"/>
+                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="deviceRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.40599520991830795" green="0.67777714416058399" blue="0.58047246829714949" alpha="1" colorSpace="deviceRGB"/>
+                                    </view>
                                 </subviews>
                                 <color key="backgroundColor" red="0.4745098352432251" green="0.79215693473815918" blue="0.67843139171600342" alpha="1" colorSpace="deviceRGB"/>
                             </view>
@@ -514,9 +528,10 @@
                                 <rect key="frame" x="139" y="142" width="161" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="15"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="deviceRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4go-C9-q8g" customClass="LKImage">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="foodstock" translatesAutoresizingMaskIntoConstraints="NO" id="4go-C9-q8g" customClass="LKImage">
                                 <rect key="frame" x="28" y="131" width="80" height="80"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -524,6 +539,12 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="uJd-ZG-am4"/>
+                    <connections>
+                        <outlet property="coverImageView" destination="7kH-AA-dN3" id="jpr-4n-I6X"/>
+                        <outlet property="headerLabel" destination="w9X-r7-jlQ" id="BEf-2r-gJj"/>
+                        <outlet property="logotypeImage" destination="4go-C9-q8g" id="R7K-XQ-iMU"/>
+                        <outlet property="subHeaderLabel" destination="Fys-mW-hdx" id="yKR-7l-dZB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MHC-wY-fLT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -923,9 +944,11 @@
         <image name="background-food" width="540" height="960"/>
         <image name="background-misc" width="540" height="960"/>
         <image name="background-schedule" width="540" height="960"/>
+        <image name="cover-nangilima" width="160" height="100"/>
         <image name="entertainment" width="25" height="24"/>
         <image name="food" width="15" height="25"/>
         <image name="food-active" width="15" height="25"/>
+        <image name="foodstock" width="129" height="131"/>
         <image name="handle" width="167" height="323"/>
         <image name="heart" width="40" height="35"/>
         <image name="heart-filled" width="40" height="35"/>
