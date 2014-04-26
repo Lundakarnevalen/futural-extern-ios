@@ -16,7 +16,7 @@
 		1ABFF6E319002BBB00C575EE /* LKAnnotation.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1ABFF6DF19002BBB00C575EE /* LKAnnotation.xib */; };
 		1ABFF6E419002BBB00C575EE /* LKAnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ABFF6E119002BBB00C575EE /* LKAnnotationView.m */; };
 		1ABFF6E719002BDD00C575EE /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ABFF6E619002BDD00C575EE /* MapViewController.m */; };
-		1ABFF6E919002DD100C575EE /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1ABFF6E819002DD100C575EE /* Images.xcassets */; };
+		1ABFF6E919002DD100C575EE /* Map.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1ABFF6E819002DD100C575EE /* Map.xcassets */; };
 		1ABFF6ED1900646900C575EE /* ECSlidingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ABFF6EC1900646900C575EE /* ECSlidingViewController.m */; };
 		1ABFF6F01900649300C575EE /* InitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ABFF6EF1900649300C575EE /* InitViewController.m */; };
 		1ABFF6F819006E5400C575EE /* MapFilterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ABFF6F719006E5400C575EE /* MapFilterViewController.m */; };
@@ -80,7 +80,7 @@
 		1ABFF6E119002BBB00C575EE /* LKAnnotationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LKAnnotationView.m; sourceTree = "<group>"; };
 		1ABFF6E519002BDD00C575EE /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MapViewController.h; path = Controllers/Map/MapViewController.h; sourceTree = "<group>"; };
 		1ABFF6E619002BDD00C575EE /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MapViewController.m; path = Controllers/Map/MapViewController.m; sourceTree = "<group>"; };
-		1ABFF6E819002DD100C575EE /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		1ABFF6E819002DD100C575EE /* Map.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Map.xcassets; path = Data/Sprites/Map.xcassets; sourceTree = "<group>"; };
 		1ABFF6EB1900646800C575EE /* ECSlidingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ECSlidingViewController.h; path = Controllers/Map/ECSlidingViewController.h; sourceTree = "<group>"; };
 		1ABFF6EC1900646900C575EE /* ECSlidingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ECSlidingViewController.m; path = Controllers/Map/ECSlidingViewController.m; sourceTree = "<group>"; };
 		1ABFF6EE1900649300C575EE /* InitViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = InitViewController.h; path = Controllers/Map/InitViewController.h; sourceTree = "<group>"; };
@@ -351,7 +351,7 @@
 			isa = PBXGroup;
 			children = (
 				57994784190B18B60098BEA3 /* Places.xcassets */,
-				1ABFF6E819002DD100C575EE /* Images.xcassets */,
+				1ABFF6E819002DD100C575EE /* Map.xcassets */,
 				575C94A218FE838E00A341EE /* TabBar.xcassets */,
 				578929C419007BD4002AA116 /* PlaceCategories.xcassets */,
 				578929C81900839A002AA116 /* Events.xcassets */,
@@ -475,7 +475,7 @@
 				57DB443E190291D0009C3D37 /* Schedule.xcassets in Resources */,
 				578929C91900839A002AA116 /* Events.xcassets in Resources */,
 				575C94AF18FE90D900A341EE /* robothead.ttf in Resources */,
-				1ABFF6E919002DD100C575EE /* Images.xcassets in Resources */,
+				1ABFF6E919002DD100C575EE /* Map.xcassets in Resources */,
 				578929C519007BD4002AA116 /* PlaceCategories.xcassets in Resources */,
 				5776211B190989C800B99E8E /* Layout.xcassets in Resources */,
 				576EA12F18FDD8F300D4166D /* OpeningHours.plist in Resources */,
