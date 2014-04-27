@@ -7,6 +7,7 @@
 //
 
 #import "EntertainmentViewController.h"
+#import "EntertainmentDetailViewController.h"
 
 #import "LKLayout.h"
 
@@ -33,12 +34,13 @@
     [self.grid.cells enumerateObjectsUsingBlock:^(id object, NSUInteger index, BOOL *stop) {
         
         LKCell *cell = (LKCell *)object;
-        LKPlace *place = [self.karneval.places objectAtIndex:index];
+        LKPlace *place = [[self entertainmentPlaces] objectAtIndex:index];
         
         LKButton *button = [LKLayout buttonForCell:cell
                                    withStrokeColor:[LKColor colorWithIdentifier:LKColorGreen]
                                           andImage:[place imageForPlace]];
         button.tag = index; //identifier
+        [button addTarget:self action:@selector(cellClick:) forControlEvents:UIControlEventTouchUpInside];
         
         UILabel *title = [LKLayout titleLabelForCell:cell
                                            withTitle:place.name];
@@ -47,6 +49,22 @@
         [self.scrollView addSubview:title];
         
     }];
+    
+}
+
+- (void)cellClick:(id)sender {
+    
+    [self performSegueWithIdentifier:@"entertainment.detail" sender:sender];
+    
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    
+    LKButton *button = (LKButton *)sender;
+    LKPlace *place = [[self entertainmentPlaces] objectAtIndex:button.tag];
+    
+    EntertainmentDetailViewController *detailVC = [segue destinationViewController];
+    detailVC.place = place;
     
 }
 

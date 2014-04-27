@@ -47,7 +47,6 @@
 		575C94CB18FED4B400A341EE /* FoodViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 575C94CA18FED4B400A341EE /* FoodViewController.m */; };
 		576EA12C18FDD6BE00D4166D /* LKarneval.m in Sources */ = {isa = PBXBuildFile; fileRef = 576EA12B18FDD6BE00D4166D /* LKarneval.m */; };
 		576EA12F18FDD8F300D4166D /* OpeningHours.plist in Resources */ = {isa = PBXBuildFile; fileRef = 576EA12E18FDD8F300D4166D /* OpeningHours.plist */; };
-		5776211B190989C800B99E8E /* Layout.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5776211A190989C800B99E8E /* Layout.xcassets */; };
 		577621211909932800B99E8E /* EntertainmentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 577621201909932800B99E8E /* EntertainmentViewController.m */; };
 		57762124190993DB00B99E8E /* MiscellaneousViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 57762123190993DB00B99E8E /* MiscellaneousViewController.m */; };
 		578929C519007BD4002AA116 /* PlaceCategories.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 578929C419007BD4002AA116 /* PlaceCategories.xcassets */; };
@@ -57,6 +56,8 @@
 		57CC6F5C190C5DD30006DE48 /* FoodDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 57CC6F5B190C5DD30006DE48 /* FoodDetailViewController.m */; };
 		57CC6F61190C673A0006DE48 /* Covers.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 57CC6F60190C673A0006DE48 /* Covers.xcassets */; };
 		57DB443E190291D0009C3D37 /* Schedule.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 57DB443D190291D0009C3D37 /* Schedule.xcassets */; };
+		57E047BF190D5BAF00C45F68 /* Layout.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 57E047BE190D5BAF00C45F68 /* Layout.xcassets */; };
+		57E047C2190D5CD100C45F68 /* EntertainmentDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 57E047C1190D5CD100C45F68 /* EntertainmentDetailViewController.m */; };
 		57FB7472190B150A0059CA82 /* LKCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 57FB746B190B150A0059CA82 /* LKCell.m */; };
 		57FB7473190B150A0059CA82 /* LKGrid.m in Sources */ = {isa = PBXBuildFile; fileRef = 57FB746D190B150A0059CA82 /* LKGrid.m */; };
 		57FB7474190B150A0059CA82 /* LKImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 57FB746F190B150A0059CA82 /* LKImage.m */; };
@@ -133,7 +134,6 @@
 		576EA12A18FDD6BE00D4166D /* LKarneval.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; name = LKarneval.h; path = Models/LKarneval.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		576EA12B18FDD6BE00D4166D /* LKarneval.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; name = LKarneval.m; path = Models/LKarneval.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		576EA12E18FDD8F300D4166D /* OpeningHours.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = OpeningHours.plist; path = Data/OpeningHours.plist; sourceTree = "<group>"; };
-		5776211A190989C800B99E8E /* Layout.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Layout.xcassets; path = Data/Sprites/Layout.xcassets; sourceTree = "<group>"; };
 		5776211C19098C2100B99E8E /* NavigationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NavigationViewController.h; path = Controllers/NavigationViewController.h; sourceTree = "<group>"; };
 		5776211D19098C2100B99E8E /* NavigationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NavigationViewController.m; path = Controllers/NavigationViewController.m; sourceTree = "<group>"; };
 		5776211F1909932800B99E8E /* EntertainmentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EntertainmentViewController.h; path = Controllers/EntertainmentViewController.h; sourceTree = "<group>"; };
@@ -147,6 +147,9 @@
 		57CC6F5B190C5DD30006DE48 /* FoodDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FoodDetailViewController.m; path = Controllers/FoodDetailViewController.m; sourceTree = "<group>"; };
 		57CC6F60190C673A0006DE48 /* Covers.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Covers.xcassets; path = Data/Sprites/Covers.xcassets; sourceTree = "<group>"; };
 		57DB443D190291D0009C3D37 /* Schedule.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Schedule.xcassets; path = Data/Sprites/Schedule.xcassets; sourceTree = "<group>"; };
+		57E047BE190D5BAF00C45F68 /* Layout.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Layout.xcassets; path = Data/Sprites/Layout.xcassets; sourceTree = "<group>"; };
+		57E047C0190D5CD100C45F68 /* EntertainmentDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EntertainmentDetailViewController.h; path = Controllers/EntertainmentDetailViewController.h; sourceTree = "<group>"; };
+		57E047C1190D5CD100C45F68 /* EntertainmentDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EntertainmentDetailViewController.m; path = Controllers/EntertainmentDetailViewController.m; sourceTree = "<group>"; };
 		57FB7466190B06F80059CA82 /* MiscellaneousDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MiscellaneousDetailViewController.h; path = Controllers/MiscellaneousDetailViewController.h; sourceTree = "<group>"; };
 		57FB7467190B06F80059CA82 /* MiscellaneousDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MiscellaneousDetailViewController.m; path = Controllers/MiscellaneousDetailViewController.m; sourceTree = "<group>"; };
 		57FB746A190B150A0059CA82 /* LKCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LKCell.h; path = Models/LKCell.h; sourceTree = "<group>"; };
@@ -192,14 +195,14 @@
 			children = (
 				1A411FF01901B1C700FF39F9 /* CreateAnnotationsViewController.h */,
 				1A411FF11901B1C700FF39F9 /* CreateAnnotationsViewController.m */,
-				1ABFF6EE1900649300C575EE /* InitViewController.h */,
-				1ABFF6EF1900649300C575EE /* InitViewController.m */,
 				1ABFF6EB1900646800C575EE /* ECSlidingViewController.h */,
 				1ABFF6EC1900646900C575EE /* ECSlidingViewController.m */,
-				1ABFF6E519002BDD00C575EE /* MapViewController.h */,
-				1ABFF6E619002BDD00C575EE /* MapViewController.m */,
+				1ABFF6EE1900649300C575EE /* InitViewController.h */,
+				1ABFF6EF1900649300C575EE /* InitViewController.m */,
 				1ABFF6F619006E5400C575EE /* MapFilterViewController.h */,
 				1ABFF6F719006E5400C575EE /* MapFilterViewController.m */,
+				1ABFF6E519002BDD00C575EE /* MapViewController.h */,
+				1ABFF6E619002BDD00C575EE /* MapViewController.m */,
 			);
 			name = Map;
 			sourceTree = "<group>";
@@ -316,19 +319,19 @@
 		57407D0E18FD29EB0003F787 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				1A4A83C8190996AE00D7C466 /* LKButton.h */,
-				1A4A83C9190996AE00D7C466 /* LKButton.m */,
-				573797F218FFDC8700ABC2CD /* Map */,
 				576EA12A18FDD6BE00D4166D /* LKarneval.h */,
 				576EA12B18FDD6BE00D4166D /* LKarneval.m */,
-				57407D1318FD2A5A0003F787 /* LKEvent.h */,
-				57407D1418FD2A5A0003F787 /* LKEvent.m */,
-				57407D1818FD2B5C0003F787 /* LKSektion.h */,
-				57407D1918FD2B5C0003F787 /* LKSektion.m */,
 				57407D1B18FD2F110003F787 /* LKarnevalist.h */,
 				57407D1C18FD2F110003F787 /* LKarnevalist.m */,
+				1A4A83C8190996AE00D7C466 /* LKButton.h */,
+				1A4A83C9190996AE00D7C466 /* LKButton.m */,
+				57407D1318FD2A5A0003F787 /* LKEvent.h */,
+				57407D1418FD2A5A0003F787 /* LKEvent.m */,
 				5722E90E18FD72F500BEE3A2 /* LKPlace.h */,
 				5722E90F18FD72F500BEE3A2 /* LKPlace.m */,
+				57407D1818FD2B5C0003F787 /* LKSektion.h */,
+				57407D1918FD2B5C0003F787 /* LKSektion.m */,
+				573797F218FFDC8700ABC2CD /* Map */,
 				5722E92018FD81B300BEE3A2 /* Toolbox */,
 			);
 			name = Models;
@@ -337,14 +340,13 @@
 		57407D0F18FD29F20003F787 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				1ABFF6EA1900645300C575EE /* Map */,
+				57E047C3190D5CEC00C45F68 /* Entertainment */,
 				57CC6F5D190C5DEA0006DE48 /* Food */,
-				575C94B618FEC9C600A341EE /* ScheduleViewController.h */,
-				575C94B718FEC9C600A341EE /* ScheduleViewController.m */,
-				5776211F1909932800B99E8E /* EntertainmentViewController.h */,
-				577621201909932800B99E8E /* EntertainmentViewController.m */,
+				1ABFF6EA1900645300C575EE /* Map */,
 				57FB7469190B07020059CA82 /* Miscellaneous */,
 				575C94BC18FED02400A341EE /* Navigation */,
+				575C94B618FEC9C600A341EE /* ScheduleViewController.h */,
+				575C94B718FEC9C600A341EE /* ScheduleViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -352,14 +354,14 @@
 		575C94A118FE835400A341EE /* Sprites */ = {
 			isa = PBXGroup;
 			children = (
-				57994784190B18B60098BEA3 /* Places.xcassets */,
-				1ABFF6E819002DD100C575EE /* Map.xcassets */,
-				575C94A218FE838E00A341EE /* TabBar.xcassets */,
-				578929C419007BD4002AA116 /* PlaceCategories.xcassets */,
-				578929C81900839A002AA116 /* Events.xcassets */,
-				57DB443D190291D0009C3D37 /* Schedule.xcassets */,
-				5776211A190989C800B99E8E /* Layout.xcassets */,
+				57E047BE190D5BAF00C45F68 /* Layout.xcassets */,
 				57CC6F60190C673A0006DE48 /* Covers.xcassets */,
+				578929C81900839A002AA116 /* Events.xcassets */,
+				1ABFF6E819002DD100C575EE /* Map.xcassets */,
+				578929C419007BD4002AA116 /* PlaceCategories.xcassets */,
+				57994784190B18B60098BEA3 /* Places.xcassets */,
+				57DB443D190291D0009C3D37 /* Schedule.xcassets */,
+				575C94A218FE838E00A341EE /* TabBar.xcassets */,
 			);
 			name = Sprites;
 			sourceTree = "<group>";
@@ -405,6 +407,17 @@
 				57CC6F5B190C5DD30006DE48 /* FoodDetailViewController.m */,
 			);
 			name = Food;
+			sourceTree = "<group>";
+		};
+		57E047C3190D5CEC00C45F68 /* Entertainment */ = {
+			isa = PBXGroup;
+			children = (
+				5776211F1909932800B99E8E /* EntertainmentViewController.h */,
+				577621201909932800B99E8E /* EntertainmentViewController.m */,
+				57E047C0190D5CD100C45F68 /* EntertainmentDetailViewController.h */,
+				57E047C1190D5CD100C45F68 /* EntertainmentDetailViewController.m */,
+			);
+			name = Entertainment;
 			sourceTree = "<group>";
 		};
 		57FB7469190B07020059CA82 /* Miscellaneous */ = {
@@ -481,12 +494,12 @@
 				575C94AF18FE90D900A341EE /* robothead.ttf in Resources */,
 				1ABFF6E919002DD100C575EE /* Map.xcassets in Resources */,
 				578929C519007BD4002AA116 /* PlaceCategories.xcassets in Resources */,
-				5776211B190989C800B99E8E /* Layout.xcassets in Resources */,
 				576EA12F18FDD8F300D4166D /* OpeningHours.plist in Resources */,
 				1AE8E55F18F42FB50078EBDF /* InfoPlist.strings in Resources */,
 				1AE8E56818F42FB50078EBDF /* Main.storyboard in Resources */,
 				575C94A318FE838E00A341EE /* TabBar.xcassets in Resources */,
 				1A7DA8A318FF06C70025C677 /* App.xcassets in Resources */,
+				57E047BF190D5BAF00C45F68 /* Layout.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -525,6 +538,7 @@
 				5722E91018FD72F500BEE3A2 /* LKPlace.m in Sources */,
 				576EA12C18FDD6BE00D4166D /* LKarneval.m in Sources */,
 				57FB7475190B150A0059CA82 /* LKLayout.m in Sources */,
+				57E047C2190D5CD100C45F68 /* EntertainmentDetailViewController.m in Sources */,
 				1AE8E56118F42FB50078EBDF /* main.m in Sources */,
 				1A411FEF1901A98D00FF39F9 /* UIView+Shadow.m in Sources */,
 				1ABFF70119007E2000C575EE /* LKOverlayRenderer.m in Sources */,

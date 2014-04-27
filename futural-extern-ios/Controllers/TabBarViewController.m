@@ -26,7 +26,7 @@
 
 - (void)customizeTabBar {
     
-    UIFont *font = [UIFont fontWithName:@"FuturaLT-Bold" size:9];
+    UIFont *font = [UIFont fontWithName:[LKLayout futuraFontName] size:9];
     UIColor *colorActive = [UIColor whiteColor];
     UIColor *colorStandby = [LKColor colorWithIdentifier:LKColorLightRed];
     

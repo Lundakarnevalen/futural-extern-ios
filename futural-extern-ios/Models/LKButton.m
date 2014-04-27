@@ -33,15 +33,20 @@
 
 - (void)setHighlighted:(BOOL)highlighted {
     
+    [UIView beginAnimations:nil context:nil];
+    [UIView setAnimationDuration:0.1];
+    
     if (highlighted) {
         
-        self.alpha = 0.25;
+        self.alpha = 0.5;
         
     } else {
         
         self.alpha = 1;
         
     }
+    
+    [UIView commitAnimations];
     
 }
 
