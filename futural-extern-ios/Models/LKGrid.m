@@ -22,8 +22,6 @@
         
         self.frame = frame;
         
-        NSLog(@"Width: %f, Height: %f", frame.size.width, frame.size.height);
-        
         [cells enumerateObjectsUsingBlock:^(id object, NSUInteger index, BOOL *stop) {
            
             LKCell *cell = (LKCell *)object;
@@ -31,12 +29,10 @@
             NSInteger cellRadius = (cell.size.width / 2);
             NSInteger columnIndex = (index % COUNT_COLUMNS);
             NSInteger rowIndex = (index / COUNT_COLUMNS);
-            NSLog(@"Row:%d, Col:%d", rowIndex, columnIndex);
             
             CGSize spacing;
             spacing.width = (self.frame.size.width / (COUNT_COLUMNS * 2));
             spacing.height = cellRadius + SPACING_ROW;
-            NSLog(@"SpacingX:%f, SpacingY:%f", spacing.width, spacing.height);
             
             BOOL zeroIfFirstColumn = (columnIndex != 0); //zero if false, one if true.
             BOOL zeroIfFirstRow = (rowIndex != 0);
@@ -45,7 +41,6 @@
             CGPoint position;
             position.x = spacing.width + (spacing.width * zeroIfFirstColumn * columnIndex) + (spacing.width * columnIndex) - (cell.size.width / 2); //don't bother, it's working though. WOOP!
             position.y = spacing.height + (spacing.height * rowIndex) - (cellRadius * zeroIfNotFirstRow) + (cellRadius * rowIndex * zeroIfFirstRow) - (cellRadius * zeroIfFirstRow);
-            NSLog(@"x:%f, y:%f", position.x, position.y);
             
             cell.position = position;
             

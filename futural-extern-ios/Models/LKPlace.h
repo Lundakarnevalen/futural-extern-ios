@@ -33,7 +33,15 @@ typedef enum {
     LKPlaceCategoryMinorEntertainment = 11,
     LKPlaceCategoryCoffee = 12,
     LKPlaceCategoryParking = 13,
-    LKPlaceCategoryATM = 14
+    LKPlaceCategoryATM = 14,
+    LKPlaceCategoryTrash = 15,
+    LKPlaceCategoryPolice = 16,
+    LKPlaceCategoryFireEscape = 17,
+    LKPlaceCategoryRadio = 18,
+    LKPlaceCategoryEntrance = 19,
+    LKPlaceCategoryShow = 20,
+    LKPlaceCategoryTickets = 21,
+    LKPlaceCategoryEntertainment = 22
     
 } LKPlaceCategory;
 
@@ -41,7 +49,7 @@ typedef enum {
 
 @property (nonatomic) NSString *identifier; //has to be different from the other places.
 @property (nonatomic) NSString *name;
-@property (nonatomic) NSString *description;
+@property (nonatomic) NSString *information;
 @property (nonatomic) UIImage *image;
 @property (nonatomic) UIImage *annotationImage;
 

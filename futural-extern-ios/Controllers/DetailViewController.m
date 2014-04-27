@@ -30,14 +30,14 @@
     
     if([self.segueIdentifier isEqualToString:@"food.detail"]) {
         
-        informationBarColor = [LKColor colorWithIdentifier:LKColorGreen];
+        informationBarColor = [LKColor colorWithIdentifier:LKColorDarkGreen];
         logotypeStrokeColor = [LKColor colorWithIdentifier:LKColorBeige];
         
     }
     
     if([self.segueIdentifier isEqualToString:@"entertainment.detail"]) {
         
-        informationBarColor = [LKColor colorWithIdentifier:LKColorRed];
+        informationBarColor = [LKColor colorWithIdentifier:LKColorDarkRed];
         logotypeStrokeColor = [LKColor colorWithIdentifier:LKColorGreen];
         
     }
@@ -71,7 +71,7 @@
     [self.informationHeader setFont:[LKLayout informationHeaderFont]];
     [self.informationHeader setText:headerText];
     
-    [self.descriptionView setText:self.place.description];
+    [self.descriptionView setText:self.place.information];
     
     UIImage *coverImage = [self.place coverImage];
     coverImage = [LKLayout blurImage:coverImage withRadiusOf:2.0]; //pretty laggy... :(

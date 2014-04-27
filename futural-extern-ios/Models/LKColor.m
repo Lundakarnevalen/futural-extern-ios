@@ -27,6 +27,14 @@
             
             break;
             
+        case LKColorDarkRed:
+            
+            red = 183;
+            green = 63;
+            blue = 47;
+            
+            break;
+            
         case LKColorBlue:
             
             red = 76.0;
@@ -40,6 +48,14 @@
             red = 123.0;
             green = 202.0;
             blue = 173.0;
+            
+            break;
+            
+        case LKColorDarkGreen:
+            
+            red = 114;
+            green = 184;
+            blue = 158;
             
             break;
             

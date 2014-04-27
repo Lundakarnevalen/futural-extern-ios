@@ -60,9 +60,9 @@
                            position, @"position",
                           nil];
     
-    for (id key in place) {
-        NSLog(@"key: %@, value: %@ \n", key, [place objectForKey:key]);
-    }
+//    for (id key in place) {
+//        NSLog(@"key: %@, value: %@ \n", key, [place objectForKey:key]);
+//    }
 
     NSString *path = [[NSBundle mainBundle] pathForResource:@"Places" ofType:@"plist"];
     NSString *docsFolder = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)[0];
@@ -77,7 +77,7 @@
     
     [array setObject:place forKey:[title lowercaseString]];
     
-    NSLog(@"%d", [array writeToFile:docsPath atomically:YES]);
+//    NSLog(@"%d", [array writeToFile:docsPath atomically:YES]);
     [self dismissViewControllerAnimated:YES completion:nil];
     
 }

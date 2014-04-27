@@ -51,16 +51,11 @@
     
     LKButton *button = (LKButton *)sender;
     
-    LKPlace *place = [self.karneval.places objectAtIndex:button.tag];
-    NSLog(@"name tapped:%@", place.name);
-    
-    [self performSegueWithIdentifier:@"misc.detail" sender:self];
+    [self performSegueWithIdentifier:@"misc.detail" sender:button];
     
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    
-    NSLog(@"segue time!");
     
 }
 

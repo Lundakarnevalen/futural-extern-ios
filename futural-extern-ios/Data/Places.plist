@@ -2,6 +2,338 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>dansen</key>
+	<dict>
+		<key>positions</key>
+		<array>
+			<dict>
+				<key>latitude</key>
+				<real>55.70535135810641</real>
+				<key>longitude</key>
+				<real>13.19536679118114</real>
+			</dict>
+		</array>
+		<key>alcohol</key>
+		<true/>
+		<key>category</key>
+		<integer>22</integer>
+		<key>description</key>
+		<string>Skaka det lurviga.</string>
+		<key>name</key>
+		<string>Dansen</string>
+		<key>payment_options</key>
+		<array/>
+	</dict>
+	<key>showen</key>
+	<dict>
+		<key>positions</key>
+		<array>
+			<dict>
+				<key>latitude</key>
+				<real>55.70561432124412</real>
+				<key>longitude</key>
+				<real>13.19560148445819</real>
+			</dict>
+		</array>
+		<key>alcohol</key>
+		<false/>
+		<key>category</key>
+		<integer>20</integer>
+		<key>description</key>
+		<string>Showen är cool.</string>
+		<key>name</key>
+		<string>Showen</string>
+		<key>payment_options</key>
+		<array/>
+	</dict>
+	<key>musik</key>
+	<dict>
+		<key>positions</key>
+		<array>
+			<dict>
+				<key>latitude</key>
+				<real>55.70583136993501</real>
+				<key>longitude</key>
+				<real>13.19397933260115</real>
+			</dict>
+			<dict>
+				<key>latitude</key>
+				<real>55.70542684432107</real>
+				<key>longitude</key>
+				<real>13.19316179470717</real>
+			</dict>
+		</array>
+		<key>alcohol</key>
+		<false/>
+		<key>category</key>
+		<integer>22</integer>
+		<key>description</key>
+		<string>Här sprudlar det av ren karnevalist-glädje i form av toner som formar ljuv musik.</string>
+		<key>name</key>
+		<string>Musik</string>
+		<key>payment_options</key>
+		<array/>
+	</dict>
+	<key>biljetteriet</key>
+	<dict>
+		<key>positions</key>
+		<array>
+			<dict>
+				<key>latitude</key>
+				<real>55.70502736279169</real>
+				<key>longitude</key>
+				<real>13.19517650439325</real>
+			</dict>
+		</array>
+		<key>alcohol</key>
+		<false/>
+		<key>category</key>
+		<integer>21</integer>
+		<key>description</key>
+		<string>Säljer biljetter till alla fantastiska aktiviter som händer på karnevalsområdet.</string>
+		<key>name</key>
+		<string>Biljetteriet</string>
+		<key>payment_options</key>
+		<array>
+			<integer>4</integer>
+		</array>
+	</dict>
+	<key>polisen</key>
+	<dict>
+		<key>positions</key>
+		<array>
+			<dict>
+				<key>latitude</key>
+				<real>55.70566708948963</real>
+				<key>longitude</key>
+				<real>13.19601302178581</real>
+			</dict>
+			<dict>
+				<key>latitude</key>
+				<real>55.7052602564826</real>
+				<key>longitude</key>
+				<real>13.19401040144301</real>
+			</dict>
+		</array>
+		<key>alcohol</key>
+		<false/>
+		<key>category</key>
+		<integer>16</integer>
+		<key>description</key>
+		<string>Skyddar dig från utomjordingar och andra futurala hot.</string>
+		<key>name</key>
+		<string>Polisen</string>
+		<key>payment_options</key>
+		<array/>
+	</dict>
+	<key>kabaren</key>
+	<dict>
+		<key>positions</key>
+		<array>
+			<dict>
+				<key>latitude</key>
+				<real>55.70435384485661</real>
+				<key>longitude</key>
+				<real>13.19383678585551</real>
+			</dict>
+		</array>
+		<key>alcohol</key>
+		<false/>
+		<key>category</key>
+		<integer>20</integer>
+		<key>description</key>
+		<string>Lorem ipsum</string>
+		<key>name</key>
+		<string>Kabarén</string>
+		<key>payment_options</key>
+		<array/>
+	</dict>
+	<key>radion</key>
+	<dict>
+		<key>alcohol</key>
+		<false/>
+		<key>category</key>
+		<integer>18</integer>
+		<key>description</key>
+		<string>Här hittar du karnevalens alldeles egna högkvarter för futurala radiovågor.</string>
+		<key>name</key>
+		<string>Radion</string>
+		<key>payment_options</key>
+		<array/>
+		<key>positions</key>
+		<array>
+			<dict>
+				<key>latitude</key>
+				<real>55.70537955178818</real>
+				<key>longitude</key>
+				<real>13.19494142376257</real>
+			</dict>
+		</array>
+	</dict>
+	<key>entre</key>
+	<dict>
+		<key>alcohol</key>
+		<false/>
+		<key>category</key>
+		<integer>19</integer>
+		<key>description</key>
+		<string>Ut och ingångar befinner sig vid dessa punkter.</string>
+		<key>name</key>
+		<string>Entré</string>
+		<key>payment_options</key>
+		<array/>
+		<key>positions</key>
+		<array>
+			<dict>
+				<key>latitude</key>
+				<real>55.70601964557335</real>
+				<key>longitude</key>
+				<real>13.19565500654615</real>
+			</dict>
+			<dict>
+				<key>latitude</key>
+				<real>55.70513544724786</real>
+				<key>longitude</key>
+				<real>13.19293492729316</real>
+			</dict>
+			<dict>
+				<key>latitude</key>
+				<real>55.70439204446827</real>
+				<key>longitude</key>
+				<real>13.19313558627814</real>
+			</dict>
+			<dict>
+				<key>latitude</key>
+				<real>55.70374101009212</real>
+				<key>longitude</key>
+				<real>13.19423114265037</real>
+			</dict>
+			<dict>
+				<key>latitude</key>
+				<real>55.70446908732766</real>
+				<key>longitude</key>
+				<real>13.19560129896877</real>
+			</dict>
+		</array>
+	</dict>
+	<key>snaxeriet</key>
+	<dict>
+		<key>alcohol</key>
+		<false/>
+		<key>category</key>
+		<integer>3</integer>
+		<key>description</key>
+		<string>Letar du efter framtidens snacks? Du har kommit helt rätt!</string>
+		<key>name</key>
+		<string>Snaxeriet</string>
+		<key>payment_options</key>
+		<array>
+			<string>4</string>
+		</array>
+		<key>positions</key>
+		<array>
+			<dict>
+				<key>latitude</key>
+				<real>55.70518037337276</real>
+				<key>longitude</key>
+				<real>13.19316831120843</real>
+			</dict>
+			<dict>
+				<key>latitude</key>
+				<real>55.7054595047</real>
+				<key>longitude</key>
+				<real>13.19451290447664</real>
+			</dict>
+			<dict>
+				<key>latitude</key>
+				<real>55.70482747798818</real>
+				<key>longitude</key>
+				<real>13.19337470912295</real>
+			</dict>
+		</array>
+	</dict>
+	<key>tombolan</key>
+	<dict>
+		<key>alcohol</key>
+		<false/>
+		<key>category</key>
+		<integer>10</integer>
+		<key>description</key>
+		<string>Visst känns det som att du har väldigt mycket tur idag? Vad sägs om att testa den på våra alldeles fantastiskt futurala spel.</string>
+		<key>name</key>
+		<string>Tombolan</string>
+		<key>payment_options</key>
+		<array>
+			<string>4</string>
+		</array>
+		<key>positions</key>
+		<array>
+			<dict>
+				<key>latitude</key>
+				<real>55.70474919330989</real>
+				<key>longitude</key>
+				<real>13.19445891186438</real>
+			</dict>
+		</array>
+	</dict>
+	<key>soptunna</key>
+	<dict>
+		<key>alcohol</key>
+		<false/>
+		<key>category</key>
+		<integer>15</integer>
+		<key>description</key>
+		<string>Här slänger du allt som inte ger dig någon karnevalist-glädje.</string>
+		<key>name</key>
+		<string>Soptunna</string>
+		<key>payment_options</key>
+		<array/>
+		<key>positions</key>
+		<array>
+			<dict>
+				<key>latitude</key>
+				<real>55.70688332580387</real>
+				<key>longitude</key>
+				<real>13.19570738052719</real>
+			</dict>
+			<dict>
+				<key>latitude</key>
+				<real>55.70521696656937</real>
+				<key>longitude</key>
+				<real>13.19372387921223</real>
+			</dict>
+			<dict>
+				<key>latitude</key>
+				<real>55.7039572412542</real>
+				<key>longitude</key>
+				<real>13.19453665220126</real>
+			</dict>
+			<dict>
+				<key>latitude</key>
+				<real>55.70457677586199</real>
+				<key>longitude</key>
+				<real>13.19544640504312</real>
+			</dict>
+			<dict>
+				<key>latitude</key>
+				<real>55.70556189423078</real>
+				<key>longitude</key>
+				<real>13.19477811180374</real>
+			</dict>
+			<dict>
+				<key>latitude</key>
+				<real>55.7048783266619</real>
+				<key>longitude</key>
+				<real>13.19446443948018</real>
+			</dict>
+			<dict>
+				<key>latitude</key>
+				<real>55.7046984808458</real>
+				<key>longitude</key>
+				<real>13.19383546152834</real>
+			</dict>
+		</array>
+	</dict>
 	<key>cirkusen</key>
 	<dict>
 		<key>positions</key>
@@ -16,7 +348,7 @@
 		<key>alcohol</key>
 		<false/>
 		<key>category</key>
-		<integer>4</integer>
+		<integer>20</integer>
 		<key>description</key>
 		<string>Lorem Ipsum</string>
 		<key>name</key>
@@ -40,12 +372,6 @@
 		<array>
 			<dict>
 				<key>latitude</key>
-				<real>55.70556259155273</real>
-				<key>longitude</key>
-				<real>13.19296550750732</real>
-			</dict>
-			<dict>
-				<key>latitude</key>
 				<real>55.70508561404364</real>
 				<key>longitude</key>
 				<real>13.19467199442641</real>
@@ -66,11 +392,9 @@
 		<key>alcohol</key>
 		<false/>
 		<key>category</key>
-		<integer>11</integer>
+		<integer>20</integer>
 		<key>description</key>
 		<string>Revyn</string>
-		<key>image</key>
-		<string></string>
 		<key>name</key>
 		<string>Revyn</string>
 		<key>payment_options</key>

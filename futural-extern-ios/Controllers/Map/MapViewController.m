@@ -40,6 +40,7 @@
     LKOverlay *map = [[LKOverlay alloc] initWithImage:[UIImage imageNamed:@"Lundakarnevalen"]];
     [self.mapView addOverlay:map  level:MKOverlayLevelAboveRoads];
     
+    self.mapView.mapType = MKMapTypeSatellite;
     self.mapView.region = MKCoordinateRegionMake(
                                              CLLocationCoordinate2DMake(55.705282871899165, 13.194099413861689),
                                              MKCoordinateSpanMake(0.0048452481526979341, 0.0081815629812922452));
@@ -137,11 +138,11 @@
         [places addObjectsFromArray:[LKarneval LKPlaceFilterEntertainment]];
     }
     
-    for (LKPlace *place in [karneval placesFilteredByCategories:places]) {
-        
+//    for (LKPlace *place in [karneval placesFilteredByCategories:places]) {
+    for (LKPlace *place in karneval.places) {
+    
         [place.positions enumerateObjectsUsingBlock:^(id object, NSUInteger index, BOOL *stop) {
             
-            NSLog(@"%@-index:%d", place.name, index);
             LKAnnotation *anno = [[LKAnnotation alloc] initWithPlace:place andPositionIndexOf:index];
             [self.mapView addAnnotation:anno];
             

@@ -18,7 +18,7 @@
         
         //create logic to read from a property list and store it in this model
         self.name = propertyList[@"name"];
-        self.description = propertyList[@"description"];
+        self.information = propertyList[@"description"];
         self.category = [propertyList[@"category"] integerValue];
         self.alcohol = [propertyList[@"alcohol"] boolValue];
         self.image = [UIImage imageNamed:propertyList[@"image"]];
@@ -211,7 +211,7 @@
             
         case LKPlaceCategoryScene:
             
-            imageName = @"show";
+            imageName = @"showen";
             
             break;
             
