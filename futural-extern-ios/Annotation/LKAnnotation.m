@@ -14,14 +14,20 @@
 @synthesize coordinate;
 
 //designated init
--(instancetype)initWithPlace:(LKPlace *)place {
+-(instancetype)initWithPlace:(LKPlace *)place andPositionIndexOf:(NSInteger)positionIndex {
+    
     self = [super init];
+    
     if (self) {
-        coordinate = place.position;
+        
+        coordinate = [[place.positions objectAtIndex:positionIndex] coordinate];
         title = place.name;
         self.image = [place imageForAnnotation];
+        
     }
+    
     return self;
+    
 }
 
 @end

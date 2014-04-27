@@ -40,6 +40,12 @@
 		<array>
 			<dict>
 				<key>latitude</key>
+				<real>55.70556259155273</real>
+				<key>longitude</key>
+				<real>13.19296550750732</real>
+			</dict>
+			<dict>
+				<key>latitude</key>
 				<real>55.70508561404364</real>
 				<key>longitude</key>
 				<real>13.19467199442641</real>
@@ -59,8 +65,6 @@
 		</array>
 		<key>alcohol</key>
 		<false/>
-		<key>annotation_image</key>
-		<string></string>
 		<key>category</key>
 		<integer>11</integer>
 		<key>description</key>

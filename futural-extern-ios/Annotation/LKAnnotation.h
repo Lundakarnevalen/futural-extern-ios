@@ -11,7 +11,7 @@
 
 @interface LKAnnotation : NSObject <MKAnnotation>
 
--(instancetype)initWithPlace:(LKPlace *)place;
+-(instancetype)initWithPlace:(LKPlace *)place andPositionIndexOf:(NSInteger)positionIndex; //as we are now having multiple positions per place.
 
 @property (nonatomic, readonly, copy) NSString *title;
 @property (nonatomic, strong) UIImage *image;

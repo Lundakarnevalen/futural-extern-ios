@@ -138,8 +138,15 @@
     }
     
     for (LKPlace *place in [karneval placesFilteredByCategories:places]) {
-        LKAnnotation *anno = [[LKAnnotation alloc] initWithPlace:place];
-        [self.mapView addAnnotation:anno];
+        
+        [place.positions enumerateObjectsUsingBlock:^(id object, NSUInteger index, BOOL *stop) {
+            
+            NSLog(@"%@-index:%d", place.name, index);
+            LKAnnotation *anno = [[LKAnnotation alloc] initWithPlace:place andPositionIndexOf:index];
+            [self.mapView addAnnotation:anno];
+            
+        }];
+        
     }
     
 //    for (NSDictionary *dict in annotations) {

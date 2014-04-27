@@ -153,7 +153,7 @@
 
 - (NSString *)description {
     
-    return [NSString stringWithFormat:@"This is %@ and I'm located at %f&%f, our payment options are %@", self.name, self.position.latitude, self.position.longitude, self.paymentOptions];
+    return [NSString stringWithFormat:@"This is %@ and I'm located at %d places, our payment options are %@", self.name, [self.positions count], self.paymentOptions];
     
 }
 
