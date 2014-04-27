@@ -13,9 +13,18 @@
 
 @interface LKLayout : NSObject
 
++ (NSString *)futuraFontName;
 + (UIFont *)gridFont;
 + (NSInteger)gridFontSize;
 + (NSInteger)gridCellStrokeWidth;
++ (UIFont *)detailHeaderFont;
++ (UIFont *)detailSubHeaderFont;
++ (UIFont *)detailMapHeaderFont;
+
++ (void)addShadowToView:(UIView *)view ofSize:(NSInteger)shadowSize;
++ (void)addInsetShadowToView:(UIView *)view ofSize:(NSInteger)shadowSize;
+
++ (UIImage *)blurImage:(UIImage *)image withRadiusOf:(float)blurRadius;
 
 + (UILabel *)titleLabelForCell:(LKCell *)cell withTitle:(NSString *)title;
 + (LKButton *)buttonForCell:(LKCell *)cell withStrokeColor:(UIColor *)strokeColor andImage:(UIImage *)image;

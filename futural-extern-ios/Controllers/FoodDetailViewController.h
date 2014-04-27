@@ -18,5 +18,9 @@
 @property (weak, nonatomic) IBOutlet LKImage *logotypeImage;
 @property (weak, nonatomic) IBOutlet UILabel *headerLabel;
 @property (weak, nonatomic) IBOutlet UILabel *subHeaderLabel;
+@property (weak, nonatomic) IBOutlet UIView *statusSign;
+@property (weak, nonatomic) IBOutlet UILabel *mapLabel;
+@property (weak, nonatomic) IBOutlet UIView *mapView;
+@property (weak, nonatomic) IBOutlet UILabel *statusLabel;
 
 @end

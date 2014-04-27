@@ -8,6 +8,7 @@
 
 #import "TabBarViewController.h"
 #import "LKColor.h"
+#import "LKLayout.h"
 
 #define TAB_INDEX_DEFAULT 2
 
@@ -47,9 +48,7 @@
     [self.tabBar setBarTintColor:[LKColor colorWithIdentifier:LKColorRed]];
     
     //inner shadow.
-    UIView *shadow = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.tabBar.frame.size.width, 3)];
-    [shadow setBackgroundColor:[UIColor colorWithWhite:0 alpha:0.15]];
-    [self.tabBar addSubview:shadow];
+    [LKLayout addInsetShadowToView:self.tabBar ofSize:3];
     
     for(UITabBarItem *item in self.tabBar.items) { //set active and standby icons.
         

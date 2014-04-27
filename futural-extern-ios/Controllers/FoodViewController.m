@@ -7,6 +7,7 @@
 //
 
 #import "FoodViewController.h"
+#import "FoodDetailViewController.h"
 
 #import "LKLayout.h"
 #import "LKColor.h"
@@ -55,12 +56,17 @@
 
 - (void)cellClick:(id)sender {
     
+    [self performSegueWithIdentifier:@"food.detail" sender:sender];
+    
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    
     LKButton *button = (LKButton *)sender;
     LKPlace *place = [[self foodPlaces] objectAtIndex:button.tag];
     
-    NSLog(@"Food tap: %@", place.name);
-    
-    [self performSegueWithIdentifier:@"food.detail" sender:self];
+    FoodDetailViewController *detailVC = [segue destinationViewController];
+    detailVC.place = place;
     
 }
 

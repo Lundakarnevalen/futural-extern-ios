@@ -66,7 +66,9 @@
 
 - (NSString *)dataIdentifier { //the identifier that connects this event to the event in the database.
     
-    return [NSString stringWithFormat:@"%@ %@:%@", [self.name lowercaseString], [self formattedStartTime], [self formattedEndTime]];
+    NSString *identifier = [NSString stringWithFormat:@"%@ %@:%@", [self.name lowercaseString], [self formattedStartTime], [self formattedEndTime]];
+    
+    return identifier;
     
 }
 
