@@ -545,6 +545,7 @@
                     <connections>
                         <outlet property="coverImageView" destination="7kH-AA-dN3" id="jpr-4n-I6X"/>
                         <outlet property="headerLabel" destination="w9X-r7-jlQ" id="BEf-2r-gJj"/>
+                        <outlet property="informationBar" destination="Ewb-B4-we1" id="8eH-JE-fe7"/>
                         <outlet property="logotypeImage" destination="4go-C9-q8g" id="R7K-XQ-iMU"/>
                         <outlet property="mapLabel" destination="iG7-RL-a9T" id="CYX-HY-W3L"/>
                         <outlet property="mapView" destination="zgW-GW-uhm" id="PQa-2l-OV4"/>

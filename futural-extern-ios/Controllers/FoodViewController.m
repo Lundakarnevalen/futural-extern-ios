@@ -55,7 +55,7 @@
 }
 
 - (void)cellClick:(id)sender {
-    
+
     [self performSegueWithIdentifier:@"food.detail" sender:sender];
     
 }

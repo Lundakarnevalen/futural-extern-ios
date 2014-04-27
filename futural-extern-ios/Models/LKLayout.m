@@ -66,6 +66,19 @@
     
 }
 
++ (NSString *)defaultTitle {
+    
+    return [@"Lundakarnevalen" uppercaseString];
+    
+}
+
++ (void)addShadowToLabel:(UILabel *)label withSizeOf:(NSInteger)size {
+    
+    [label setShadowColor:[UIColor colorWithWhite:0 alpha:0.25]];
+    [label setShadowOffset:CGSizeMake(0, size)];
+    
+}
+
 + (UIImage *)blurImage:(UIImage *)image withRadiusOf:(float)blurRadius {
     
     // create our blurred image

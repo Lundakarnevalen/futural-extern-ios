@@ -22,5 +22,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *mapLabel;
 @property (weak, nonatomic) IBOutlet UIView *mapView;
 @property (weak, nonatomic) IBOutlet UILabel *statusLabel;
+@property (weak, nonatomic) IBOutlet UIView *informationBar;
 
 @end

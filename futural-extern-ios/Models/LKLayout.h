@@ -20,9 +20,11 @@
 + (UIFont *)detailHeaderFont;
 + (UIFont *)detailSubHeaderFont;
 + (UIFont *)detailMapHeaderFont;
++ (NSString *)defaultTitle;
 
 + (void)addShadowToView:(UIView *)view ofSize:(NSInteger)shadowSize;
 + (void)addInsetShadowToView:(UIView *)view ofSize:(NSInteger)shadowSize;
++ (void)addShadowToLabel:(UILabel *)label withSizeOf:(NSInteger)size;
 
 + (UIImage *)blurImage:(UIImage *)image withRadiusOf:(float)blurRadius;
 

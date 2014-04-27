@@ -8,6 +8,7 @@
 
 #import "NavigationViewController.h"
 #import "LKColor.h"
+#import "LKLayout.h"
 
 @implementation NavigationViewController
 
@@ -30,7 +31,7 @@
                                      NSFontAttributeName : [UIFont fontWithName:@"Robot!Head" size:28]
                                      };
     
-    [self.navigationBar.topItem setTitle:@"LUNDAKARNEVALEN"];
+    [self.navigationBar.topItem setTitle:[LKLayout defaultTitle]];
     [self.navigationBar setTranslucent:NO];
     [self.navigationBar setBarTintColor:[LKColor colorWithIdentifier:LKColorRed]];
     [self.navigationBar setTintColor:[UIColor whiteColor]];

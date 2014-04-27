@@ -16,6 +16,8 @@
     
     [super viewDidLoad];
     
+    [self setTitle:[LKLayout defaultTitle]];
+    
     [self customizeView];
     
     [self.logotypeImage setImage:[self.place imageForPlace]];
@@ -29,11 +31,16 @@
 
 - (void)customizeView {
     
+    [LKLayout addInsetShadowToView:self.informationBar ofSize:3];
+    [LKLayout addShadowToView:self.informationBar ofSize:3];
+    
     [self.logotypeImage drawCircularImage:[LKColor colorWithIdentifier:LKColorBeige]];
     
     [self.headerLabel setFont:[LKLayout detailHeaderFont]];
+    [LKLayout addShadowToLabel:self.headerLabel withSizeOf:2];
     
     [self.subHeaderLabel setFont:[LKLayout detailSubHeaderFont]];
+    [LKLayout addShadowToLabel:self.subHeaderLabel withSizeOf:2];
     
     [self.mapLabel setFont:[LKLayout detailMapHeaderFont]];
     [LKLayout addShadowToView:self.mapView ofSize:3];
