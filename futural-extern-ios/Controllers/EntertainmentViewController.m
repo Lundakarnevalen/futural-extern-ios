@@ -7,7 +7,7 @@
 //
 
 #import "EntertainmentViewController.h"
-#import "EntertainmentDetailViewController.h"
+#import "DetailViewController.h"
 
 #import "LKLayout.h"
 
@@ -63,8 +63,9 @@
     LKButton *button = (LKButton *)sender;
     LKPlace *place = [[self entertainmentPlaces] objectAtIndex:button.tag];
     
-    EntertainmentDetailViewController *detailVC = [segue destinationViewController];
+    DetailViewController *detailVC = [segue destinationViewController];
     detailVC.place = place;
+    detailVC.segueIdentifier = segue.identifier;
     
 }
 

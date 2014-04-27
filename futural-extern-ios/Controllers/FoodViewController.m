@@ -7,7 +7,7 @@
 //
 
 #import "FoodViewController.h"
-#import "FoodDetailViewController.h"
+#import "DetailViewController.h"
 
 #import "LKLayout.h"
 #import "LKColor.h"
@@ -65,8 +65,9 @@
     LKButton *button = (LKButton *)sender;
     LKPlace *place = [[self foodPlaces] objectAtIndex:button.tag];
     
-    FoodDetailViewController *detailVC = [segue destinationViewController];
+    DetailViewController *detailVC = [segue destinationViewController];
     detailVC.place = place;
+    detailVC.segueIdentifier = segue.identifier;
     
 }
 

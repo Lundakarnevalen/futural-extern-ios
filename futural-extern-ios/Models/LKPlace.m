@@ -96,7 +96,7 @@
         
     } else {
         
-        return [UIImage imageNamed:@"unknown"];
+        return [UIImage imageNamed:@"cover-unknown"];
         
     }
     

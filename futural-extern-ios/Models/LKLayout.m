@@ -50,13 +50,25 @@
 
 + (UIFont *)detailHeaderFont {
     
-    return [UIFont fontWithName:[self futuraFontName] size:28];
+    return [UIFont fontWithName:[self futuraFontName] size:36];
     
 }
 
 + (UIFont *)detailMapHeaderFont {
     
     return [UIFont fontWithName:[self futuraFontName] size:10];
+    
+}
+
++ (UIFont *)informationHeaderFont {
+    
+    return [UIFont fontWithName:[self futuraFontName] size:22];
+    
+}
+
++ (UIFont *)detailPaymentFont {
+    
+    return [UIFont fontWithName:[self futuraFontName] size:8];
     
 }
 

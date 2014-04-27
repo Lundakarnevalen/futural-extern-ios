@@ -21,6 +21,8 @@
 + (UIFont *)detailSubHeaderFont;
 + (UIFont *)detailMapHeaderFont;
 + (NSString *)defaultTitle;
++ (UIFont *)detailPaymentFont;
++ (UIFont *)informationHeaderFont;
 
 + (void)addShadowToView:(UIView *)view ofSize:(NSInteger)shadowSize;
 + (void)addInsetShadowToView:(UIView *)view ofSize:(NSInteger)shadowSize;
