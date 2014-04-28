@@ -53,14 +53,10 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    LKEvent *event = [[self events] objectAtIndex:indexPath.row];
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@CELL_IDENTIFIER];
+    NSInteger row = indexPath.row;
     
-    if(!cell) {
-        
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@CELL_IDENTIFIER];
-        
-    }
+    LKEvent *event = [[self events] objectAtIndex:row];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@CELL_IDENTIFIER];
     
     UILabel *headerName = (UILabel *)[[cell contentView] viewWithTag:TAG_HEADER_NAME];
     UILabel *headerPlace = (UILabel *)[[cell contentView] viewWithTag:TAG_HEADER_PLACE];
@@ -79,10 +75,7 @@
     [image drawCircularImage:[UIColor whiteColor]];
     
     [favorite setSelected:event.favorite];
-    [favorite setTag:TAG_FAVORITE * indexPath.row]; //to solve the equation of which object that was favorited. (ugly, but working, solved by dividing the tag with 6 a.k.a TAG_FAVORITE).
     [favorite addTarget:self action:@selector(favoriteEventAtRow:) forControlEvents:UIControlEventTouchDown];
-    
-    NSLog(@"Current row: %d", indexPath.row);
     
     return cell;
     
@@ -90,10 +83,10 @@
 
 - (void)favoriteEventAtRow:(UIButton *)sender {
     
-    NSInteger row = sender.tag / TAG_FAVORITE;
-    LKEvent *event = [[self events] objectAtIndex:row];
+    CGPoint buttonPosition = [sender convertPoint:CGPointZero toView:self.tableView];
+    NSIndexPath *indexPath = [self.tableView indexPathForRowAtPoint:buttonPosition];
     
-    NSLog(@"%@-tag %d", event.name, sender.tag);
+    LKEvent *event = [[self events] objectAtIndex:indexPath.row];
     
     event.favorite = ![event isFavorite];
     [sender setSelected:[event isFavorite]];

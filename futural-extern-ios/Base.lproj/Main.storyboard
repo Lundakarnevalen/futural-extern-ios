@@ -321,6 +321,9 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="FwE-jU-bDQ"/>
+                    <connections>
+                        <outlet property="tableView" destination="LVT-VY-gxW" id="ae2-3K-QTe"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZlI-uz-5lI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

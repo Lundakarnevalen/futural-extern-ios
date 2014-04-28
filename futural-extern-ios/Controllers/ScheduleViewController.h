@@ -11,5 +11,6 @@
 @interface ScheduleViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
 
 @property (nonatomic) LKarneval *karneval;
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 @end
