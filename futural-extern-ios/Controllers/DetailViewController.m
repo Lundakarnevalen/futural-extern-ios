@@ -40,6 +40,8 @@
         informationBarColor = [LKColor colorWithIdentifier:LKColorDarkRed];
         logotypeStrokeColor = [LKColor colorWithIdentifier:LKColorGreen];
         
+        NSLog(@"Subplaces %@", self.place.subPlaces);
+        
     }
     
     [self.informationBar setBackgroundColor:informationBarColor];

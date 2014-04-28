@@ -26,8 +26,6 @@
         self.start = [dates objectForKey:@"start"];
         self.end = [dates objectForKey:@"end"];
         
-        //add logic to read a property list containing all the information about the event.
-        
     }
     
     return self;
