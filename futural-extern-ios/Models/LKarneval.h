@@ -33,5 +33,6 @@ extern const int NumberOfFilters;
 
 + (NSArray *)LKPlaceFilterFood;
 + (NSArray *)LKPlaceFilterEntertainment;
++ (NSArray *)LKPlaceFilterOther;
 
 @end

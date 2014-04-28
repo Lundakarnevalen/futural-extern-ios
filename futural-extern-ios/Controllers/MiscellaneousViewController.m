@@ -22,6 +22,12 @@
 
 }
 
+- (NSArray *)miscPlaces {
+    
+    return [self.karneval placesFilteredByCategories:[LKarneval LKPlaceFilterOther]];
+    
+}
+
 - (void)renderGrid {
     
     [self.scrollView setContentSize:[self.grid contentSize]];
@@ -29,7 +35,7 @@
     [self.grid.cells enumerateObjectsUsingBlock:^(id object, NSUInteger index, BOOL *stop) {
         
         LKCell *cell = (LKCell *)object;
-        LKPlace *place = [self.karneval.places objectAtIndex:index];
+        LKPlace *place = [[self miscPlaces] objectAtIndex:index];
         
         LKButton *button = [LKLayout buttonForCell:cell
                                    withStrokeColor:[LKColor colorWithIdentifier:LKColorBeige]
@@ -75,7 +81,7 @@
     
     if(!_grid) {
         
-        _grid = [[LKGrid alloc] initWithFrame:self.scrollView.frame andGridCells:[LKGrid cellsFromArray:self.karneval.places]];
+        _grid = [[LKGrid alloc] initWithFrame:self.scrollView.frame andGridCells:[LKGrid cellsFromArray:[self miscPlaces]]];
         
     }
     

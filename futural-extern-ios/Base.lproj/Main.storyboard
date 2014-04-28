@@ -554,7 +554,7 @@
                                 </connections>
                             </mapView>
                             <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ovd-0P-KLA">
-                                <rect key="frame" x="305" y="319" width="30" height="57"/>
+                                <rect key="frame" x="305" y="347" width="30" height="57"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.96862745100000003" green="0.91764705879999997" blue="0.83137254900000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -573,7 +573,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="VOy-Cp-HdC" secondAttribute="trailing" id="0Ne-K2-IzT"/>
-                            <constraint firstItem="zRu-NC-REF" firstAttribute="top" secondItem="ovd-0P-KLA" secondAttribute="bottom" constant="128" id="76o-Op-LVs"/>
+                            <constraint firstItem="zRu-NC-REF" firstAttribute="top" secondItem="ovd-0P-KLA" secondAttribute="bottom" constant="100" id="76o-Op-LVs"/>
                             <constraint firstItem="VOy-Cp-HdC" firstAttribute="top" secondItem="e0T-3B-zCv" secondAttribute="top" id="9zR-zC-DKw"/>
                             <constraint firstItem="VOy-Cp-HdC" firstAttribute="leading" secondItem="gTy-RO-O6Q" secondAttribute="leading" id="BTK-R6-c5L"/>
                             <constraint firstItem="zRu-NC-REF" firstAttribute="top" secondItem="VOy-Cp-HdC" secondAttribute="bottom" id="gIp-K1-WnA"/>

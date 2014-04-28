@@ -9,7 +9,7 @@
 #define PLIST_PLACES "Places"
 #define PLIST_EVENTS "Events"
 
-const int NumberOfFilters = 2;
+const int NumberOfFilters = 3;
 
 @implementation LKarneval
 
@@ -283,7 +283,13 @@ const int NumberOfFilters = 2;
 
 + (NSArray *)LKPlaceFilterEntertainment {
     
-    return @[@(LKPlaceCategoryTent), @(LKPlaceCategoryScene), @(LKPlaceCategoryLottery), @(LKPlaceCategoryMinorEntertainment), @(LKPlaceCategoryEntertainment), @(LKPlaceCategoryShow), @(LKPlaceCategoryChildren)];
+    return @[@(LKPlaceCategoryTent), @(LKPlaceCategoryScene), @(LKPlaceCategoryLottery), @(LKPlaceCategoryMinorEntertainment), @(LKPlaceCategoryEntertainment), @(LKPlaceCategoryShow), @(LKPlaceCategoryChildren), @(LKPlaceCategoryRadio), @(LKPlaceCategoryTickets)];
+    
+}
+
++ (NSArray *)LKPlaceFilterOther {
+    
+    return @[@(LKPlaceCategoryToilet), @(LKPlaceCategoryFirstAid), @(LKPlaceCategoryChargingStation), @(LKPlaceCategoryShop), @(LKPlaceCategoryParking), @(LKPlaceCategoryPolice), @(LKPlaceCategoryATM), @(LKPlaceCategoryTrash), @(LKPlaceCategoryFireEscape), @(LKPlaceCategoryEntrance)];
     
 }
 

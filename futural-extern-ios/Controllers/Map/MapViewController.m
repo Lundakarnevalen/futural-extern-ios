@@ -75,9 +75,11 @@
 - (IBAction)mapViewClicked:(UITapGestureRecognizer *)sender {
     CGPoint point = [sender locationInView:self.mapView];
     CLLocationCoordinate2D coord = [self.mapView convertPoint:point toCoordinateFromView:self.view];
-    NSLog(@"\nx:\t%f\ty:\t%f\nla:\t%.20f\tln:\t%.20f", point.x, point.y, coord.latitude, coord.longitude);
+    NSString *lat = [[NSString stringWithFormat:@"%.20f", coord.latitude] stringByReplacingOccurrencesOfString:@"." withString:@","];
+    NSString *lng = [[NSString stringWithFormat:@"%.20f", coord.longitude] stringByReplacingOccurrencesOfString:@"." withString:@","];
+    NSLog(@"\nx:\t%f\ty:\t%f\nla:\t%@\tln:\t%@", point.x, point.y, lat, lng);
     CLLocation *location = [[CLLocation alloc] initWithLatitude:coord.latitude longitude:coord.longitude];
-    [self performSegueWithIdentifier:@"createAnnotationSegue" sender:location];
+    //[self performSegueWithIdentifier:@"createAnnotationSegue" sender:location];
 }
 
 - (IBAction)showMapButtonClicked:(id)sender {
@@ -143,8 +145,12 @@
         [places addObjectsFromArray:[LKarneval LKPlaceFilterEntertainment]];
     }
     
-//    for (LKPlace *place in [karneval placesFilteredByCategories:places]) {
-    for (LKPlace *place in karneval.places) {
+    if ([self.filter[@"other"] boolValue]) {
+        [places addObjectsFromArray:[LKarneval LKPlaceFilterOther]];
+    }
+    
+    for (LKPlace *place in [karneval placesFilteredByCategories:places]) {
+//    for (LKPlace *place in karneval.places) {
     
         [place.subPlaces enumerateObjectsUsingBlock:^(id object, NSUInteger index, BOOL *stop) {
             

@@ -60,6 +60,12 @@ NSString *const FilterMapTableViewRowDidSelect             = @"FilterMapTableVie
             label.textColor = ([self.filter[@"entertainment"] boolValue]) ? [UIColor whiteColor] : [[UIColor blackColor] colorWithAlphaComponent:0.4];
             break;
         case 2:
+            if (!cell) cell = [tableView dequeueReusableCellWithIdentifier:@"FilterCell" forIndexPath:indexPath];
+            label = (UILabel *)[[cell contentView] viewWithTag:TAG_LABEL];
+            label.text = @"ÖVRIGT";
+            label.textColor = ([self.filter[@"other"] boolValue]) ? [UIColor whiteColor] : [[UIColor blackColor] colorWithAlphaComponent:0.4];
+            break;
+        case 3:
             if (!cell) cell = [tableView dequeueReusableCellWithIdentifier:@"ShowEverythingCell" forIndexPath:indexPath];
             break;
         default:
@@ -82,8 +88,12 @@ NSString *const FilterMapTableViewRowDidSelect             = @"FilterMapTableVie
             [self.filter setObject:[NSNumber numberWithBool:![self.filter[@"entertainment"] boolValue]] forKey:@"entertainment"];
             break;
         case 2:
+            [self.filter setObject:[NSNumber numberWithBool:![self.filter[@"other"] boolValue]] forKey:@"other"];
+            break;
+        case 3:
             [self.filter setValue:[NSNumber numberWithBool:YES] forKey:@"food"];
             [self.filter setValue:[NSNumber numberWithBool:YES] forKey:@"entertainment"];
+            [self.filter setValue:[NSNumber numberWithBool:YES] forKey:@"other"];
         default:
             break;
     }
