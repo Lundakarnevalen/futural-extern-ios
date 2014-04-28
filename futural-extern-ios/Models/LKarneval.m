@@ -283,7 +283,7 @@ const int NumberOfFilters = 2;
 
 + (NSArray *)LKPlaceFilterEntertainment {
     
-    return @[@(LKPlaceCategoryTent), @(LKPlaceCategoryScene), @(LKPlaceCategoryLottery), @(LKPlaceCategoryMinorEntertainment), @(LKPlaceCategoryEntertainment), @(LKPlaceCategoryShow)];
+    return @[@(LKPlaceCategoryTent), @(LKPlaceCategoryScene), @(LKPlaceCategoryLottery), @(LKPlaceCategoryMinorEntertainment), @(LKPlaceCategoryEntertainment), @(LKPlaceCategoryShow), @(LKPlaceCategoryChildren)];
     
 }
 

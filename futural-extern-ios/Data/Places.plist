@@ -2,6 +2,46 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>barnevalen</key>
+	<dict>
+		<key>alcohol</key>
+		<false/>
+		<key>category</key>
+		<integer>23</integer>
+		<key>description</key>
+		<string>Dina små aliens kommer att älska det här.</string>
+		<key>name</key>
+		<string>Barnevalen</string>
+		<key>payment_options</key>
+		<array/>
+		<key>positions</key>
+		<array>
+			<dict>
+				<key>name</key>
+				<string>Förbjudna tältet</string>
+				<key>latitude</key>
+				<real>55.70399958255682</real>
+				<key>longitude</key>
+				<real>13.19495661742418</real>
+			</dict>
+			<dict>
+				<key>name</key>
+				<string>Bak- och framtidsresan</string>
+				<key>latitude</key>
+				<real>55.7039678443762</real>
+				<key>longitude</key>
+				<real>13.19482518919924</real>
+			</dict>
+			<dict>
+				<key>name</key>
+				<string>Astronautakademin</string>
+				<key>latitude</key>
+				<real>55.7038136872786</real>
+				<key>longitude</key>
+				<real>13.19461463574077</real>
+			</dict>
+		</array>
+	</dict>
 	<key>toaletter</key>
 	<dict>
 		<key>alcohol</key>

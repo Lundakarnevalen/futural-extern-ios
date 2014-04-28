@@ -43,7 +43,8 @@ typedef enum {
     LKPlaceCategoryEntrance = 19,
     LKPlaceCategoryShow = 20,
     LKPlaceCategoryTickets = 21,
-    LKPlaceCategoryEntertainment = 22
+    LKPlaceCategoryEntertainment = 22,
+    LKPlaceCategoryChildren = 23
     
 } LKPlaceCategory;
 
@@ -53,7 +54,6 @@ typedef enum {
 @property (nonatomic) NSString *name;
 @property (nonatomic) NSString *information;
 @property (nonatomic) UIImage *image;
-@property (nonatomic) UIImage *annotationImage;
 
 @property (nonatomic) LKPlaceCategory category;
 @property (nonatomic) CLLocationCoordinate2D position;

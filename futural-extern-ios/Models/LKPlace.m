@@ -22,7 +22,6 @@
         self.category = [propertyList[@"category"] integerValue];
         self.alcohol = [propertyList[@"alcohol"] boolValue];
         self.image = [UIImage imageNamed:propertyList[@"image"]];
-        self.annotationImage = [UIImage imageNamed:propertyList[@"annotation_image"]];
         
         for(NSString *option in propertyList[@"payment_options"]) {
             
@@ -233,10 +232,6 @@
             break;
             
         case LKPlaceCategoryTent:
-            
-            break;
-            
-        case LKPlaceCategoryToilet:
             
             break;
             
