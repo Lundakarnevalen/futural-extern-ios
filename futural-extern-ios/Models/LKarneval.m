@@ -153,6 +153,26 @@ const int NumberOfFilters = 3;
     
 }
 
+- (NSArray *)upcomingEvents {
+    
+    NSMutableArray *upcoming = [[NSMutableArray alloc] init];
+    
+    for(LKEvent *event in self.events) {
+        
+        if(![event isOver]) {
+            
+            [upcoming addObject:event];
+            
+        }
+        
+    }
+    
+    [self.class sortEventsChronological:upcoming];
+    
+    return upcoming;
+    
+}
+
 - (NSArray *)placesFilteredByCategories:(NSArray *)categories {
     
     NSMutableArray *places;
@@ -269,11 +289,23 @@ const int NumberOfFilters = 3;
 
 - (NSString *)description {
     
-    return [NSString stringWithFormat:@"This is %@ and we're opening at %@, at the moment we have %d events and %d places to see.", self.class, self.openingHours, [self.places count], [self.events count]];
+    return [NSString stringWithFormat:@"This is %@ and we're opening at %@, at the moment we have %lu events and %lu places to see.", self.class, self.openingHours, (unsigned long)[self.places count], (unsigned long)[self.events count]];
     
 }
 
 #pragma mark Class methods
+
++ (NSArray *)sortEventsChronological:(NSMutableArray *)events {
+    
+    [events sortUsingComparator:^NSComparisonResult(id obj1, id obj2) {
+        
+        return [[(LKEvent *)obj1 start] compare:[(LKEvent *)obj2 start]];
+        
+    }];
+    
+    return events;
+    
+}
 
 + (NSArray *)LKPlaceFilterFood {
     

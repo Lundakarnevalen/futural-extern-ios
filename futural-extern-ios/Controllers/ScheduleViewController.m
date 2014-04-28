@@ -28,11 +28,16 @@
     
 }
 
+- (NSArray *)events {
+    
+    //add a property to filter this relative to day.
+    return [self.karneval upcomingEvents];
+    
+}
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     
-    //return filtered and sorted array later (based on date, this should happen inside of the model).
-    return [self.karneval.events count];
+    return [[self events] count];
     
 }
 
@@ -48,7 +53,7 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    LKEvent *event = [self.karneval.events objectAtIndex:indexPath.row];
+    LKEvent *event = [[self events] objectAtIndex:indexPath.row];
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@CELL_IDENTIFIER];
     
     if(!cell) {
@@ -74,8 +79,10 @@
     [image drawCircularImage:[UIColor whiteColor]];
     
     [favorite setSelected:event.favorite];
-    [favorite setTag:favorite.tag * indexPath.row]; //to solve the equation of which object that was favorited. (ugly, but working, solved by dividing the tag with 6 a.k.a TAG_FAVORITE).
+    [favorite setTag:TAG_FAVORITE * indexPath.row]; //to solve the equation of which object that was favorited. (ugly, but working, solved by dividing the tag with 6 a.k.a TAG_FAVORITE).
     [favorite addTarget:self action:@selector(favoriteEventAtRow:) forControlEvents:UIControlEventTouchDown];
+    
+    NSLog(@"Current row: %d", indexPath.row);
     
     return cell;
     
@@ -84,7 +91,9 @@
 - (void)favoriteEventAtRow:(UIButton *)sender {
     
     NSInteger row = sender.tag / TAG_FAVORITE;
-    LKEvent *event = [self.karneval.events objectAtIndex:row];
+    LKEvent *event = [[self events] objectAtIndex:row];
+    
+    NSLog(@"%@-tag %d", event.name, sender.tag);
     
     event.favorite = ![event isFavorite];
     [sender setSelected:[event isFavorite]];

@@ -78,7 +78,7 @@
     NSString *lat = [[NSString stringWithFormat:@"%.20f", coord.latitude] stringByReplacingOccurrencesOfString:@"." withString:@","];
     NSString *lng = [[NSString stringWithFormat:@"%.20f", coord.longitude] stringByReplacingOccurrencesOfString:@"." withString:@","];
     NSLog(@"\nx:\t%f\ty:\t%f\nla:\t%@\tln:\t%@", point.x, point.y, lat, lng);
-    CLLocation *location = [[CLLocation alloc] initWithLatitude:coord.latitude longitude:coord.longitude];
+//    CLLocation *location = [[CLLocation alloc] initWithLatitude:coord.latitude longitude:coord.longitude];
     //[self performSegueWithIdentifier:@"createAnnotationSegue" sender:location];
 }
 

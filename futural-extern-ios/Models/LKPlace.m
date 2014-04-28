@@ -161,7 +161,7 @@
 
 - (NSString *)description {
     
-    return [NSString stringWithFormat:@"This is %@ and I'm located at %d places, our payment options are %@", self.name, [self.subPlaces count], self.paymentOptions];
+    return [NSString stringWithFormat:@"This is %@ and I'm located at %lu places, our payment options are %@", self.name, (unsigned long)[self.subPlaces count], self.paymentOptions];
     
 }
 

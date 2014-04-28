@@ -27,9 +27,9 @@ extern const int NumberOfFilters;
 - (NSArray *)placesExcludedByCategories:(NSArray *)categories;
 - (NSArray *)placesFilteredByCategories:(NSArray *)categories;
 
-- (NSArray *)placesAtPlaceWithIdentifier:(NSString *)identifier; //get all subPlaces from a place.
 - (NSArray *)eventsAtPlaceWithIdentifier:(NSString *)identifier; //get events associated with a place.
 - (NSArray *)favoriteEvents;
+- (NSArray *)upcomingEvents;
 
 + (NSArray *)LKPlaceFilterFood;
 + (NSArray *)LKPlaceFilterEntertainment;

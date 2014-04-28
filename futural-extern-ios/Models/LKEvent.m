@@ -34,21 +34,14 @@
 
 - (BOOL)isOver {
     
-    //check if the event has already taken place.
-    return NO;
+    NSDate *today = [NSDate date];
+    return [[today laterDate:self.end] isEqualToDate:today];
     
 }
 
 - (BOOL)isFavorite {
     
-    if(!_favorite) { //check the database
-        
-        _favorite = (BOOL)[[NSUserDefaults standardUserDefaults] boolForKey:[self dataIdentifier]];
-        
-        if(!_favorite)
-            _favorite = NO; //default if there's none in the database.
-        
-    }
+    _favorite = (BOOL)[[NSUserDefaults standardUserDefaults] boolForKey:[self dataIdentifier]];
     
     return _favorite;
     
@@ -57,6 +50,7 @@
 - (void)setFavorite:(BOOL)favorite {
     
     _favorite = favorite;
+    NSLog(@"Save favorite: %@, %d", [self dataIdentifier], _favorite);
     [[NSUserDefaults standardUserDefaults] setBool:favorite forKey:[self dataIdentifier]];
     [[NSUserDefaults standardUserDefaults] synchronize]; //important, or there may be some slight delays.
     
