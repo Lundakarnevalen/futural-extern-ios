@@ -141,7 +141,7 @@
 //    for (LKPlace *place in [karneval placesFilteredByCategories:places]) {
     for (LKPlace *place in karneval.places) {
     
-        [place.positions enumerateObjectsUsingBlock:^(id object, NSUInteger index, BOOL *stop) {
+        [place.subPlaces enumerateObjectsUsingBlock:^(id object, NSUInteger index, BOOL *stop) {
             
             LKAnnotation *anno = [[LKAnnotation alloc] initWithPlace:place andPositionIndexOf:index];
             [self.mapView addAnnotation:anno];

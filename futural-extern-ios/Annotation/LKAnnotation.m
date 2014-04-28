@@ -20,8 +20,9 @@
     
     if (self) {
         
-        coordinate = [[place.positions objectAtIndex:positionIndex] coordinate];
-        title = place.name;
+        LKSubPlace *subPlace = [place.subPlaces objectAtIndex:positionIndex];
+        coordinate = [subPlace.position coordinate];
+        title = subPlace.name;
         self.image = [place imageForAnnotation];
         
     }

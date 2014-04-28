@@ -9,6 +9,8 @@
 #import <Foundation/Foundation.h>
 #import "CoreLocation/CoreLocation.h"
 
+#import "LKSubPlace.h"
+
 typedef enum {
     
     LKPaymentOptionCard = 1,
@@ -55,7 +57,7 @@ typedef enum {
 
 @property (nonatomic) LKPlaceCategory category;
 @property (nonatomic) CLLocationCoordinate2D position;
-@property (nonatomic) NSMutableArray *positions; //of CLLocationCoordinate2D
+@property (nonatomic) NSMutableArray *subPlaces; //of LKSubPlace
 
 @property (nonatomic, getter = isSellingAlcohol) BOOL alcohol; //selling alcoholic beverages?
 @property (nonatomic) NSMutableArray *paymentOptions; //of LKPaymentOption. what kind of payments are available (card, phone, futural). IF THE ARRAY IS EMPTY, IT'S FOR FREE.

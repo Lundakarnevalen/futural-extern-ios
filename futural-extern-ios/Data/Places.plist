@@ -2,6 +2,86 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>toaletter</key>
+	<dict>
+		<key>alcohol</key>
+		<false/>
+		<key>category</key>
+		<integer>5</integer>
+		<key>description</key>
+		<string>Rymdavfall måste lagras någonstans.</string>
+		<key>name</key>
+		<string>Toaletter</string>
+		<key>payment_options</key>
+		<array/>
+		<key>positions</key>
+		<array>
+			<dict>
+				<key>latitude</key>
+				<real>55.70648780072795</real>
+				<key>longitude</key>
+				<real>13.1958402043337</real>
+			</dict>
+			<dict>
+				<key>latitude</key>
+				<real>55.70603133250371</real>
+				<key>longitude</key>
+				<real>13.19404062814232</real>
+			</dict>
+			<dict>
+				<key>latitude</key>
+				<real>55.70485187667411</real>
+				<key>longitude</key>
+				<real>13.19570665852305</real>
+			</dict>
+			<dict>
+				<key>latitude</key>
+				<real>55.705228407599</real>
+				<key>longitude</key>
+				<real>13.19285637404313</real>
+			</dict>
+			<dict>
+				<key>latitude</key>
+				<real>55.70372639868275</real>
+				<key>longitude</key>
+				<real>13.19470515375246</real>
+			</dict>
+			<dict>
+				<key>latitude</key>
+				<real>55.70531936414573</real>
+				<key>longitude</key>
+				<real>13.19419428089188</real>
+			</dict>
+			<dict>
+				<key>latitude</key>
+				<real>55.70438108228282</real>
+				<key>longitude</key>
+				<real>13.19472544482855</real>
+			</dict>
+		</array>
+	</dict>
+	<key>firstaid</key>
+	<dict>
+		<key>alcohol</key>
+		<false/>
+		<key>category</key>
+		<integer>19</integer>
+		<key>description</key>
+		<string>För att hjälpa dig i karnevalsvimlet.</string>
+		<key>name</key>
+		<string>Sjukvård</string>
+		<key>payment_options</key>
+		<array/>
+		<key>positions</key>
+		<array>
+			<dict>
+				<key>latitude</key>
+				<real>55.70589745349834</real>
+				<key>longitude</key>
+				<real>13.195349039021</real>
+			</dict>
+		</array>
+	</dict>
 	<key>dansen</key>
 	<dict>
 		<key>positions</key>
@@ -185,32 +265,50 @@
 		<key>positions</key>
 		<array>
 			<dict>
+				<key>name</key>
+				<string>En lundensares guide till galaxen</string>
 				<key>latitude</key>
-				<real>55.70601964557335</real>
+				<real>55.7056318688607</real>
+				<key>longitude</key>
+				<real>13.19298738463846</real>
+			</dict>
+			<dict>
+				<key>name</key>
+				<string>Futopia</string>
+				<key>latitude</key>
+				<real>55.7060196455733</real>
 				<key>longitude</key>
 				<real>13.19565500654615</real>
 			</dict>
 			<dict>
+				<key>name</key>
+				<string>Botaniska år 3014</string>
 				<key>latitude</key>
-				<real>55.70513544724786</real>
+				<real>55.7051354472479</real>
 				<key>longitude</key>
 				<real>13.19293492729316</real>
 			</dict>
 			<dict>
+				<key>name</key>
+				<string>Futuralteleportal</string>
 				<key>latitude</key>
-				<real>55.70439204446827</real>
+				<real>55.7043920444683</real>
 				<key>longitude</key>
 				<real>13.19313558627814</real>
 			</dict>
 			<dict>
+				<key>name</key>
+				<string>Intergalaktisk invandring</string>
 				<key>latitude</key>
-				<real>55.70374101009212</real>
+				<real>55.7037410100921</real>
 				<key>longitude</key>
 				<real>13.19423114265037</real>
 			</dict>
 			<dict>
+				<key>name</key>
+				<string>Ett svart hål</string>
 				<key>latitude</key>
-				<real>55.70446908732766</real>
+				<real>55.7044690873277</real>
 				<key>longitude</key>
 				<real>13.19560129896877</real>
 			</dict>
@@ -269,10 +367,28 @@
 		<key>positions</key>
 		<array>
 			<dict>
+				<key>name</key>
+				<string>Tillbaka till samtiden</string>
 				<key>latitude</key>
-				<real>55.70474919330989</real>
+				<real>55.7046899767097</real>
 				<key>longitude</key>
-				<real>13.19445891186438</real>
+				<real>13.19470679837929</real>
+			</dict>
+			<dict>
+				<key>name</key>
+				<string>Strike for the future</string>
+				<key>latitude</key>
+				<real>55.7045492497648</real>
+				<key>longitude</key>
+				<real>13.19459512816178</real>
+			</dict>
+			<dict>
+				<key>name</key>
+				<string>Futuralbucks</string>
+				<key>latitude</key>
+				<real>55.7046234675636</real>
+				<key>longitude</key>
+				<real>13.19465534628458</real>
 			</dict>
 		</array>
 	</dict>

@@ -31,17 +31,26 @@
             
         }
         
-        //NSDictionary *position = propertyList[@"position"];
         NSArray *positions = propertyList[@"positions"];
         
         for(NSDictionary *position in positions) {
+            
+            NSString *name = position[@"name"];
+            
+            if(!name) {
+                
+                name = self.name; //fallback to category if no name is set.
+                
+            }
             
             CLLocationDegrees latitude = [position[@"latitude"] doubleValue];
             CLLocationDegrees longitude = [position[@"longitude"] doubleValue];
             
             CLLocation *coordinates = [[CLLocation alloc] initWithLatitude:latitude longitude:longitude]; //send message 'coordinate' to get the CLLocation2D blublub.
             
-            [self.positions addObject:coordinates];
+            LKSubPlace *subPlace = [[LKSubPlace alloc] initWithName:name andPosition:coordinates];
+            
+            [self.subPlaces addObject:subPlace];
             
         }
         
@@ -81,7 +90,7 @@
 - (CLLocationCoordinate2D)position {
     
     //as for now.
-    _position = [[_positions firstObject] coordinate];
+    _position = [[_subPlaces firstObject] coordinate];
     return _position;
     
 }
@@ -137,15 +146,15 @@
     
 }
 
-- (NSMutableArray *)positions {
+- (NSMutableArray *)subPlaces {
     
-    if(!_positions) {
+    if(!_subPlaces) {
         
-        _positions = [[NSMutableArray alloc] init];
+        _subPlaces = [[NSMutableArray alloc] init];
         
     }
     
-    return _positions;
+    return _subPlaces;
     
 }
 
@@ -153,7 +162,7 @@
 
 - (NSString *)description {
     
-    return [NSString stringWithFormat:@"This is %@ and I'm located at %d places, our payment options are %@", self.name, [self.positions count], self.paymentOptions];
+    return [NSString stringWithFormat:@"This is %@ and I'm located at %d places, our payment options are %@", self.name, [self.subPlaces count], self.paymentOptions];
     
 }
 
