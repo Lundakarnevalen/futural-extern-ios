@@ -16,13 +16,15 @@
     
     [super viewDidLoad];
     
-    [self setNeedsStatusBarAppearanceUpdate];
+    if ([self respondsToSelector:@selector(setNeedsStatusBarAppearanceUpdate)]) {
+        [self setNeedsStatusBarAppearanceUpdate];
+    }    
     
     [self customizeNavigationbar];
     
 }
 
--(UIStatusBarStyle)preferredStatusBarStyle { return UIStatusBarStyleLightContent; } //set statusbar to white
+//-(UIStatusBarStyle)preferredStatusBarStyle { return UIStatusBarStyleLightContent; } //set statusbar to white
 
 - (void)customizeNavigationbar {
     
@@ -33,8 +35,13 @@
     
     [self.navigationBar.topItem setTitle:[LKLayout defaultTitle]];
     [self.navigationBar setTranslucent:NO];
-    [self.navigationBar setBarTintColor:[LKColor colorWithIdentifier:LKColorRed]];
-    [self.navigationBar setTintColor:[UIColor whiteColor]];
+    if ([self respondsToSelector:@selector(setBarTintColor:)]) {
+        [self.navigationBar setBarTintColor:[LKColor colorWithIdentifier:LKColorRed]];
+        [self.navigationBar setTintColor:[UIColor whiteColor]];
+    } else {
+        [self.navigationBar setBackgroundColor:[LKColor colorWithIdentifier:LKColorRed]];
+    }
+    
     [self.navigationBar setTitleTextAttributes:textAttributes];
     
     //shadow beneath navbar.

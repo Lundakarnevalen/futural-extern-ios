@@ -38,9 +38,14 @@
     [self.slidingViewController setAnchorLeftRevealAmount:150.0f];
     
     LKOverlay *map = [[LKOverlay alloc] initWithImage:[UIImage imageNamed:@"Lundakarnevalen"]];
-    [self.mapView addOverlay:map  level:MKOverlayLevelAboveRoads];
+    if ([self respondsToSelector:@selector(addOverlay:level:)]) {
+        [self.mapView addOverlay:map  level:MKOverlayLevelAboveRoads];
+    } else {
+        [self.mapView addOverlay:map];
+    }
     
-    self.mapView.mapType = MKMapTypeSatellite;
+    
+    //self.mapView.mapType = MKMapTypeSatellite;
     self.mapView.region = MKCoordinateRegionMake(
                                              CLLocationCoordinate2DMake(55.705282871899165, 13.194099413861689),
                                              MKCoordinateSpanMake(0.0048452481526979341, 0.0081815629812922452));

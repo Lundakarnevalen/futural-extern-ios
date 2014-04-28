@@ -45,7 +45,12 @@
     //remove 1px default shadow.
     [[UITabBar appearance] setShadowImage:[[UIImage alloc] init]];
     [[UITabBar appearance] setBackgroundImage:[[UIImage alloc] init]];
-    [self.tabBar setBarTintColor:[LKColor colorWithIdentifier:LKColorRed]];
+    if ([self respondsToSelector:@selector(setBarTintColor:)]) {
+        [self.tabBar setBarTintColor:[LKColor colorWithIdentifier:LKColorRed]];
+    } else {
+        [self.tabBar setBackgroundColor:[LKColor colorWithIdentifier:LKColorRed]];
+    }
+    
     
     //inner shadow.
     [LKLayout addInsetShadowToView:self.tabBar ofSize:3];

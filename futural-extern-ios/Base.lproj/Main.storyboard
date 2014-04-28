@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13C1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="C1T-Qq-mO7">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13C64" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="C1T-Qq-mO7">
     <dependencies>
         <deployment defaultVersion="1536" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
@@ -11,6 +11,7 @@
                 <tabBarController definesPresentationContext="YES" id="C1T-Qq-mO7" customClass="TabBarViewController" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" title="LUNDAKARNEVALEN" id="FHD-Un-eLV"/>
                     <keyCommands/>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" translucent="NO" id="ZcI-fb-Kne">
                         <rect key="frame" x="129" y="330" width="163" height="49"/>
@@ -22,7 +23,7 @@
                     <connections>
                         <segue destination="Nfm-lw-JoY" kind="relationship" relationship="viewControllers" id="GWj-QV-Cst"/>
                         <segue destination="8la-XX-XlW" kind="relationship" relationship="viewControllers" id="lYe-Ee-yAp"/>
-                        <segue destination="9Ni-0u-Na0" kind="relationship" relationship="viewControllers" id="hh8-6d-OFs"/>
+                        <segue destination="laf-eY-f6K" kind="relationship" relationship="viewControllers" id="Ygi-Mp-CRj"/>
                         <segue destination="qzT-ma-Goo" kind="relationship" relationship="viewControllers" id="XgV-Rv-Rjx"/>
                         <segue destination="Mv3-Fl-glh" kind="relationship" relationship="viewControllers" id="A3Y-oD-jKg"/>
                     </connections>
@@ -59,7 +60,7 @@
                         <viewControllerLayoutGuide type="top" id="OvZ-E8-ubT"/>
                         <viewControllerLayoutGuide type="bottom" id="Or7-Ro-cNC"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="ta8-jg-mQB">
+                    <view key="view" clipsSubviews="YES" contentMode="scaleToFill" id="ta8-jg-mQB">
                         <rect key="frame" x="0.0" y="64" width="320" height="455"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
@@ -67,7 +68,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="455"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ga3-Ta-MVw">
+                            <scrollView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ga3-Ta-MVw">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="455"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </scrollView>
@@ -475,7 +476,7 @@
                         <viewControllerLayoutGuide type="top" id="Lzp-Uf-Pm6"/>
                         <viewControllerLayoutGuide type="bottom" id="4Xu-Xq-lyv"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="LlJ-Re-iFC">
+                    <view key="view" clipsSubviews="YES" contentMode="scaleToFill" id="LlJ-Re-iFC">
                         <rect key="frame" x="0.0" y="64" width="320" height="455"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
@@ -511,27 +512,7 @@
             </objects>
             <point key="canvasLocation" x="1089" y="210"/>
         </scene>
-        <!--Navigation View Controller - Karta-->
-        <scene sceneID="jml-uL-TSW">
-            <objects>
-                <navigationController definesPresentationContext="YES" id="9Ni-0u-Na0" customClass="NavigationViewController" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Karta" image="map" id="ujc-Bd-LuQ"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="7ap-0a-BTX">
-                        <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" red="0.87058830261230469" green="0.30980393290519714" blue="0.25098040699958801" alpha="1" colorSpace="deviceRGB"/>
-                        <textAttributes key="titleTextAttributes">
-                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="deviceRGB"/>
-                        </textAttributes>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="laf-eY-f6K" kind="relationship" relationship="rootViewController" id="Qfc-lj-sWC"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="tCC-RV-K4O" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="653" y="-1176"/>
-        </scene>
-        <!--Init View Controller-->
+        <!--Init View Controller - Karta-->
         <scene sceneID="aGX-iM-vct">
             <objects>
                 <viewController id="laf-eY-f6K" customClass="InitViewController" sceneMemberID="viewController">
@@ -540,30 +521,31 @@
                         <viewControllerLayoutGuide type="bottom" id="N2v-0A-0nu"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="mnH-cD-et0">
-                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Karta" image="map" id="mPx-wn-2KB"/>
                     <navigationItem key="navigationItem" id="4Ja-Fp-Y8A"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rcv-zd-cZb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1049" y="-1176"/>
+            <point key="canvasLocation" x="589" y="-1268"/>
         </scene>
-        <!--Map View Controller - Karta-->
+        <!--Map View Controller-->
         <scene sceneID="PEU-C2-tap">
             <objects>
-                <viewController restorationIdentifier="Karta" storyboardIdentifier="Karta" id="4LJ-BV-Ygh" customClass="MapViewController" sceneMemberID="viewController">
+                <viewController id="4LJ-BV-Ygh" customClass="MapViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="e0T-3B-zCv"/>
                         <viewControllerLayoutGuide type="bottom" id="zRu-NC-REF"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="gTy-RO-O6Q">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" rotateEnabled="NO" pitchEnabled="NO" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VOy-Cp-HdC">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <gestureRecognizers/>
                                 <connections>
@@ -572,7 +554,7 @@
                                 </connections>
                             </mapView>
                             <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ovd-0P-KLA">
-                                <rect key="frame" x="305" y="383" width="30" height="57"/>
+                                <rect key="frame" x="305" y="319" width="30" height="57"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.96862745100000003" green="0.91764705879999997" blue="0.83137254900000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -591,14 +573,13 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="VOy-Cp-HdC" secondAttribute="trailing" id="0Ne-K2-IzT"/>
-                            <constraint firstItem="VOy-Cp-HdC" firstAttribute="top" secondItem="gTy-RO-O6Q" secondAttribute="top" id="3pA-Pn-CHs"/>
                             <constraint firstItem="zRu-NC-REF" firstAttribute="top" secondItem="ovd-0P-KLA" secondAttribute="bottom" constant="128" id="76o-Op-LVs"/>
+                            <constraint firstItem="VOy-Cp-HdC" firstAttribute="top" secondItem="e0T-3B-zCv" secondAttribute="top" id="9zR-zC-DKw"/>
                             <constraint firstItem="VOy-Cp-HdC" firstAttribute="leading" secondItem="gTy-RO-O6Q" secondAttribute="leading" id="BTK-R6-c5L"/>
                             <constraint firstItem="zRu-NC-REF" firstAttribute="top" secondItem="VOy-Cp-HdC" secondAttribute="bottom" id="gIp-K1-WnA"/>
                             <constraint firstAttribute="trailing" secondItem="ovd-0P-KLA" secondAttribute="trailing" constant="-15" id="l6Y-fz-qke"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Karta" image="map" id="X4m-8E-Gx8"/>
                     <navigationItem key="navigationItem" id="bCb-Yy-j4V"/>
                     <connections>
                         <outlet property="mapView" destination="VOy-Cp-HdC" id="MAY-Rm-AJw"/>
@@ -612,7 +593,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="1507" y="-1176"/>
+            <point key="canvasLocation" x="1465" y="-1276"/>
         </scene>
         <!--Map Filter View Controller-->
         <scene sceneID="M5z-Iy-t46">
@@ -756,7 +737,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1hv-Jg-Pev" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1888" y="-1182"/>
+            <point key="canvasLocation" x="2414" y="-1182"/>
         </scene>
         <!--Create Annotations View Controller-->
         <scene sceneID="wks-JV-UTP">
@@ -901,7 +882,28 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8Yw-uB-HgK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1435" y="-1851"/>
+            <point key="canvasLocation" x="1877" y="-1268"/>
+        </scene>
+        <!--Navigation View Controller - Karta-->
+        <scene sceneID="keh-4I-Q0z">
+            <objects>
+                <navigationController storyboardIdentifier="Karta" definesPresentationContext="YES" useStoryboardIdentifierAsRestorationIdentifier="YES" id="zIJ-wH-zWT" customClass="NavigationViewController" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Karta" image="map" id="ozP-JC-FI4"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="Yv9-RK-mEf">
+                        <rect key="frame" x="0.0" y="0.0" width="0.0" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.87058830259999997" green="0.30980393290000002" blue="0.25098040700000002" alpha="1" colorSpace="deviceRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="deviceRGB"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="4LJ-BV-Ygh" kind="relationship" relationship="rootViewController" id="yPs-hP-7Fk"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kND-WY-58w" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1060" y="-1268"/>
         </scene>
     </scenes>
     <resources>
@@ -925,13 +927,13 @@
         <image name="schedule" width="25" height="25"/>
         <image name="show" width="128" height="128"/>
     </resources>
-    <color key="tintColor" red="0.87058830261230469" green="0.30980393290519714" blue="0.25098040699958801" alpha="1" colorSpace="deviceRGB"/>
+    <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="kDc-mY-drz"/>
+        <segue reference="bC2-Ov-OlK"/>
     </inferredMetricsTieBreakers>
 </document>

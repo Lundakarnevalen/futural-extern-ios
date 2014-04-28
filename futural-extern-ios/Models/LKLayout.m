@@ -185,6 +185,7 @@
     titleLabel.textAlignment = NSTextAlignmentCenter;
     titleLabel.text = [title uppercaseString];
     titleLabel.adjustsFontSizeToFitWidth = YES;
+    titleLabel.backgroundColor = [UIColor clearColor];
     
     return titleLabel;
     
