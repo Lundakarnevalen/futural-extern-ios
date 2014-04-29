@@ -67,21 +67,32 @@
 
 - (BOOL)acceptsCard {
     
-    //loop through the array paymentOptions, if it finds an object containing LKPaymentOptionCard the place accepts card.
+    for(NSNumber *paymentContainer in self.paymentOptions) {
+        
+        if([paymentContainer integerValue] == LKPaymentOptionCard) {
+            
+            return YES;
+            
+        }
+        
+    }
+    
     return NO;
     
 }
 
-- (BOOL)acceptsFutural {
+- (BOOL)acceptsCash {
     
-    //look at acceptsCard
-    return NO;
+    for(NSNumber *paymentContainer in self.paymentOptions) {
+        
+        if([paymentContainer integerValue] == LKPaymentOptionCash) {
+            
+            return YES;
+            
+        }
+        
+    }
     
-}
-
-- (BOOL)acceptsPhone {
-    
-    //look at acceptsCard
     return NO;
     
 }

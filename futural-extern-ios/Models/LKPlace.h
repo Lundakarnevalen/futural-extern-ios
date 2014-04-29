@@ -62,6 +62,10 @@ typedef enum {
 @property (nonatomic, getter = isSellingAlcohol) BOOL alcohol; //selling alcoholic beverages?
 @property (nonatomic) NSMutableArray *paymentOptions; //of LKPaymentOption. what kind of payments are available (card, phone, futural). IF THE ARRAY IS EMPTY, IT'S FOR FREE.
 
+- (BOOL)isFree;
+- (BOOL)acceptsCash;
+- (BOOL)acceptsCard;
+
 - (LKPlace *)initWithProperties:(NSDictionary *)propertyList;
 
 - (UIImage *)image;
