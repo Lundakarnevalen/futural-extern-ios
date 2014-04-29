@@ -248,7 +248,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="100" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="LVT-VY-gxW">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="455"/>
+                                <rect key="frame" x="0.0" y="57" width="320" height="398"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
@@ -259,6 +259,16 @@
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="100"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
+                                                <view tag="20" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iFS-n8-A0e" userLabel="circle">
+                                                    <rect key="frame" x="66" y="0.0" width="12" height="12"/>
+                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                                </view>
+                                                <view tag="21" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3XR-vU-c7Z" userLabel="circle">
+                                                    <rect key="frame" x="66" y="88" width="12" height="12"/>
+                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                                </view>
                                                 <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2dd-lU-nID">
                                                     <rect key="frame" x="70" y="0.0" width="4" height="100"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -308,7 +318,7 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.68627452850341797" green="0.77647066116333008" blue="0.86274516582489014" alpha="1" colorSpace="deviceRGB"/>
                                         <connections>
-                                            <segue destination="cQb-th-ecb" kind="push" id="Vp9-97-p8A"/>
+                                            <segue destination="aKP-kb-tFC" kind="push" identifier="event.detail" id="aWC-mC-OV9"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -328,25 +338,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZlI-uz-5lI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1072" y="1609"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="7WX-S5-hlY">
-            <objects>
-                <viewController id="cQb-th-ecb" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="h6P-VI-3uR"/>
-                        <viewControllerLayoutGuide type="bottom" id="ilR-ym-LuL"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="fr6-jP-bAb">
-                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="RiJ-ey-sAI"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="AfP-7C-xJX" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1525" y="1595"/>
         </scene>
         <!--Navigation View Controller - Schema-->
         <scene sceneID="iHm-PM-EtH">
@@ -937,6 +928,6 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="bC2-Ov-OlK"/>
+        <segue reference="aWC-mC-OV9"/>
     </inferredMetricsTieBreakers>
 </document>

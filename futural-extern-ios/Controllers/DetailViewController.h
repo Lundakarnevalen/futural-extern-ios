@@ -29,5 +29,6 @@
 
 @property (nonatomic) NSString *segueIdentifier; //the segue identifier used to show this view.
 @property (nonatomic) LKPlace *place;
+@property (nonatomic) LKEvent *event;
 
 @end

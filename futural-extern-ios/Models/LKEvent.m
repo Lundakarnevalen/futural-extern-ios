@@ -20,7 +20,7 @@
         
         self.identifier = propertyList[@"identifier"];
         self.name = propertyList[@"name"];
-        self.description = propertyList[@"description"];
+        self.information = propertyList[@"description"];
         
         NSDictionary *dates = propertyList[@"date"];
         self.start = [dates objectForKey:@"start"];
@@ -107,6 +107,21 @@
     }
     
     return eventImage;
+    
+}
+
+- (UIImage *)coverImage {
+    
+    UIImage *coverImage = [UIImage imageNamed:[NSString stringWithFormat:@"cover-%@", self.identifier]];
+    
+    if(!coverImage) {
+        
+        //fallback to place.
+        return [self.place coverImage];
+        
+    }
+    
+    return coverImage;
     
 }
 

@@ -27,6 +27,8 @@
     
     UIColor *informationBarColor = [UIColor grayColor];
     UIColor *logotypeStrokeColor = [UIColor grayColor];
+    UIImage *coverImage;
+    NSString *headerText;
     
     if([self.segueIdentifier isEqualToString:@"food.detail"]) {
         
@@ -44,6 +46,13 @@
         
     }
     
+    if([self.segueIdentifier isEqualToString:@"event.detail"]) {
+        
+        informationBarColor = [LKColor colorWithIdentifier:LKColorLightBlue];
+        logotypeStrokeColor = [UIColor whiteColor];
+        
+    }
+    
     [self.informationBar setBackgroundColor:informationBarColor];
     [LKLayout addInsetShadowToView:self.informationBar ofSize:3];
     [LKLayout addShadowToView:self.informationBar ofSize:3];
@@ -55,12 +64,35 @@
     [self.cashLabel setFont:[LKLayout detailPaymentFont]];
     [self.cardLabel setFont:[LKLayout detailPaymentFont]];
     
-    [self.cashImage setHidden:![self.place acceptsCash]];
-    [self.cashLabel setHidden:![self.place acceptsCash]];
-    [self.cardImage setHidden:![self.place acceptsCard]];
-    [self.cardLabel setHidden:![self.place acceptsCard]];
+    if(self.place) {
+        
+        [self.cashImage setHidden:![self.place acceptsCash]];
+        [self.cashLabel setHidden:![self.place acceptsCash]];
+        [self.cardImage setHidden:![self.place acceptsCard]];
+        [self.cardLabel setHidden:![self.place acceptsCard]];
+        
+        [self.logotypeImage setImage:[self.place imageForPlace]];
+        [self.headerLabel setText:[self.place.name uppercaseString]];
+        [self.descriptionView setText:self.place.information];
+        headerText = [[NSString stringWithFormat:@"Vad är %@?", self.place.name] uppercaseString];
+        coverImage = [self.place coverImage];
+        
+    } else { //event, hide symbols.
+        
+        [self.cashImage setHidden:YES];
+        [self.cashLabel setHidden:YES];
+        [self.cardImage setHidden:YES];
+        [self.cardLabel setHidden:YES];
+        
+        [self.logotypeImage setImage:[self.event imageForEvent]];
+        [self.headerLabel setText:[self.event.name uppercaseString]];
+        [self.subHeaderLabel setText:[self.event.place.name uppercaseString]];
+        [self.descriptionView setText:self.event.information];
+        headerText = [[NSString stringWithFormat:@"Vad är %@?", self.event.name] uppercaseString];
+        coverImage = [self.event coverImage];
+        
+    }
 
-    [self.logotypeImage setImage:[self.place imageForPlace]];
     [self.logotypeImage drawCircularImage:logotypeStrokeColor];
 
     [self.headerLabel setFont:[LKLayout detailHeaderFont]];
@@ -72,15 +104,9 @@
     [self.mapLabel setFont:[LKLayout detailMapHeaderFont]];
     [LKLayout addShadowToView:self.mapView ofSize:3];
     
-    [self.headerLabel setText:[self.place.name uppercaseString]];
-    
-    NSString *headerText = [[NSString stringWithFormat:@"Vad är %@?", self.place.name] uppercaseString];
     [self.informationHeader setFont:[LKLayout informationHeaderFont]];
     [self.informationHeader setText:headerText];
     
-    [self.descriptionView setText:self.place.information];
-    
-    UIImage *coverImage = [self.place coverImage];
     coverImage = [LKLayout blurImage:coverImage withRadiusOf:2.0]; //pretty laggy... :(
     [self.coverImage setImage:coverImage];
     

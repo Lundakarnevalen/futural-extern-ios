@@ -7,6 +7,7 @@
 //
 
 #import "ScheduleViewController.h"
+#import "DetailViewController.h"
 
 #import "LKImage.h"
 #import "LKLayout.h"
@@ -19,6 +20,9 @@
 #define TAG_TIME_START 4
 #define TAG_TIME_END 5
 #define TAG_FAVORITE 6
+
+#define TAG_TOP_CIRCLE 20
+#define TAG_BOTTOM_CIRCLE 21
 
 @implementation ScheduleViewController
 
@@ -64,6 +68,14 @@
     UILabel *timeEnd = (UILabel *)[[cell contentView] viewWithTag:TAG_TIME_END];
     LKImage *image = (LKImage *)[[cell contentView] viewWithTag:TAG_IMAGE];
     UIButton *favorite = (UIButton *)[[cell contentView] viewWithTag:TAG_FAVORITE];
+    UIView *topCircle = (UIView *)[[cell contentView] viewWithTag:TAG_TOP_CIRCLE];
+    UIView *bottomCircle = (UIView *)[[cell contentView] viewWithTag:TAG_BOTTOM_CIRCLE];
+    
+    topCircle.hidden = (row != 0);
+    bottomCircle.hidden = (row != [[self events] count] - 1);
+    
+    topCircle.layer.cornerRadius = topCircle.frame.size.height / 2;
+    bottomCircle.layer.cornerRadius = bottomCircle.frame.size.height / 2;
     
     headerName.text = [NSString stringWithFormat:@"%@", [event.name uppercaseString]];
     headerPlace.text = [NSString stringWithFormat:@"%@", [event.place.name uppercaseString]];
@@ -78,6 +90,19 @@
     [favorite addTarget:self action:@selector(favoriteEventAtRow:) forControlEvents:UIControlEventTouchDown];
     
     return cell;
+    
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    
+    CGPoint buttonPosition = [sender convertPoint:CGPointZero toView:self.tableView];
+    NSIndexPath *indexPath = [self.tableView indexPathForRowAtPoint:buttonPosition];
+    
+    LKEvent *event = [[self events] objectAtIndex:indexPath.row];
+    
+    DetailViewController *detailVC = segue.destinationViewController;
+    detailVC.event = event;
+    detailVC.segueIdentifier = segue.identifier;
     
 }
 

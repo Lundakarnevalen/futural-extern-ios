@@ -14,7 +14,7 @@
 @property (nonatomic) NSString *identifier; //does not have to be unique, but this is the string that connects the event to an image.
 
 @property (nonatomic) NSString *name;
-@property (nonatomic) NSString *description; //description of the event.
+@property (nonatomic) NSString *information; //description of the event.
 @property (nonatomic) LKPlace *place; //where the event is located.
 
 @property (nonatomic) NSDate *start;
@@ -36,5 +36,6 @@
 
 //if there's no event image, it will grab the LKPlace image instead.
 - (UIImage *)imageForEvent;
+- (UIImage *)coverImage;
 
 @end
