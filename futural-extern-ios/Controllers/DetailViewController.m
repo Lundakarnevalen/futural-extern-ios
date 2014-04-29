@@ -54,6 +54,11 @@
     
     [self.cashLabel setFont:[LKLayout detailPaymentFont]];
     [self.cardLabel setFont:[LKLayout detailPaymentFont]];
+    
+    [self.cashImage setHidden:![self.place acceptsCash]];
+    [self.cashLabel setHidden:![self.place acceptsCash]];
+    [self.cardImage setHidden:![self.place acceptsCard]];
+    [self.cardLabel setHidden:![self.place acceptsCard]];
 
     [self.logotypeImage setImage:[self.place imageForPlace]];
     [self.logotypeImage drawCircularImage:logotypeStrokeColor];
