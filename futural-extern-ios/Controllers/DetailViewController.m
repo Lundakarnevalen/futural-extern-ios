@@ -7,6 +7,7 @@
 //
 
 #import "DetailViewController.h"
+#import "MultipleChoicesViewController.h"
 
 #import "LKLayout.h"
 #import "LKColor.h"
@@ -77,12 +78,16 @@
         headerText = [[NSString stringWithFormat:@"Vad är %@?", self.place.name] uppercaseString];
         coverImage = [self.place coverImage];
         
+        [self.statusView setHidden:NO];
+        
     } else { //event, hide symbols.
         
         [self.cashImage setHidden:YES];
         [self.cashLabel setHidden:YES];
         [self.cardImage setHidden:YES];
         [self.cardLabel setHidden:YES];
+        
+        [self.statusView setHidden:YES];
         
         [self.logotypeImage setImage:[self.event imageForEvent]];
         [self.headerLabel setText:[self.event.name uppercaseString]];
@@ -109,6 +114,40 @@
     
     coverImage = [LKLayout blurImage:coverImage withRadiusOf:2.0]; //pretty laggy... :(
     [self.coverImage setImage:coverImage];
+    
+}
+
+- (IBAction)findMe:(id)sender {
+    
+    if(self.place) {
+        
+        NSInteger subPlaces = [self.place.subPlaces count];
+        
+        if(subPlaces > 1) {
+            
+            [self performSegueWithIdentifier:@"detail.grid" sender:sender];
+            
+        } else {
+            
+            NSLog(@"Take me there!");
+            
+        }
+        
+    } else {
+        
+        NSLog(@"This is an event, take me there.");
+        
+    }
+    
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    
+    MultipleChoicesViewController *choicesVC = segue.destinationViewController;
+    
+    choicesVC.choices = self.place.subPlaces;
+    choicesVC.strokeColor = [LKColor colorWithIdentifier:LKColorBeige];
+    choicesVC.desiredBackgroundImage = self.coverImage.image;
     
 }
 
