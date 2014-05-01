@@ -191,6 +191,12 @@
     return 75; //or the first header will be hidden. :(
 }
 
+
+- (void) viewWillAppear:(BOOL)animated {
+    [self.tableView deselectRowAtIndexPath:[self.tableView indexPathForSelectedRow] animated:NO];
+    [super viewWillAppear:animated];
+}
+
 - (NSString *)convertIndexToDateString:(NSInteger)dateIndex {
     
     NSInteger index = 0;

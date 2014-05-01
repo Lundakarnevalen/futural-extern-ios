@@ -8,6 +8,7 @@
 
 #import "DetailViewController.h"
 #import "MultipleChoicesViewController.h"
+#import "InitViewController.h"
 
 #import "LKLayout.h"
 #import "LKColor.h"
@@ -57,8 +58,6 @@
         
         informationBarColor = [LKColor colorWithIdentifier:LKColorDarkRed];
         logotypeStrokeColor = [LKColor colorWithIdentifier:LKColorGreen];
-        
-        NSLog(@"Subplaces %@", self.place.subPlaces);
         
     }
     
@@ -165,7 +164,7 @@
         
     } else {
         
-        NSLog(@"This is an event detailed, take me to the place.");
+        [self performSegueWithIdentifier:@"map.detail" sender:self];
         
     }
     
@@ -173,25 +172,39 @@
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     
-    LKImage *logotype = self.logotypeImage;
-    MultipleChoicesViewController *choicesVC = segue.destinationViewController;
+    if([segue.identifier isEqualToString:@"detail.grid"]) {
     
-    choicesVC.strokeColor = logotype.strokeColor;
-    choicesVC.logotype = logotype.image;
-    choicesVC.desiredBackgroundImage = self.coverImage.image;
-    choicesVC.parentName = [self.place.name uppercaseString];
-    
-    if(self.segueSubPlaces) {
+        LKImage *logotype = self.logotypeImage;
+        MultipleChoicesViewController *choicesVC = segue.destinationViewController;
         
-        choicesVC.choices = self.place.subPlaces;
+        choicesVC.strokeColor = logotype.strokeColor;
+        choicesVC.logotype = logotype.image;
+        choicesVC.desiredBackgroundImage = self.coverImage.image;
+        choicesVC.parentName = [self.place.name uppercaseString];
+        
+        if(self.segueSubPlaces) {
+            
+            choicesVC.choices = self.place.subPlaces;
+            
+        } else {
+            
+            choicesVC.choices = [[self.karneval eventsAtPlaceWithIdentifier:self.place.identifier] mutableCopy];
+            
+        }
+        
+        [self resetSegueData];
         
     } else {
         
-        choicesVC.choices = [[self.karneval eventsAtPlaceWithIdentifier:self.place.identifier] mutableCopy];
+//        InitViewController *initVC = segue.destinationViewController;
+//        
+//        if(!initVC) {
+//            
+//            initVC = [self.storyboard instantiateViewControllerWithIdentifier:@"Karta"];
+//            
+//        }
         
     }
-    
-    [self resetSegueData];
     
 }
 

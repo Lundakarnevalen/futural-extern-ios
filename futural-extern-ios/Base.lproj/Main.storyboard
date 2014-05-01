@@ -239,6 +239,7 @@
                         <outlet property="statusView" destination="BeB-aw-b78" id="QAX-RY-M0j"/>
                         <outlet property="subHeaderLabel" destination="uPS-vA-m5k" id="V0c-HF-gcP"/>
                         <segue destination="sZB-Gn-BVz" kind="push" identifier="detail.grid" id="Ghv-ok-8HG"/>
+                        <segue destination="zIJ-wH-zWT" kind="modal" identifier="map.detail" id="LVi-hm-5OW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nZT-61-A41" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -272,6 +273,7 @@
                     <connections>
                         <outlet property="backgroundImage" destination="WBh-D5-FZj" id="jlI-7e-nbN"/>
                         <outlet property="scrollView" destination="ahS-RD-Uoz" id="2Pl-vM-cSs"/>
+                        <segue destination="zIJ-wH-zWT" kind="modal" identifier="map.detail" id="ayh-sl-m68"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="feb-w1-9IO" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -990,5 +992,6 @@
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
         <segue reference="aWC-mC-OV9"/>
+        <segue reference="ayh-sl-m68"/>
     </inferredMetricsTieBreakers>
 </document>
