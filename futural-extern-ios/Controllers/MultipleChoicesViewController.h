@@ -16,9 +16,11 @@
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 
 //set these when segue'ing.
+@property (nonatomic) NSString *parentName;
 @property (nonatomic) NSMutableArray *choices;
 @property (nonatomic) UIColor *strokeColor;
 @property (nonatomic) UIImage *desiredBackgroundImage;
+@property (nonatomic) UIImage *logotype;
 
 @property (weak, nonatomic) IBOutlet UIImageView *backgroundImage;
 

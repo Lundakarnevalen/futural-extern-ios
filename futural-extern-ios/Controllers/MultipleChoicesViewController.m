@@ -20,6 +20,8 @@
     [self.backgroundImage setImage:[LKLayout blurImage:self.desiredBackgroundImage withRadiusOf:3]];
     [self.backgroundImage setClipsToBounds:YES];
     
+    self.title = self.parentName;
+    
     [self renderGrid];
     
 }
@@ -31,16 +33,28 @@
     [self.grid.cells enumerateObjectsUsingBlock:^(id object, NSUInteger index, BOOL *stop) {
         
         LKCell *cell = (LKCell *)object;
-        LKPlace *place = [self.choices objectAtIndex:index];
+        id information = [self.choices objectAtIndex:index];
+        
+        if([information class] == [LKPlace class]) {
+            
+            information = (LKPlace *)information;
+            self.logotype = [information imageForPlace];
+            
+        } else if([information class] == [LKEvent class]) {
+            
+            information = (LKEvent *)information;
+            self.logotype = [information imageForEvent];
+            
+        }
         
         LKButton *button = [LKLayout buttonForCell:cell
                                    withStrokeColor:self.strokeColor
-                                          andImage:[UIImage imageWithData:nil]];
+                                          andImage:self.logotype];
         button.tag = index; //identifier
         [button addTarget:self action:@selector(cellClick:) forControlEvents:UIControlEventTouchUpInside];
         
         UILabel *title = [LKLayout titleLabelForCell:cell
-                                           withTitle:place.name];
+                                           withTitle:[information name]];
         
         [self.scrollView addSubview:button];
         [self.scrollView addSubview:title];
@@ -51,7 +65,7 @@
 
 - (void)cellClick:(id)sender {
     
-    NSLog(@"Click, hehe.");
+    
     
 }
 

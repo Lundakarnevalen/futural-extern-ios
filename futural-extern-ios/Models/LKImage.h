@@ -10,6 +10,8 @@
 
 @interface LKImage : UIImageView
 
+@property (nonatomic) UIColor *strokeColor;
+
 - (void)drawCircularImage:(UIColor *)strokeColor;
 
 @end

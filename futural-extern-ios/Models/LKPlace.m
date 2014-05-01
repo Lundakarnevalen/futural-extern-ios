@@ -47,8 +47,7 @@
             
             CLLocation *coordinates = [[CLLocation alloc] initWithLatitude:latitude longitude:longitude]; //send message 'coordinate' to get the CLLocation2D blublub.
             
-            LKSubPlace *subPlace = [[LKSubPlace alloc] initWithName:name andPosition:coordinates];
-            
+            LKSubPlace *subPlace = [[LKSubPlace alloc] initWithName:name andPosition:coordinates]; //could use LKPlace instead, but whatevs.
             [self.subPlaces addObject:subPlace];
             
         }

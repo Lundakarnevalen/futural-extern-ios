@@ -95,6 +95,15 @@
     
 }
 
+- (NSString *)formattedStartTimeWithWeekday {
+    
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setDateFormat:@"EEEE"];
+    
+    return [dateFormatter stringFromDate:self.end];
+    
+}
+
 - (UIImage *)imageForEvent {
     
     UIImage *eventImage = [UIImage imageNamed:self.identifier];

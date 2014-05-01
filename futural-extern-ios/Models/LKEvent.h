@@ -30,6 +30,7 @@
 - (NSInteger)secondsLeft; //calculate how many seconds until the event is taking place (for use with push messages).
 - (NSString *)timeLeft; //return the time left until launch date, thought that we could use the following format dd:hh:mm (for use with views)
 
+- (NSString *)formattedStartTimeWithWeekday;
 //the following are in HH:mm format.
 - (NSString *)formattedStartTime;
 - (NSString *)formattedEndTime;

@@ -12,6 +12,13 @@
 #import "LKLayout.h"
 #import "LKColor.h"
 
+@interface DetailViewController() { }
+
+@property (nonatomic) BOOL segueEvents;
+@property (nonatomic) BOOL segueSubPlaces;
+
+@end
+
 @implementation DetailViewController
 
 - (void)viewDidLoad {
@@ -21,7 +28,15 @@
     [self setTitle:[LKLayout defaultTitle]];
     
     [self customizeView];
+    [self resetSegueData];
 
+}
+
+- (void)resetSegueData {
+    
+    self.segueEvents = NO;
+    self.segueSubPlaces = NO;
+    
 }
 
 - (void)customizeView {
@@ -122,20 +137,35 @@
     if(self.place) {
         
         NSInteger subPlaces = [self.place.subPlaces count];
+        NSInteger events = [[self.karneval eventsAtPlaceWithIdentifier:self.place.identifier] count];
         
         if(subPlaces > 1) {
             
+            self.segueSubPlaces = YES;
             [self performSegueWithIdentifier:@"detail.grid" sender:sender];
             
         } else {
             
-            NSLog(@"Take me there!");
+            if(events > 1) {
+                
+                self.segueEvents = YES;
+                [self performSegueWithIdentifier:@"detail.grid" sender:sender];
+                
+            } else if(events == 1) {
+                
+                NSLog(@"This places has one event.");
+                
+            } else {
+                
+                NSLog(@"Check the place position and navigate there.");
+                
+            }
             
         }
         
     } else {
         
-        NSLog(@"This is an event, take me there.");
+        NSLog(@"This is an event detailed, take me to the place.");
         
     }
     
@@ -143,12 +173,37 @@
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     
-    LKButton *button = sender;
+    LKImage *logotype = self.logotypeImage;
     MultipleChoicesViewController *choicesVC = segue.destinationViewController;
     
-    choicesVC.choices = self.place.subPlaces;
-    choicesVC.strokeColor = [LKColor colorWithIdentifier:LKColorBeige];
+    choicesVC.strokeColor = logotype.strokeColor;
+    choicesVC.logotype = logotype.image;
     choicesVC.desiredBackgroundImage = self.coverImage.image;
+    choicesVC.parentName = [self.place.name uppercaseString];
+    
+    if(self.segueSubPlaces) {
+        
+        choicesVC.choices = self.place.subPlaces;
+        
+    } else {
+        
+        choicesVC.choices = [[self.karneval eventsAtPlaceWithIdentifier:self.place.identifier] mutableCopy];
+        
+    }
+    
+    [self resetSegueData];
+    
+}
+
+- (LKarneval *)karneval {
+    
+    if(!_karneval) {
+        
+        _karneval = [LKarneval sharedLKarneval];
+        
+    }
+    
+    return _karneval;
     
 }
 

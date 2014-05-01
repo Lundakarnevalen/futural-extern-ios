@@ -76,12 +76,20 @@
     
     NSString *dateString = [self convertIndexToDateString:section];
     
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setDateFormat:@"MM-dd-yyyy"];
+    NSDate *date = [dateFormatter dateFromString:[NSString stringWithFormat:@"%@-2014", dateString]];
+    [dateFormatter setDateFormat:@"EEEE (dd/MM)"];
+    
+    
     UIView *header = [[[NSBundle mainBundle] loadNibNamed:@"scheduleTableHeader" owner:self options:nil] firstObject];
     UILabel *informationLabel = (UILabel *)[header viewWithTag:TAG_HEAD_LABEL];
     UIView *backgroundView = [header viewWithTag:TAG_HEAD_VIEW];
     
     [LKLayout addShadowToView:backgroundView ofSize:3];
-    informationLabel.text = dateString;
+    
+    informationLabel.text = [[dateFormatter stringFromDate:date] uppercaseString];
+    informationLabel.font = [LKLayout fontForTableHeader];
     
     return header;
     

@@ -11,7 +11,6 @@
 @interface LKButton()
 
 @property (nonatomic) CAShapeLayer *circleLayer;
-@property (nonatomic) UIColor *color;
 
 @end
 
@@ -19,14 +18,14 @@
 
 - (void)drawCircleButton:(UIColor *)color withStrokeWidth:(NSInteger)strokeWidth {
     
-    self.color = color;
+    self.strokeColor = color;
     
     [self setTitle:nil forState:UIControlStateNormal];
     
     [self.layer setCornerRadius:self.frame.size.height / 2]; //makes the button circular.
     [self.layer setMasksToBounds:YES]; //crops the image.
     [self.layer setBorderWidth:strokeWidth];
-    [self.layer setBorderColor:color.CGColor];
+    [self.layer setBorderColor:self.strokeColor.CGColor];
     [self setImage:self.backgroundImage forState:UIControlStateNormal];
 
 }

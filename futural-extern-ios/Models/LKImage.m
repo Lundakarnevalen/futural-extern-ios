@@ -12,6 +12,8 @@
 
 - (void)drawCircularImage:(UIColor *)strokeColor {
     
+    self.strokeColor = strokeColor;
+    
     [self.layer setCornerRadius:(self.frame.size.width / 2)];
     [self.layer setMasksToBounds:YES];
     [self.layer setBorderColor:strokeColor.CGColor];

@@ -66,6 +66,12 @@
     
 }
 
++ (UIFont *)fontForTableHeader {
+    
+    return [UIFont fontWithName:[self futuraFontName] size:24];
+    
+}
+
 + (UIFont *)detailPaymentFont {
     
     return [UIFont fontWithName:[self futuraFontName] size:8];

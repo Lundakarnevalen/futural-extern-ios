@@ -23,6 +23,7 @@
 + (NSString *)defaultTitle;
 + (UIFont *)detailPaymentFont;
 + (UIFont *)informationHeaderFont;
++ (UIFont *)fontForTableHeader;
 
 + (void)addShadowToView:(UIView *)view ofSize:(NSInteger)shadowSize;
 + (void)addInsetShadowToView:(UIView *)view ofSize:(NSInteger)shadowSize;
