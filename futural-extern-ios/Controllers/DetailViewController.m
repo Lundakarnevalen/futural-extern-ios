@@ -143,6 +143,7 @@
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     
+    LKButton *button = sender;
     MultipleChoicesViewController *choicesVC = segue.destinationViewController;
     
     choicesVC.choices = self.place.subPlaces;

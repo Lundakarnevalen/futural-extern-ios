@@ -35,7 +35,27 @@
 - (NSArray *)events {
     
     //add a property to filter this relative to day.
-    return [self.karneval upcomingEvents];
+    NSInteger selectedSection = [self.sectionButton selectedSegmentIndex];
+    
+    switch(selectedSection) {
+    
+        case 0:
+            return [self.karneval upcomingEvents];
+            
+            break;
+            
+        case 1:
+            
+            return [self.karneval favoriteEvents];
+            
+            break;
+            
+        default:
+            return nil;
+            break;
+            
+            
+    }
     
 }
 
@@ -52,6 +72,12 @@
     [cell setBackgroundColor:[UIColor clearColor]];
     
     [tableView setBackgroundColor:[UIColor clearColor]];
+    
+}
+
+- (IBAction)sectionChanged:(id)sender {
+    
+    [self.tableView reloadData];
     
 }
 
