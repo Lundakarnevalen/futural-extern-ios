@@ -149,6 +149,8 @@ const int NumberOfFilters = 3;
         
     }
     
+    [self.class sortEventsChronological:favorites];
+    
     return favorites;
     
 }
@@ -294,6 +296,31 @@ const int NumberOfFilters = 3;
 }
 
 #pragma mark Class methods
+
++ (NSDictionary *)datesFromEvents:(NSArray *)events { //use with tableViews (sections).
+    
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    [formatter setDateFormat:@"MM-dd"];
+    
+    NSMutableDictionary *dates = [[NSMutableDictionary alloc] init];
+    
+    for(LKEvent *event in events) {
+        
+        NSString *date = [formatter stringFromDate:event.start];
+        
+        if(!dates[date]) {
+            
+            dates[date] = [[NSMutableArray alloc] init]; //store the events for that date.
+            
+        }
+        
+        [dates[date] addObject:event];
+        
+    }
+    
+    return dates;
+    
+}
 
 + (NSArray *)sortEventsChronological:(NSMutableArray *)events {
     

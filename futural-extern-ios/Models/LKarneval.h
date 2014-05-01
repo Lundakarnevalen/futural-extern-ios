@@ -27,6 +27,7 @@ extern const int NumberOfFilters;
 - (NSArray *)placesExcludedByCategories:(NSArray *)categories;
 - (NSArray *)placesFilteredByCategories:(NSArray *)categories;
 
++ (NSDictionary *)datesFromEvents:(NSArray *)events; //use with tableViews (sections).
 - (NSArray *)eventsAtPlaceWithIdentifier:(NSString *)identifier; //get events associated with a place.
 - (NSArray *)favoriteEvents;
 - (NSArray *)upcomingEvents;

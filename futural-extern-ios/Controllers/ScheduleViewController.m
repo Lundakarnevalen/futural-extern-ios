@@ -21,6 +21,10 @@
 #define TAG_TIME_END 5
 #define TAG_FAVORITE 6
 
+//the category view.
+#define TAG_HEAD_LABEL 1
+#define TAG_HEAD_VIEW 2
+
 #define TAG_TOP_CIRCLE 20
 #define TAG_BOTTOM_CIRCLE 21
 
@@ -61,7 +65,25 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     
-    return [[self events] count];
+    NSDictionary *dates = [LKarneval datesFromEvents:[self events]];
+    NSString *dateString = [self convertIndexToDateString:section];
+    
+    return [dates[dateString] count];
+    
+}
+
+-(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
+    
+    NSString *dateString = [self convertIndexToDateString:section];
+    
+    UIView *header = [[[NSBundle mainBundle] loadNibNamed:@"scheduleTableHeader" owner:self options:nil] firstObject];
+    UILabel *informationLabel = (UILabel *)[header viewWithTag:TAG_HEAD_LABEL];
+    UIView *backgroundView = [header viewWithTag:TAG_HEAD_VIEW];
+    
+    [LKLayout addShadowToView:backgroundView ofSize:3];
+    informationLabel.text = dateString;
+    
+    return header;
     
 }
 
@@ -75,6 +97,14 @@
     
 }
 
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    
+    NSDictionary *dates = [LKarneval datesFromEvents:[self events]];
+    
+    return [dates count];
+    
+}
+
 - (IBAction)sectionChanged:(id)sender {
     
     [self.tableView reloadData];
@@ -83,10 +113,12 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    NSInteger row = indexPath.row;
+    NSInteger row = [self.class rowIndexFromIndexPath:indexPath inTableView:self.tableView];
     
     LKEvent *event = [[self events] objectAtIndex:row];
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@CELL_IDENTIFIER];
+    NSString *dateString = [self convertIndexToDateString:indexPath.section];
+    NSDictionary *dates = [LKarneval datesFromEvents:[self events]];
     
     UILabel *headerName = (UILabel *)[[cell contentView] viewWithTag:TAG_HEADER_NAME];
     UILabel *headerPlace = (UILabel *)[[cell contentView] viewWithTag:TAG_HEADER_PLACE];
@@ -97,8 +129,8 @@
     UIView *topCircle = (UIView *)[[cell contentView] viewWithTag:TAG_TOP_CIRCLE];
     UIView *bottomCircle = (UIView *)[[cell contentView] viewWithTag:TAG_BOTTOM_CIRCLE];
     
-    topCircle.hidden = (row != 0);
-    bottomCircle.hidden = (row != [[self events] count] - 1);
+    topCircle.hidden = (indexPath.row != 0);
+    bottomCircle.hidden = (indexPath.row != [dates[dateString] count] - 1);
     
     topCircle.layer.cornerRadius = topCircle.frame.size.height / 2;
     bottomCircle.layer.cornerRadius = bottomCircle.frame.size.height / 2;
@@ -136,11 +168,39 @@
     
     CGPoint buttonPosition = [sender convertPoint:CGPointZero toView:self.tableView];
     NSIndexPath *indexPath = [self.tableView indexPathForRowAtPoint:buttonPosition];
+    NSInteger row = [self.class rowIndexFromIndexPath:indexPath inTableView:self.tableView];
     
-    LKEvent *event = [[self events] objectAtIndex:indexPath.row];
+    LKEvent *event = [[self events] objectAtIndex:row];
     
     event.favorite = ![event isFavorite];
     [sender setSelected:[event isFavorite]];
+    
+    [self.tableView reloadData];
+    
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
+    return 75; //or the first header will be hidden. :(
+}
+
+- (NSString *)convertIndexToDateString:(NSInteger)dateIndex {
+    
+    NSInteger index = 0;
+    NSDictionary *dates = [LKarneval datesFromEvents:[self events]];
+    
+    for(NSString *date in dates) {
+        
+        if(dateIndex == index) {
+            
+            return date;
+            
+        }
+        
+        index++;
+        
+    }
+
+    return nil;
     
 }
 
@@ -153,6 +213,22 @@
     }
     
     return _karneval;
+    
+}
+
++ (NSInteger)rowIndexFromIndexPath:(NSIndexPath *)indexPath inTableView:(UITableView *)tableView {
+    
+    NSInteger row = 0;
+    
+    for (NSInteger i = 0; i < indexPath.section; i++) {
+        
+        row += [tableView numberOfRowsInSection:i];
+        
+    }
+    
+    row += indexPath.row;
+    
+    return row;
     
 }
 

@@ -50,7 +50,6 @@
 - (void)setFavorite:(BOOL)favorite {
     
     _favorite = favorite;
-    NSLog(@"Save favorite: %@, %d", [self dataIdentifier], _favorite);
     [[NSUserDefaults standardUserDefaults] setBool:favorite forKey:[self dataIdentifier]];
     [[NSUserDefaults standardUserDefaults] synchronize]; //important, or there may be some slight delays.
     

@@ -33,6 +33,7 @@
 		1AE8E56518F42FB50078EBDF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AE8E56418F42FB50078EBDF /* AppDelegate.m */; };
 		1AE8E56818F42FB50078EBDF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1AE8E56618F42FB50078EBDF /* Main.storyboard */; };
 		1AF152C819059592006F2896 /* Places.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1AF152C719059591006F2896 /* Places.plist */; };
+		5703E5F01912C85F005DA0D2 /* scheduleTableHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5703E5EF1912C85F005DA0D2 /* scheduleTableHeader.xib */; };
 		5722E91018FD72F500BEE3A2 /* LKPlace.m in Sources */ = {isa = PBXBuildFile; fileRef = 5722E90F18FD72F500BEE3A2 /* LKPlace.m */; };
 		5722E91618FD7C3600BEE3A2 /* TabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5722E91518FD7C3600BEE3A2 /* TabBarViewController.m */; };
 		5722E91C18FD7DF300BEE3A2 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5722E91B18FD7DF300BEE3A2 /* MapKit.framework */; };
@@ -111,6 +112,7 @@
 		1AE8E56718F42FB50078EBDF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1AE8E57318F42FB50078EBDF /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		1AF152C719059591006F2896 /* Places.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Places.plist; path = Data/Places.plist; sourceTree = "<group>"; };
+		5703E5EF1912C85F005DA0D2 /* scheduleTableHeader.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = scheduleTableHeader.xib; path = Views/scheduleTableHeader.xib; sourceTree = "<group>"; };
 		5722E90E18FD72F500BEE3A2 /* LKPlace.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; name = LKPlace.h; path = Models/LKPlace.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		5722E90F18FD72F500BEE3A2 /* LKPlace.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; name = LKPlace.m; path = Models/LKPlace.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		5722E91418FD7C3600BEE3A2 /* TabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; name = TabBarViewController.h; path = Controllers/TabBarViewController.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
@@ -308,6 +310,7 @@
 		573797EE18FFD57D00ABC2CD /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				5703E5EF1912C85F005DA0D2 /* scheduleTableHeader.xib */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -476,6 +479,7 @@
 				1AF152C819059592006F2896 /* Places.plist in Resources */,
 				1ABFF7031900887F00C575EE /* futuralt-bold.ttf in Resources */,
 				57994785190B18B60098BEA3 /* Places.xcassets in Resources */,
+				5703E5F01912C85F005DA0D2 /* scheduleTableHeader.xib in Resources */,
 				57CC6F61190C673A0006DE48 /* Covers.xcassets in Resources */,
 				575C949F18FE7F3D00A341EE /* Events.plist in Resources */,
 				57DB443E190291D0009C3D37 /* Schedule.xcassets in Resources */,
