@@ -164,7 +164,9 @@
     CGPoint buttonPosition = [sender convertPoint:CGPointZero toView:self.tableView];
     NSIndexPath *indexPath = [self.tableView indexPathForRowAtPoint:buttonPosition];
     
-    LKEvent *event = [[self events] objectAtIndex:indexPath.row];
+    NSInteger row = [self.class rowIndexFromIndexPath:indexPath inTableView:self.tableView];
+    
+    LKEvent *event = [[self events] objectAtIndex:row];
     
     DetailViewController *detailVC = segue.destinationViewController;
     detailVC.event = event;

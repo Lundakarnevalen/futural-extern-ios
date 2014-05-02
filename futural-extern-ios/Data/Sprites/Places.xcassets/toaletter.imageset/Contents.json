@@ -3,12 +3,12 @@
     {
       "idiom" : "universal",
       "scale" : "1x",
-      "filename" : "toa.png"
+      "filename" : "toalett.png"
     },
     {
       "idiom" : "universal",
       "scale" : "2x",
-      "filename" : "toa2.png"
+      "filename" : "toalett@2x.png"
     }
   ],
   "info" : {

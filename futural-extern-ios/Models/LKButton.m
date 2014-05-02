@@ -24,6 +24,7 @@
     
     [self.layer setCornerRadius:self.frame.size.height / 2]; //makes the button circular.
     [self.layer setMasksToBounds:YES]; //crops the image.
+    [self.layer setBackgroundColor:[UIColor whiteColor].CGColor];
     [self.layer setBorderWidth:strokeWidth];
     [self.layer setBorderColor:self.strokeColor.CGColor];
     [self setImage:self.backgroundImage forState:UIControlStateNormal];

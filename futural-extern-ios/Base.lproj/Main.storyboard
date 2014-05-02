@@ -116,7 +116,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="173"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tMQ-5B-x9F">
+                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tMQ-5B-x9F">
                                 <rect key="frame" x="0.0" y="171" width="320" height="68"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
@@ -201,6 +201,7 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="revyn" translatesAutoresizingMaskIntoConstraints="NO" id="D8S-9h-q0n" customClass="LKImage">
                                 <rect key="frame" x="15" y="144" width="80" height="80"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="deviceRGB"/>
                             </imageView>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="VAD ÄR REVYN?" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="EtQ-l4-Kzc">
                                 <rect key="frame" x="20" y="247" width="275" height="34"/>
@@ -209,7 +210,7 @@
                                 <color key="textColor" red="0.29803922772407532" green="0.31764706969261169" blue="0.42352944612503052" alpha="1" colorSpace="deviceRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="84q-BC-bwh">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="84q-BC-bwh">
                                 <rect key="frame" x="20" y="279" width="280" height="176"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -220,6 +221,10 @@
                             </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="84q-BC-bwh" firstAttribute="top" secondItem="tMQ-5B-x9F" secondAttribute="bottom" constant="40" id="YaL-c9-MUA"/>
+                            <constraint firstItem="mKb-sb-hy4" firstAttribute="top" secondItem="84q-BC-bwh" secondAttribute="bottom" id="ZqK-yH-a9S"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="i1G-4M-eQs"/>
                     <connections>
@@ -258,16 +263,22 @@
                         <rect key="frame" x="0.0" y="64" width="320" height="455"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="cover-nangilima" translatesAutoresizingMaskIntoConstraints="NO" id="WBh-D5-FZj">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="cover-nangilima" translatesAutoresizingMaskIntoConstraints="NO" id="WBh-D5-FZj">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="455"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ahS-RD-Uoz">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ahS-RD-Uoz">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="455"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ahS-RD-Uoz" firstAttribute="top" secondItem="Bn6-50-Ken" secondAttribute="bottom" id="FSY-3s-jnz"/>
+                            <constraint firstItem="e0x-Wp-tUf" firstAttribute="top" secondItem="WBh-D5-FZj" secondAttribute="bottom" constant="-10" id="IBM-k1-N6n"/>
+                            <constraint firstItem="WBh-D5-FZj" firstAttribute="top" secondItem="Bn6-50-Ken" secondAttribute="bottom" constant="-10" id="Xbt-MN-ioX"/>
+                            <constraint firstItem="e0x-Wp-tUf" firstAttribute="top" secondItem="ahS-RD-Uoz" secondAttribute="bottom" id="wp0-mj-8Ma"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="eNc-Hn-5Lt"/>
                     <connections>
@@ -296,13 +307,13 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="455"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="none" rowHeight="100" sectionHeaderHeight="75" sectionFooterHeight="3" translatesAutoresizingMaskIntoConstraints="NO" id="LVT-VY-gxW">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="100" sectionHeaderHeight="75" sectionFooterHeight="1" translatesAutoresizingMaskIntoConstraints="NO" id="LVT-VY-gxW">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="455"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="event" rowHeight="100" id="MTV-wv-JgL">
-                                        <rect key="frame" x="0.0" y="55" width="320" height="100"/>
+                                        <rect key="frame" x="0.0" y="75" width="320" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="MTV-wv-JgL" id="xG1-Nx-M38">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="100"/>
@@ -673,7 +684,7 @@
                                     <constraint firstAttribute="height" constant="20" id="ia8-lL-jze"/>
                                 </constraints>
                             </view>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Filter" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="clT-aN-5nU" customClass="UILabel_Shadow_FuturaBoldFont">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Visa enbart" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="clT-aN-5nU" customClass="UILabel_Shadow_FuturaBoldFont">
                                 <rect key="frame" x="170" y="40" width="150" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.47394040230000001" green="0.49132695790000003" blue="0.69664782290000005" alpha="1" colorSpace="calibratedRGB"/>
@@ -992,6 +1003,6 @@
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
         <segue reference="aWC-mC-OV9"/>
-        <segue reference="ayh-sl-m68"/>
+        <segue reference="LVi-hm-5OW"/>
     </inferredMetricsTieBreakers>
 </document>

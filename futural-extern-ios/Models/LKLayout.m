@@ -175,7 +175,7 @@
     
     CGSize titleSize;
     titleSize.width = scaledWidth;
-    titleSize.height = [self gridFontSize];
+    titleSize.height = [self gridFontSize] + 5;
     
     CGPoint titlePosition;
     titlePosition.x = cell.position.x - (widthAdded / 2);
@@ -192,6 +192,8 @@
     titleLabel.text = [title uppercaseString];
     titleLabel.adjustsFontSizeToFitWidth = YES;
     titleLabel.backgroundColor = [UIColor clearColor];
+    
+    [self addShadowToLabel:titleLabel withSizeOf:1];
     
     return titleLabel;
     

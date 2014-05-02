@@ -63,7 +63,7 @@
     
     if([self.segueIdentifier isEqualToString:@"event.detail"]) {
         
-        informationBarColor = [LKColor colorWithIdentifier:LKColorLightBlue];
+        informationBarColor = [LKColor colorWithIdentifier:LKColorBlue];
         logotypeStrokeColor = [UIColor whiteColor];
         
     }
