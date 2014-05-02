@@ -16,17 +16,27 @@
     
     if(self) {
         
-        //create logic to read from a property list and store it in this model
         self.name = propertyList[@"name"];
         self.information = propertyList[@"description"];
         self.category = [propertyList[@"category"] integerValue];
         self.alcohol = [propertyList[@"alcohol"] boolValue];
-        self.image = [UIImage imageNamed:propertyList[@"image"]];
         
         for(NSString *option in propertyList[@"payment_options"]) {
             
             NSNumber *paymentOption = [NSNumber numberWithInteger:[option integerValue]];
             [self.paymentOptions addObject:paymentOption];
+            
+        }
+        
+        if(propertyList[@"position"]) {
+            
+            NSDictionary *position = propertyList[@"position"];
+            
+            CLLocationCoordinate2D coordinates;
+            coordinates.latitude = [position[@"latitude"] floatValue];
+            coordinates.longitude = [position[@"longitude"] floatValue];
+            
+            self.position = coordinates;
             
         }
         
@@ -36,18 +46,15 @@
             
             NSString *name = position[@"name"];
             
+            LKPlace *subPlace = [[LKPlace alloc] initWithProperties:position];
+            subPlace.parent = self;
+
             if(!name) {
                 
-                name = self.name; //fallback to category if no name is set.
+                subPlace.name = self.name; //fallback to category if no name is set.
                 
             }
             
-            CLLocationDegrees latitude = [position[@"latitude"] doubleValue];
-            CLLocationDegrees longitude = [position[@"longitude"] doubleValue];
-            
-            CLLocation *coordinates = [[CLLocation alloc] initWithLatitude:latitude longitude:longitude]; //send message 'coordinate' to get the CLLocation2D blublub.
-            
-            LKSubPlace *subPlace = [[LKSubPlace alloc] initWithName:name andPosition:coordinates]; //could use LKPlace instead, but whatevs.
             [self.subPlaces addObject:subPlace];
             
         }
@@ -96,14 +103,6 @@
     
 }
 
-- (CLLocationCoordinate2D)position {
-    
-    //as for now.
-    _position = [[_subPlaces firstObject] coordinate];
-    return _position;
-    
-}
-
 - (UIImage *)coverImage {
     
     UIImage *cover = [UIImage imageNamed:[NSString stringWithFormat:@"cover-%@", self.identifier]];
@@ -123,10 +122,15 @@
 - (UIImage *)imageForPlace {
     
     UIImage *identifierImage = [self.class imageForIdentifier:self.identifier];
+    UIImage *parentImage = [self.parent imageForPlace];
     
     if(identifierImage) {
         
         return identifierImage;
+        
+    } else if (parentImage) {
+        
+        return parentImage;
         
     } else { //fallback if no specific image/logotype.
         
@@ -247,7 +251,7 @@
             
         default:
             
-            imageName = @"unknown";
+            //imageName = @"unknown";
             
             break;
             

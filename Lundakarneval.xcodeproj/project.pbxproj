@@ -37,7 +37,6 @@
 		5722E91018FD72F500BEE3A2 /* LKPlace.m in Sources */ = {isa = PBXBuildFile; fileRef = 5722E90F18FD72F500BEE3A2 /* LKPlace.m */; };
 		5722E91618FD7C3600BEE3A2 /* TabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5722E91518FD7C3600BEE3A2 /* TabBarViewController.m */; };
 		5722E91C18FD7DF300BEE3A2 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5722E91B18FD7DF300BEE3A2 /* MapKit.framework */; };
-		573A1195190E57FE005A9AF3 /* LKSubPlace.m in Sources */ = {isa = PBXBuildFile; fileRef = 573A1194190E57FE005A9AF3 /* LKSubPlace.m */; };
 		57407D1518FD2A5A0003F787 /* LKEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 57407D1418FD2A5A0003F787 /* LKEvent.m */; };
 		57407D1718FD2B1A0003F787 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57407D1618FD2B1A0003F787 /* CoreLocation.framework */; };
 		57407D1A18FD2B5C0003F787 /* LKSektion.m in Sources */ = {isa = PBXBuildFile; fileRef = 57407D1918FD2B5C0003F787 /* LKSektion.m */; };
@@ -120,8 +119,6 @@
 		5722E91B18FD7DF300BEE3A2 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		5722E91D18FD80C700BEE3A2 /* LKColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; name = LKColor.h; path = Models/LKColor.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		5722E91E18FD80C700BEE3A2 /* InitViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; name = InitViewController.m; path = Controllers/Map/InitViewController.m; sourceTree = "<group>"; };
-		573A1193190E57FE005A9AF3 /* LKSubPlace.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LKSubPlace.h; path = Models/LKSubPlace.h; sourceTree = "<group>"; };
-		573A1194190E57FE005A9AF3 /* LKSubPlace.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LKSubPlace.m; path = Models/LKSubPlace.m; sourceTree = "<group>"; };
 		57407D1318FD2A5A0003F787 /* LKEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; name = LKEvent.h; path = Models/LKEvent.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		57407D1418FD2A5A0003F787 /* LKEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; name = LKEvent.m; path = Models/LKEvent.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		57407D1618FD2B1A0003F787 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
@@ -337,8 +334,6 @@
 				5722E90F18FD72F500BEE3A2 /* LKPlace.m */,
 				57407D1818FD2B5C0003F787 /* LKSektion.h */,
 				57407D1918FD2B5C0003F787 /* LKSektion.m */,
-				573A1193190E57FE005A9AF3 /* LKSubPlace.h */,
-				573A1194190E57FE005A9AF3 /* LKSubPlace.m */,
 				573797F218FFDC8700ABC2CD /* Map */,
 				5722E92018FD81B300BEE3A2 /* Toolbox */,
 			);
@@ -519,7 +514,6 @@
 				1ABFF6F01900649300C575EE /* InitViewController.m in Sources */,
 				1ABFF6FA1900713800C575EE /* LKColor.m in Sources */,
 				575C94CB18FED4B400A341EE /* FoodViewController.m in Sources */,
-				573A1195190E57FE005A9AF3 /* LKSubPlace.m in Sources */,
 				57762124190993DB00B99E8E /* MiscellaneousViewController.m in Sources */,
 				577621211909932800B99E8E /* EntertainmentViewController.m in Sources */,
 				57FB7473190B150A0059CA82 /* LKGrid.m in Sources */,

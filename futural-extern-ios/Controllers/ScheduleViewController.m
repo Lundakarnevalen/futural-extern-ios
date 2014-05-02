@@ -146,8 +146,20 @@
     headerName.text = [NSString stringWithFormat:@"%@", [event.name uppercaseString]];
     headerPlace.text = [NSString stringWithFormat:@"%@", [event.place.name uppercaseString]];
     
-    timeStart.text = [NSString stringWithFormat:@"%@", [event formattedStartTime]];
-    timeEnd.text = [NSString stringWithFormat:@"%@", [event formattedEndTime]];
+    NSString *startTime =[NSString stringWithFormat:@"%@", [event formattedStartTime]];
+    NSString *endTime = [NSString stringWithFormat:@"%@", [event formattedEndTime]];
+    
+    if(![startTime isEqualToString:@"13:37"] && ![endTime isEqualToString:@"13:37"]) {
+        
+        timeStart.text = startTime;
+        timeEnd.text = endTime;
+        
+    } else {
+        
+        timeStart.text = @"";
+        timeEnd.text = @"";
+        
+    }
 
     [image setImage:[event imageForEvent]];
     [image drawCircularImage:[UIColor whiteColor]];
@@ -201,22 +213,12 @@
 
 - (NSString *)convertIndexToDateString:(NSInteger)dateIndex {
     
-    NSInteger index = 0;
     NSDictionary *dates = [LKarneval datesFromEvents:[self events]];
     
-    for(NSString *date in dates) {
-        
-        if(dateIndex == index) {
-            
-            return date;
-            
-        }
-        
-        index++;
-        
-    }
-
-    return nil;
+    NSArray *allDates = [dates allKeys];
+    NSArray *sortedDates = [allDates sortedArrayUsingSelector:@selector(compare:)];
+    
+    return sortedDates[dateIndex];
     
 }
 
