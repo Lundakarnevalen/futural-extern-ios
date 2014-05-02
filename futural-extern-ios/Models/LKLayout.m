@@ -84,6 +84,12 @@
     
 }
 
++ (UIFont *)segmentFont {
+    
+    return [UIFont fontWithName:[self futuraFontName] size:10];
+    
+}
+
 + (NSString *)defaultTitle {
     
     return [@"Lundakarnevalen" uppercaseString];
@@ -138,6 +144,25 @@
     shadow.backgroundColor = [UIColor colorWithWhite:0 alpha:0.15];
     
     [view addSubview:shadow];
+    
+}
+
++ (void)customizeSegment:(UISegmentedControl *)segmentControl {
+    
+    [segmentControl setTitleTextAttributes:@{
+                                             NSFontAttributeName : [self segmentFont]
+                                             } forState:UIControlStateNormal];
+    [segmentControl setTitleTextAttributes:@{ NSFontAttributeName : [self segmentFont] } forState:UIControlStateSelected];
+    
+    for(NSInteger index = 0; index < segmentControl.numberOfSegments; index++) {
+        
+        NSString *title = [segmentControl titleForSegmentAtIndex:index];
+        
+        [segmentControl setTitle:[title uppercaseString] forSegmentAtIndex:index];
+        
+    }
+    
+    
     
 }
 

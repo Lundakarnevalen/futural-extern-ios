@@ -34,6 +34,8 @@
     
     [super viewDidLoad];
     
+    [LKLayout customizeSegment:self.sectionButton];
+    
 }
 
 - (NSArray *)events {

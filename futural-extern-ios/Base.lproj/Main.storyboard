@@ -112,7 +112,7 @@
                                 <rect key="frame" x="-5" y="0.0" width="330" height="173"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" alpha="0.49999999999999961" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="background-moln" translatesAutoresizingMaskIntoConstraints="NO" id="pJv-Xu-jU8" userLabel="clouds">
+                            <imageView hidden="YES" userInteractionEnabled="NO" alpha="0.49999999999999961" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="background-moln" translatesAutoresizingMaskIntoConstraints="NO" id="pJv-Xu-jU8" userLabel="clouds">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="173"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
@@ -146,7 +146,7 @@
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                     </view>
                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BeB-aw-b78" userLabel="status sign">
-                                        <rect key="frame" x="152" y="10" width="64" height="20"/>
+                                        <rect key="frame" x="157" y="24" width="64" height="20"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <subviews>
                                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ÖPPET" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5LT-uy-E2o">
@@ -159,22 +159,22 @@
                                         </subviews>
                                         <color key="backgroundColor" red="0.49579887039999998" green="0.8276973084" blue="0.70886943260000002" alpha="1" colorSpace="deviceRGB"/>
                                     </view>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="icon-cash" translatesAutoresizingMaskIntoConstraints="NO" id="CFG-g0-piZ">
+                                    <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="icon-cash" translatesAutoresizingMaskIntoConstraints="NO" id="CFG-g0-piZ">
                                         <rect key="frame" x="154" y="38" width="23" height="15"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="icon-kort" translatesAutoresizingMaskIntoConstraints="NO" id="kQB-aQ-VKH">
+                                    <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="icon-kort" translatesAutoresizingMaskIntoConstraints="NO" id="kQB-aQ-VKH">
                                         <rect key="frame" x="191" y="38" width="23" height="15"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="CASH" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qrq-eU-Bcz">
+                                    <label hidden="YES" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="CASH" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qrq-eU-Bcz">
                                         <rect key="frame" x="144" y="50" width="42" height="21"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="8"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="deviceRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="KORT" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bPu-Ne-fNl">
+                                    <label hidden="YES" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="KORT" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bPu-Ne-fNl">
                                         <rect key="frame" x="181" y="50" width="42" height="21"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="8"/>
@@ -226,7 +226,20 @@
                             <constraint firstItem="mKb-sb-hy4" firstAttribute="top" secondItem="84q-BC-bwh" secondAttribute="bottom" id="ZqK-yH-a9S"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="i1G-4M-eQs"/>
+                    <navigationItem key="navigationItem" id="i1G-4M-eQs">
+                        <nil key="title"/>
+                        <segmentedControl key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="Gfk-zC-s5h">
+                            <rect key="frame" x="77" y="7" width="167" height="31"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <segments>
+                                <segment title="Info"/>
+                                <segment title="Platser"/>
+                            </segments>
+                            <connections>
+                                <action selector="sectionChanged:" destination="aKP-kb-tFC" eventType="valueChanged" id="ncs-Pa-Pm8"/>
+                            </connections>
+                        </segmentedControl>
+                    </navigationItem>
                     <connections>
                         <outlet property="cardImage" destination="kQB-aQ-VKH" id="5il-Z9-PUX"/>
                         <outlet property="cardLabel" destination="bPu-Ne-fNl" id="7uX-0x-ukT"/>
@@ -240,6 +253,7 @@
                         <outlet property="logotypeImage" destination="D8S-9h-q0n" id="oK8-l8-FpQ"/>
                         <outlet property="mapLabel" destination="oHQ-pN-pky" id="jB4-pq-NoR"/>
                         <outlet property="mapView" destination="t2Q-Ha-3gd" id="FIM-3p-zoq"/>
+                        <outlet property="sectionButton" destination="Gfk-zC-s5h" id="h56-6K-hs3"/>
                         <outlet property="statusLabel" destination="5LT-uy-E2o" id="iJD-Gn-aDs"/>
                         <outlet property="statusView" destination="BeB-aw-b78" id="QAX-RY-M0j"/>
                         <outlet property="subHeaderLabel" destination="uPS-vA-m5k" id="V0c-HF-gcP"/>
@@ -254,7 +268,7 @@
         <!--Multiple Choices View Controller-->
         <scene sceneID="K2P-1g-cqC">
             <objects>
-                <viewController id="sZB-Gn-BVz" customClass="MultipleChoicesViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="choices" id="sZB-Gn-BVz" customClass="MultipleChoicesViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Bn6-50-Ken"/>
                         <viewControllerLayoutGuide type="bottom" id="e0x-Wp-tUf"/>
@@ -648,7 +662,13 @@
                             <constraint firstAttribute="trailing" secondItem="ovd-0P-KLA" secondAttribute="trailing" constant="-15" id="l6Y-fz-qke"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="bCb-Yy-j4V"/>
+                    <navigationItem key="navigationItem" id="bCb-Yy-j4V">
+                        <barButtonItem key="rightBarButtonItem" image="icon-filter" id="aCE-94-hbU">
+                            <connections>
+                                <action selector="showMapButtonClicked:" destination="4LJ-BV-Ygh" id="LkD-8Q-zA6"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="mapView" destination="VOy-Cp-HdC" id="MAY-Rm-AJw"/>
                         <segue destination="CBE-hh-3D3" kind="modal" identifier="createAnnotationSegue" id="dlX-3D-OP5"/>
@@ -988,6 +1008,7 @@
         <image name="heart" width="40" height="35"/>
         <image name="heart-filled" width="40" height="35"/>
         <image name="icon-cash" width="25" height="17"/>
+        <image name="icon-filter" width="20" height="20"/>
         <image name="icon-kort" width="25" height="17"/>
         <image name="map" width="24" height="24"/>
         <image name="misc" width="25" height="18"/>

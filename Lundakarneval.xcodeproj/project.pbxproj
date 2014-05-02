@@ -351,11 +351,11 @@
 				575C94CA18FED4B400A341EE /* FoodViewController.m */,
 				1ABFF6EA1900645300C575EE /* Map */,
 				57FB7469190B07020059CA82 /* Miscellaneous */,
+				57F07CD319103FE600290BB3 /* MultipleChoicesViewController.h */,
+				57F07CD419103FE600290BB3 /* MultipleChoicesViewController.m */,
 				575C94BC18FED02400A341EE /* Navigation */,
 				575C94B618FEC9C600A341EE /* ScheduleViewController.h */,
 				575C94B718FEC9C600A341EE /* ScheduleViewController.m */,
-				57F07CD319103FE600290BB3 /* MultipleChoicesViewController.h */,
-				57F07CD419103FE600290BB3 /* MultipleChoicesViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";

@@ -83,7 +83,9 @@
 }
 
 - (IBAction)showMapButtonClicked:(id)sender {
+    
     [self.slidingViewController anchorTopViewTo:ECLeft];
+    
 }
 
 // This will get called too before the view appears

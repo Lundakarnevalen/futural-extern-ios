@@ -26,6 +26,7 @@
 @property (weak, nonatomic) IBOutlet UIImageView *cashImage;
 @property (weak, nonatomic) IBOutlet UILabel *informationHeader;
 @property (weak, nonatomic) IBOutlet UITextView *descriptionView;
+@property (weak, nonatomic) IBOutlet UISegmentedControl *sectionButton;
 
 @property (nonatomic) NSString *segueIdentifier; //the segue identifier used to show this view.
 @property (nonatomic) LKarneval *karneval;

@@ -65,7 +65,7 @@
 
 - (void)cellClick:(id)sender {
     
-    
+    NSLog(@"Click motherfucker.");
     
 }
 

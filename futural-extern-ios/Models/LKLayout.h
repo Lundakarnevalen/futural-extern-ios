@@ -28,6 +28,7 @@
 + (void)addShadowToView:(UIView *)view ofSize:(NSInteger)shadowSize;
 + (void)addInsetShadowToView:(UIView *)view ofSize:(NSInteger)shadowSize;
 + (void)addShadowToLabel:(UILabel *)label withSizeOf:(NSInteger)size;
++ (void)customizeSegment:(UISegmentedControl *)segmentControl;
 
 + (UIImage *)blurImage:(UIImage *)image withRadiusOf:(float)blurRadius;
 

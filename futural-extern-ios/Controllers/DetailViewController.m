@@ -18,6 +18,8 @@
 @property (nonatomic) BOOL segueEvents;
 @property (nonatomic) BOOL segueSubPlaces;
 
+@property (nonatomic) MultipleChoicesViewController *choiceVC;
+
 @end
 
 @implementation DetailViewController
@@ -40,12 +42,40 @@
     
 }
 
+- (IBAction)sectionChanged:(id)sender {
+    
+    NSInteger viewTag = 5000;
+    
+    UISegmentedControl *segment = sender;
+    NSInteger index = segment.selectedSegmentIndex;
+    
+    if(self.choiceVC && index == 0) {
+    
+        UIView *choiceView = [self.view viewWithTag:viewTag];
+        [choiceView removeFromSuperview];
+        NSLog(@"Pop that.");
+        
+    } else {
+        
+        self.choiceVC.choices = self.place.subPlaces;
+        self.choiceVC.desiredBackgroundImage = self.coverImage.image;
+        self.choiceVC.view.tag = viewTag;
+        self.choiceVC.strokeColor = self.logotypeImage.strokeColor;
+        [self.view addSubview:self.choiceVC.view];
+        NSLog(@"Adding that.");
+        
+    }
+    
+}
+
 - (void)customizeView {
     
     UIColor *informationBarColor = [UIColor grayColor];
     UIColor *logotypeStrokeColor = [UIColor grayColor];
     UIImage *coverImage;
     NSString *headerText;
+
+    [self.sectionButton setHidden:NO];
     
     if([self.segueIdentifier isEqualToString:@"food.detail"]) {
         
@@ -65,8 +95,17 @@
         
         informationBarColor = [LKColor colorWithIdentifier:LKColorBlue];
         logotypeStrokeColor = [UIColor whiteColor];
+        [self.sectionButton setHidden:YES];
         
     }
+    
+    if(self.place.category == LKPlaceCategoryScene) { //if it's a place being shown.
+        
+        [self.sectionButton setTitle:@"EVENTS" forSegmentAtIndex:1];
+        
+    }
+    
+    [LKLayout customizeSegment:self.sectionButton];
     
     [self.informationBar setBackgroundColor:informationBarColor];
     [LKLayout addInsetShadowToView:self.informationBar ofSize:3];
@@ -81,11 +120,6 @@
     
     if(self.place) {
         
-        [self.cashImage setHidden:![self.place acceptsCash]];
-        [self.cashLabel setHidden:![self.place acceptsCash]];
-        [self.cardImage setHidden:![self.place acceptsCard]];
-        [self.cardLabel setHidden:![self.place acceptsCard]];
-        
         [self.logotypeImage setImage:[self.place imageForPlace]];
         [self.headerLabel setText:[self.place.name uppercaseString]];
         [self.descriptionView setText:self.place.information];
@@ -95,11 +129,6 @@
         [self.statusView setHidden:NO];
         
     } else { //event, hide symbols.
-        
-        [self.cashImage setHidden:YES];
-        [self.cashLabel setHidden:YES];
-        [self.cardImage setHidden:YES];
-        [self.cardLabel setHidden:YES];
         
         [self.statusView setHidden:YES];
         
@@ -196,15 +225,22 @@
         
     } else {
         
-//        InitViewController *initVC = segue.destinationViewController;
-//        
-//        if(!initVC) {
-//            
-//            initVC = [self.storyboard instantiateViewControllerWithIdentifier:@"Karta"];
-//            
-//        }
+        //initiate map.
         
     }
+    
+}
+
+- (MultipleChoicesViewController *)choiceVC {
+    
+    if(!_choiceVC) {
+        
+        _choiceVC = [self.storyboard instantiateViewControllerWithIdentifier:@"choices"];
+        
+        
+    }
+    
+    return _choiceVC;
     
 }
 
