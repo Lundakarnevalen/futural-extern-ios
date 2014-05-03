@@ -409,11 +409,12 @@
                     <navigationItem key="navigationItem" id="FwE-jU-bDQ">
                         <nil key="title"/>
                         <segmentedControl key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="cdC-9T-oxQ">
-                            <rect key="frame" x="93" y="7" width="135" height="30"/>
+                            <rect key="frame" x="35" y="7" width="251" height="30"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <segments>
-                                <segment title="Alla"/>
+                                <segment title="Kommande"/>
                                 <segment title="Favoriter"/>
+                                <segment title="Alla"/>
                             </segments>
                             <connections>
                                 <action selector="sectionChanged:" destination="HRp-1t-hkA" eventType="valueChanged" id="Tk2-oH-1wl"/>

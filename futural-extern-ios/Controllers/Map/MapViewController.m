@@ -227,55 +227,42 @@
     LKAnnotationView *annotationView = (LKAnnotationView *)view;
     LKPlace *place = annotationView.annotation.place;
     
-    //Ful-lösning som fän, men fock it, it's working, hårdkodning #livingontheedge.
-    
     NSDictionary *filters = @{
-                              @"entertainment" : [[LKarneval class] LKPlaceFilterEntertainment],
-                              @"food" : [[LKarneval class] LKPlaceFilterFood],
-                              @"misc" : [[LKarneval class] LKPlaceFilterOther]
+                              @"entertainment" : [LKarneval LKPlaceFilterEntertainment],
+                              @"food" : [LKarneval LKPlaceFilterFood],
+                              @"misc" : [LKarneval LKPlaceFilterOther]
                          };
     
-    [[[LKarneval class] LKPlaceFilterEntertainment] enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
-        
-        LKPlaceCategory category = [obj integerValue]; //inside of nsnumber.
-        
-        if(category == place.category) {
-            
-            [[[self.tabBarController viewControllers] objectAtIndex:0] popToRootViewControllerAnimated:NO];
-            
-            NSLog(@"This is contained inside of entertainment.");
-            EntertainmentViewController *vc = (EntertainmentViewController *)[[[self.tabBarController viewControllers] objectAtIndex:0] visibleViewController]; //fifän.
-            vc.visitIdentifier = place.parent.name;
-            
-            [self.tabBarController setSelectedIndex:0];
-            
-        }
-        
-    }];
+    NSDictionary *tabIndexes = @{
+                                 @"entertainment" : @0,
+                                 @"food" : @1,
+                                 @"misc" : @4
+                                 }; //change this if the order of the tabs changes.
     
-    [[[LKarneval class] LKPlaceFilterFood] enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+    [filters enumerateKeysAndObjectsUsingBlock:^(id key, id obj, BOOL *stop) {
+       
+        NSArray *currentFilter = (NSArray *)obj;
         
-        LKPlaceCategory category = [obj integerValue];
-        
-        if(category == place.category) {
+        [currentFilter enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+           
+            LKPlaceCategory category = [obj integerValue]; //inside of nsnumber.
             
-            NSLog(@"This is contained inside of food.");
-            [self.tabBarController setSelectedIndex:1];
+            if(category == place.category) {
+                
+                NSInteger tabIndex = [tabIndexes[key] integerValue]; //nsnumbers
+                
+                [[[self.tabBarController viewControllers] objectAtIndex:tabIndex] popToRootViewControllerAnimated:NO];
+                
+                NSLog(@"This is contained inside of %@.", key);
+                EntertainmentViewController *vc = (EntertainmentViewController *)[[[self.tabBarController viewControllers] objectAtIndex:tabIndex] visibleViewController]; //fifän.
+                vc.visitIdentifier = place.parent.name;
+                vc.visitPlace = place.parent;
+                
+                [self.tabBarController setSelectedIndex:tabIndex];
+                
+            }
             
-        }
-        
-    }];
-    
-    [[[LKarneval class] LKPlaceFilterOther] enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
-        
-        LKPlaceCategory category = [obj integerValue];
-        
-        if(category == place.category) {
-            
-            NSLog(@"This is contained inside of others.");
-            [self.tabBarController setSelectedIndex:4];
-            
-        }
+        }];
         
     }];
     

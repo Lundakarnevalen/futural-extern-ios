@@ -22,6 +22,48 @@
 
 }
 
+- (void)viewDidAppear:(BOOL)animated {
+    
+    if(self.visitIdentifier) {
+        
+        NSLog(@"SHOW ME %@", self.visitIdentifier);
+        self.visitPlace = nil;
+        
+        for(LKPlace *place in [self miscPlaces]) {
+            
+            if([place.name isEqualToString:self.visitIdentifier]) {
+                
+                //self.visitPlace = place;
+                [self performSegueForName:place.name];
+                
+                //needs to be dynamic.
+                
+                break;
+                
+            }
+            
+        }
+        
+        self.visitIdentifier = nil;
+        
+    }
+    
+}
+
+- (void)performSegueForName:(NSString *)name {
+    
+    name = [name lowercaseString];
+    
+    NSLog(@"Segue requested for %@", name);
+    
+    if([name isEqualToString:@"radion"]) {
+        
+        [self performSegueWithIdentifier:@"radio.play" sender:self];
+        
+    }
+    
+}
+
 - (NSArray *)miscPlaces {
     
     return [self.karneval placesFilteredByCategories:[LKarneval LKPlaceFilterOther]];
@@ -59,11 +101,7 @@
     LKButton *button = (LKButton *)sender;
     NSString *identifier = [button.identifier lowercaseString];
     
-    if([identifier isEqualToString:@"radion"]) {
-    
-        [self performSegueWithIdentifier:@"radio.play" sender:button];
-        
-    }
+    [self performSegueForName:identifier];
     
 }
 
