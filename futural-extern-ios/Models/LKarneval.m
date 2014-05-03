@@ -132,6 +132,12 @@ const int NumberOfFilters = 3;
 
 #pragma mark Methods
 
+- (NSArray *)allEvents {
+    
+    return [[self class] sortEventsChronological:self.events];
+    
+}
+
 - (NSArray *)favoriteEvents {
     
     NSMutableArray *favorites;
