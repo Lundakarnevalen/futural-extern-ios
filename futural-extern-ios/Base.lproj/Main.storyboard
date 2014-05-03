@@ -505,6 +505,7 @@
                     <connections>
                         <outlet property="scrollView" destination="Sm7-jv-mlW" id="cWe-6F-606"/>
                         <segue destination="hrp-zr-VQ1" kind="push" identifier="misc.detail" id="S9e-OK-3i2"/>
+                        <segue destination="ox8-el-fR8" kind="push" identifier="toRadioSegue" id="Mcq-zf-6jP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mae-eN-f30" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -528,7 +529,57 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LVj-Oq-nbV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1534" y="-465"/>
+            <point key="canvasLocation" x="1994" y="-465"/>
+        </scene>
+        <!--Radio View Controller - RADIO-->
+        <scene sceneID="VqL-lu-d3h">
+            <objects>
+                <viewController id="ox8-el-fR8" customClass="RadioViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="xnP-Fa-2FO"/>
+                        <viewControllerLayoutGuide type="bottom" id="4F1-u7-D22"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="FT1-Hp-els">
+                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="radio-background" translatesAutoresizingMaskIntoConstraints="NO" id="Hd5-qq-7wQ">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="455"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fgt-oS-Enp">
+                                <rect key="frame" x="100" y="197" width="120" height="120"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="120" id="4Dh-tG-jUZ"/>
+                                    <constraint firstAttribute="width" constant="120" id="a1i-72-z8X"/>
+                                </constraints>
+                                <state key="normal" image="radio-play">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="playButtonPressed:" destination="ox8-el-fR8" eventType="touchUpInside" id="eOy-Va-Qlq"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Hd5-qq-7wQ" firstAttribute="centerX" secondItem="Fgt-oS-Enp" secondAttribute="centerX" id="4hW-Nx-Xba"/>
+                            <constraint firstItem="4F1-u7-D22" firstAttribute="top" secondItem="Hd5-qq-7wQ" secondAttribute="bottom" id="Jw6-Lj-96h"/>
+                            <constraint firstItem="Hd5-qq-7wQ" firstAttribute="top" secondItem="xnP-Fa-2FO" secondAttribute="bottom" id="avs-Gz-wEd"/>
+                            <constraint firstItem="Hd5-qq-7wQ" firstAttribute="leading" secondItem="FT1-Hp-els" secondAttribute="leading" id="fwQ-0P-PE6"/>
+                            <constraint firstItem="Hd5-qq-7wQ" firstAttribute="centerY" secondItem="Fgt-oS-Enp" secondAttribute="centerY" constant="-29.5" id="fwc-zJ-Tsp"/>
+                            <constraint firstAttribute="trailing" secondItem="Hd5-qq-7wQ" secondAttribute="trailing" id="meV-RT-0ey"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="RADIO" id="4tz-SY-zbL"/>
+                    <connections>
+                        <outlet property="playPauseButton" destination="Fgt-oS-Enp" id="quF-fi-jve"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LAm-hg-w90" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2375" y="23"/>
         </scene>
         <!--Navigation View Controller - Mat-->
         <scene sceneID="ZBc-cH-Bw5">
@@ -1017,6 +1068,8 @@
         <image name="icon-kort" width="25" height="17"/>
         <image name="map" width="24" height="24"/>
         <image name="misc" width="25" height="18"/>
+        <image name="radio-background" width="1080" height="1920"/>
+        <image name="radio-play" width="410" height="424"/>
         <image name="revyn" width="128" height="128"/>
         <image name="schedule" width="25" height="25"/>
         <image name="showen" width="128" height="128"/>

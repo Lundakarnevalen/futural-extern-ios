@@ -10,6 +10,9 @@
 		1A411FEC1901A7BC00FF39F9 /* UILabel+FuturaFont.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A411FEB1901A7BC00FF39F9 /* UILabel+FuturaFont.m */; };
 		1A411FEF1901A98D00FF39F9 /* UIView+Shadow.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A411FEE1901A98D00FF39F9 /* UIView+Shadow.m */; };
 		1A411FF21901B1C700FF39F9 /* CreateAnnotationsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A411FF11901B1C700FF39F9 /* CreateAnnotationsViewController.m */; };
+		1A4833791915010A00CDC0CD /* Radio.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1A4833781915010A00CDC0CD /* Radio.xcassets */; };
+		1A48337D191504F900CDC0CD /* RadioViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A48337C191504F900CDC0CD /* RadioViewController.m */; };
+		1A48337F1915057400CDC0CD /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A48337E1915057400CDC0CD /* AVFoundation.framework */; };
 		1A4A83CA190996AE00D7C466 /* LKButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A4A83C9190996AE00D7C466 /* LKButton.m */; };
 		1A7DA8A318FF06C70025C677 /* App.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1A7DA8A218FF06C70025C677 /* App.xcassets */; };
 		1ABFF6E219002BBB00C575EE /* LKAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ABFF6DE19002BBB00C575EE /* LKAnnotation.m */; };
@@ -73,6 +76,10 @@
 		1A411FEE1901A98D00FF39F9 /* UIView+Shadow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+Shadow.m"; path = "Models/UIView+Shadow.m"; sourceTree = "<group>"; };
 		1A411FF01901B1C700FF39F9 /* CreateAnnotationsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CreateAnnotationsViewController.h; path = Controllers/CreateAnnotationsViewController.h; sourceTree = "<group>"; };
 		1A411FF11901B1C700FF39F9 /* CreateAnnotationsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CreateAnnotationsViewController.m; path = Controllers/CreateAnnotationsViewController.m; sourceTree = "<group>"; };
+		1A4833781915010A00CDC0CD /* Radio.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Radio.xcassets; path = Data/Sprites/Radio.xcassets; sourceTree = "<group>"; };
+		1A48337B191504F900CDC0CD /* RadioViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RadioViewController.h; path = Controllers/Radio/RadioViewController.h; sourceTree = "<group>"; };
+		1A48337C191504F900CDC0CD /* RadioViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RadioViewController.m; path = Controllers/Radio/RadioViewController.m; sourceTree = "<group>"; };
+		1A48337E1915057400CDC0CD /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		1A4A83C8190996AE00D7C466 /* LKButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LKButton.h; path = Models/LKButton.h; sourceTree = "<group>"; };
 		1A4A83C9190996AE00D7C466 /* LKButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LKButton.m; path = Models/LKButton.m; sourceTree = "<group>"; };
 		1A7DA8A218FF06C70025C677 /* App.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = App.xcassets; sourceTree = "<group>"; };
@@ -169,6 +176,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1A48337F1915057400CDC0CD /* AVFoundation.framework in Frameworks */,
 				5722E91C18FD7DF300BEE3A2 /* MapKit.framework in Frameworks */,
 				57407D1718FD2B1A0003F787 /* CoreLocation.framework in Frameworks */,
 				1AE8E55718F42FB50078EBDF /* CoreGraphics.framework in Frameworks */,
@@ -180,6 +188,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1A48337A191504BE00CDC0CD /* Radio */ = {
+			isa = PBXGroup;
+			children = (
+				1A48337B191504F900CDC0CD /* RadioViewController.h */,
+				1A48337C191504F900CDC0CD /* RadioViewController.m */,
+			);
+			name = Radio;
+			sourceTree = "<group>";
+		};
 		1ABFF6DC19002BBB00C575EE /* Annotation */ = {
 			isa = PBXGroup;
 			children = (
@@ -240,6 +257,7 @@
 		1AE8E55318F42FB50078EBDF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				1A48337E1915057400CDC0CD /* AVFoundation.framework */,
 				5722E91B18FD7DF300BEE3A2 /* MapKit.framework */,
 				57407D1618FD2B1A0003F787 /* CoreLocation.framework */,
 				1AE8E55418F42FB50078EBDF /* Foundation.framework */,
@@ -343,6 +361,7 @@
 		57407D0F18FD29F20003F787 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				1A48337A191504BE00CDC0CD /* Radio */,
 				57E047C4190D689600C45F68 /* DetailViewController.h */,
 				57E047C5190D689600C45F68 /* DetailViewController.m */,
 				5776211F1909932800B99E8E /* EntertainmentViewController.h */,
@@ -371,6 +390,7 @@
 				57994784190B18B60098BEA3 /* Places.xcassets */,
 				57DB443D190291D0009C3D37 /* Schedule.xcassets */,
 				575C94A218FE838E00A341EE /* TabBar.xcassets */,
+				1A4833781915010A00CDC0CD /* Radio.xcassets */,
 			);
 			name = Sprites;
 			sourceTree = "<group>";
@@ -446,6 +466,15 @@
 			attributes = {
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = Lundakarnevalen;
+				TargetAttributes = {
+					1AE8E55018F42FB50078EBDF = {
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
+					};
+				};
 			};
 			buildConfigurationList = 1AE8E54C18F42FB50078EBDF /* Build configuration list for PBXProject "Lundakarneval" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -470,6 +499,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1A4833791915010A00CDC0CD /* Radio.xcassets in Resources */,
 				1ABFF6E319002BBB00C575EE /* LKAnnotation.xib in Resources */,
 				1AF152C819059592006F2896 /* Places.plist in Resources */,
 				1ABFF7031900887F00C575EE /* futuralt-bold.ttf in Resources */,
@@ -531,6 +561,7 @@
 				1A411FEF1901A98D00FF39F9 /* UIView+Shadow.m in Sources */,
 				1ABFF70119007E2000C575EE /* LKOverlayRenderer.m in Sources */,
 				57FB7474190B150A0059CA82 /* LKImage.m in Sources */,
+				1A48337D191504F900CDC0CD /* RadioViewController.m in Sources */,
 				1A411FEC1901A7BC00FF39F9 /* UILabel+FuturaFont.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
