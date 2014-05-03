@@ -109,10 +109,13 @@
     
     if([self.place.subPlaces count] < 2 && self.place.category != LKPlaceCategoryScene) {
      
-        NSLog(@"REMOVE");
         [self.sectionButton setHidden:YES];
         
     }
+    
+    MKCoordinateRegion region = MKCoordinateRegionMake(self.place.position, MKCoordinateSpanMake(1, 1));
+    
+    [self.miniMap setRegion:region];
     
     [LKLayout customizeSegment:self.sectionButton];
     
