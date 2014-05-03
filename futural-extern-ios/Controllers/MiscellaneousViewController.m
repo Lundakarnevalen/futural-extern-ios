@@ -57,7 +57,8 @@
     
     LKButton *button = (LKButton *)sender;
     
-    [self performSegueWithIdentifier:@"misc.detail" sender:button];
+    //[self performSegueWithIdentifier:@"misc.detail" sender:button];
+    [self performSegueWithIdentifier:@"toRadioSegue" sender:button];
     
 }
 
