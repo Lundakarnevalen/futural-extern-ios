@@ -8,6 +8,9 @@
 
 #import "MapViewController.h"
 #import "ECSlidingViewController.h"
+#import "EntertainmentViewController.h"
+#import "FoodViewController.h"
+#import "MiscellaneousViewController.h"
 
 #import "LKAnnotation.h"
 #import "LKAnnotationView.h"
@@ -222,7 +225,61 @@
 - (void)mapView:(MKMapView *)mapView didSelectAnnotationView:(MKAnnotationView *)view {
     
     LKAnnotationView *annotationView = (LKAnnotationView *)view;
-    NSLog(@"This annotiation is %@", annotationView.annotation.identifier);
+    LKPlace *place = annotationView.annotation.place;
+    
+    //Ful-lösning som fän, men fock it, it's working, hårdkodning #livingontheedge.
+    
+    NSDictionary *filters = @{
+                              @"entertainment" : [[LKarneval class] LKPlaceFilterEntertainment],
+                              @"food" : [[LKarneval class] LKPlaceFilterFood],
+                              @"misc" : [[LKarneval class] LKPlaceFilterOther]
+                         };
+    
+    [[[LKarneval class] LKPlaceFilterEntertainment] enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+        
+        LKPlaceCategory category = [obj integerValue]; //inside of nsnumber.
+        
+        if(category == place.category) {
+            
+            [[[self.tabBarController viewControllers] objectAtIndex:0] popToRootViewControllerAnimated:NO];
+            
+            NSLog(@"This is contained inside of entertainment.");
+            EntertainmentViewController *vc = (EntertainmentViewController *)[[[self.tabBarController viewControllers] objectAtIndex:0] visibleViewController]; //fifän.
+            vc.visitIdentifier = place.parent.name;
+            
+            [self.tabBarController setSelectedIndex:0];
+            
+        }
+        
+    }];
+    
+    [[[LKarneval class] LKPlaceFilterFood] enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+        
+        LKPlaceCategory category = [obj integerValue];
+        
+        if(category == place.category) {
+            
+            NSLog(@"This is contained inside of food.");
+            [self.tabBarController setSelectedIndex:1];
+            
+        }
+        
+    }];
+    
+    [[[LKarneval class] LKPlaceFilterOther] enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+        
+        LKPlaceCategory category = [obj integerValue];
+        
+        if(category == place.category) {
+            
+            NSLog(@"This is contained inside of others.");
+            [self.tabBarController setSelectedIndex:4];
+            
+        }
+        
+    }];
+    
+    NSLog(@"This annotiation is %@", annotationView.annotation.place.parent.identifier);
     
 }
 
@@ -241,6 +298,18 @@
     } else if (mapView.region.center.longitude > 13.20106887303782450260) {
         [self returnToCenterMap];
     }
+    
+}
+
+- (LKarneval *)karneval {
+    
+    if(!_karneval) {
+        
+        _karneval = [LKarneval sharedLKarneval];
+        
+    }
+    
+    return _karneval;
     
 }
 

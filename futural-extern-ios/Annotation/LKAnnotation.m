@@ -22,7 +22,7 @@
         
         LKPlace *subPlace = [place.subPlaces objectAtIndex:positionIndex];
         
-        self.identifier = subPlace.parent.identifier;
+        self.place = subPlace;
         coordinate = subPlace.position;
         title = [subPlace.name uppercaseString];
         self.image = [place imageForAnnotation];

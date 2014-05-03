@@ -56,7 +56,6 @@
 		578929C519007BD4002AA116 /* PlaceCategories.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 578929C419007BD4002AA116 /* PlaceCategories.xcassets */; };
 		578929C91900839A002AA116 /* Events.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 578929C81900839A002AA116 /* Events.xcassets */; };
 		57994785190B18B60098BEA3 /* Places.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 57994784190B18B60098BEA3 /* Places.xcassets */; };
-		57BD3482190B1A8E001BE9B2 /* MiscellaneousDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 57FB7467190B06F80059CA82 /* MiscellaneousDetailViewController.m */; };
 		57CC6F61190C673A0006DE48 /* Covers.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 57CC6F60190C673A0006DE48 /* Covers.xcassets */; };
 		57DB443E190291D0009C3D37 /* Schedule.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 57DB443D190291D0009C3D37 /* Schedule.xcassets */; };
 		57E047BF190D5BAF00C45F68 /* Layout.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 57E047BE190D5BAF00C45F68 /* Layout.xcassets */; };
@@ -159,8 +158,6 @@
 		57E047C5190D689600C45F68 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DetailViewController.m; path = Controllers/DetailViewController.m; sourceTree = "<group>"; };
 		57F07CD319103FE600290BB3 /* MultipleChoicesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MultipleChoicesViewController.h; path = Controllers/MultipleChoicesViewController.h; sourceTree = "<group>"; };
 		57F07CD419103FE600290BB3 /* MultipleChoicesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MultipleChoicesViewController.m; path = Controllers/MultipleChoicesViewController.m; sourceTree = "<group>"; };
-		57FB7466190B06F80059CA82 /* MiscellaneousDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MiscellaneousDetailViewController.h; path = Controllers/MiscellaneousDetailViewController.h; sourceTree = "<group>"; };
-		57FB7467190B06F80059CA82 /* MiscellaneousDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MiscellaneousDetailViewController.m; path = Controllers/MiscellaneousDetailViewController.m; sourceTree = "<group>"; };
 		57FB746A190B150A0059CA82 /* LKCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LKCell.h; path = Models/LKCell.h; sourceTree = "<group>"; };
 		57FB746B190B150A0059CA82 /* LKCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LKCell.m; path = Models/LKCell.m; sourceTree = "<group>"; };
 		57FB746C190B150A0059CA82 /* LKGrid.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LKGrid.h; path = Models/LKGrid.h; sourceTree = "<group>"; };
@@ -368,8 +365,9 @@
 				577621201909932800B99E8E /* EntertainmentViewController.m */,
 				575C94C918FED4B400A341EE /* FoodViewController.h */,
 				575C94CA18FED4B400A341EE /* FoodViewController.m */,
+				57762122190993DB00B99E8E /* MiscellaneousViewController.h */,
+				57762123190993DB00B99E8E /* MiscellaneousViewController.m */,
 				1ABFF6EA1900645300C575EE /* Map */,
-				57FB7469190B07020059CA82 /* Miscellaneous */,
 				57F07CD319103FE600290BB3 /* MultipleChoicesViewController.h */,
 				57F07CD419103FE600290BB3 /* MultipleChoicesViewController.m */,
 				575C94BC18FED02400A341EE /* Navigation */,
@@ -425,17 +423,6 @@
 				575C949E18FE7F3D00A341EE /* Events.plist */,
 			);
 			name = Data;
-			sourceTree = "<group>";
-		};
-		57FB7469190B07020059CA82 /* Miscellaneous */ = {
-			isa = PBXGroup;
-			children = (
-				57762122190993DB00B99E8E /* MiscellaneousViewController.h */,
-				57762123190993DB00B99E8E /* MiscellaneousViewController.m */,
-				57FB7466190B06F80059CA82 /* MiscellaneousDetailViewController.h */,
-				57FB7467190B06F80059CA82 /* MiscellaneousDetailViewController.m */,
-			);
-			name = Miscellaneous;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -528,7 +515,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				57BD3482190B1A8E001BE9B2 /* MiscellaneousDetailViewController.m in Sources */,
 				57F07CD519103FE600290BB3 /* MultipleChoicesViewController.m in Sources */,
 				57FB7476190B15C10059CA82 /* NavigationViewController.m in Sources */,
 				1ABFF6ED1900646900C575EE /* ECSlidingViewController.m in Sources */,

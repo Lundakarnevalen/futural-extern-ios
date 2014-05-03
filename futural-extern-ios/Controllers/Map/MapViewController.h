@@ -11,6 +11,6 @@
 
 @interface MapViewController : UIViewController <MKMapViewDelegate, UITableViewDelegate, MKMapViewDelegate>
 
-
+@property (nonatomic) LKarneval *karneval;
 
 @end
