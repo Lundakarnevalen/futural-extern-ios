@@ -219,9 +219,17 @@
                                                   MKCoordinateSpanMake(0.0038183853724191863, 0.0047661187034577779));
 }
 
-- (void)mapView:(MKMapView *)mapView regionDidChangeAnimated:(BOOL)animated {
+- (void)mapView:(MKMapView *)mapView didSelectAnnotationView:(MKAnnotationView *)view {
+    
+    LKAnnotationView *annotationView = (LKAnnotationView *)view;
+    NSLog(@"This annotiation is %@", annotationView.annotation.identifier);
+    
+}
+
+- (void)mapViewWillStartRenderingMap:(MKMapView *)mapView {
+    
     NSLog(@"%f, %f",mapView.region.span.latitudeDelta, mapView.region.span.longitudeDelta);
-   
+    
     if (mapView.region.span.latitudeDelta > 0.0055911036392117808) {
         [self returnToCenterMap];
     } else if (mapView.region.center.latitude < 55.70295306978420057931) {
@@ -235,6 +243,5 @@
     }
     
 }
-
 
 @end

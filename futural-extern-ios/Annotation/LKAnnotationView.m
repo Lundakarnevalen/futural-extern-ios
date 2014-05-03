@@ -7,7 +7,6 @@
 //
 
 #import "LKAnnotationView.h"
-#import "LKAnnotation.h"
 #import "LKLayout.h"
 
 @implementation LKAnnotationView
@@ -20,23 +19,24 @@
     
     if (self) {
         
-        NSArray *nibObjects = [[NSBundle mainBundle] loadNibNamed:@"LKAnnotation" owner:self options:nil];
-        UIView *nibView = [nibObjects objectAtIndex:0];
-        UILabel *label = (UILabel *)[nibView viewWithTag:TAG_LABEL];
-        UIImageView *image = (UIImageView *)[nibView viewWithTag:TAG_IMAGE];
+        self.annotation = annotation;
+        
+        UIView *annotationView = [[[NSBundle mainBundle] loadNibNamed:@"LKAnnotation" owner:self options:nil] firstObject];
+        UILabel *label = (UILabel *)[annotationView viewWithTag:TAG_LABEL];
+        UIImageView *image = (UIImageView *)[annotationView viewWithTag:TAG_IMAGE];
+        
+        image.image = ((LKAnnotation *) self.annotation).image;
+        label.text = self.annotation.title;
         
         [label setFont:[LKLayout detailMapHeaderFont]];
         
-        image.image = ((LKAnnotation *)annotation).image;
+        [self addSubview:annotationView];
         
-        label.text = annotation.title;
-        
-        [self addSubview:nibView];
-        
-        CGFloat width = ((UIImage *)[nibView viewWithTag:TAG_BUBBLE]).size.width;
-        CGFloat height = ((UIImage *)[nibView viewWithTag:TAG_BUBBLE]).size.height;
+        CGFloat width = ((UIImage *)[annotationView viewWithTag:TAG_BUBBLE]).size.width;
+        CGFloat height = ((UIImage *)[annotationView viewWithTag:TAG_BUBBLE]).size.height;
         self.bounds = CGRectMake(0, 0, width, height);
         centerOffset = CGPointMake(0 , -height / 2);
+        
     }
     
     return self;
