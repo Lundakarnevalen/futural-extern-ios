@@ -57,6 +57,12 @@
             
             break;
             
+        case 2:
+            
+            return [self.karneval allEvents];
+            
+            break;
+            
         default:
             return nil;
             break;

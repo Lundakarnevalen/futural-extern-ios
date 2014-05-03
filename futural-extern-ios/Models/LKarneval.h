@@ -31,6 +31,7 @@ extern const int NumberOfFilters;
 - (NSArray *)eventsAtPlaceWithIdentifier:(NSString *)identifier; //get events associated with a place.
 - (NSArray *)favoriteEvents;
 - (NSArray *)upcomingEvents;
+- (NSArray *)allEvents;
 
 + (NSArray *)LKPlaceFilterFood;
 + (NSArray *)LKPlaceFilterEntertainment;
