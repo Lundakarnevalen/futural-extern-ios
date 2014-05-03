@@ -46,21 +46,28 @@ NSString *const FilterMapTableViewRowDidSelect             = @"FilterMapTableVie
 {
     UITableViewCell *cell = nil;
     UILabel *label = nil;
+    UIImageView *image = nil;
     switch (indexPath.row) {
         case 0:
             if (!cell) cell = [tableView dequeueReusableCellWithIdentifier:@"FilterCell" forIndexPath:indexPath];
+            image = (UIImageView *)[[cell contentView] viewWithTag:TAG_IMG];
+            image.image = [UIImage imageNamed:@"filter-food"];
             label = (UILabel *)[[cell contentView] viewWithTag:TAG_LABEL];
             label.text = @"MAT";
             label.textColor = ([self.filter[@"food"] boolValue]) ? [UIColor whiteColor] : [[UIColor blackColor] colorWithAlphaComponent:0.4];
             break;
         case 1:
             if (!cell) cell = [tableView dequeueReusableCellWithIdentifier:@"FilterCell" forIndexPath:indexPath];
+            image = (UIImageView *)[[cell contentView] viewWithTag:TAG_IMG];
+            image.image = [UIImage imageNamed:@"filter-entertainment"];
             label = (UILabel *)[[cell contentView] viewWithTag:TAG_LABEL];
             label.text = @"NÖJEN";
             label.textColor = ([self.filter[@"entertainment"] boolValue]) ? [UIColor whiteColor] : [[UIColor blackColor] colorWithAlphaComponent:0.4];
             break;
         case 2:
             if (!cell) cell = [tableView dequeueReusableCellWithIdentifier:@"FilterCell" forIndexPath:indexPath];
+            image = (UIImageView *)[[cell contentView] viewWithTag:TAG_IMG];
+            image.image = [UIImage imageNamed:@"filter-help"];
             label = (UILabel *)[[cell contentView] viewWithTag:TAG_LABEL];
             label.text = @"ÖVRIGT";
             label.textColor = ([self.filter[@"other"] boolValue]) ? [UIColor whiteColor] : [[UIColor blackColor] colorWithAlphaComponent:0.4];

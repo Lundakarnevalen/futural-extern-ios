@@ -3,11 +3,12 @@
     {
       "idiom" : "universal",
       "scale" : "1x",
-      "filename" : "karta.png"
+      "filename" : "smånöjen.png"
     },
     {
       "idiom" : "universal",
-      "scale" : "2x"
+      "scale" : "2x",
+      "filename" : "smånöjen@2x.png"
     }
   ],
   "info" : {

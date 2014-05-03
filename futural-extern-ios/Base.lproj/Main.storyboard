@@ -626,7 +626,7 @@
                         <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" rotateEnabled="NO" pitchEnabled="NO" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VOy-Cp-HdC">
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" pitchEnabled="NO" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VOy-Cp-HdC">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <gestureRecognizers/>
@@ -651,6 +651,10 @@
                                     <action selector="showMapButtonClicked:" destination="4LJ-BV-Ygh" eventType="touchUpInside" id="Exw-eE-mF4"/>
                                 </connections>
                             </button>
+                            <imageView hidden="YES" userInteractionEnabled="NO" alpha="0.5" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Lundakarnevalen" translatesAutoresizingMaskIntoConstraints="NO" id="3mg-U3-s5B">
+                                <rect key="frame" x="0.0" y="92" width="320" height="320"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -995,6 +999,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Lundakarnevalen" width="2500" height="2500"/>
         <image name="background-entertainment" width="540" height="960"/>
         <image name="background-food" width="540" height="960"/>
         <image name="background-misc" width="540" height="960"/>

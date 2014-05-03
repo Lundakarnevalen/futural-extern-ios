@@ -3,11 +3,12 @@
     {
       "idiom" : "universal",
       "scale" : "1x",
-      "filename" : "karta.png"
+      "filename" : "lagerfestmästeriet.png"
     },
     {
       "idiom" : "universal",
-      "scale" : "2x"
+      "scale" : "2x",
+      "filename" : "lagerfestmästeriet@2x.png"
     }
   ],
   "info" : {
