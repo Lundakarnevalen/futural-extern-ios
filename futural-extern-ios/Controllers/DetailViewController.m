@@ -8,6 +8,7 @@
 
 #import "DetailViewController.h"
 #import "MultipleChoicesViewController.h"
+#import "MapViewController.h"
 #import "InitViewController.h"
 
 #import "LKLayout.h"
@@ -174,7 +175,12 @@
 
 - (IBAction)findMe:(id)sender {
     
+    NSInteger tabIndex = 2;
+    MapViewController *vc = (MapViewController *)[(UINavigationController *)[[[self.tabBarController viewControllers] objectAtIndex:tabIndex] topViewController] visibleViewController]; //fifän, igen.
+    
     if(self.place) {
+        
+        vc.visitPlace = self.place;
         
         NSInteger subPlaces = [self.place.subPlaces count];
         
@@ -190,13 +196,20 @@
         
     } else {
         
-        [self performSegueWithIdentifier:@"map.detail" sender:self];
-        
     }
+    
+    [self.tabBarController setSelectedIndex:tabIndex];
     
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    
+    if([segue.identifier isEqualToString:@"map.detail"]) {
+        
+        MapViewController *vc = (MapViewController *)segue.destinationViewController;
+        vc.visitPlace = self.place;
+        
+    }
     
 }
 

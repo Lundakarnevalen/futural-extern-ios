@@ -55,15 +55,37 @@
 }
 
 -(void)viewDidAppear:(BOOL)animated {
-
-    //Skum svart bakgrund. /V
-    /*if (self.navigationController.navigationBar.alpha != 0) {
-        [UIView animateWithDuration:0.3
-                         animations:^(void) { self.navigationController.navigationBar.alpha = 0; }
-                         completion:nil];
-    }
-    [super viewDidAppear:animated];*/
+    
     [self reloadAnnotations];
+    
+    if(self.visitPlace) {
+        
+        MKMapRect zoomRect = MKMapRectNull;
+
+        for(id <MKAnnotation>object in self.mapView.annotations) {
+            
+            LKAnnotation *annotation = (LKAnnotation *)object;
+            LKPlace *place = annotation.place;
+            
+            if([place.name isEqualToString:self.visitPlace.name]) {
+                
+                MKMapPoint annotationPoint = MKMapPointForCoordinate(annotation.coordinate);
+                MKMapRect pointRect = MKMapRectMake(annotationPoint.x, annotationPoint.y, 0.1, 0.1);
+                
+                if (MKMapRectIsNull(zoomRect)) {
+                    zoomRect = pointRect;
+                } else {
+                    zoomRect = MKMapRectUnion(zoomRect, pointRect);
+                }
+                
+            }
+            
+        }
+        
+        [self.mapView setVisibleMapRect:zoomRect animated:YES];
+        
+    }
+    
 }
 
 -(void)filterMapTableViewRowDidSelect:(NSNotification *)notification {

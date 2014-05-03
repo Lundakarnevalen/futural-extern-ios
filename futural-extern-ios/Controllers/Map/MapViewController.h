@@ -13,4 +13,6 @@
 
 @property (nonatomic) LKarneval *karneval;
 
+@property (nonatomic) LKPlace *visitPlace;
+
 @end

@@ -1037,6 +1037,7 @@
             <objects>
                 <navigationController storyboardIdentifier="Karta" definesPresentationContext="YES" useStoryboardIdentifierAsRestorationIdentifier="YES" id="zIJ-wH-zWT" customClass="NavigationViewController" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Karta" image="map" id="ozP-JC-FI4"/>
+                    <navigationItem key="navigationItem" id="7jg-1c-B4R"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="Yv9-RK-mEf">
                         <rect key="frame" x="0.0" y="0.0" width="0.0" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
