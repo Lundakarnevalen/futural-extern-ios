@@ -39,7 +39,7 @@ NSString *const FilterMapTableViewRowDidSelect             = @"FilterMapTableVie
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
-    return NumberOfFilters+1;
+    return NumberOfFilters+2;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -67,13 +67,32 @@ NSString *const FilterMapTableViewRowDidSelect             = @"FilterMapTableVie
         case 2:
             if (!cell) cell = [tableView dequeueReusableCellWithIdentifier:@"FilterCell" forIndexPath:indexPath];
             image = (UIImageView *)[[cell contentView] viewWithTag:TAG_IMG];
+            image.image = [UIImage imageNamed:@"filter-bathroom"];
+            label = (UILabel *)[[cell contentView] viewWithTag:TAG_LABEL];
+            label.text = @"TOALETTER";
+            label.textColor = ([self.filter[@"toilet"] boolValue]) ? [UIColor whiteColor] : [[UIColor blackColor] colorWithAlphaComponent:0.4];
+            break;
+        case 3:
+            if (!cell) cell = [tableView dequeueReusableCellWithIdentifier:@"FilterCell" forIndexPath:indexPath];
+            image = (UIImageView *)[[cell contentView] viewWithTag:TAG_IMG];
+            image.image = [UIImage imageNamed:@"filter-trash"];
+            label = (UILabel *)[[cell contentView] viewWithTag:TAG_LABEL];
+            label.text = @"SOPTUNNOR";
+            label.textColor = ([self.filter[@"trash"] boolValue]) ? [UIColor whiteColor] : [[UIColor blackColor] colorWithAlphaComponent:0.4];
+            break;
+        case 4:
+            if (!cell) cell = [tableView dequeueReusableCellWithIdentifier:@"FilterCell" forIndexPath:indexPath];
+            image = (UIImageView *)[[cell contentView] viewWithTag:TAG_IMG];
             image.image = [UIImage imageNamed:@"filter-help"];
             label = (UILabel *)[[cell contentView] viewWithTag:TAG_LABEL];
             label.text = @"ÖVRIGT";
             label.textColor = ([self.filter[@"other"] boolValue]) ? [UIColor whiteColor] : [[UIColor blackColor] colorWithAlphaComponent:0.4];
             break;
-        case 3:
+        case 5:
             if (!cell) cell = [tableView dequeueReusableCellWithIdentifier:@"ShowEverythingCell" forIndexPath:indexPath];
+            break;
+        case 6:
+            if (!cell) cell = [tableView dequeueReusableCellWithIdentifier:@"HideEverythingCell" forIndexPath:indexPath];
             break;
         default:
             
@@ -95,12 +114,28 @@ NSString *const FilterMapTableViewRowDidSelect             = @"FilterMapTableVie
             [self.filter setObject:[NSNumber numberWithBool:![self.filter[@"entertainment"] boolValue]] forKey:@"entertainment"];
             break;
         case 2:
-            [self.filter setObject:[NSNumber numberWithBool:![self.filter[@"other"] boolValue]] forKey:@"other"];
+            [self.filter setObject:[NSNumber numberWithBool:![self.filter[@"toilet"] boolValue]] forKey:@"toilet"];
             break;
         case 3:
+            [self.filter setObject:[NSNumber numberWithBool:![self.filter[@"trash"] boolValue]] forKey:@"trash"];
+            break;
+        case 4:
+            [self.filter setObject:[NSNumber numberWithBool:![self.filter[@"other"] boolValue]] forKey:@"other"];
+            break;
+        case 5:
             [self.filter setValue:[NSNumber numberWithBool:YES] forKey:@"food"];
             [self.filter setValue:[NSNumber numberWithBool:YES] forKey:@"entertainment"];
+            [self.filter setValue:[NSNumber numberWithBool:YES] forKey:@"toilet"];
+            [self.filter setValue:[NSNumber numberWithBool:YES] forKey:@"trash"];
             [self.filter setValue:[NSNumber numberWithBool:YES] forKey:@"other"];
+            break;
+        case 6:
+            [self.filter setValue:[NSNumber numberWithBool:NO] forKey:@"food"];
+            [self.filter setValue:[NSNumber numberWithBool:NO] forKey:@"entertainment"];
+            [self.filter setValue:[NSNumber numberWithBool:NO] forKey:@"toilet"];
+            [self.filter setValue:[NSNumber numberWithBool:NO] forKey:@"trash"];
+            [self.filter setValue:[NSNumber numberWithBool:NO] forKey:@"other"];
+            break;
         default:
             break;
     }

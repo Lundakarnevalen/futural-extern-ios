@@ -33,8 +33,14 @@ extern const int NumberOfFilters;
 - (NSArray *)upcomingEvents;
 - (NSArray *)allEvents;
 
+// filters for the filters
 + (NSArray *)LKPlaceFilterFood;
 + (NSArray *)LKPlaceFilterEntertainment;
++ (NSArray *)LKPlaceFilterToilet;
++ (NSArray *)LKPlaceFilterTrash;
 + (NSArray *)LKPlaceFilterOther;
+
+//filter for tab bar
++ (NSArray *)LKPlaceFilterMisc;
 
 @end

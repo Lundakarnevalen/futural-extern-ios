@@ -66,7 +66,7 @@
 
 - (NSArray *)miscPlaces {
     
-    return [self.karneval placesFilteredByCategories:[LKarneval LKPlaceFilterOther]];
+    return [self.karneval placesFilteredByCategories:[LKarneval LKPlaceFilterMisc]];
     
 }
 
