@@ -35,6 +35,10 @@
 - (NSString *)formattedStartTime;
 - (NSString *)formattedEndTime;
 
+//NOTIFICATIONS
+- (void)disableNotification;
+- (void)enableNotification;
+
 //if there's no event image, it will grab the LKPlace image instead.
 - (UIImage *)imageForEvent;
 - (UIImage *)coverImage;

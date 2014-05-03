@@ -4,6 +4,23 @@
 <array>
 	<dict>
 		<key>identifier</key>
+		<string>test</string>
+		<key>name</key>
+		<string>TEST MADDAFAKKOR</string>
+		<key>description</key>
+		<string>kaldjskasjkdlfjaskldjfkalsdjfkj</string>
+		<key>place</key>
+		<string>storascenen</string>
+		<key>date</key>
+		<dict>
+			<key>start</key>
+			<date>2014-05-03T19:00:00Z</date>
+			<key>end</key>
+			<date>2014-05-03T19:00:00Z</date>
+		</dict>
+	</dict>
+	<dict>
+		<key>identifier</key>
 		<string>partiet</string>
 		<key>name</key>
 		<string>Partiet</string>

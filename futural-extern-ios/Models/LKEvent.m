@@ -8,6 +8,12 @@
 
 #import "LKEvent.h"
 
+@interface LKEvent() { }
+
+@property (nonatomic) NSInteger minutesBeforeEvent;
+
+@end
+
 @implementation LKEvent
 
 @synthesize favorite = _favorite;
@@ -17,6 +23,8 @@
     self = [super init];
     
     if(self) {
+        
+        self.minutesBeforeEvent = 15; //change this if necessary.
         
         self.identifier = propertyList[@"identifier"];
         self.name = propertyList[@"name"];
@@ -50,6 +58,13 @@
 - (void)setFavorite:(BOOL)favorite {
     
     _favorite = favorite;
+    
+    if(_favorite) {
+        [self enableNotification];
+    } else {
+        [self disableNotification];
+    }
+    
     [[NSUserDefaults standardUserDefaults] setBool:favorite forKey:[self dataIdentifier]];
     [[NSUserDefaults standardUserDefaults] synchronize]; //important, or there may be some slight delays.
     
@@ -70,17 +85,18 @@
     
 }
 
-- (void)enableNotification {
-
-#warning not done.
-    NSString *message = [NSString stringWithFormat:@"%@ börjar om 15 min vid %@.", self.name, self.place.name];
-    NSDate *firingDate = [self.start dateByAddingTimeInterval:-60*15];
+- (void)disableNotification {
     
-    UILocalNotification* localNotification = [[UILocalNotification alloc] init];
-    localNotification.fireDate = firingDate;
-    localNotification.alertBody = message;
-    localNotification.timeZone = [NSTimeZone defaultTimeZone];
-    [[UIApplication sharedApplication] scheduleLocalNotification:localNotification];
+    NSLog(@"Disabling %@", [self dataIdentifier]);
+    [[UIApplication sharedApplication] cancelLocalNotification:self.notification];
+    
+}
+
+- (void)enableNotification {
+    
+    NSLog(@"Enabling %@", [self dataIdentifier]);
+    [[UIApplication sharedApplication] scheduleLocalNotification:self.notification];
+
     
 }
 
@@ -164,21 +180,40 @@
     
     if(!_notification) {
         
-#warning not done.
-//        UIApplication *app = [UIApplication sharedApplication];
-//        NSArray *eventArray = [app scheduledLocalNotifications];
-//        for (int i=0; i<[eventArray count]; i++)
-//        {
-//            UILocalNotification* oneEvent = [eventArray objectAtIndex:i];
-//            NSDictionary *userInfoCurrent = oneEvent.userInfo;
-//            NSString *uid=[NSString stringWithFormat:@"%@",[userInfoCurrent valueForKey:@"uid"]];
-//            if ([uid isEqualToString:uidtodelete])
-//            {
-//                //Cancelling local notification
-//                [app cancelLocalNotification:oneEvent];
-//                break;
-//            }
-//        }
+        NSArray *notifications = [[UIApplication sharedApplication] scheduledLocalNotifications];
+        
+        NSLog(@"Looking for %@", [self dataIdentifier]);
+        
+        for(UILocalNotification *notification in notifications) {
+            
+            NSDictionary *information = notification.userInfo;
+            NSString *identifier = [information valueForKey:@"identifier"];
+            
+            if ([identifier isEqualToString:[self dataIdentifier]]) {
+                
+                _notification = notification;
+                break;
+                
+            }
+            
+        }
+        
+        if(!_notification) { //not there.
+            
+            NSLog(@"Did not find %@", [self dataIdentifier]);
+            
+            NSString *message = [NSString stringWithFormat:@"%@ börjar om %d min vid %@.", self.name, self.minutesBeforeEvent, self.place.name];
+            NSDate *firingDate = [self.start dateByAddingTimeInterval:-60 * self.minutesBeforeEvent];
+            
+            UILocalNotification* notification = [[UILocalNotification alloc] init];
+            notification.fireDate = firingDate;
+            notification.alertBody = message;
+            notification.userInfo = @{ @"identifier" : [self dataIdentifier] };
+            notification.timeZone = [NSTimeZone defaultTimeZone];
+            
+            _notification = notification;
+            
+        }
         
     }
     

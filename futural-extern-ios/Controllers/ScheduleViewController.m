@@ -20,6 +20,7 @@
 #define TAG_TIME_START 4
 #define TAG_TIME_END 5
 #define TAG_FAVORITE 6
+#define TAG_FAVORITE_IMAGE 7
 
 //the category view.
 #define TAG_HEAD_LABEL 1
@@ -136,8 +137,14 @@
     UILabel *timeEnd = (UILabel *)[[cell contentView] viewWithTag:TAG_TIME_END];
     LKImage *image = (LKImage *)[[cell contentView] viewWithTag:TAG_IMAGE];
     UIButton *favorite = (UIButton *)[[cell contentView] viewWithTag:TAG_FAVORITE];
+    UIImageView *favoriteImage = (UIImageView *)[[cell contentView] viewWithTag:TAG_FAVORITE_IMAGE];
     UIView *topCircle = (UIView *)[[cell contentView] viewWithTag:TAG_TOP_CIRCLE];
     UIView *bottomCircle = (UIView *)[[cell contentView] viewWithTag:TAG_BOTTOM_CIRCLE];
+    
+    [LKLayout addShadowToLabel:headerName withSizeOf:1];
+    [LKLayout addShadowToLabel:headerPlace withSizeOf:1];
+    [LKLayout addShadowToLabel:timeStart withSizeOf:1];
+    [LKLayout addShadowToLabel:timeEnd withSizeOf:1];
     
     topCircle.hidden = (indexPath.row != 0);
     bottomCircle.hidden = (indexPath.row != [dates[dateString] count] - 1);
@@ -166,7 +173,7 @@
     [image setImage:[event imageForEvent]];
     [image drawCircularImage:[UIColor whiteColor]];
     
-    [favorite setSelected:event.favorite];
+    [favoriteImage setImage:[UIImage imageNamed:[[self class] imageNameForHeartWithStatusOf:[event isFavorite]]]];
     [favorite addTarget:self action:@selector(favoriteEventAtRow:) forControlEvents:UIControlEventTouchDown];
     
     return cell;
@@ -197,7 +204,10 @@
     LKEvent *event = [[self events] objectAtIndex:row];
     
     event.favorite = ![event isFavorite];
-    [sender setSelected:[event isFavorite]];
+    
+    UIImageView *heartImage = (UIImageView *)[[sender superview] viewWithTag:TAG_FAVORITE_IMAGE];
+    NSString *imageName = [[self class] imageNameForHeartWithStatusOf:[event isFavorite]];
+    [heartImage setImage:[UIImage imageNamed:imageName]];
     
     [self.tableView reloadData];
     
@@ -233,6 +243,12 @@
     }
     
     return _karneval;
+    
+}
+
++ (NSString *)imageNameForHeartWithStatusOf:(BOOL)isFavorite {
+    
+    return isFavorite ? @"heart-filled" : @"heart";
     
 }
 

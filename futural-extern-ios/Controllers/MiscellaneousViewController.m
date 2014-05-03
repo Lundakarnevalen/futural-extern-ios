@@ -40,6 +40,7 @@
         LKButton *button = [LKLayout buttonForCell:cell
                                    withStrokeColor:[LKColor colorWithIdentifier:LKColorBeige]
                                           andImage:[place imageForPlace]];
+        button.identifier = place.name;
         button.tag = index; //identifier
         [button addTarget:self action:@selector(cellClick:) forControlEvents:UIControlEventTouchUpInside];
         
@@ -56,9 +57,13 @@
 - (void)cellClick:(id)sender {
     
     LKButton *button = (LKButton *)sender;
+    NSString *identifier = [button.identifier lowercaseString];
     
-    //[self performSegueWithIdentifier:@"misc.detail" sender:button];
-    [self performSegueWithIdentifier:@"toRadioSegue" sender:button];
+    if([identifier isEqualToString:@"radion"]) {
+    
+        [self performSegueWithIdentifier:@"radio.play" sender:button];
+        
+    }
     
 }
 

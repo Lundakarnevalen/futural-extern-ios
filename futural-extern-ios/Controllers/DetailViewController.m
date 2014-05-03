@@ -57,10 +57,13 @@
         
     } else {
         
+        CGRect c = self.view.frame;
+        
         self.choiceVC.choices = [choices mutableCopy];
         self.choiceVC.strokeColor = self.logotypeImage.strokeColor;
         self.choiceVC.desiredBackgroundImage = self.coverImage.image;
         self.choiceVC.view.tag = viewTag;
+        self.choiceVC.view.frame = CGRectMake(c.origin.x, c.origin.y - self.navigationController.navigationBar.frame.size.height - 20, c.size.width, c.size.height); //make it fit (x)
         [self.view addSubview:self.choiceVC.view];
         
     }
@@ -101,6 +104,13 @@
     if(self.place.category == LKPlaceCategoryScene) { //if it's a place being shown.
         
         [self.sectionButton setTitle:@"EVENTS" forSegmentAtIndex:1];
+        
+    }
+    
+    if([self.place.subPlaces count] < 2 && self.place.category != LKPlaceCategoryScene) {
+     
+        NSLog(@"REMOVE");
+        [self.sectionButton setHidden:YES];
         
     }
     
@@ -184,34 +194,6 @@
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    
-    if([segue.identifier isEqualToString:@"detail.grid"]) {
-    
-        LKImage *logotype = self.logotypeImage;
-        MultipleChoicesViewController *choicesVC = segue.destinationViewController;
-        
-        choicesVC.strokeColor = logotype.strokeColor;
-        choicesVC.logotype = logotype.image;
-        choicesVC.desiredBackgroundImage = self.coverImage.image;
-        choicesVC.parentName = [self.place.name uppercaseString];
-        
-//        if(self.segueSubPlaces) {
-//            
-//            choicesVC.choices = self.place.subPlaces;
-//            
-//        } else {
-//            
-//            choicesVC.choices = [[self.karneval eventsAtPlaceWithIdentifier:self.place.identifier] mutableCopy];
-//            
-//        }
-//        
-//        [self resetSegueData];
-        
-    } else {
-        
-        //initiate map.
-        
-    }
     
 }
 
