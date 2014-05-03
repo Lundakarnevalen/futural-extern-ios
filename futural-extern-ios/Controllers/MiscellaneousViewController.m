@@ -22,6 +22,48 @@
 
 }
 
+- (void)viewDidAppear:(BOOL)animated {
+    
+    if(self.visitIdentifier) {
+        
+        NSLog(@"SHOW ME %@", self.visitIdentifier);
+        self.visitPlace = nil;
+        
+        for(LKPlace *place in [self miscPlaces]) {
+            
+            if([place.name isEqualToString:self.visitIdentifier]) {
+                
+                //self.visitPlace = place;
+                [self performSegueForName:place.name];
+                
+                //needs to be dynamic.
+                
+                break;
+                
+            }
+            
+        }
+        
+        self.visitIdentifier = nil;
+        
+    }
+    
+}
+
+- (void)performSegueForName:(NSString *)name {
+    
+    name = [name lowercaseString];
+    
+    NSLog(@"Segue requested for %@", name);
+    
+    if([name isEqualToString:@"radion"]) {
+        
+        [self performSegueWithIdentifier:@"radio.play" sender:self];
+        
+    }
+    
+}
+
 - (NSArray *)miscPlaces {
     
     return [self.karneval placesFilteredByCategories:[LKarneval LKPlaceFilterOther]];
@@ -40,6 +82,7 @@
         LKButton *button = [LKLayout buttonForCell:cell
                                    withStrokeColor:[LKColor colorWithIdentifier:LKColorBeige]
                                           andImage:[place imageForPlace]];
+        button.identifier = place.name;
         button.tag = index; //identifier
         [button addTarget:self action:@selector(cellClick:) forControlEvents:UIControlEventTouchUpInside];
         
@@ -56,9 +99,9 @@
 - (void)cellClick:(id)sender {
     
     LKButton *button = (LKButton *)sender;
+    NSString *identifier = [button.identifier lowercaseString];
     
-    //[self performSegueWithIdentifier:@"misc.detail" sender:button];
-    [self performSegueWithIdentifier:@"toRadioSegue" sender:button];
+    [self performSegueForName:identifier];
     
 }
 

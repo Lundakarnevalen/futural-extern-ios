@@ -342,13 +342,13 @@ const int NumberOfFilters = 3;
 
 + (NSArray *)LKPlaceFilterEntertainment {
     
-    return @[@(LKPlaceCategoryTent), @(LKPlaceCategoryScene), @(LKPlaceCategoryLottery), @(LKPlaceCategoryMinorEntertainment), @(LKPlaceCategoryEntertainment), @(LKPlaceCategoryShow), @(LKPlaceCategoryChildren), @(LKPlaceCategoryRadio), @(LKPlaceCategoryTickets)];
+    return @[@(LKPlaceCategoryTent), @(LKPlaceCategoryScene), @(LKPlaceCategoryLottery), @(LKPlaceCategoryMinorEntertainment), @(LKPlaceCategoryEntertainment), @(LKPlaceCategoryShow), @(LKPlaceCategoryChildren), @(LKPlaceCategoryTickets)];
     
 }
 
 + (NSArray *)LKPlaceFilterOther {
     
-    return @[@(LKPlaceCategoryToilet), @(LKPlaceCategoryFirstAid), @(LKPlaceCategoryChargingStation), @(LKPlaceCategoryShop), @(LKPlaceCategoryParking), @(LKPlaceCategoryPolice), @(LKPlaceCategoryATM), @(LKPlaceCategoryTrash), @(LKPlaceCategoryFireEscape), @(LKPlaceCategoryEntrance)];
+    return @[@(LKPlaceCategoryToilet), @(LKPlaceCategoryFirstAid), @(LKPlaceCategoryChargingStation), @(LKPlaceCategoryShop), @(LKPlaceCategoryParking), @(LKPlaceCategoryPolice), @(LKPlaceCategoryATM), @(LKPlaceCategoryTrash), @(LKPlaceCategoryFireEscape), @(LKPlaceCategoryEntrance), @(LKPlaceCategoryRadio)];
     
 }
 

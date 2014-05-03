@@ -17,6 +17,9 @@
 @property (nonatomic) LKGrid *grid;
 @property (nonatomic) LKarneval *karneval;
 
+@property (nonatomic) NSString *visitIdentifier;
+@property (nonatomic) LKPlace *visitPlace;
+
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 
 @end

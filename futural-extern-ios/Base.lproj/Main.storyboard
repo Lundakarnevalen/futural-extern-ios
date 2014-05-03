@@ -112,7 +112,7 @@
                                 <rect key="frame" x="-5" y="0.0" width="330" height="173"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
-                            <imageView hidden="YES" userInteractionEnabled="NO" alpha="0.49999999999999961" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="background-moln" translatesAutoresizingMaskIntoConstraints="NO" id="pJv-Xu-jU8" userLabel="clouds">
+                            <imageView userInteractionEnabled="NO" alpha="0.49999999999999961" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="background-moln" translatesAutoresizingMaskIntoConstraints="NO" id="pJv-Xu-jU8" userLabel="clouds">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="173"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
@@ -258,7 +258,6 @@
                         <outlet property="statusView" destination="BeB-aw-b78" id="QAX-RY-M0j"/>
                         <outlet property="subHeaderLabel" destination="uPS-vA-m5k" id="V0c-HF-gcP"/>
                         <segue destination="sZB-Gn-BVz" kind="push" identifier="detail.grid" id="Ghv-ok-8HG"/>
-                        <segue destination="zIJ-wH-zWT" kind="modal" identifier="map.detail" id="LVi-hm-5OW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nZT-61-A41" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -298,7 +297,6 @@
                     <connections>
                         <outlet property="backgroundImage" destination="WBh-D5-FZj" id="jlI-7e-nbN"/>
                         <outlet property="scrollView" destination="ahS-RD-Uoz" id="2Pl-vM-cSs"/>
-                        <segue destination="zIJ-wH-zWT" kind="modal" identifier="map.detail" id="ayh-sl-m68"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="feb-w1-9IO" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -356,34 +354,38 @@
                                                     <rect key="frame" x="14" y="18" width="37" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="10"/>
-                                                    <color key="textColor" red="0.29803922772407532" green="0.31764706969261169" blue="0.42352944612503052" alpha="1" colorSpace="deviceRGB"/>
+                                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="deviceRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="PLATS" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AaV-oq-WEe">
                                                     <rect key="frame" x="116" y="26" width="156" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="10"/>
-                                                    <color key="textColor" red="0.29803922772407532" green="0.31764706969261169" blue="0.42352944612503052" alpha="1" colorSpace="deviceRGB"/>
+                                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="deviceRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="FÖRESTÄLLNING" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fFE-Mw-kBh">
                                                     <rect key="frame" x="116" y="44" width="156" height="29"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="18"/>
-                                                    <color key="textColor" red="0.29803922772407532" green="0.31764706969261169" blue="0.42352944612503052" alpha="1" colorSpace="deviceRGB"/>
+                                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="deviceRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="13:30" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0OC-A7-YAh">
                                                     <rect key="frame" x="14" y="66" width="37" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="10"/>
-                                                    <color key="textColor" red="0.29803922772407532" green="0.31764706969261169" blue="0.42352944612503052" alpha="1" colorSpace="deviceRGB"/>
+                                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="deviceRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <button opaque="NO" tag="6" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8WH-1b-2nI">
-                                                    <rect key="frame" x="280" y="41" width="20" height="17"/>
+                                                <imageView userInteractionEnabled="NO" tag="7" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="heart" translatesAutoresizingMaskIntoConstraints="NO" id="KY3-XO-BIc">
+                                                    <rect key="frame" x="286" y="38" width="24" height="24"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <state key="normal" image="heart">
+                                                </imageView>
+                                                <button opaque="NO" tag="6" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8WH-1b-2nI">
+                                                    <rect key="frame" x="275" y="0.0" width="45" height="100"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <state key="normal">
                                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
                                                     <state key="selected" image="heart-filled"/>
@@ -407,11 +409,12 @@
                     <navigationItem key="navigationItem" id="FwE-jU-bDQ">
                         <nil key="title"/>
                         <segmentedControl key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="cdC-9T-oxQ">
-                            <rect key="frame" x="93" y="7" width="135" height="30"/>
+                            <rect key="frame" x="35" y="7" width="251" height="30"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <segments>
-                                <segment title="Alla"/>
+                                <segment title="Kommande"/>
                                 <segment title="Favoriter"/>
+                                <segment title="Alla"/>
                             </segments>
                             <connections>
                                 <action selector="sectionChanged:" destination="HRp-1t-hkA" eventType="valueChanged" id="Tk2-oH-1wl"/>
@@ -504,34 +507,14 @@
                     <navigationItem key="navigationItem" id="xqZ-aM-gXv"/>
                     <connections>
                         <outlet property="scrollView" destination="Sm7-jv-mlW" id="cWe-6F-606"/>
-                        <segue destination="hrp-zr-VQ1" kind="push" identifier="misc.detail" id="S9e-OK-3i2"/>
-                        <segue destination="ox8-el-fR8" kind="push" identifier="toRadioSegue" id="Mcq-zf-6jP"/>
+                        <segue destination="ox8-el-fR8" kind="push" identifier="radio.play" id="Mcq-zf-6jP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mae-eN-f30" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1080" y="-465"/>
         </scene>
-        <!--Miscellaneous Detail View Controller-->
-        <scene sceneID="otp-W0-CvV">
-            <objects>
-                <viewController id="hrp-zr-VQ1" customClass="MiscellaneousDetailViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="EIN-V0-l8n"/>
-                        <viewControllerLayoutGuide type="bottom" id="eUb-JN-2Mg"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="BiR-4k-05B">
-                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="vJ3-ZH-rvL"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="LVj-Oq-nbV" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1994" y="-465"/>
-        </scene>
-        <!--Radio View Controller - RADIO-->
+        <!--Radio View Controller-->
         <scene sceneID="VqL-lu-d3h">
             <objects>
                 <viewController id="ox8-el-fR8" customClass="RadioViewController" sceneMemberID="viewController">
@@ -572,14 +555,14 @@
                             <constraint firstAttribute="trailing" secondItem="Hd5-qq-7wQ" secondAttribute="trailing" id="meV-RT-0ey"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="RADIO" id="4tz-SY-zbL"/>
+                    <navigationItem key="navigationItem" id="4tz-SY-zbL"/>
                     <connections>
                         <outlet property="playPauseButton" destination="Fgt-oS-Enp" id="quF-fi-jve"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LAm-hg-w90" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2375" y="23"/>
+            <point key="canvasLocation" x="2028" y="-303"/>
         </scene>
         <!--Navigation View Controller - Mat-->
         <scene sceneID="ZBc-cH-Bw5">
@@ -677,7 +660,7 @@
                         <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" pitchEnabled="NO" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VOy-Cp-HdC">
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" rotateEnabled="NO" pitchEnabled="NO" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VOy-Cp-HdC">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <gestureRecognizers/>
@@ -717,13 +700,7 @@
                             <constraint firstAttribute="trailing" secondItem="ovd-0P-KLA" secondAttribute="trailing" constant="-15" id="l6Y-fz-qke"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="bCb-Yy-j4V">
-                        <barButtonItem key="rightBarButtonItem" image="icon-filter" id="aCE-94-hbU">
-                            <connections>
-                                <action selector="showMapButtonClicked:" destination="4LJ-BV-Ygh" id="LkD-8Q-zA6"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" id="bCb-Yy-j4V"/>
                     <connections>
                         <outlet property="mapView" destination="VOy-Cp-HdC" id="MAY-Rm-AJw"/>
                         <segue destination="CBE-hh-3D3" kind="modal" identifier="createAnnotationSegue" id="dlX-3D-OP5"/>
@@ -880,7 +857,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1hv-Jg-Pev" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2414" y="-1182"/>
+            <point key="canvasLocation" x="2293" y="-1268"/>
         </scene>
         <!--Create Annotations View Controller-->
         <scene sceneID="wks-JV-UTP">
@@ -1025,7 +1002,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8Yw-uB-HgK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1877" y="-1268"/>
+            <point key="canvasLocation" x="1884" y="-1268"/>
         </scene>
         <!--Navigation View Controller - Karta-->
         <scene sceneID="keh-4I-Q0z">
@@ -1064,7 +1041,6 @@
         <image name="heart" width="40" height="35"/>
         <image name="heart-filled" width="40" height="35"/>
         <image name="icon-cash" width="25" height="17"/>
-        <image name="icon-filter" width="20" height="20"/>
         <image name="icon-kort" width="25" height="17"/>
         <image name="map" width="24" height="24"/>
         <image name="misc" width="25" height="18"/>
@@ -1082,6 +1058,5 @@
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
         <segue reference="aWC-mC-OV9"/>
-        <segue reference="LVi-hm-5OW"/>
     </inferredMetricsTieBreakers>
 </document>

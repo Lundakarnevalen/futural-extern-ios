@@ -8,6 +8,9 @@
 
 #import "MapViewController.h"
 #import "ECSlidingViewController.h"
+#import "EntertainmentViewController.h"
+#import "FoodViewController.h"
+#import "MiscellaneousViewController.h"
 
 #import "LKAnnotation.h"
 #import "LKAnnotationView.h"
@@ -219,9 +222,58 @@
                                                   MKCoordinateSpanMake(0.0038183853724191863, 0.0047661187034577779));
 }
 
-- (void)mapView:(MKMapView *)mapView regionDidChangeAnimated:(BOOL)animated {
+- (void)mapView:(MKMapView *)mapView didSelectAnnotationView:(MKAnnotationView *)view {
+    
+    LKAnnotationView *annotationView = (LKAnnotationView *)view;
+    LKPlace *place = annotationView.annotation.place;
+    
+    NSDictionary *filters = @{
+                              @"entertainment" : [LKarneval LKPlaceFilterEntertainment],
+                              @"food" : [LKarneval LKPlaceFilterFood],
+                              @"misc" : [LKarneval LKPlaceFilterOther]
+                         };
+    
+    NSDictionary *tabIndexes = @{
+                                 @"entertainment" : @0,
+                                 @"food" : @1,
+                                 @"misc" : @4
+                                 }; //change this if the order of the tabs changes.
+    
+    [filters enumerateKeysAndObjectsUsingBlock:^(id key, id obj, BOOL *stop) {
+       
+        NSArray *currentFilter = (NSArray *)obj;
+        
+        [currentFilter enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+           
+            LKPlaceCategory category = [obj integerValue]; //inside of nsnumber.
+            
+            if(category == place.category) {
+                
+                NSInteger tabIndex = [tabIndexes[key] integerValue]; //nsnumbers
+                
+                [[[self.tabBarController viewControllers] objectAtIndex:tabIndex] popToRootViewControllerAnimated:NO];
+                
+                NSLog(@"This is contained inside of %@.", key);
+                EntertainmentViewController *vc = (EntertainmentViewController *)[[[self.tabBarController viewControllers] objectAtIndex:tabIndex] visibleViewController]; //fifän.
+                vc.visitIdentifier = place.parent.name;
+                vc.visitPlace = place.parent;
+                
+                [self.tabBarController setSelectedIndex:tabIndex];
+                
+            }
+            
+        }];
+        
+    }];
+    
+    NSLog(@"This annotiation is %@", annotationView.annotation.place.parent.identifier);
+    
+}
+
+- (void)mapViewWillStartRenderingMap:(MKMapView *)mapView {
+    
     NSLog(@"%f, %f",mapView.region.span.latitudeDelta, mapView.region.span.longitudeDelta);
-   
+    
     if (mapView.region.span.latitudeDelta > 0.0055911036392117808) {
         [self returnToCenterMap];
     } else if (mapView.region.center.latitude < 55.70295306978420057931) {
@@ -236,5 +288,16 @@
     
 }
 
+- (LKarneval *)karneval {
+    
+    if(!_karneval) {
+        
+        _karneval = [LKarneval sharedLKarneval];
+        
+    }
+    
+    return _karneval;
+    
+}
 
 @end

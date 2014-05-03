@@ -22,6 +22,33 @@
     
 }
 
+- (void)viewDidAppear:(BOOL)animated {
+    
+    if(self.visitIdentifier) {
+        
+        NSLog(@"SHOW ME %@", self.visitIdentifier);
+        self.visitPlace = nil;
+        
+        for(LKPlace *place in [self foodPlaces]) {
+            
+            if([place.name isEqualToString:self.visitIdentifier]) {
+                
+                self.visitPlace = place;
+                
+                [self performSegueWithIdentifier:@"food.detail" sender:self];
+                
+                break;
+                
+            }
+            
+        }
+        
+        self.visitIdentifier = nil;
+        
+    }
+    
+}
+
 - (NSArray *)foodPlaces {
     
     return [self.karneval placesFilteredByCategories:[LKarneval LKPlaceFilterFood]];
@@ -62,12 +89,21 @@
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     
-    LKButton *button = (LKButton *)sender;
-    LKPlace *place = [[self foodPlaces] objectAtIndex:button.tag];
-    
     DetailViewController *detailVC = [segue destinationViewController];
-    detailVC.place = place;
     detailVC.segueIdentifier = segue.identifier;
+    
+    if([sender class] == [LKButton class]) {
+        
+        LKButton *button = (LKButton *)sender;
+        LKPlace *place = [[self foodPlaces] objectAtIndex:button.tag];
+        
+        detailVC.place = place;
+        
+    } else { //segue via map.
+        
+        detailVC.place = self.visitPlace;
+        
+    }
     
 }
 

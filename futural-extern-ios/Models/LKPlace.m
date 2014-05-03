@@ -145,6 +145,18 @@
     
 }
 
+- (LKPlaceCategory)category {
+    
+    if(_category == 0 && self.parent) {
+        
+        _category = self.parent.category;
+        
+    }
+    
+    return _category;
+    
+}
+
 #pragma mark Lazy Instantiation
 
 - (NSMutableArray *)paymentOptions {

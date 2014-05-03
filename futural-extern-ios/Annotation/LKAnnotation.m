@@ -21,6 +21,8 @@
     if (self) {
         
         LKPlace *subPlace = [place.subPlaces objectAtIndex:positionIndex];
+        
+        self.place = subPlace;
         coordinate = subPlace.position;
         title = [subPlace.name uppercaseString];
         self.image = [place imageForAnnotation];
