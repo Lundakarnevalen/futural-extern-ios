@@ -7,6 +7,7 @@
 //
 
 #import "RadioViewController.h"
+#import "LKLayout.h"
 #import <AVFoundation/AVFoundation.h>
 
 @interface RadioViewController ()
@@ -15,6 +16,13 @@
 @end
 
 @implementation RadioViewController
+
+-(void)viewDidLoad {
+    [super viewDidLoad];
+    
+    self.title = [LKLayout defaultTitle];
+    
+}
 
 - (IBAction)playButtonPressed:(id)sender {
     

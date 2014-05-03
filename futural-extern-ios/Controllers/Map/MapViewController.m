@@ -47,11 +47,7 @@
         [self.mapView addOverlay:map];
     }
     
-    
-    //self.mapView.mapType = MKMapTypeSatellite;
-    self.mapView.region = MKCoordinateRegionMake(
-                                             CLLocationCoordinate2DMake(55.705714087790462, 13.19449706379363),
-                                             MKCoordinateSpanMake(0.0055568226665982934, 0.0069360886253946319));
+    [self returnToCenterMap];
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(filterMapTableViewRowDidSelect:) name:FilterMapTableViewRowDidSelect object:nil];
 
@@ -270,7 +266,7 @@
     
 }
 
-- (void)mapViewWillStartRenderingMap:(MKMapView *)mapView {
+- (void)mapView:(MKMapView *)mapView regionDidChangeAnimated:(BOOL)animated {
     
     NSLog(@"%f, %f",mapView.region.span.latitudeDelta, mapView.region.span.longitudeDelta);
     
