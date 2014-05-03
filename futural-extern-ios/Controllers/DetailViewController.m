@@ -113,7 +113,7 @@
         
     }
     
-    MKCoordinateRegion region = MKCoordinateRegionMake(self.place.position, MKCoordinateSpanMake(1, 1));
+    MKCoordinateRegion region = MKCoordinateRegionMake(self.place.position, MKCoordinateSpanMake(0, 0));
     
     [self.miniMap setRegion:region];
     
