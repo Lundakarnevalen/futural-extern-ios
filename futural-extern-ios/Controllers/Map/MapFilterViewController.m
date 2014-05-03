@@ -39,7 +39,7 @@ NSString *const FilterMapTableViewRowDidSelect             = @"FilterMapTableVie
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
-    return NumberOfFilters+1;
+    return NumberOfFilters+2;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -67,7 +67,7 @@ NSString *const FilterMapTableViewRowDidSelect             = @"FilterMapTableVie
         case 2:
             if (!cell) cell = [tableView dequeueReusableCellWithIdentifier:@"FilterCell" forIndexPath:indexPath];
             image = (UIImageView *)[[cell contentView] viewWithTag:TAG_IMG];
-            image.image = [UIImage imageNamed:@"filter-toilet"];
+            image.image = [UIImage imageNamed:@"filter-bathroom"];
             label = (UILabel *)[[cell contentView] viewWithTag:TAG_LABEL];
             label.text = @"TOALETTER";
             label.textColor = ([self.filter[@"toilet"] boolValue]) ? [UIColor whiteColor] : [[UIColor blackColor] colorWithAlphaComponent:0.4];
@@ -90,6 +90,9 @@ NSString *const FilterMapTableViewRowDidSelect             = @"FilterMapTableVie
             break;
         case 5:
             if (!cell) cell = [tableView dequeueReusableCellWithIdentifier:@"ShowEverythingCell" forIndexPath:indexPath];
+            break;
+        case 6:
+            if (!cell) cell = [tableView dequeueReusableCellWithIdentifier:@"HideEverythingCell" forIndexPath:indexPath];
             break;
         default:
             
@@ -125,6 +128,14 @@ NSString *const FilterMapTableViewRowDidSelect             = @"FilterMapTableVie
             [self.filter setValue:[NSNumber numberWithBool:YES] forKey:@"toilet"];
             [self.filter setValue:[NSNumber numberWithBool:YES] forKey:@"trash"];
             [self.filter setValue:[NSNumber numberWithBool:YES] forKey:@"other"];
+            break;
+        case 6:
+            [self.filter setValue:[NSNumber numberWithBool:NO] forKey:@"food"];
+            [self.filter setValue:[NSNumber numberWithBool:NO] forKey:@"entertainment"];
+            [self.filter setValue:[NSNumber numberWithBool:NO] forKey:@"toilet"];
+            [self.filter setValue:[NSNumber numberWithBool:NO] forKey:@"trash"];
+            [self.filter setValue:[NSNumber numberWithBool:NO] forKey:@"other"];
+            break;
         default:
             break;
     }
