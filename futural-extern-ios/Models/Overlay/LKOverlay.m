@@ -17,10 +17,10 @@
     self = [super init];
     if (self) {
         self.image = image;
-        coordinate = CLLocationCoordinate2DMake(	55.707550, 13.191905);
+        coordinate = CLLocationCoordinate2DMake(55.70738293380098582475, 13.19098967697549085187);
         MKMapPoint upperLeft = MKMapPointForCoordinate(self.coordinate);
         
-        boundingMapRect = MKMapRectMake(upperLeft.x, upperLeft.y, 3850, 3850*1.5075);
+        boundingMapRect = MKMapRectMake(upperLeft.x, upperLeft.y, 5225, 5225);
     }
     
     return self;
