@@ -15,9 +15,6 @@
 
 @interface DetailViewController() { }
 
-@property (nonatomic) BOOL segueEvents;
-@property (nonatomic) BOOL segueSubPlaces;
-
 @property (nonatomic) MultipleChoicesViewController *choiceVC;
 
 @end
@@ -31,15 +28,7 @@
     [self setTitle:[LKLayout defaultTitle]];
     
     [self customizeView];
-    [self resetSegueData];
 
-}
-
-- (void)resetSegueData {
-    
-    self.segueEvents = NO;
-    self.segueSubPlaces = NO;
-    
 }
 
 - (IBAction)sectionChanged:(id)sender {
@@ -48,21 +37,31 @@
     
     UISegmentedControl *segment = sender;
     NSInteger index = segment.selectedSegmentIndex;
+
+    NSArray *choices;
+    
+    if(self.place.category == LKPlaceCategoryScene) {
+        
+        choices = [self.karneval eventsAtPlaceWithIdentifier:self.place.identifier];
+
+    } else {
+        
+        choices = self.place.subPlaces;
+        
+    }
     
     if(self.choiceVC && index == 0) {
     
         UIView *choiceView = [self.view viewWithTag:viewTag];
         [choiceView removeFromSuperview];
-        NSLog(@"Pop that.");
         
     } else {
         
-        self.choiceVC.choices = self.place.subPlaces;
+        self.choiceVC.choices = [choices mutableCopy];
+        self.choiceVC.strokeColor = self.logotypeImage.strokeColor;
         self.choiceVC.desiredBackgroundImage = self.coverImage.image;
         self.choiceVC.view.tag = viewTag;
-        self.choiceVC.strokeColor = self.logotypeImage.strokeColor;
         [self.view addSubview:self.choiceVC.view];
-        NSLog(@"Adding that.");
         
     }
     
@@ -136,7 +135,7 @@
         [self.headerLabel setText:[self.event.name uppercaseString]];
         [self.subHeaderLabel setText:[self.event.place.name uppercaseString]];
         [self.descriptionView setText:self.event.information];
-        headerText = [[NSString stringWithFormat:@"Vad är %@?", self.event.name] uppercaseString];
+        headerText = [[NSString stringWithFormat:@"Vem är %@?", self.event.name] uppercaseString];
         coverImage = [self.event coverImage];
         
     }
@@ -165,29 +164,14 @@
     if(self.place) {
         
         NSInteger subPlaces = [self.place.subPlaces count];
-        NSInteger events = [[self.karneval eventsAtPlaceWithIdentifier:self.place.identifier] count];
         
         if(subPlaces > 1) {
             
-            self.segueSubPlaces = YES;
-            [self performSegueWithIdentifier:@"detail.grid" sender:sender];
+            NSLog(@"Multiple places that are being requested, filter excluesively.");
             
         } else {
-            
-            if(events > 1) {
                 
-                self.segueEvents = YES;
-                [self performSegueWithIdentifier:@"detail.grid" sender:sender];
-                
-            } else if(events == 1) {
-                
-                NSLog(@"This places has one event.");
-                
-            } else {
-                
-                NSLog(@"Check the place position and navigate there.");
-                
-            }
+            NSLog(@"Check the place position and navigate there.");
             
         }
         
@@ -211,17 +195,17 @@
         choicesVC.desiredBackgroundImage = self.coverImage.image;
         choicesVC.parentName = [self.place.name uppercaseString];
         
-        if(self.segueSubPlaces) {
-            
-            choicesVC.choices = self.place.subPlaces;
-            
-        } else {
-            
-            choicesVC.choices = [[self.karneval eventsAtPlaceWithIdentifier:self.place.identifier] mutableCopy];
-            
-        }
-        
-        [self resetSegueData];
+//        if(self.segueSubPlaces) {
+//            
+//            choicesVC.choices = self.place.subPlaces;
+//            
+//        } else {
+//            
+//            choicesVC.choices = [[self.karneval eventsAtPlaceWithIdentifier:self.place.identifier] mutableCopy];
+//            
+//        }
+//        
+//        [self resetSegueData];
         
     } else {
         

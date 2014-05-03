@@ -63,17 +63,24 @@
     
 }
 
-- (NSInteger)secondsLeft {
-    
-    //calculate how many seconds until the event is taking place (for use with push messages).
-    return 3600;
-    
-}
-
 - (NSString *)timeLeft {
     
     //return the time left until launch date, thought that we could use the following format dd:hh:mm (for use with views)
     return @"dd:hh:mm";
+    
+}
+
+- (void)enableNotification {
+
+#warning not done.
+    NSString *message = [NSString stringWithFormat:@"%@ börjar om 15 min vid %@.", self.name, self.place.name];
+    NSDate *firingDate = [self.start dateByAddingTimeInterval:-60*15];
+    
+    UILocalNotification* localNotification = [[UILocalNotification alloc] init];
+    localNotification.fireDate = firingDate;
+    localNotification.alertBody = message;
+    localNotification.timeZone = [NSTimeZone defaultTimeZone];
+    [[UIApplication sharedApplication] scheduleLocalNotification:localNotification];
     
 }
 
@@ -150,6 +157,32 @@
     }
     
     return _place;
+    
+}
+
+- (UILocalNotification *)notification {
+    
+    if(!_notification) {
+        
+#warning not done.
+//        UIApplication *app = [UIApplication sharedApplication];
+//        NSArray *eventArray = [app scheduledLocalNotifications];
+//        for (int i=0; i<[eventArray count]; i++)
+//        {
+//            UILocalNotification* oneEvent = [eventArray objectAtIndex:i];
+//            NSDictionary *userInfoCurrent = oneEvent.userInfo;
+//            NSString *uid=[NSString stringWithFormat:@"%@",[userInfoCurrent valueForKey:@"uid"]];
+//            if ([uid isEqualToString:uidtodelete])
+//            {
+//                //Cancelling local notification
+//                [app cancelLocalNotification:oneEvent];
+//                break;
+//            }
+//        }
+        
+    }
+    
+    return _notification;
     
 }
 
