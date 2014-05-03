@@ -21,6 +21,7 @@
     [super viewDidLoad];
     
     self.title = [LKLayout defaultTitle];
+    
 }
 
 - (IBAction)playButtonPressed:(id)sender {
