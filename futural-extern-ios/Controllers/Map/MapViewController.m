@@ -135,6 +135,9 @@
         self.filter = [[NSMutableDictionary alloc] init];
         [self.filter setValue:[NSNumber numberWithBool:YES] forKey:@"food"];
         [self.filter setValue:[NSNumber numberWithBool:YES] forKey:@"entertainment"];
+        [self.filter setValue:[NSNumber numberWithBool:YES] forKey:@"other"];
+        [self.filter setValue:[NSNumber numberWithBool:YES] forKey:@"toilet"];
+        [self.filter setValue:[NSNumber numberWithBool:YES] forKey:@"trash"];
         [[NSUserDefaults standardUserDefaults] setObject:self.filter forKey:@"filter"];
     }
     
@@ -144,6 +147,14 @@
     
     if ([self.filter[@"entertainment"] boolValue]) {
         [places addObjectsFromArray:[LKarneval LKPlaceFilterEntertainment]];
+    }
+    
+    if ([self.filter[@"toilet"] boolValue]) {
+        [places addObjectsFromArray:[LKarneval LKPlaceFilterToilet]];
+    }
+    
+    if ([self.filter[@"trash"] boolValue]) {
+        [places addObjectsFromArray:[LKarneval LKPlaceFilterTrash]];
     }
     
     if ([self.filter[@"other"] boolValue]) {
@@ -226,12 +237,16 @@
     NSDictionary *filters = @{
                               @"entertainment" : [LKarneval LKPlaceFilterEntertainment],
                               @"food" : [LKarneval LKPlaceFilterFood],
+                              @"toilet" : [LKarneval LKPlaceFilterToilet],
+                              @"trash" : [LKarneval LKPlaceFilterTrash],
                               @"misc" : [LKarneval LKPlaceFilterOther]
                          };
     
     NSDictionary *tabIndexes = @{
                                  @"entertainment" : @0,
                                  @"food" : @1,
+                                 @"toilet" : @4,
+                                 @"trash" : @4,
                                  @"misc" : @4
                                  }; //change this if the order of the tabs changes.
     

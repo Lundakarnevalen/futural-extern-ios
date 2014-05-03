@@ -9,7 +9,7 @@
 #define PLIST_PLACES "Places"
 #define PLIST_EVENTS "Events"
 
-const int NumberOfFilters = 3;
+const int NumberOfFilters = 5;
 
 @implementation LKarneval
 
@@ -352,10 +352,26 @@ const int NumberOfFilters = 3;
     
 }
 
++ (NSArray *)LKPlaceFilterToilet {
+    
+    return @[@(LKPlaceCategoryToilet)];
+    
+}
+
++ (NSArray *)LKPlaceFilterTrash {
+    
+    return @[@(LKPlaceCategoryTrash)];
+    
+}
+
 + (NSArray *)LKPlaceFilterOther {
     
-    return @[@(LKPlaceCategoryToilet), @(LKPlaceCategoryFirstAid), @(LKPlaceCategoryChargingStation), @(LKPlaceCategoryShop), @(LKPlaceCategoryParking), @(LKPlaceCategoryPolice), @(LKPlaceCategoryATM), @(LKPlaceCategoryTrash), @(LKPlaceCategoryFireEscape), @(LKPlaceCategoryEntrance), @(LKPlaceCategoryRadio)];
+    return @[ @(LKPlaceCategoryFirstAid), @(LKPlaceCategoryChargingStation), @(LKPlaceCategoryShop), @(LKPlaceCategoryParking), @(LKPlaceCategoryPolice), @(LKPlaceCategoryATM), @(LKPlaceCategoryFireEscape), @(LKPlaceCategoryEntrance), @(LKPlaceCategoryRadio)];
     
+}
+
++ (NSArray *)LKPlaceFilterMisc {
+    return [[[self.class LKPlaceFilterOther] arrayByAddingObjectsFromArray:[self.class LKPlaceFilterTrash]] arrayByAddingObjectsFromArray:[self.class LKPlaceFilterToilet]];
 }
 
 @end
