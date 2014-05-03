@@ -23,7 +23,7 @@
                             <rect key="frame" x="0.0" y="0.0" width="75" height="90"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
-                                <imageView userInteractionEnabled="NO" tag="1001" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="hamburger" translatesAutoresizingMaskIntoConstraints="NO" id="ssj-DT-Jiv">
+                                <imageView userInteractionEnabled="NO" tag="1001" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="hamburger" translatesAutoresizingMaskIntoConstraints="NO" id="ssj-DT-Jiv" customClass="LKImage">
                                     <rect key="frame" x="22" y="12" width="30" height="30"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 </imageView>
@@ -43,7 +43,7 @@
         </view>
     </objects>
     <resources>
-        <image name="bubble" width="459" height="558"/>
+        <image name="bubble" width="106" height="119"/>
         <image name="hamburger" width="145" height="112"/>
     </resources>
 </document>

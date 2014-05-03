@@ -8,6 +8,7 @@
 
 #import "LKAnnotationView.h"
 #import "LKLayout.h"
+#import "LKImage.h"
 
 @implementation LKAnnotationView
 
@@ -23,9 +24,12 @@
         
         UIView *annotationView = [[[NSBundle mainBundle] loadNibNamed:@"LKAnnotation" owner:self options:nil] firstObject];
         UILabel *label = (UILabel *)[annotationView viewWithTag:TAG_LABEL];
-        UIImageView *image = (UIImageView *)[annotationView viewWithTag:TAG_IMAGE];
+        LKImage *image = (LKImage *)[annotationView viewWithTag:TAG_IMAGE];
         
+        image.strokeColor = [UIColor whiteColor];
         image.image = ((LKAnnotation *) self.annotation).image;
+        [image drawCircularImage:image.strokeColor];
+        
         label.text = self.annotation.title;
         
         [label setFont:[LKLayout detailMapHeaderFont]];

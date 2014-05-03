@@ -83,6 +83,7 @@
         }
         
         [self.mapView setVisibleMapRect:zoomRect animated:YES];
+        self.visitPlace = nil;
         
     }
     
