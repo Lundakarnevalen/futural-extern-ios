@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MapKit/MapKit.h"
 #import "LKImage.h"
 
 @interface DetailViewController : UIViewController
@@ -27,6 +28,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *informationHeader;
 @property (weak, nonatomic) IBOutlet UITextView *descriptionView;
 @property (weak, nonatomic) IBOutlet UISegmentedControl *sectionButton;
+@property (weak, nonatomic) IBOutlet MKMapView *miniMap;
 
 @property (nonatomic) NSString *segueIdentifier; //the segue identifier used to show this view.
 @property (nonatomic) LKarneval *karneval;
