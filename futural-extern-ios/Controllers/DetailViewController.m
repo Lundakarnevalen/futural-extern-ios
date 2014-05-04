@@ -153,26 +153,35 @@
     
     MKCoordinateRegion region;
     LKAnnotation *annotation;
+    LKPlace *place;
     
     if(self.place) {
      
         NSInteger randomIndex = arc4random() % [self.place.subPlaces count];
-        LKPlace *randomPlace = [self.place.subPlaces objectAtIndex:randomIndex];
-        region = MKCoordinateRegionMake(randomPlace.position, MKCoordinateSpanMake(0.0001, 0.0001));
+        place = [self.place.subPlaces objectAtIndex:randomIndex];
         annotation = [[LKAnnotation alloc] initWithPlace:self.place andPositionIndexOf:randomIndex];
         
     } else {
         
-        LKPlace *place = (LKPlace *)[self.event.place.subPlaces firstObject];
-        
-        region = MKCoordinateRegionMake(place.position, MKCoordinateSpanMake(0.0001, 0.0001));
+        place = (LKPlace *)[self.event.place.subPlaces firstObject];
         annotation = [[LKAnnotation alloc] initWithPlace:place];
         
     }
     
-    [self.miniMap renderOverlay];
-    [self.miniMap addAnnotation:annotation];
-    [self.miniMap setRegion:region];
+    BOOL placeIsNil = (place == nil);
+    
+    [self.mapLabel setHidden:placeIsNil];
+    [self.mapView setHidden:placeIsNil];
+    
+    if(place) {
+        
+        region = MKCoordinateRegionMake(place.position, MKCoordinateSpanMake(0.0001, 0.0001));
+        
+        [self.miniMap renderOverlay];
+        [self.miniMap addAnnotation:annotation];
+        [self.miniMap setRegion:region];
+        
+    }
     
     [LKLayout customizeSegment:self.sectionButton];
     

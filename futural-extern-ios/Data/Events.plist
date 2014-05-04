@@ -225,7 +225,7 @@
 	</dict>
 	<dict>
 		<key>identifier</key>
-		<string>tagetavgar</string>
+		<string>tåget</string>
 		<key>name</key>
 		<string>Tåget avgår</string>
 		<key>description</key>
@@ -259,7 +259,7 @@
 	</dict>
 	<dict>
 		<key>identifier</key>
-		<string>tagetavgar</string>
+		<string>tåget</string>
 		<key>name</key>
 		<string>Tåget avgår</string>
 		<key>description</key>
