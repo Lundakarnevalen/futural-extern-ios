@@ -1327,7 +1327,8 @@ Så borsta tänderna, glöm inte tandtråden och ta med hela familjen till Barne
 		<key>category</key>
 		<integer>21</integer>
 		<key>description</key>
-		<string>För att kunna gå in på Futuralkarnevalens område i Lundagård och se artister och de klassiska nöjena samt uppleva karnevalen i sin helhet, så krävs entrébiljett till karnevalsområdet. Entrébiljetter kan köpas vid varje entré till området. Vårrekommendation till dig är dock att köpa entrébiljett redan innan karnevalsdagarna för att undvika kön vid entréerna.</string>
+		<string>För att kunna gå in på Futuralkarnevalens område i Lundagård och se artister och de klassiska nöjena samt uppleva karnevalen i sin helhet, så krävs entrébiljett till karnevalsområdet. Entrébiljetter kan köpas vid varje entré till området. Vår
+rekommendation till dig är dock att köpa entrébiljett redan innan karnevalsdagarna för att undvika kön vid entréerna.</string>
 		<key>name</key>
 		<string>Biljetteriet</string>
 		<key>payment_options</key>
@@ -2613,9 +2614,9 @@ Så borsta tänderna, glöm inte tandtråden och ta med hela familjen till Barne
 				<key>position</key>
 				<dict>
 					<key>latitude</key>
-					<real>55.70512605161667</real>
+					<real>55.70605421252043</real>
 					<key>longitude</key>
-					<real>13.19529316574132</real>
+					<real>13.19455318842597</real>
 				</dict>
 			</dict>
 		</array>

@@ -26,14 +26,14 @@
     
     self.delegate = self;
     self.showsPointsOfInterest = NO; //remove coffee shops, restaurants, etc.
-    self.mapType = MKMapTypeSatellite; //remove street names.
+    //self.mapType = MKMapTypeSatellite; //remove street names.
     
     LKOverlay *map = [[LKOverlay alloc] initWithImage:[UIImage imageNamed:@"Lundakarnevalen"]];
     
     self.tintColor = [LKColor colorWithIdentifier:LKColorRed];
     
     if ([self respondsToSelector:@selector(addOverlay:level:)]) {
-        [self addOverlay:map  level:MKOverlayLevelAboveRoads];
+        [self addOverlay:map  level:MKOverlayLevelAboveLabels];
     } else {
         [self addOverlay:map];
     }
