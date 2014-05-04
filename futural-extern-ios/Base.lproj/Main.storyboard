@@ -3,6 +3,7 @@
     <dependencies>
         <deployment defaultVersion="1536" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--Tab Bar View Controller - LUNDAKARNEVALEN-->
@@ -108,9 +109,12 @@
                         <rect key="frame" x="0.0" y="64" width="320" height="455"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="cover-revyn" translatesAutoresizingMaskIntoConstraints="NO" id="eDk-KJ-zbB">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="cover-revyn" translatesAutoresizingMaskIntoConstraints="NO" id="eDk-KJ-zbB">
                                 <rect key="frame" x="-5" y="0.0" width="330" height="173"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="eDk-KJ-zbB" secondAttribute="height" multiplier="330:173" id="zyP-jO-eXM"/>
+                                </constraints>
                             </imageView>
                             <imageView userInteractionEnabled="NO" alpha="0.49999999999999961" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="background-moln" translatesAutoresizingMaskIntoConstraints="NO" id="pJv-Xu-jU8" userLabel="clouds">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="173"/>
@@ -135,7 +139,7 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="66" height="40"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             </mapView>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="14e-WN-NkG">
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="14e-WN-NkG">
                                                 <rect key="frame" x="0.0" y="0.0" width="66" height="40"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <state key="normal">
@@ -706,7 +710,13 @@
                             <constraint firstAttribute="trailing" secondItem="ovd-0P-KLA" secondAttribute="trailing" constant="-15" id="l6Y-fz-qke"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="bCb-Yy-j4V"/>
+                    <navigationItem key="navigationItem" id="bCb-Yy-j4V">
+                        <barButtonItem key="rightBarButtonItem" image="icon-filter" id="9Y1-c7-lmT">
+                            <connections>
+                                <action selector="showMapButtonClicked:" destination="4LJ-BV-Ygh" id="qo9-LP-k8m"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="mapView" destination="VOy-Cp-HdC" id="ope-2h-ibY"/>
                         <segue destination="CBE-hh-3D3" kind="modal" identifier="createAnnotationSegue" id="dlX-3D-OP5"/>
@@ -1071,6 +1081,7 @@
         <image name="heart" width="40" height="35"/>
         <image name="heart-filled" width="40" height="35"/>
         <image name="icon-cash" width="25" height="17"/>
+        <image name="icon-filter" width="20" height="20"/>
         <image name="icon-kort" width="25" height="17"/>
         <image name="map" width="24" height="24"/>
         <image name="misc" width="25" height="18"/>
