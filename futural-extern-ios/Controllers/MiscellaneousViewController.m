@@ -7,6 +7,7 @@
 //
 
 #import "MiscellaneousViewController.h"
+#import "DetailViewController.h"
 
 #import "LKLayout.h"
 
@@ -34,7 +35,7 @@
             if([place.name isEqualToString:self.visitIdentifier]) {
                 
                 //self.visitPlace = place;
-                [self performSegueForName:place.name];
+                [self performSegueForName:place.name withSender:place];
                 
                 //needs to be dynamic.
                 
@@ -50,7 +51,7 @@
     
 }
 
-- (void)performSegueForName:(NSString *)name {
+- (void)performSegueForName:(NSString *)name withSender:(id)sender {
     
     name = [name lowercaseString];
     
@@ -58,7 +59,11 @@
     
     if([name isEqualToString:@"radion"]) {
         
-        [self performSegueWithIdentifier:@"radio.play" sender:self];
+        [self performSegueWithIdentifier:@"radio.play" sender:sender];
+        
+    } else {
+        
+        [self performSegueWithIdentifier:@"misc.detail" sender:sender];
         
     }
     
@@ -101,11 +106,29 @@
     LKButton *button = (LKButton *)sender;
     NSString *identifier = [button.identifier lowercaseString];
     
-    [self performSegueForName:identifier];
+    [self performSegueForName:identifier withSender:sender];
     
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    
+    if([segue.identifier isEqualToString:@"misc.detail"]) {
+        
+        DetailViewController *vc = (DetailViewController *)segue.destinationViewController;
+        
+        if([sender class] == [LKButton class]) {
+            
+            LKButton *button = sender;
+            vc.place = [[self miscPlaces] objectAtIndex:button.tag];
+            
+        } else {
+            
+            vc.place = (LKPlace *)sender;
+            
+        }
+        
+    }
+    
     
 }
 
