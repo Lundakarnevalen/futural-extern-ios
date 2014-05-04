@@ -91,6 +91,7 @@
     NSString *headerText;
 
     [self.sectionButton setHidden:NO];
+    [self.statusView setBackgroundColor:[LKColor colorWithIdentifier:LKColorGreen]];
     
     if([self.segueIdentifier isEqualToString:@"food.detail"]) {
         
@@ -111,6 +112,7 @@
         informationBarColor = [LKColor colorWithIdentifier:LKColorBlue];
         logotypeStrokeColor = [UIColor whiteColor];
         [self.sectionButton setHidden:YES];
+        [self.statusView setBackgroundColor:[LKColor colorWithIdentifier:LKColorLightBlue]];
         
     }
     
@@ -155,31 +157,24 @@
     [LKLayout addInsetShadowToView:self.informationBar ofSize:3];
     [LKLayout addShadowToView:self.informationBar ofSize:3];
     
-    [self.statusView setBackgroundColor:[LKColor colorWithIdentifier:LKColorGreen]];
     [self.statusLabel setFont:[LKLayout detailMapHeaderFont]];
     [LKLayout addShadowToView:self.statusView ofSize:3];
     
     [self.cashLabel setFont:[LKLayout detailPaymentFont]];
     [self.cardLabel setFont:[LKLayout detailPaymentFont]];
     
+    NSString *timeSpan;
+    
     if(self.place) {
         
         [self.logotypeImage setImage:[self.place imageForPlace]];
         [self.headerLabel setText:[self.place.name uppercaseString]];
+        [self.subHeaderLabel setHidden:YES];
         [self.descriptionView setText:self.place.information];
         headerText = [[NSString stringWithFormat:@"Vad är %@?", self.place.name] uppercaseString];
         coverImage = [self.place coverImage];
         
-        NSString *timeSpan = [self.place timeSpan];
-        if(![timeSpan isEqualToString:@""]) {
-            
-            [self.statusLabel setText:[self.place timeSpan]];
-            [self.statusView setHidden:NO];
-            
-        } else {
-            
-            [self.statusView setHidden:YES];
-        }
+        timeSpan = [self.place timeSpan];
         
     } else { //event, hide symbols.
         
@@ -187,11 +182,23 @@
         
         [self.logotypeImage setImage:[self.event imageForEvent]];
         [self.headerLabel setText:[self.event.name uppercaseString]];
+        [self.subHeaderLabel setHidden:NO];
         [self.subHeaderLabel setText:[self.event.place.name uppercaseString]];
         [self.descriptionView setText:self.event.information];
         headerText = [[NSString stringWithFormat:@"Vem är %@?", self.event.name] uppercaseString];
         coverImage = [self.event coverImage];
+        timeSpan = [self.event formattedStartTime];
         
+    }
+    
+    if(!([timeSpan isEqualToString:@""] || [timeSpan isEqualToString:@"13:37"])) {
+        
+        [self.statusLabel setText:timeSpan];
+        [self.statusView setHidden:NO];
+        
+    } else {
+        
+        [self.statusView setHidden:YES];
     }
 
     [self.logotypeImage drawCircularImage:logotypeStrokeColor];

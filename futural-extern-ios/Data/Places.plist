@@ -1202,7 +1202,7 @@
 		<key>alcohol</key>
 		<false/>
 		<key>category</key>
-		<integer>19</integer>
+		<integer>6</integer>
 		<key>description</key>
 		<string>På området finns en sjukstuga (se karta) med läkare och sjuksköterskor som mer än gärna plåstrar om dig när du blir skadad, det är bara att gå dit! Utöver detta så kan du få hjälp av sjukvårdsteam som hela tiden rör sig på området.</string>
 		<key>name</key>
