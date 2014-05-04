@@ -322,7 +322,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="455"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="100" sectionHeaderHeight="75" sectionFooterHeight="1" translatesAutoresizingMaskIntoConstraints="NO" id="LVT-VY-gxW">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="100" sectionHeaderHeight="75" sectionFooterHeight="1" translatesAutoresizingMaskIntoConstraints="NO" id="LVT-VY-gxW">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="455"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -409,8 +409,10 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="LVT-VY-gxW" firstAttribute="top" secondItem="smr-w5-4G1" secondAttribute="bottom" id="THg-YX-fvE"/>
-                            <constraint firstItem="YXA-o7-HTJ" firstAttribute="top" secondItem="LVT-VY-gxW" secondAttribute="bottom" id="Ydz-0R-Fn3"/>
+                            <constraint firstItem="YXA-o7-HTJ" firstAttribute="top" secondItem="LVT-VY-gxW" secondAttribute="bottom" id="Gun-PW-En9"/>
+                            <constraint firstAttribute="trailing" secondItem="LVT-VY-gxW" secondAttribute="trailing" id="dDA-7i-feo"/>
+                            <constraint firstItem="LVT-VY-gxW" firstAttribute="top" secondItem="smr-w5-4G1" secondAttribute="bottom" id="nOd-PP-mYP"/>
+                            <constraint firstItem="LVT-VY-gxW" firstAttribute="leading" secondItem="hJ8-iv-Xl3" secondAttribute="leading" id="ynd-5E-RXI"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="FwE-jU-bDQ">
@@ -515,6 +517,7 @@
                     <connections>
                         <outlet property="scrollView" destination="Sm7-jv-mlW" id="cWe-6F-606"/>
                         <segue destination="ox8-el-fR8" kind="push" identifier="radio.play" id="Mcq-zf-6jP"/>
+                        <segue destination="aKP-kb-tFC" kind="push" identifier="misc.detail" id="S9K-Gu-3aE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mae-eN-f30" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1083,6 +1086,6 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="aWC-mC-OV9"/>
+        <segue reference="S9K-Gu-3aE"/>
     </inferredMetricsTieBreakers>
 </document>
