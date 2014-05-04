@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1A3576ED1916D641005649FA /* Places.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1A3576EC1916D641005649FA /* Places.plist */; };
 		1A411FEC1901A7BC00FF39F9 /* UILabel+FuturaFont.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A411FEB1901A7BC00FF39F9 /* UILabel+FuturaFont.m */; };
 		1A411FEF1901A98D00FF39F9 /* UIView+Shadow.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A411FEE1901A98D00FF39F9 /* UIView+Shadow.m */; };
 		1A411FF21901B1C700FF39F9 /* CreateAnnotationsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A411FF11901B1C700FF39F9 /* CreateAnnotationsViewController.m */; };
@@ -35,7 +36,6 @@
 		1AE8E56118F42FB50078EBDF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AE8E56018F42FB50078EBDF /* main.m */; };
 		1AE8E56518F42FB50078EBDF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AE8E56418F42FB50078EBDF /* AppDelegate.m */; };
 		1AE8E56818F42FB50078EBDF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1AE8E56618F42FB50078EBDF /* Main.storyboard */; };
-		1AF152C819059592006F2896 /* Places.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1AF152C719059591006F2896 /* Places.plist */; };
 		5703E5F01912C85F005DA0D2 /* scheduleTableHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5703E5EF1912C85F005DA0D2 /* scheduleTableHeader.xib */; };
 		5722E91018FD72F500BEE3A2 /* LKPlace.m in Sources */ = {isa = PBXBuildFile; fileRef = 5722E90F18FD72F500BEE3A2 /* LKPlace.m */; };
 		5722E91618FD7C3600BEE3A2 /* TabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5722E91518FD7C3600BEE3A2 /* TabBarViewController.m */; };
@@ -70,6 +70,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1A3576EC1916D641005649FA /* Places.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Places.plist; path = Data/Places.plist; sourceTree = "<group>"; };
 		1A411FEA1901A7BC00FF39F9 /* UILabel+FuturaFont.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UILabel+FuturaFont.h"; path = "Models/UILabel+FuturaFont.h"; sourceTree = "<group>"; };
 		1A411FEB1901A7BC00FF39F9 /* UILabel+FuturaFont.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UILabel+FuturaFont.m"; path = "Models/UILabel+FuturaFont.m"; sourceTree = "<group>"; };
 		1A411FED1901A98D00FF39F9 /* UIView+Shadow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+Shadow.h"; path = "Models/UIView+Shadow.h"; sourceTree = "<group>"; };
@@ -117,7 +118,6 @@
 		1AE8E56418F42FB50078EBDF /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = AppDelegate.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		1AE8E56718F42FB50078EBDF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1AE8E57318F42FB50078EBDF /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		1AF152C719059591006F2896 /* Places.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Places.plist; path = Data/Places.plist; sourceTree = "<group>"; };
 		5703E5EF1912C85F005DA0D2 /* scheduleTableHeader.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = scheduleTableHeader.xib; path = Views/scheduleTableHeader.xib; sourceTree = "<group>"; };
 		5722E90E18FD72F500BEE3A2 /* LKPlace.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; name = LKPlace.h; path = Models/LKPlace.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		5722E90F18FD72F500BEE3A2 /* LKPlace.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; name = LKPlace.m; path = Models/LKPlace.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
@@ -424,7 +424,7 @@
 				575C94A818FE8D0000A341EE /* Typefaces */,
 				575C94A118FE835400A341EE /* Sprites */,
 				576EA12E18FDD8F300D4166D /* OpeningHours.plist */,
-				1AF152C719059591006F2896 /* Places.plist */,
+				1A3576EC1916D641005649FA /* Places.plist */,
 				575C949E18FE7F3D00A341EE /* Events.plist */,
 			);
 			name = Data;
@@ -493,10 +493,10 @@
 			files = (
 				1A4833791915010A00CDC0CD /* Radio.xcassets in Resources */,
 				1ABFF6E319002BBB00C575EE /* LKAnnotation.xib in Resources */,
-				1AF152C819059592006F2896 /* Places.plist in Resources */,
 				1ABFF7031900887F00C575EE /* futuralt-bold.ttf in Resources */,
 				57994785190B18B60098BEA3 /* Places.xcassets in Resources */,
 				5703E5F01912C85F005DA0D2 /* scheduleTableHeader.xib in Resources */,
+				1A3576ED1916D641005649FA /* Places.plist in Resources */,
 				57CC6F61190C673A0006DE48 /* Covers.xcassets in Resources */,
 				575C949F18FE7F3D00A341EE /* Events.plist in Resources */,
 				57DB443E190291D0009C3D37 /* Schedule.xcassets in Resources */,
