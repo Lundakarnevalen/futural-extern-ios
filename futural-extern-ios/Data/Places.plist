@@ -45,7 +45,7 @@
 		<key>category</key>
 		<integer>11</integer>
 		<key>description</key>
-		<string>För dig som vill uppleva musik, spontanitet och skrattintensivitet är smånöjen det perfekta! Biljetter säljs på karnevalsområdet och föreställningarna visas så ofta som bara är möjligt. Ta tillvara på din spontanitet och tillåt dig att, för en halvtimme, ”fånga framtiden” i våra smånöjen.</string>
+		<string>Lorum ipsum</string>
 		<key>name</key>
 		<string>Smånöjen</string>
 		<key>payment_options</key>
@@ -862,7 +862,7 @@
 		<key>category</key>
 		<integer>4</integer>
 		<key>description</key>
-		<string>Hur man än vrider och vänder på historien, världen och dess invånare ser man tydligt att vi gång efter annan bevittnar sagan om mänsklighetens gränslösa idioti. Det är nästan imponerande hur vuxna, ansvarstagande människor ständigt förstör sin egen verklighet. Som barn utsätts vi för enorma förhoppningar, varje ny generation förväntas bli den första vettiga generationen. Men nej, det kommer aldrig ske. Människan är, har alltid varit och kommer alltid att förbli en idiot. Följ med oss i Karnevalsrevyn Kottar &amp; Nötter –  45 minuter satiriska, intellektuella och tramsiga sketcher och fartfyllda sång- och dansnummer om allt och inget. En generationsresa där vi bevisar att varenda kotte, utan undantag, växer upp till att bli ett nöt.</string>
+		<string>Lorum ipsum</string>
 		<key>name</key>
 		<string>Tältnöjen</string>
 		<key>payment_options</key>
@@ -899,9 +899,7 @@
 		<key>category</key>
 		<integer>23</integer>
 		<key>description</key>
-		<string>Pinsamma pappa Olsson har ont i sin tand och vågar inte gå till tandläkaren, inte ens när barnen Pia, Cissi och Ville följer med. Men en futuralt fiffig uppfinning blir början på ett otroligt äventyr…
-Vi får följa med på en resa i tid och mun, bland tandsten och smaklökar, där våra hjältar slåss för kärlek och vänskap med uppdraget att hjälpa pappas onda tand. Vi träffar en galen vetenskapskvinna, sjungande tänder, ett vänligt tandtroll och Skånes egen regionala tandfé.
-Så borsta tänderna, glöm inte tandtråden och ta med hela familjen till Barnevalen. Detta får ni inte missa!</string>
+		<string>Dina små aliens kommer att älska det här.</string>
 		<key>name</key>
 		<string>Barnevalen</string>
 		<key>payment_options</key>
@@ -1243,7 +1241,7 @@ Så borsta tänderna, glöm inte tandtråden och ta med hela familjen till Barne
 		<key>category</key>
 		<integer>22</integer>
 		<key>description</key>
-		<string>En vis person sa en gång ”Varför gå genom livet när du kan dansa?”. En ypperlig devis som Lundakarnevalen tagit till sig och kommer att efterleva – med råge! Under de tre karnevalsnätterna i maj så kan Lundakarnevalen stoltsera med Sveriges största nattklubb, Dansen, på AF-borgen! Under dessa nätter så kommer AF-borgen att transformeras till en mullrande dansinferno utan jämlike. Tillsammans kommer över 6000 personer dansa nätterna genom på Dansens fyra olika dansgolv i Tégners, Stora salen och Lilla salen till tonerna av våra fantastiska DJ:s och artister. </string>
+		<string>Skaka det lurviga.</string>
 		<key>name</key>
 		<string>Dansen</string>
 		<key>payment_options</key>
@@ -1268,7 +1266,7 @@ Så borsta tänderna, glöm inte tandtråden och ta med hela familjen till Barne
 		<key>category</key>
 		<integer>20</integer>
 		<key>description</key>
-		<string>Karnevalsshowen 2014 inbjuder till Ljuset &amp; Lyktan – En dag i Livet. På den lilla krogen Ljuset &amp; Lyktan får vi uppleva en dag tillsammans med krogvärden Rolle Rosén som sett och hört det mesta. Ur en betraktares synvinkel möter vi besökare, kunder och vänner som alla söker efter en mening. Med hjälp av humor, sång och dans närmar vi oss människor som alla bär något med sig, men som inte alltid vet om det, utan ständigt är på jakt efter något större. Tillsammans med en vällagad krogmeny kan vi utlova en helhetsupplevelse som inte kommer lämna någon oberörd.</string>
+		<string>Showen är cool.</string>
 		<key>name</key>
 		<string>Showen</string>
 		<key>payment_options</key>
@@ -1302,7 +1300,7 @@ Så borsta tänderna, glöm inte tandtråden och ta med hela familjen till Barne
 		<key>category</key>
 		<integer>22</integer>
 		<key>description</key>
-		<string>Musiksektionen ser till att det alltid strömmar ljuv musik ifrån olika platser på Karnevalsområdet och framförallt ifrån Stora Scenen framför universitetshuset. Vi har hand om alla artister som kommer för att uppträda under dagarna men även scenerna dem uppträder ifrån.</string>
+		<string>Här sprudlar det av ren karnevalist-glädje i form av toner som formar ljuv musik.</string>
 		<key>name</key>
 		<string>Musik</string>
 		<key>payment_options</key>
@@ -1389,7 +1387,7 @@ rekommendation till dig är dock att köpa entrébiljett redan innan karnevalsda
 		<key>category</key>
 		<integer>20</integer>
 		<key>description</key>
-		<string>Vi befinner oss i den postapokalyptiska dystopin efter det stora kärnvapenkriget. Världen är i ruiner, men Cabaret Apocalyptica gör sitt bästa för att hålla humöret uppe hos de få som är kvar. Dock är det svårt att hålla reda på vad det är för gäster man får när man låter dörren stå öppen. En dagbok från tiden innan kriget kan ge perspektiv och ibland blir historien väldigt levande. Häng med oss in i en värld där det futurala inte är vad vi hoppas, där nutiden inte är riktigt klok men upplevelsen total.</string>
+		<string>Lorem ipsum</string>
 		<key>name</key>
 		<string>Kabarén</string>
 		<key>payment_options</key>
@@ -1881,7 +1879,7 @@ rekommendation till dig är dock att köpa entrébiljett redan innan karnevalsda
 		<key>category</key>
 		<integer>10</integer>
 		<key>description</key>
-		<string>Tombolan sprider karnevalsglädje genom de spel och tävlingar som kommer att finnas på området. Vi skapar de mest fantastiska och knäppa spelbodar som Liseberg aldrig sett genom musik, lampor, satir och futurism.</string>
+		<string>Visst känns det som att du har väldigt mycket tur idag? Vad sägs om att testa den på våra alldeles fantastiskt futurala spel.</string>
 		<key>name</key>
 		<string>Tombolan</string>
 		<key>payment_options</key>
@@ -2270,7 +2268,7 @@ rekommendation till dig är dock att köpa entrébiljett redan innan karnevalsda
 		<key>category</key>
 		<integer>20</integer>
 		<key>description</key>
-		<string>På Tegnérsplatsen precis söder på AF-borgen ligger Lundakarnevalens äldsta och mest urballade nöje, nämligen Karnevalscirkusen! Cirkusen har en lång historia av att blanda studentikos humor med parodier på cirkusnummer, såväl som genuint imponerande sådana. Detta år kommer föreställningen, namngiven ”Cirkus 40 minuter”, att ta med publiken på en hisnande färd mellan olika främmande platser, och bjuda på en frisk blandning av gammalt såväl som nytt. En traditionell cirkus skickas ut på under ytterst otraditionella omständigheter på grund av en mystisk resenär från framtiden. Bered er på ett äventyr fylld med både spänning, humor och grace. Ett sant nöje för hela familjen!</string>
+		<string>Lorem Ipsum</string>
 		<key>name</key>
 		<string>Cirkusen</string>
 		<key>payment_options</key>
@@ -2278,12 +2276,45 @@ rekommendation till dig är dock att köpa entrébiljett redan innan karnevalsda
 	</dict>
 	<key>krogundervatten</key>
 	<dict>
+		<key>openinghours</key>
+		<dict>
+			<key>2014-05-04</key>
+			<dict>
+				<key>open</key>
+				<string>12:00</string>
+				<key>close</key>
+				<string>01:00</string>
+			</dict>
+			<key>2014-05-16</key>
+			<dict>
+				<key>open</key>
+				<string>12:00</string>
+				<key>close</key>
+				<string>01:00</string>
+			</dict>
+			<key>2014-05-17</key>
+			<dict>
+				<key>open</key>
+				<string>12:00</string>
+				<key>close</key>
+				<string>01:00</string>
+			</dict>
+			<key>2014-05-18</key>
+			<dict>
+				<key>open</key>
+				<string>12:00</string>
+				<key>close</key>
+				<string>01:00</string>
+			</dict>
+		</dict>
 		<key>alcohol</key>
 		<true/>
 		<key>category</key>
 		<integer>2</integer>
 		<key>description</key>
-		<string>Lorem Ipsum</string>
+		<string>Åren gick och polarisarna smälte. Skåne översvämmades och endast Domkyrkans torn stack upp. Folket skrek efter vällagad mat, och en krog svarade. Krog Undervatten finns vid Kungshusets gavel och erbjuder er en havsinspirerad oas under karnevalsdagarna. Slå er ned en stund och njut av den härliga stämningen och trubadurerna som förgyller krogen och ger er en genuint trevlig upplevelse. Vi bjuder på en meny inspirerad av världshaven, allt med en fransk touch. 
+
+Välkommen till krog Undervatten!</string>
 		<key>name</key>
 		<string>Krog Undervatten</string>
 		<key>payment_options</key>
@@ -2303,12 +2334,45 @@ rekommendation till dig är dock att köpa entrébiljett redan innan karnevalsda
 	</dict>
 	<key>kroglajka</key>
 	<dict>
+		<key>openinghours</key>
+		<dict>
+			<key>2014-05-04</key>
+			<dict>
+				<key>open</key>
+				<string>12:00</string>
+				<key>close</key>
+				<string>01:00</string>
+			</dict>
+			<key>2014-05-16</key>
+			<dict>
+				<key>open</key>
+				<string>12:00</string>
+				<key>close</key>
+				<string>01:00</string>
+			</dict>
+			<key>2014-05-17</key>
+			<dict>
+				<key>open</key>
+				<string>12:00</string>
+				<key>close</key>
+				<string>01:00</string>
+			</dict>
+			<key>2014-05-18</key>
+			<dict>
+				<key>open</key>
+				<string>12:00</string>
+				<key>close</key>
+				<string>01:00</string>
+			</dict>
+		</dict>
 		<key>alcohol</key>
 		<true/>
 		<key>category</key>
 		<integer>2</integer>
 		<key>description</key>
-		<string>Lorem Ipsum</string>
+		<string>Från 1957 till 2014 har Lajka varit både en folkkär rymdhund och en överanvänd Facebook-knapp. I år är året då Lajka tar ett kliv ut ur cyberspace  och vinner karnevalbesökarnas hjärtan. Med härlig atmosfär och en stor uteservering  mitt i karnevalens kaos skapar Krog Lajka ditt perfekta karnevalshäng! Kom till oss och ät en utsökt paella eller vegetarisk lasagne, släck törsten med en svalkande karnevöl på karnevalens bästa plats, mittemot stora scenen.
+
+Pris: 50 kr per portion</string>
 		<key>name</key>
 		<string>Krog Lajka</string>
 		<key>payment_options</key>
@@ -2319,9 +2383,9 @@ rekommendation till dig är dock att köpa entrébiljett redan innan karnevalsda
 				<key>position</key>
 				<dict>
 					<key>latitude</key>
-					<real>55.7057200457242</real>
+					<real>55.70573799412114</real>
 					<key>longitude</key>
-					<real>13.1947512335366</real>
+					<real>13.19474001701577</real>
 				</dict>
 			</dict>
 		</array>
@@ -2345,7 +2409,7 @@ rekommendation till dig är dock att köpa entrébiljett redan innan karnevalsda
 		<key>category</key>
 		<integer>20</integer>
 		<key>description</key>
-		<string>Hur man än vrider och vänder på historien, världen och dess invånare ser man tydligt att vi gång efter annan bevittnar sagan om mänsklighetens gränslösa idioti. Det är nästan imponerande hur vuxna, ansvarstagande människor ständigt förstör sin egen verklighet. Som barn utsätts vi för enorma förhoppningar, varje ny generation förväntas bli den första vettiga generationen. Men nej, det kommer aldrig ske. Människan är, har alltid varit och kommer alltid att förbli en idiot. Följ med oss i Karnevalsrevyn Kottar &amp; Nötter –  45 minuter satiriska, intellektuella och tramsiga sketcher och fartfyllda sång- och dansnummer om allt och inget. En generationsresa där vi bevisar att varenda kotte, utan undantag, växer upp till att bli ett nöt.</string>
+		<string>Revyn</string>
 		<key>name</key>
 		<string>Revyn</string>
 		<key>payment_options</key>
@@ -2395,7 +2459,7 @@ rekommendation till dig är dock att köpa entrébiljett redan innan karnevalsda
 		<key>category</key>
 		<integer>8</integer>
 		<key>description</key>
-		<string>Lilla Scenen kommer vara stjärnan på krogområdet Foodstock. Här kommer finnas en underbar blandning av musik, mat i olika former och barer där man kan umgås, äta, lyssna på fantastisk musik och insupa den karnevalistiska andan.</string>
+		<string>Lorem Ipsum</string>
 		<key>name</key>
 		<string>Lilla scenen</string>
 		<key>payment_options</key>
@@ -2406,6 +2470,13 @@ rekommendation till dig är dock att köpa entrébiljett redan innan karnevalsda
 		<key>openinghours</key>
 		<dict>
 			<key>2014-05-04</key>
+			<dict>
+				<key>open</key>
+				<string>12:00</string>
+				<key>close</key>
+				<string>01:00</string>
+			</dict>
+			<key>2014-05-16</key>
 			<dict>
 				<key>open</key>
 				<string>12:00</string>
@@ -2575,7 +2646,14 @@ rekommendation till dig är dock att köpa entrébiljett redan innan karnevalsda
 		<key>category</key>
 		<integer>1</integer>
 		<key>description</key>
-		<string>Lorem Ipsum</string>
+		<string>Lundakarnevalen framtidssatsar &amp; lanserar det helt nya området Foodstock. Vi öppnar upp en värld fylld av blommor, bin, musik, mat &amp; nöje. På vårt nya område uppe vid Gamla kirurgen välkomnar vi dig för ytterligare karnevalsupplevelser och förlänger känslan av karneval lite längre. Fred, kärlek &amp; förståelse – i en tidigare oskådad symbios! Unna dig lite karnevalistiska upptåg bland våra tältnöjen eller vinn fina eller ofina priser i tombolabodarna. Vila upp dig på vår uteservering &amp; ät av vår amerikansk-inspirerade meny eller ta dig upp till grillen &amp; få lika god mat - fast med mer grillyta. 
+På scenen finns underhållning dag, kväll &amp; natt. Under lunchtid erbjuder vi underhållning som är mer familjeanpassad, och under eftermiddag &amp; kväll satsar vi för fullt på musik från världens alla hörn - reggae, folk, indie, hiphop och en massa annat! 
+
+Framåt natten skruvar vi upp tempot för att tillsammans med några av Sveriges största inom deep- &amp; tech-house skapa världens läckraste förfest.
+Vi utlovar stämning &amp; drag som hade fått Jimi Hendrix att bli högerhänt!
+På scenen finns underhållning dag, kväll &amp; natt. Under lunchtid erbjuder vi underhållning som är mer familjeanpassad, och under eftermiddag &amp; kväll satsar vi för fullt på musik från världens alla hörn - reggae, folk, indie, hiphop och en massa annat!
+Framåt natten skruvar vi upp tempot för att tillsammans med några av Sveriges största inom deep- &amp; tech-house skapa världens läckraste förfest.
+Vi utlovar stämning &amp; drag som hade fått Jimi Hendrix att bli högerhänt!</string>
 		<key>name</key>
 		<string>Foodstock</string>
 		<key>payment_options</key>
@@ -2600,16 +2678,17 @@ rekommendation till dig är dock att köpa entrébiljett redan innan karnevalsda
 		<key>category</key>
 		<integer>8</integer>
 		<key>description</key>
-		<string>Med det ståtliga Universitetshuset i bakgrunden kan du avnjuta de ljuva tonerna från stora scenens fenomenala artiser. Ladda inför oförglömliga musikupplevelser!</string>
+		<string>Lorem Ipsum</string>
 		<key>name</key>
 		<string>Stora Scenen</string>
 		<key>payment_options</key>
 		<array/>
 	</dict>
-	<key>filmen</key>
+	<key>thymetravel</key>
 	<dict>
-		<key>positions</key>
-		<array>
+		<key>openinghours</key>
+		<dict>
+			<key>2014-05-04</key>
 			<dict>
 				<key>position</key>
 				<dict>
@@ -2619,42 +2698,50 @@ rekommendation till dig är dock att köpa entrébiljett redan innan karnevalsda
 					<real>13.19455318842597</real>
 				</dict>
 			</dict>
-		</array>
+			<key>2014-05-16</key>
+			<dict>
+				<key>open</key>
+				<string>14:00</string>
+				<key>close</key>
+				<string>02:00</string>
+			</dict>
+			<key>2014-05-17</key>
+			<dict>
+				<key>open</key>
+				<string>14:00</string>
+				<key>close</key>
+				<string>02:00</string>
+			</dict>
+			<key>2014-05-18</key>
+			<dict>
+				<key>open</key>
+				<string>14:00</string>
+				<key>close</key>
+				<string>02:00</string>
+			</dict>
+		</dict>
 		<key>alcohol</key>
-		<false/>
+		<true/>
 		<key>category</key>
-		<string>22</string>
+		<integer>2</integer>
 		<key>description</key>
-		<string>Lunds universitet står hotat av en dold fienden med oklara intentioner. Den unga studentskan Sara, som av en ren slump dras in i de dramatiska förvecklingarna, visar sig vara den enda som kan skydda universitetet mot en våldsam undergång. Men är det egentligen en slump att det blir just hon? Under tiden som hon tvingas vänja sig vid sina nyvunna superkrafter, får vi stifta bekantskap med den nördige Filip. I sällskap av hennes nyfunne vän får vi följa våra hjältar genom hackerattacker, biljakter och slutligen i den avgörande kampen mot de onda i Sveriges första superhjältefilm…</string>
+		<string>I Athen på AF-borgen hittar du tidsmaskinen som tar dig på en kulinarisk tidsresa som utan tvekan kommer att krydda din karnevalsupplevelse. För att på dagarna ta avstamp i det glada femtiotalet och erbjuda er både känslan, stämningen och maten hos en amerikansk diner, svidar vi mot kvällen om. Då kröker vi tid och rum och fortsätter på tidsresan som landar i en bar i sann anda av den välkända Studio 54. Tidsresor till trots, en sak kan ni alltid räkna med, och det är att på krog Thyme</string>
 		<key>name</key>
-		<string>Filmen</string>
+		<string>Krog Thyme Travel</string>
 		<key>payment_options</key>
 		<array/>
-	</dict>
-	<key>spexet</key>
-	<dict>
 		<key>positions</key>
 		<array>
 			<dict>
 				<key>position</key>
 				<dict>
 					<key>latitude</key>
-					<real>55.7050766266735</real>
+					<real>55.70539306348792</real>
 					<key>longitude</key>
-					<real>13.1952963993865</real>
+					<real>13.19582988050847</real>
 				</dict>
 			</dict>
 		</array>
-		<key>alcohol</key>
-		<false/>
-		<key>category</key>
-		<string>22</string>
-		<key>description</key>
-		<string>På stora salens scen i AF-borgen möter du karnevalsspexet Atlantis! Här bjuds det på ett traditionellt lundensiskt spex där sagan om hur det gick för Atlantis berättas med högklassig humor, sång och dans. Föreställning börjar i ett slitet och nedgånget Atlantis. Staden håller inte längre för sin egen vikt och sjunker sakta men säkert, både ner i vattnet och ner i fördärvet. Invånarna i staden har vant sig vid förfallet, men stadens borgmästarinna har bestämt sig för att få staden på flytande igen (både bildligt och bokstavligen!). Atlantis ska återgå till sina forna glansdagar – och det illa kvickt!</string>
-		<key>name</key>
-		<string>Spexet</string>
-		<key>payment_options</key>
-		<array/>
 	</dict>
 </dict>
 </plist>
