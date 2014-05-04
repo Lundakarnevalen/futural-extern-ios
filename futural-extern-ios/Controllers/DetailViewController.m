@@ -30,8 +30,18 @@
     
     [self setTitle:[LKLayout defaultTitle]];
     
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(multipleChoice:) name:@"choiceClick" object:nil];
+    
     [self customizeView];
 
+}
+
+- (void)multipleChoice:(NSNotification *)notification {
+    
+    LKPlace *place = (LKPlace *)notification.userInfo[@"place"];
+    
+    [self navigateToMapWithPlace:place];
+    
 }
 
 - (IBAction)sectionChanged:(id)sender {
@@ -181,25 +191,29 @@
 
 - (IBAction)findMe:(id)sender {
     
+    [self navigateToMapWithPlace:self.place];
+    
+}
+
+- (void)navigateToMapWithPlace:(LKPlace *)place {
+    
     NSInteger tabIndex = 2;
     MapViewController *vc = (MapViewController *)[(UINavigationController *)[[[self.tabBarController viewControllers] objectAtIndex:tabIndex] topViewController] visibleViewController]; //fifän, igen.
     
-    if(self.place) {
+    if(place) {
         
-        NSInteger subPlaces = [self.place.subPlaces count];
+        NSInteger subPlaces = [place.subPlaces count];
         
         if(subPlaces > 1) {
             
-            vc.visitCategory = @[@(self.place.category)];
+            vc.visitCategory = place.category;
             NSLog(@"Multiple places that are being requested, filter excluesively.");
             
         } else {
-                
-            vc.visitPlace = self.place;
+            
+            vc.visitPlace = place;
             
         }
-        
-    } else {
         
     }
     

@@ -14,7 +14,7 @@
 @property (nonatomic) LKarneval *karneval;
 
 //detail to map
-@property (nonatomic) NSArray *visitCategory;
+@property (nonatomic) LKPlaceCategory visitCategory;
 @property (nonatomic) LKPlace *visitPlace;
 
 @end

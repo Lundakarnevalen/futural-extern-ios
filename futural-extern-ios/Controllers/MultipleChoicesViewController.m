@@ -7,6 +7,8 @@
 //
 
 #import "MultipleChoicesViewController.h"
+#import "MapViewController.h"
+#import "DetailViewController.h"
 
 #import "LKColor.h"
 
@@ -64,8 +66,19 @@
 }
 
 - (void)cellClick:(id)sender {
+
+    LKButton *button = sender;
+    LKPlace *place = [self.choices objectAtIndex:button.tag];
     
-    NSLog(@"Click motherfucker.");
+    if(!place) {
+        
+        place = [[self.choices objectAtIndex:button.tag] place]; //event scene
+        
+    }
+    
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"choiceClick" object:self userInfo:@{@"place" : place}];
+    
+    
     
 }
 

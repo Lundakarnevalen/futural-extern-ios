@@ -34,6 +34,8 @@
     
     [super viewDidLoad];
     
+    self.visitCategory = 0;
+    
     self.slidingViewController.underRightViewController  = [self.storyboard instantiateViewControllerWithIdentifier:@"Filter"];
     
     [self.view addGestureRecognizer:self.slidingViewController.panGesture];
@@ -78,6 +80,10 @@
                     zoomRect = MKMapRectUnion(zoomRect, pointRect);
                 }
                 
+            } else {
+                
+                [self.mapView removeAnnotation:object];
+                
             }
             
         }
@@ -85,9 +91,21 @@
         [self.mapView setVisibleMapRect:zoomRect animated:YES];
         self.visitPlace = nil;
         
-    } else if(self.visitCategory) {
+    } else if(self.visitCategory != 0) {
         
+        for(id <MKAnnotation>annotation in self.mapView.annotations) {
+            
+            LKAnnotation *a = (LKAnnotation *)annotation;
+            
+            if(a.place.category != self.visitCategory) {
+                
+                [self.mapView removeAnnotation:annotation];
+                
+            }
+            
+        }
         
+        self.visitCategory = 0;
         
     }
     
