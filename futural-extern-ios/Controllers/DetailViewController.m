@@ -76,7 +76,30 @@
         self.choiceVC.strokeColor = self.logotypeImage.strokeColor;
         self.choiceVC.desiredBackgroundImage = self.coverImage.image;
         self.choiceVC.view.tag = viewTag;
-        self.choiceVC.view.frame = CGRectMake(c.origin.x, c.origin.y - self.navigationController.navigationBar.frame.size.height - 20, c.size.width, c.size.height); //make it fit (x)
+        
+        CGRect frame;
+        
+        CGPoint location;
+        location.x = c.origin.x;
+        
+        if (SYSTEM_VERSION_LESS_THAN(@"7.0")) {
+            
+            location.y = c.origin.y;
+            
+        } else {
+        
+            location.y = c.origin.y - self.navigationController.navigationBar.frame.size.height - 20;
+            
+        }
+        
+        CGSize size = c.size;
+        frame.origin = location;
+        frame.size = size;
+        
+        
+        self.choiceVC.view.frame = frame; //make it fit (x)
+        
+        
         [self.view addSubview:self.choiceVC.view];
         
     }

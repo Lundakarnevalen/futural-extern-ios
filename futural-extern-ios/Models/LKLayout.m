@@ -7,6 +7,7 @@
 //
 
 #import "LKLayout.h"
+#import "LKColor.h"
 
 #define SHADOW_SIZE 6.0
 
@@ -153,6 +154,12 @@
                                              NSFontAttributeName : [self segmentFont]
                                              } forState:UIControlStateNormal];
     [segmentControl setTitleTextAttributes:@{ NSFontAttributeName : [self segmentFont] } forState:UIControlStateSelected];
+    
+    if (SYSTEM_VERSION_LESS_THAN(@"7.0")) {
+        
+        segmentControl.tintColor = [LKColor colorWithIdentifier:LKColorRed];
+        
+    }
     
     for(NSInteger index = 0; index < segmentControl.numberOfSegments; index++) {
         
