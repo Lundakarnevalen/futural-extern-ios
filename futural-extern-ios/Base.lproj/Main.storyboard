@@ -706,7 +706,13 @@
                             <constraint firstAttribute="trailing" secondItem="ovd-0P-KLA" secondAttribute="trailing" constant="-15" id="l6Y-fz-qke"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="bCb-Yy-j4V"/>
+                    <navigationItem key="navigationItem" id="bCb-Yy-j4V">
+                        <barButtonItem key="rightBarButtonItem" image="icon-filter" id="9Y1-c7-lmT">
+                            <connections>
+                                <action selector="showMapButtonClicked:" destination="4LJ-BV-Ygh" id="qo9-LP-k8m"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="mapView" destination="VOy-Cp-HdC" id="ope-2h-ibY"/>
                         <segue destination="CBE-hh-3D3" kind="modal" identifier="createAnnotationSegue" id="dlX-3D-OP5"/>
@@ -1071,6 +1077,7 @@
         <image name="heart" width="40" height="35"/>
         <image name="heart-filled" width="40" height="35"/>
         <image name="icon-cash" width="25" height="17"/>
+        <image name="icon-filter" width="20" height="20"/>
         <image name="icon-kort" width="25" height="17"/>
         <image name="map" width="24" height="24"/>
         <image name="misc" width="25" height="18"/>
