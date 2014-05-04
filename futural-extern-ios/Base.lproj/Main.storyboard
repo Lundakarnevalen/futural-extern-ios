@@ -108,7 +108,7 @@
                         <rect key="frame" x="0.0" y="64" width="320" height="455"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="cover-nangilima" translatesAutoresizingMaskIntoConstraints="NO" id="eDk-KJ-zbB">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="cover-revyn" translatesAutoresizingMaskIntoConstraints="NO" id="eDk-KJ-zbB">
                                 <rect key="frame" x="-5" y="0.0" width="330" height="173"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
@@ -279,7 +279,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="cover-nangilima" translatesAutoresizingMaskIntoConstraints="NO" id="WBh-D5-FZj">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="cover-revyn" translatesAutoresizingMaskIntoConstraints="NO" id="WBh-D5-FZj">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
@@ -322,7 +322,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="455"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="100" sectionHeaderHeight="75" sectionFooterHeight="1" translatesAutoresizingMaskIntoConstraints="NO" id="LVT-VY-gxW">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="100" sectionHeaderHeight="75" sectionFooterHeight="1" translatesAutoresizingMaskIntoConstraints="NO" id="LVT-VY-gxW">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="455"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -408,6 +408,10 @@
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="LVT-VY-gxW" firstAttribute="top" secondItem="smr-w5-4G1" secondAttribute="bottom" id="THg-YX-fvE"/>
+                            <constraint firstItem="YXA-o7-HTJ" firstAttribute="top" secondItem="LVT-VY-gxW" secondAttribute="bottom" id="Ydz-0R-Fn3"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="FwE-jU-bDQ">
                         <nil key="title"/>
@@ -1056,7 +1060,7 @@
         <image name="background-misc" width="540" height="960"/>
         <image name="background-moln" width="479" height="233"/>
         <image name="background-schedule" width="540" height="960"/>
-        <image name="cover-nangilima" width="160" height="100"/>
+        <image name="cover-revyn" width="160" height="100"/>
         <image name="entertainment" width="25" height="24"/>
         <image name="food" width="15" height="25"/>
         <image name="food-active" width="15" height="25"/>
