@@ -53,13 +53,15 @@
     
     if(self.visitPlace) {
         
+        [self renderAllPlaces];
+        
         MKMapRect zoomRect = MKMapRectNull;
 
         for(id <MKAnnotation>object in self.mapView.annotations) {
             
             NSString *className = NSStringFromClass([object class]);
             
-            if(![className isEqualToString:@"MKUserLocation"]) {
+            if(![className isEqualToString:@"MKUserLocation"]) { //or it'll crash, MKUser is the dot telling where the user is atm.
                 
             LKAnnotation *annotation = (LKAnnotation *)object;
             LKPlace *place = annotation.place;
@@ -89,6 +91,8 @@
         self.visitPlace = nil;
         
     } else if(self.visitCategory != 0) {
+        
+        [self renderAllPlaces];
         
         for(id <MKAnnotation>annotation in self.mapView.annotations) {
             
@@ -154,7 +158,6 @@
 
 -(void)reloadAnnotations {
     
-    LKarneval *karneval = [LKarneval sharedLKarneval];
     NSMutableArray *places = [[NSMutableArray alloc] init];
     [self.mapView removeAnnotations:[self.mapView annotations]];
     
@@ -189,7 +192,7 @@
         [places addObjectsFromArray:[LKarneval LKPlaceFilterOther]];
     }
     
-    for (LKPlace *place in [karneval placesFilteredByCategories:places]) {
+    for (LKPlace *place in [self.karneval placesFilteredByCategories:places]) {
     
         [place.subPlaces enumerateObjectsUsingBlock:^(id object, NSUInteger index, BOOL *stop) {
             
@@ -200,6 +203,23 @@
         
     }
 
+}
+
+- (void)renderAllPlaces { //used while presenting specific places.
+    
+    [self.mapView removeAnnotations:self.mapView.annotations];
+    
+    for (LKPlace *place in self.karneval.places) {
+        
+        [place.subPlaces enumerateObjectsUsingBlock:^(id object, NSUInteger index, BOOL *stop) {
+            
+            LKAnnotation *anno = [[LKAnnotation alloc] initWithPlace:place andPositionIndexOf:index];
+            [self.mapView addAnnotation:anno];
+            
+        }];
+        
+    }
+    
 }
 
 - (LKarneval *)karneval {

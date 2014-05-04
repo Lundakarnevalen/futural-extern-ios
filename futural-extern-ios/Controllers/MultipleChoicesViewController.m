@@ -11,6 +11,8 @@
 #import "DetailViewController.h"
 
 #import "LKColor.h"
+#import "LKMapView.h"
+#import "LKAnnotation.h"
 
 @implementation MultipleChoicesViewController
 
@@ -54,6 +56,14 @@
                                           andImage:self.logotype];
         button.tag = index; //identifier
         [button addTarget:self action:@selector(cellClick:) forControlEvents:UIControlEventTouchUpInside];
+        
+//        LKMapView *map = [[LKMapView alloc] init];
+//        LKAnnotation *annotation = [[LKAnnotation alloc] initWithPlace:information];
+//        map.frame = button.frame;
+//        [map addAndCenterAnnotation:annotation];
+//        [map renderOverlay];
+//        
+//        [button addSubview:map];
         
         UILabel *title = [LKLayout titleLabelForCell:cell
                                            withTitle:[information name]];

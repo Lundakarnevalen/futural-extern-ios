@@ -132,7 +132,6 @@
     
     [self.miniMap renderOverlay];
     [self.miniMap addAnnotation:annotation];
-    
     [self.miniMap setRegion:region];
     
     [LKLayout customizeSegment:self.sectionButton];

@@ -6,6 +6,8 @@
 //  Copyright (c) 2014 Lundakarnevalen. All rights reserved.
 //
 
+#import "LKLayout.h"
+#import "LKColor.h"
 #import "LKMapView.h"
 #import "LKOverlay.h"
 #import "LKOverlayRenderer.h"
@@ -23,8 +25,12 @@
     NSLog(@"I'm ALIVE!");
     
     self.delegate = self;
+    self.showsPointsOfInterest = NO; //remove coffee shops, restaurants, etc.
+    self.mapType = MKMapTypeSatellite; //remove street names.
     
     LKOverlay *map = [[LKOverlay alloc] initWithImage:[UIImage imageNamed:@"Lundakarnevalen"]];
+    
+    self.tintColor = [LKColor colorWithIdentifier:LKColorRed];
     
     if ([self respondsToSelector:@selector(addOverlay:level:)]) {
         [self addOverlay:map  level:MKOverlayLevelAboveRoads];
@@ -110,6 +116,15 @@
     }];
     
     NSLog(@"This annotiation is %@", annotationView.annotation.place.parent.identifier);
+    
+}
+
+- (void)addAndCenterAnnotation:(LKAnnotation *)annotation {
+    
+    MKCoordinateRegion region = MKCoordinateRegionMake(annotation.place.position, MKCoordinateSpanMake(0.0001, 0.0001));
+    
+    [self addAnnotation:annotation];
+    [self setRegion:region];
     
 }
 

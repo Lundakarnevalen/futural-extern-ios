@@ -9,9 +9,13 @@
 #import <Foundation/Foundation.h>
 #import "MapKit/MapKit.h"
 
+#import "LKAnnotation.h"
+
 @interface LKMapView : MKMapView<MKMapViewDelegate>
 
 - (void)renderOverlay;
 - (void)returnToCenterMap;
+
+- (void)addAndCenterAnnotation:(LKAnnotation *)annotation;
 
 @end

@@ -33,4 +33,21 @@
     
 }
 
+- (instancetype)initWithPlace:(LKPlace *)place {
+    
+    self = [super init];
+    
+    if(self) {
+    
+    self.place = place;
+    coordinate = place.position;
+    title = [place.name uppercaseString];
+    self.image = [place imageForAnnotation];
+        
+    }
+    
+    return self;
+    
+}
+
 @end

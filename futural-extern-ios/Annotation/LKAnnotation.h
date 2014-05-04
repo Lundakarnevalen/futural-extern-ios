@@ -12,6 +12,7 @@
 @interface LKAnnotation : NSObject <MKAnnotation>
 
 -(instancetype)initWithPlace:(LKPlace *)place andPositionIndexOf:(NSInteger)positionIndex; //as we are now having multiple positions per place.
+- (instancetype)initWithPlace:(LKPlace *)place;
 
 @property (nonatomic) LKPlace *place;
 @property (nonatomic, readonly, copy) NSString *title;
