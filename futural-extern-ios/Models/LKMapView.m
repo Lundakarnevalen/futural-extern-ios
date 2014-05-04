@@ -11,6 +11,7 @@
 #import "LKMapView.h"
 #import "LKOverlay.h"
 #import "LKOverlayRenderer.h"
+#import "LKOverlayView.h"
 #import "LKAnnotation.h"
 #import "LKAnnotationView.h"
 
@@ -25,8 +26,6 @@
     NSLog(@"I'm ALIVE!");
     
     self.delegate = self;
-    self.showsPointsOfInterest = NO; //remove coffee shops, restaurants, etc.
-    //self.mapType = MKMapTypeSatellite; //remove street names.
     
     if([self respondsToSelector:@selector(showsPointsOfInterest)]) {
         
@@ -66,16 +65,6 @@
         LKAnnotation *anno = (LKAnnotation *)annotation;
         LKAnnotationView *sav = [[LKAnnotationView alloc] initWithAnnotation:anno reuseIdentifier:@""];
         sav.canShowCallout = NO;
-        //        UIImageView *image = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"hamburger.png"]];
-        //        image.contentMode = UIViewContentModeScaleAspectFit;
-        //        UIView *leftCAV = [[UIView alloc] initWithFrame:CGRectMake(0,0,25,25)];
-        //        image.frame = leftCAV.frame;
-        //        [leftCAV addSubview: image];
-        //        sav.leftCalloutAccessoryView = leftCAV;
-        //
-        //        UIButton *rightButton = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
-        //        [rightButton addTarget:nil action:nil forControlEvents:UIControlEventTouchUpInside];
-        //sav.rightCalloutAccessoryView = rightButton;
         return sav;
         
     }
@@ -161,6 +150,15 @@
         LKOverlay *map = (LKOverlay *)overlay;
         LKOverlayRenderer *overlayRenderer = [[LKOverlayRenderer alloc] initWithOverlay:map];
         return overlayRenderer;
+    }
+    return nil;
+}
+
+- (MKOverlayView *)mapView:(MKMapView *)mapView viewForOverlay:(id<MKOverlay>)overlay {
+    if ([overlay isKindOfClass:LKOverlay.class]) {
+        LKOverlay *map = (LKOverlay *)overlay;
+        LKOverlayView *overlayView = [[LKOverlayView alloc] initWithOverlay:map];
+        return overlayView;
     }
     return nil;
 }

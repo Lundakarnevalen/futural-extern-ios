@@ -16,6 +16,7 @@
 		1A48337F1915057400CDC0CD /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A48337E1915057400CDC0CD /* AVFoundation.framework */; };
 		1A4A83CA190996AE00D7C466 /* LKButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A4A83C9190996AE00D7C466 /* LKButton.m */; };
 		1A7DA8A318FF06C70025C677 /* App.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1A7DA8A218FF06C70025C677 /* App.xcassets */; };
+		1A96E5831916E3DE0079D900 /* LKOverlayView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A96E5821916E3DE0079D900 /* LKOverlayView.m */; };
 		1ABFF6E219002BBB00C575EE /* LKAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ABFF6DE19002BBB00C575EE /* LKAnnotation.m */; };
 		1ABFF6E319002BBB00C575EE /* LKAnnotation.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1ABFF6DF19002BBB00C575EE /* LKAnnotation.xib */; };
 		1ABFF6E419002BBB00C575EE /* LKAnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ABFF6E119002BBB00C575EE /* LKAnnotationView.m */; };
@@ -84,6 +85,8 @@
 		1A4A83C8190996AE00D7C466 /* LKButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LKButton.h; path = Models/LKButton.h; sourceTree = "<group>"; };
 		1A4A83C9190996AE00D7C466 /* LKButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LKButton.m; path = Models/LKButton.m; sourceTree = "<group>"; };
 		1A7DA8A218FF06C70025C677 /* App.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = App.xcassets; sourceTree = "<group>"; };
+		1A96E5811916E3DE0079D900 /* LKOverlayView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LKOverlayView.h; path = Models/Overlay/LKOverlayView.h; sourceTree = "<group>"; };
+		1A96E5821916E3DE0079D900 /* LKOverlayView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LKOverlayView.m; path = Models/Overlay/LKOverlayView.m; sourceTree = "<group>"; };
 		1ABFF6DD19002BBB00C575EE /* LKAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LKAnnotation.h; sourceTree = "<group>"; };
 		1ABFF6DE19002BBB00C575EE /* LKAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LKAnnotation.m; sourceTree = "<group>"; };
 		1ABFF6DF19002BBB00C575EE /* LKAnnotation.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LKAnnotation.xib; sourceTree = "<group>"; };
@@ -233,6 +236,8 @@
 				1ABFF6FD19007CF800C575EE /* LKOverlay.m */,
 				1ABFF6FF19007E2000C575EE /* LKOverlayRenderer.h */,
 				1ABFF70019007E2000C575EE /* LKOverlayRenderer.m */,
+				1A96E5811916E3DE0079D900 /* LKOverlayView.h */,
+				1A96E5821916E3DE0079D900 /* LKOverlayView.m */,
 			);
 			name = Overlay;
 			sourceTree = "<group>";
@@ -530,6 +535,7 @@
 				57407D1D18FD2F110003F787 /* LKarnevalist.m in Sources */,
 				1ABFF6E219002BBB00C575EE /* LKAnnotation.m in Sources */,
 				57FB7472190B150A0059CA82 /* LKCell.m in Sources */,
+				1A96E5831916E3DE0079D900 /* LKOverlayView.m in Sources */,
 				5722E91618FD7C3600BEE3A2 /* TabBarViewController.m in Sources */,
 				1ABFF6E719002BDD00C575EE /* MapViewController.m in Sources */,
 				1ABFF6F01900649300C575EE /* InitViewController.m in Sources */,
