@@ -4,19 +4,19 @@
 <array>
 	<dict>
 		<key>identifier</key>
-		<string>test</string>
+		<string>invigning</string>
 		<key>name</key>
-		<string>TEST MADDAFAKKOR</string>
+		<string>Invigning</string>
 		<key>description</key>
-		<string>kaldjskasjkdlfjaskldjfkalsdjfkj</string>
+		<string>Invigning av karnevalen, det kommer bli storslaget och riktigt bra drag. Det blir en resa in i övermorgon med start imorgon. Om detta är din femte karneval väntar en speciell överaskning.</string>
 		<key>place</key>
 		<string>storascenen</string>
 		<key>date</key>
 		<dict>
 			<key>start</key>
-			<date>2014-05-03T19:00:00Z</date>
+			<date>2014-05-16T11:00:00Z</date>
 			<key>end</key>
-			<date>2014-05-03T19:00:00Z</date>
+			<date>2014-05-16T12:00:00Z</date>
 		</dict>
 	</dict>
 	<dict>
@@ -31,9 +31,9 @@
 		<key>date</key>
 		<dict>
 			<key>start</key>
-			<date>2014-05-18T11:37:00Z</date>
+			<date>2014-05-18T15:00:00Z</date>
 			<key>end</key>
-			<date>2014-05-18T11:37:00Z</date>
+			<date>2014-05-18T15:45:00Z</date>
 		</dict>
 	</dict>
 	<dict>
@@ -55,6 +55,23 @@
 	</dict>
 	<dict>
 		<key>identifier</key>
+		<string>omradetstanger</string>
+		<key>name</key>
+		<string>Området stänger</string>
+		<key>description</key>
+		<string>Första tidsresan! Vi reser in i morgondagen (genom att gå hem och sova).</string>
+		<key>place</key>
+		<string>storascenen</string>
+		<key>date</key>
+		<dict>
+			<key>start</key>
+			<date>2014-05-16T21:59:00Z</date>
+			<key>end</key>
+			<date>2014-05-16T21:59:01Z</date>
+		</dict>
+	</dict>
+	<dict>
+		<key>identifier</key>
 		<string>sandramosh</string>
 		<key>name</key>
 		<string>Sandra Mosh</string>
@@ -68,6 +85,23 @@
 			<date>2014-05-17T11:37:00Z</date>
 			<key>end</key>
 			<date>2014-05-17T11:37:00Z</date>
+		</dict>
+	</dict>
+	<dict>
+		<key>identifier</key>
+		<string>omradetoppnar</string>
+		<key>name</key>
+		<string>Området öppnar</string>
+		<key>description</key>
+		<string>Dags för dag 2, hoppas ni är sugna på skoj! Se till att sprid glädje. Samlas under trädet vid AF-Borgens sydvästraste hörn klockan 15:00 och leta efter första ledtråden.</string>
+		<key>place</key>
+		<string>storascenen</string>
+		<key>date</key>
+		<dict>
+			<key>start</key>
+			<date>2014-05-16T10:00:00Z</date>
+			<key>end</key>
+			<date>2014-05-15T22:00:00Z</date>
 		</dict>
 	</dict>
 	<dict>
@@ -99,9 +133,9 @@
 		<key>date</key>
 		<dict>
 			<key>start</key>
-			<date>2014-05-16T11:37:00Z</date>
+			<date>2014-05-16T15:15:00Z</date>
 			<key>end</key>
-			<date>2014-05-16T11:37:00Z</date>
+			<date>2014-05-16T16:00:00Z</date>
 		</dict>
 	</dict>
 	<dict>
@@ -123,6 +157,23 @@
 	</dict>
 	<dict>
 		<key>identifier</key>
+		<string>omradetoppnar</string>
+		<key>name</key>
+		<string>Området öppnar</string>
+		<key>description</key>
+		<string>Området öppnar</string>
+		<key>place</key>
+		<string>storascenen</string>
+		<key>date</key>
+		<dict>
+			<key>start</key>
+			<date>2014-05-17T10:00:00Z</date>
+			<key>end</key>
+			<date>2014-05-16T22:00:00Z</date>
+		</dict>
+	</dict>
+	<dict>
+		<key>identifier</key>
 		<string>discotekayugostyle</string>
 		<key>name</key>
 		<string>Discoteka Yugostyle</string>
@@ -134,6 +185,23 @@
 		<dict>
 			<key>start</key>
 			<date>2014-05-18T21:00:00Z</date>
+			<key>end</key>
+			<date>2014-05-17T22:00:00Z</date>
+		</dict>
+	</dict>
+	<dict>
+		<key>identifier</key>
+		<string>omradetoppnar</string>
+		<key>name</key>
+		<string>Området öppnar</string>
+		<key>description</key>
+		<string>Området öppnar</string>
+		<key>place</key>
+		<string>storascenen</string>
+		<key>date</key>
+		<dict>
+			<key>start</key>
+			<date>2014-05-18T10:00:00Z</date>
 			<key>end</key>
 			<date>2014-05-17T22:00:00Z</date>
 		</dict>
@@ -157,6 +225,23 @@
 	</dict>
 	<dict>
 		<key>identifier</key>
+		<string>tagetavgar</string>
+		<key>name</key>
+		<string>Tåget avgår</string>
+		<key>description</key>
+		<string>Nu tuffar tåget igång.</string>
+		<key>place</key>
+		<string></string>
+		<key>date</key>
+		<dict>
+			<key>start</key>
+			<date>2014-05-17T11:00:00Z</date>
+			<key>end</key>
+			<date>2014-05-17T13:00:00Z</date>
+		</dict>
+	</dict>
+	<dict>
+		<key>identifier</key>
 		<string>wintergatan</string>
 		<key>name</key>
 		<string>Wintergatan</string>
@@ -170,6 +255,23 @@
 			<date>2014-05-18T16:30:00Z</date>
 			<key>end</key>
 			<date>2014-05-18T17:15:00Z</date>
+		</dict>
+	</dict>
+	<dict>
+		<key>identifier</key>
+		<string>tagetavgar</string>
+		<key>name</key>
+		<string>Tåget avgår</string>
+		<key>description</key>
+		<string>Nu tuffar tåget igång.</string>
+		<key>place</key>
+		<string></string>
+		<key>date</key>
+		<dict>
+			<key>start</key>
+			<date>2014-05-18T11:00:00Z</date>
+			<key>end</key>
+			<date>2014-05-18T13:00:00Z</date>
 		</dict>
 	</dict>
 	<dict>
@@ -344,19 +446,109 @@
 	</dict>
 	<dict>
 		<key>identifier</key>
-		<string></string>
+		<string>omradetstanger</string>
 		<key>name</key>
-		<string>Invigning</string>
+		<string>Området stänger</string>
 		<key>description</key>
-		<string>Futuralt awesome invigning av Lundakarnevalen 2014</string>
+		<string>Andra tidsresan! Vi reser åter in i morgondagen (genom att gå hem och sova).</string>
 		<key>place</key>
 		<string>storascenen</string>
 		<key>date</key>
 		<dict>
 			<key>start</key>
-			<date>2014-05-16T11:00:00Z</date>
+			<date>2014-05-17T21:59:00Z</date>
 			<key>end</key>
-			<date>2014-05-16T12:00:00Z</date>
+			<date>2014-05-17T21:59:01Z</date>
+		</dict>
+	</dict>
+	<dict>
+		<key>identifier</key>
+		<string>verklighetensfolk</string>
+		<key>name</key>
+		<string>Verklighetens Folk</string>
+		<key>description</key>
+		<string>Skatepunk, trash metal, power pop, hästajazz, neosoul, urban country, rotblues, dance hall, hip hop och FM rock. Det är inte fy skam. 
+
+Men nu finns även villapop. Villapop förenar lifestyle med musik. Villapop är en blandning av träregel och Tomas Ledin. Villapop uppstår när Ernst Kirchsteiger möter Guns N´Roses.
+
+Och Verklighetens Folk spelar villapop. 
+</string>
+		<key>place</key>
+		<string>storascenen</string>
+		<key>date</key>
+		<dict>
+			<key>start</key>
+			<date>2014-05-17T13:30:00Z</date>
+			<key>end</key>
+			<date>2014-05-17T14:15:00Z</date>
+		</dict>
+	</dict>
+	<dict>
+		<key>identifier</key>
+		<string>omradetstanger</string>
+		<key>name</key>
+		<string>Området stänger</string>
+		<key>description</key>
+		<string>Karnevalen slutar, se till att hitta på mycket bus innan det tar slut. Imorgon är det för sent!</string>
+		<key>place</key>
+		<string>storascenen</string>
+		<key>date</key>
+		<dict>
+			<key>start</key>
+			<date>2014-05-18T21:59:00Z</date>
+			<key>end</key>
+			<date>2014-05-18T21:59:01Z</date>
+		</dict>
+	</dict>
+	<dict>
+		<key>identifier</key>
+		<string>dansen</string>
+		<key>name</key>
+		<string>Dansen</string>
+		<key>description</key>
+		<string>Dansa loss! Hur dansar man i framtiden? Det ryktas att roboten blivit populär igen, testa! Moon walk är inte lika häftig längre, förrutom på månen då alltså...</string>
+		<key>place</key>
+		<string>dansen</string>
+		<key>date</key>
+		<dict>
+			<key>start</key>
+			<date>2014-05-16T21:30:00Z</date>
+			<key>end</key>
+			<date>2014-05-16T00:00:00Z</date>
+		</dict>
+	</dict>
+	<dict>
+		<key>identifier</key>
+		<string>dansen</string>
+		<key>name</key>
+		<string>Dansen</string>
+		<key>description</key>
+		<string>Dansa loss! Hur dansar man i framtiden? Det ryktas att roboten blivit populär igen, testa! Moon walk är inte lika häftig längre, förrutom på månen då alltså...</string>
+		<key>place</key>
+		<string>dansen</string>
+		<key>date</key>
+		<dict>
+			<key>start</key>
+			<date>2014-05-17T21:30:00Z</date>
+			<key>end</key>
+			<date>2014-05-17T00:00:00Z</date>
+		</dict>
+	</dict>
+	<dict>
+		<key>identifier</key>
+		<string>dansen</string>
+		<key>name</key>
+		<string>Dansen</string>
+		<key>description</key>
+		<string>Dansa loss! Hur dansar man i framtiden? Det ryktas att roboten blivit populär igen, testa! Moon walk är inte lika häftig längre, förrutom på månen då alltså...</string>
+		<key>place</key>
+		<string>dansen</string>
+		<key>date</key>
+		<dict>
+			<key>start</key>
+			<date>2014-05-18T21:30:00Z</date>
+			<key>end</key>
+			<date>2014-05-18T00:00:00Z</date>
 		</dict>
 	</dict>
 </array>
