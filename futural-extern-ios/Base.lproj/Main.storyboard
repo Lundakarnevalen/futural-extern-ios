@@ -261,7 +261,6 @@
                         <outlet property="statusLabel" destination="5LT-uy-E2o" id="iJD-Gn-aDs"/>
                         <outlet property="statusView" destination="BeB-aw-b78" id="QAX-RY-M0j"/>
                         <outlet property="subHeaderLabel" destination="uPS-vA-m5k" id="V0c-HF-gcP"/>
-                        <segue destination="sZB-Gn-BVz" kind="push" identifier="detail.grid" id="Ghv-ok-8HG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nZT-61-A41" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -277,15 +276,15 @@
                         <viewControllerLayoutGuide type="bottom" id="e0x-Wp-tUf"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="ABG-SJ-ecC">
-                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="cover-nangilima" translatesAutoresizingMaskIntoConstraints="NO" id="WBh-D5-FZj">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="455"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ahS-RD-Uoz">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="455"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </scrollView>
                         </subviews>

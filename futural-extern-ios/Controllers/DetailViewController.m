@@ -13,6 +13,8 @@
 
 #import "LKLayout.h"
 #import "LKColor.h"
+#import "LKAnnotation.h"
+#import "LKAnnotationView.h"
 
 @interface DetailViewController() { }
 
@@ -114,7 +116,11 @@
         
     }
     
-    MKCoordinateRegion region = MKCoordinateRegionMake(self.place.position, MKCoordinateSpanMake(0, 0));
+    NSInteger randomIndex = arc4random() % [self.place.subPlaces count];
+    LKPlace *randomPlace = [self.place.subPlaces objectAtIndex:randomIndex];
+    MKCoordinateRegion region = MKCoordinateRegionMake(randomPlace.position, MKCoordinateSpanMake(0.0001, 0.0001));
+    LKAnnotation *annotation = [[LKAnnotation alloc] initWithPlace:self.place andPositionIndexOf:randomIndex];
+    [self.miniMap addAnnotation:annotation];
     
     [self.miniMap setRegion:region];
     
@@ -180,17 +186,16 @@
     
     if(self.place) {
         
-        vc.visitPlace = self.place;
-        
         NSInteger subPlaces = [self.place.subPlaces count];
         
         if(subPlaces > 1) {
             
+            vc.visitCategory = @[@(self.place.category)];
             NSLog(@"Multiple places that are being requested, filter excluesively.");
             
         } else {
                 
-            NSLog(@"Check the place position and navigate there.");
+            vc.visitPlace = self.place;
             
         }
         
