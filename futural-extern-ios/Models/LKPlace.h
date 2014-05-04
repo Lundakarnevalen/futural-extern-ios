@@ -59,6 +59,8 @@ typedef enum {
 @property (nonatomic) CLLocationCoordinate2D position;
 @property (nonatomic) NSMutableArray *subPlaces; //of LKPlace
 
+@property (nonatomic) NSDictionary *openingHours;
+
 @property (nonatomic, getter = isSellingAlcohol) BOOL alcohol; //selling alcoholic beverages?
 @property (nonatomic) NSMutableArray *paymentOptions; //of LKPaymentOption. what kind of payments are available (card, phone, futural). IF THE ARRAY IS EMPTY, IT'S FOR FREE.
 

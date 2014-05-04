@@ -40,6 +40,7 @@
 		5722E91018FD72F500BEE3A2 /* LKPlace.m in Sources */ = {isa = PBXBuildFile; fileRef = 5722E90F18FD72F500BEE3A2 /* LKPlace.m */; };
 		5722E91618FD7C3600BEE3A2 /* TabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5722E91518FD7C3600BEE3A2 /* TabBarViewController.m */; };
 		5722E91C18FD7DF300BEE3A2 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5722E91B18FD7DF300BEE3A2 /* MapKit.framework */; };
+		572A752219162DFF004F2128 /* LKMapView.m in Sources */ = {isa = PBXBuildFile; fileRef = 572A752119162DFF004F2128 /* LKMapView.m */; };
 		57407D1518FD2A5A0003F787 /* LKEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 57407D1418FD2A5A0003F787 /* LKEvent.m */; };
 		57407D1718FD2B1A0003F787 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57407D1618FD2B1A0003F787 /* CoreLocation.framework */; };
 		57407D1A18FD2B5C0003F787 /* LKSektion.m in Sources */ = {isa = PBXBuildFile; fileRef = 57407D1918FD2B5C0003F787 /* LKSektion.m */; };
@@ -125,6 +126,8 @@
 		5722E91B18FD7DF300BEE3A2 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		5722E91D18FD80C700BEE3A2 /* LKColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; name = LKColor.h; path = Models/LKColor.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		5722E91E18FD80C700BEE3A2 /* InitViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; name = InitViewController.m; path = Controllers/Map/InitViewController.m; sourceTree = "<group>"; };
+		572A752019162DFF004F2128 /* LKMapView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LKMapView.h; path = Models/LKMapView.h; sourceTree = "<group>"; };
+		572A752119162DFF004F2128 /* LKMapView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LKMapView.m; path = Models/LKMapView.m; sourceTree = "<group>"; };
 		57407D1318FD2A5A0003F787 /* LKEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; name = LKEvent.h; path = Models/LKEvent.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		57407D1418FD2A5A0003F787 /* LKEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; name = LKEvent.m; path = Models/LKEvent.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		57407D1618FD2B1A0003F787 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
@@ -332,6 +335,8 @@
 			children = (
 				1ABFF6FB19007CB100C575EE /* Overlay */,
 				1ABFF6DC19002BBB00C575EE /* Annotation */,
+				572A752019162DFF004F2128 /* LKMapView.h */,
+				572A752119162DFF004F2128 /* LKMapView.m */,
 			);
 			name = Map;
 			sourceTree = "<group>";
@@ -538,6 +543,7 @@
 				1A411FF21901B1C700FF39F9 /* CreateAnnotationsViewController.m in Sources */,
 				1ABFF6F819006E5400C575EE /* MapFilterViewController.m in Sources */,
 				1ABFF6E419002BBB00C575EE /* LKAnnotationView.m in Sources */,
+				572A752219162DFF004F2128 /* LKMapView.m in Sources */,
 				57407D1A18FD2B5C0003F787 /* LKSektion.m in Sources */,
 				575C94B818FEC9C600A341EE /* ScheduleViewController.m in Sources */,
 				5722E91018FD72F500BEE3A2 /* LKPlace.m in Sources */,

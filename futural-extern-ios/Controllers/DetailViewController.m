@@ -39,7 +39,6 @@
 - (void)multipleChoice:(NSNotification *)notification {
     
     LKPlace *place = (LKPlace *)notification.userInfo[@"place"];
-    
     [self navigateToMapWithPlace:place];
     
 }
@@ -130,6 +129,8 @@
     LKPlace *randomPlace = [self.place.subPlaces objectAtIndex:randomIndex];
     MKCoordinateRegion region = MKCoordinateRegionMake(randomPlace.position, MKCoordinateSpanMake(0.0001, 0.0001));
     LKAnnotation *annotation = [[LKAnnotation alloc] initWithPlace:self.place andPositionIndexOf:randomIndex];
+    
+    [self.miniMap renderOverlay];
     [self.miniMap addAnnotation:annotation];
     
     [self.miniMap setRegion:region];

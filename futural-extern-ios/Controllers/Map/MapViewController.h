@@ -9,9 +9,14 @@
 #import <UIKit/UIKit.h>
 #import <MapKit/MapKit.h>
 
-@interface MapViewController : UIViewController <MKMapViewDelegate, UITableViewDelegate, MKMapViewDelegate>
+#import "LKMapView.h"
+
+@interface MapViewController : UIViewController <MKMapViewDelegate, UITableViewDelegate>
+
+@property (weak, nonatomic) IBOutlet LKMapView *mapView;
 
 @property (nonatomic) LKarneval *karneval;
+@property (nonatomic) NSMutableArray *placesToPin;
 
 //detail to map
 @property (nonatomic) LKPlaceCategory visitCategory;

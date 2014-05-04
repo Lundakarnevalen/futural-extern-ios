@@ -20,6 +20,7 @@
         self.information = propertyList[@"description"];
         self.category = [propertyList[@"category"] integerValue];
         self.alcohol = [propertyList[@"alcohol"] boolValue];
+        self.openingHours = propertyList[@"openinghours"];
         
         for(NSString *option in propertyList[@"payment_options"]) {
             

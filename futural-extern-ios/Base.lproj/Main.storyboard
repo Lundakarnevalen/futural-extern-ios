@@ -131,7 +131,7 @@
                                         <rect key="frame" x="239" y="20" width="66" height="40"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <subviews>
-                                            <mapView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" mapType="standard" zoomEnabled="NO" scrollEnabled="NO" rotateEnabled="NO" pitchEnabled="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3RW-iS-aJj">
+                                            <mapView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" mapType="standard" zoomEnabled="NO" scrollEnabled="NO" rotateEnabled="NO" pitchEnabled="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3RW-iS-aJj" customClass="LKMapView">
                                                 <rect key="frame" x="0.0" y="0.0" width="66" height="40"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             </mapView>
@@ -663,7 +663,7 @@
                         <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" rotateEnabled="NO" pitchEnabled="NO" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VOy-Cp-HdC">
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" rotateEnabled="NO" pitchEnabled="NO" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VOy-Cp-HdC" customClass="LKMapView">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <gestureRecognizers/>
@@ -673,7 +673,7 @@
                                 </connections>
                             </mapView>
                             <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ovd-0P-KLA">
-                                <rect key="frame" x="305" y="347" width="30" height="57"/>
+                                <rect key="frame" x="305" y="397" width="30" height="57"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.96862745100000003" green="0.91764705879999997" blue="0.83137254900000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -688,15 +688,11 @@
                                     <action selector="showMapButtonClicked:" destination="4LJ-BV-Ygh" eventType="touchUpInside" id="Exw-eE-mF4"/>
                                 </connections>
                             </button>
-                            <imageView hidden="YES" userInteractionEnabled="NO" alpha="0.5" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Lundakarnevalen" translatesAutoresizingMaskIntoConstraints="NO" id="3mg-U3-s5B">
-                                <rect key="frame" x="0.0" y="92" width="320" height="320"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="VOy-Cp-HdC" secondAttribute="trailing" id="0Ne-K2-IzT"/>
-                            <constraint firstItem="zRu-NC-REF" firstAttribute="top" secondItem="ovd-0P-KLA" secondAttribute="bottom" constant="100" id="76o-Op-LVs"/>
+                            <constraint firstItem="zRu-NC-REF" firstAttribute="top" secondItem="ovd-0P-KLA" secondAttribute="bottom" constant="50" id="76o-Op-LVs"/>
                             <constraint firstItem="VOy-Cp-HdC" firstAttribute="top" secondItem="e0T-3B-zCv" secondAttribute="top" id="9zR-zC-DKw"/>
                             <constraint firstItem="VOy-Cp-HdC" firstAttribute="leading" secondItem="gTy-RO-O6Q" secondAttribute="leading" id="BTK-R6-c5L"/>
                             <constraint firstItem="zRu-NC-REF" firstAttribute="top" secondItem="VOy-Cp-HdC" secondAttribute="bottom" id="gIp-K1-WnA"/>
@@ -705,7 +701,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="bCb-Yy-j4V"/>
                     <connections>
-                        <outlet property="mapView" destination="VOy-Cp-HdC" id="MAY-Rm-AJw"/>
+                        <outlet property="mapView" destination="VOy-Cp-HdC" id="ope-2h-ibY"/>
                         <segue destination="CBE-hh-3D3" kind="modal" identifier="createAnnotationSegue" id="dlX-3D-OP5"/>
                     </connections>
                 </viewController>
@@ -1055,7 +1051,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Lundakarnevalen" width="2500" height="2500"/>
         <image name="background-entertainment" width="540" height="960"/>
         <image name="background-food" width="540" height="960"/>
         <image name="background-misc" width="540" height="960"/>

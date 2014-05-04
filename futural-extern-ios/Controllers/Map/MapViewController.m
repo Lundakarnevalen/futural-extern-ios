@@ -5,6 +5,7 @@
 //  Created by Victor Ingman on 2014-04-15.
 //  Copyright (c) 2014 Lundakarnevalen. All rights reserved.
 //
+#import "MapKit/MapKit.h"
 
 #import "MapViewController.h"
 #import "ECSlidingViewController.h"
@@ -24,8 +25,6 @@
 
 @property (nonatomic, strong) NSMutableDictionary *filter;
 
-@property (strong, nonatomic) IBOutlet MKMapView *mapView;
-
 @end
 
 @implementation MapViewController
@@ -36,22 +35,14 @@
     
     self.visitCategory = 0;
     
+    [self.mapView renderOverlay];
+    
     self.slidingViewController.underRightViewController  = [self.storyboard instantiateViewControllerWithIdentifier:@"Filter"];
-    
     [self.view addGestureRecognizer:self.slidingViewController.panGesture];
-    
     [self.slidingViewController setAnchorLeftRevealAmount:150.0f];
     
-    LKOverlay *map = [[LKOverlay alloc] initWithImage:[UIImage imageNamed:@"Lundakarnevalen"]];
-    if ([self respondsToSelector:@selector(addOverlay:level:)]) {
-        [self.mapView addOverlay:map  level:MKOverlayLevelAboveRoads];
-    } else {
-        [self.mapView addOverlay:map];
-    }
-    
-    [self returnToCenterMap];
-    
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(filterMapTableViewRowDidSelect:) name:FilterMapTableViewRowDidSelect object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(navigateToDetail:) name:@"map.to.detail" object:nil]; //map model
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(filterMapTableViewRowDidSelect:) name:FilterMapTableViewRowDidSelect object:nil]; //filter
 
     
 }
@@ -66,6 +57,10 @@
 
         for(id <MKAnnotation>object in self.mapView.annotations) {
             
+            NSString *className = NSStringFromClass([object class]);
+            
+            if(![className isEqualToString:@"MKUserLocation"]) {
+                
             LKAnnotation *annotation = (LKAnnotation *)object;
             LKPlace *place = annotation.place;
             
@@ -85,6 +80,8 @@
                 [self.mapView removeAnnotation:object];
                 
             }
+                
+            }
             
         }
         
@@ -95,16 +92,23 @@
         
         for(id <MKAnnotation>annotation in self.mapView.annotations) {
             
-            LKAnnotation *a = (LKAnnotation *)annotation;
+            NSString *className = NSStringFromClass([annotation class]);
             
-            if(a.place.category != self.visitCategory) {
+            if(![className isEqualToString:@"MKUserLocation"]) {
+            
+                LKAnnotation *a = (LKAnnotation *)annotation;
                 
-                [self.mapView removeAnnotation:annotation];
+                if(a.place.category != self.visitCategory) {
+                    
+                    [self.mapView removeAnnotation:annotation];
+                    
+                }
                 
             }
             
         }
         
+        [self.mapView returnToCenterMap];
         self.visitCategory = 0;
         
     }
@@ -132,44 +136,23 @@
     
 }
 
-// This will get called too before the view appears
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    if ([[segue identifier] isEqualToString:@"toDetailedViewSegue"]) {
-//        // Get destination view
-//        DetailedAnnotationViewController *vc = [segue destinationViewController];
-//        
-//        // Pass the information to your destination view
-//        vc.title = ((SkaneAnnotation *)sender).title;
-    } else if ([[segue identifier] isEqualToString:@"createAnnotationSegue"]) {
-        CreateAnnotationsViewController *vc = [segue destinationViewController];
-        
-        // Pass the information to your destination view
-        vc.lat = ((CLLocation *)sender).coordinate.latitude;
-        vc.lng = ((CLLocation *)sender).coordinate.longitude;
-    }
+- (void)navigateToDetail:(NSNotification *)notification {
+    
+    NSLog(@"YES %@", notification);
+    
+    LKPlace *place = notification.userInfo[@"place"];
+    NSInteger tabIndex = [notification.userInfo[@"index"] integerValue];
+    
+    [[[self.tabBarController viewControllers] objectAtIndex:tabIndex] popToRootViewControllerAnimated:NO];
+    
+    EntertainmentViewController *vc = (EntertainmentViewController *)[[[self.tabBarController viewControllers] objectAtIndex:tabIndex] visibleViewController]; //fifän.
+    vc.visitIdentifier = place.parent.name;
+    vc.visitPlace = place.parent;
+    [self.tabBarController setSelectedIndex:tabIndex];
+    
 }
 
 -(void)reloadAnnotations {
-//    self.filter = [[NSUserDefaults standardUserDefaults] dictionaryForKey:@"filter"];
-//    if (!self.filter) {
-//        NSArray *filter = [NSArray arrayWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"filter" ofType:@"plist"]];
-//        NSNumber *yesValue = [NSNumber numberWithBool:YES];
-//        NSNumber *noValue = [NSNumber numberWithBool:NO];
-//        self.filter = [[NSDictionary alloc] initWithObjects:[NSArray arrayWithObjects:yesValue, noValue, yesValue, nil] forKeys:filter];
-//        [[NSUserDefaults standardUserDefaults] setObject:self.filter forKey:@"filter"];
-//    }
-//    
-//    [self.mapView removeAnnotations:self.mapView.annotations];
-//    NSString *path = [[NSBundle mainBundle] pathForResource:@"annotations" ofType:@"plist"];
-//    NSString *docsFolder = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)[0];
-//    NSArray *annotations = nil;
-//    NSString *docsPath = [docsFolder stringByAppendingString:@"/annotations.plist"];
-//    if ([[NSFileManager defaultManager] fileExistsAtPath:docsPath]) {
-//        annotations = [NSArray arrayWithContentsOfFile:docsPath];
-//    } else {
-//        annotations = [NSArray arrayWithContentsOfFile:path];
-//    }
     
     LKarneval *karneval = [LKarneval sharedLKarneval];
     NSMutableArray *places = [[NSMutableArray alloc] init];
@@ -178,11 +161,11 @@
     self.filter = (NSMutableDictionary *)[[NSUserDefaults standardUserDefaults] dictionaryForKey:@"filter"];
     if (!self.filter) {
         self.filter = [[NSMutableDictionary alloc] init];
-        [self.filter setValue:[NSNumber numberWithBool:YES] forKey:@"food"];
-        [self.filter setValue:[NSNumber numberWithBool:YES] forKey:@"entertainment"];
-        [self.filter setValue:[NSNumber numberWithBool:YES] forKey:@"other"];
-        [self.filter setValue:[NSNumber numberWithBool:YES] forKey:@"toilet"];
-        [self.filter setValue:[NSNumber numberWithBool:YES] forKey:@"trash"];
+        [self.filter setValue:[NSNumber numberWithBool:NO] forKey:@"food"];
+        [self.filter setValue:[NSNumber numberWithBool:NO] forKey:@"entertainment"];
+        [self.filter setValue:[NSNumber numberWithBool:NO] forKey:@"other"];
+        [self.filter setValue:[NSNumber numberWithBool:NO] forKey:@"toilet"];
+        [self.filter setValue:[NSNumber numberWithBool:NO] forKey:@"trash"];
         [[NSUserDefaults standardUserDefaults] setObject:self.filter forKey:@"filter"];
     }
     
@@ -207,7 +190,6 @@
     }
     
     for (LKPlace *place in [karneval placesFilteredByCategories:places]) {
-//    for (LKPlace *place in karneval.places) {
     
         [place.subPlaces enumerateObjectsUsingBlock:^(id object, NSUInteger index, BOOL *stop) {
             
@@ -217,131 +199,7 @@
         }];
         
     }
-    
-//    for (NSDictionary *dict in annotations) {
-//        double lat = [dict[@"coordinates"][@"lat"] doubleValue];
-//        double lng = [dict[@"coordinates"][@"lng"] doubleValue];
-//        CLLocationCoordinate2D coord = CLLocationCoordinate2DMake(lat, lng);
-//        NSString *title = [dict[@"title"] uppercaseString];
-//        NSString *subTitle = dict[@"subtitle"];
-//        UIImage *img = [UIImage imageNamed:dict[@"image"]];
-//        NSArray *filterStrings = [NSArray arrayWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"filter" ofType:@"plist"]];
-//        NSInteger index = [dict[@"type"] integerValue];
-//        NSString *type = [filterStrings objectAtIndex:index];
-//        if ([self.filter objectForKey:type] == [NSNumber numberWithBool:YES]) {
-//            LKAnnotation *anno = [[LKAnnotation alloc] initWithCoordinate:coord title:title subtitle:subTitle image:img];
-//            
-//            [self.mapView addAnnotation:anno];
-//        }
-//        
-//    }
-}
 
--(MKOverlayRenderer *)mapView:(MKMapView *)mapView rendererForOverlay:(id<MKOverlay>)overlay {
-    if ([overlay isKindOfClass:LKOverlay.class]) {
-        LKOverlay *map = (LKOverlay *)overlay;
-        LKOverlayRenderer *overlayRenderer = [[LKOverlayRenderer alloc] initWithOverlay:map];
-        return overlayRenderer;
-    }
-    return nil;
-}
-
--(MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id<MKAnnotation>)annotation {
-    if ([annotation isKindOfClass:LKAnnotation.class]) {
-        LKAnnotation *anno = (LKAnnotation *)annotation;
-        LKAnnotationView *sav = [[LKAnnotationView alloc] initWithAnnotation:anno reuseIdentifier:@""];
-        sav.canShowCallout = NO;
-//        UIImageView *image = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"hamburger.png"]];
-//        image.contentMode = UIViewContentModeScaleAspectFit;
-//        UIView *leftCAV = [[UIView alloc] initWithFrame:CGRectMake(0,0,25,25)];
-//        image.frame = leftCAV.frame;
-//        [leftCAV addSubview: image];
-//        sav.leftCalloutAccessoryView = leftCAV;
-//        
-//        UIButton *rightButton = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
-//        [rightButton addTarget:nil action:nil forControlEvents:UIControlEventTouchUpInside];
-        //sav.rightCalloutAccessoryView = rightButton;
-        return sav;
-        
-    }
-    return nil;
-}
-
--(void)returnToCenterMap {
-    NSLog(@"Escpaed from the map. Returning ..");
-    self.mapView.region =  MKCoordinateRegionMake(
-                                                  CLLocationCoordinate2DMake(55.705444211518049,13.194497033688751),
-                                                  MKCoordinateSpanMake(0.0038183853724191863, 0.0047661187034577779));
-}
-
-- (void)mapView:(MKMapView *)mapView didSelectAnnotationView:(MKAnnotationView *)view {
-    
-    LKAnnotationView *annotationView = (LKAnnotationView *)view;
-    LKPlace *place = annotationView.annotation.place;
-    
-    NSDictionary *filters = @{
-                              @"entertainment" : [LKarneval LKPlaceFilterEntertainment],
-                              @"food" : [LKarneval LKPlaceFilterFood],
-                              @"toilet" : [LKarneval LKPlaceFilterToilet],
-                              @"trash" : [LKarneval LKPlaceFilterTrash],
-                              @"misc" : [LKarneval LKPlaceFilterOther]
-                         };
-    
-    NSDictionary *tabIndexes = @{
-                                 @"entertainment" : @0,
-                                 @"food" : @1,
-                                 @"toilet" : @4,
-                                 @"trash" : @4,
-                                 @"misc" : @4
-                                 }; //change this if the order of the tabs changes.
-    
-    [filters enumerateKeysAndObjectsUsingBlock:^(id key, id obj, BOOL *stop) {
-       
-        NSArray *currentFilter = (NSArray *)obj;
-        
-        [currentFilter enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
-           
-            LKPlaceCategory category = [obj integerValue]; //inside of nsnumber.
-            
-            if(category == place.category) {
-                
-                NSInteger tabIndex = [tabIndexes[key] integerValue]; //nsnumbers
-                
-                [[[self.tabBarController viewControllers] objectAtIndex:tabIndex] popToRootViewControllerAnimated:NO];
-                
-                NSLog(@"This is contained inside of %@.", key);
-                EntertainmentViewController *vc = (EntertainmentViewController *)[[[self.tabBarController viewControllers] objectAtIndex:tabIndex] visibleViewController]; //fifän.
-                vc.visitIdentifier = place.parent.name;
-                vc.visitPlace = place.parent;
-                
-                [self.tabBarController setSelectedIndex:tabIndex];
-                
-            }
-            
-        }];
-        
-    }];
-    
-    NSLog(@"This annotiation is %@", annotationView.annotation.place.parent.identifier);
-    
-}
-
-- (void)mapView:(MKMapView *)mapView regionDidChangeAnimated:(BOOL)animated {
-    
-    NSLog(@"%f, %f",mapView.region.span.latitudeDelta, mapView.region.span.longitudeDelta);
-    
-    if (mapView.region.span.latitudeDelta > 0.0055911036392117808) {
-        [self returnToCenterMap];
-    } else if (mapView.region.center.latitude < 55.70295306978420057931) {
-        [self returnToCenterMap];
-    } else if (mapView.region.center.latitude > 55.71001229335885085447) {
-        [self returnToCenterMap];
-    } else if (mapView.region.center.longitude < 13.18507803164854941258) {
-        [self returnToCenterMap];
-    } else if (mapView.region.center.longitude > 13.20106887303782450260) {
-        [self returnToCenterMap];
-    }
-    
 }
 
 - (LKarneval *)karneval {
@@ -353,6 +211,18 @@
     }
     
     return _karneval;
+    
+}
+
+- (NSMutableArray *)placesToPin {
+    
+    if(!_placesToPin) {
+        
+        _placesToPin = [[NSMutableArray alloc] init];
+        
+    }
+    
+    return _placesToPin;
     
 }
 
