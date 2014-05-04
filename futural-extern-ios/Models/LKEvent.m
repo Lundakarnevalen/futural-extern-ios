@@ -72,16 +72,9 @@
 
 - (NSString *)dataIdentifier { //the identifier that connects this event to the event in the database.
     
-    NSString *identifier = [NSString stringWithFormat:@"%@ %@:%@", [self.name lowercaseString], [self formattedStartTime], [self formattedEndTime]];
+    NSString *identifier = [NSString stringWithFormat:@"%@ %@:%@", [self.name lowercaseString], self.start, self.end];
     
     return identifier;
-    
-}
-
-- (NSString *)timeLeft {
-    
-    //return the time left until launch date, thought that we could use the following format dd:hh:mm (for use with views)
-    return @"dd:hh:mm";
     
 }
 

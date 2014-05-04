@@ -170,7 +170,16 @@
         headerText = [[NSString stringWithFormat:@"Vad är %@?", self.place.name] uppercaseString];
         coverImage = [self.place coverImage];
         
-        [self.statusView setHidden:NO];
+        NSString *timeSpan = [self.place timeSpan];
+        if(![timeSpan isEqualToString:@""]) {
+            
+            [self.statusLabel setText:[self.place timeSpan]];
+            [self.statusView setHidden:NO];
+            
+        } else {
+            
+            [self.statusView setHidden:YES];
+        }
         
     } else { //event, hide symbols.
         

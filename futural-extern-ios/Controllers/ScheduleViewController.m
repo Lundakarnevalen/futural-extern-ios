@@ -43,8 +43,6 @@
     
     if(self.visitEvent) {
         
-        NSLog(@"SHOW ME %@", self.visitEvent);
-        
         [self.sectionButton setSelectedSegmentIndex:2]; //to see all of the events.
         
         for(LKEvent *event in [self events]) {
@@ -131,8 +129,6 @@
 }
 
 - (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
-    
-    NSLog(@"%@", indexPath);
     
     [[cell contentView] setBackgroundColor:[UIColor clearColor]];
     [[cell backgroundView] setBackgroundColor:[UIColor clearColor]];
@@ -221,8 +217,6 @@
     if([sender class] == [LKEvent class]) {
         
         event = sender;
-        
-        NSLog(@"SENDER : %@", event);
         
     } else {
     

@@ -76,4 +76,6 @@ typedef enum {
 - (UIImage *)imageForPlace;
 - (UIImage *)coverImage;
 
+- (NSString *)timeSpan; //00 - 00
+
 @end

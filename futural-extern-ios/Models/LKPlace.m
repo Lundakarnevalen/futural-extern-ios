@@ -72,6 +72,32 @@
     
 }
 
+- (NSString *)timeSpan {
+    
+    NSDate *today = [NSDate date];
+    
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setDateFormat:@"yyyy-MM-dd"];
+    
+    NSDictionary *openingHours = self.openingHours[[dateFormatter stringFromDate:today]];
+    
+    if(openingHours) {
+        
+        NSString *open = [openingHours objectForKey:@"open"];
+        open = [open substringToIndex:2];
+        NSString *close = [openingHours objectForKey:@"close"];
+        close = [close substringToIndex:2];
+        
+        return [NSString stringWithFormat:@"%@ - %@", open, close];
+        
+    } else {
+        
+        return @"";
+        
+    }
+    
+}
+
 - (BOOL)acceptsCard {
     
     for(NSNumber *paymentContainer in self.paymentOptions) {
