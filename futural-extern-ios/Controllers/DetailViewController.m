@@ -10,6 +10,7 @@
 #import "MultipleChoicesViewController.h"
 #import "MapViewController.h"
 #import "InitViewController.h"
+#import "ScheduleViewController.h"
 
 #import "LKLayout.h"
 #import "LKColor.h"
@@ -125,10 +126,24 @@
         
     }
     
-    NSInteger randomIndex = arc4random() % [self.place.subPlaces count];
-    LKPlace *randomPlace = [self.place.subPlaces objectAtIndex:randomIndex];
-    MKCoordinateRegion region = MKCoordinateRegionMake(randomPlace.position, MKCoordinateSpanMake(0.0001, 0.0001));
-    LKAnnotation *annotation = [[LKAnnotation alloc] initWithPlace:self.place andPositionIndexOf:randomIndex];
+    MKCoordinateRegion region;
+    LKAnnotation *annotation;
+    
+    if(self.place) {
+     
+        NSInteger randomIndex = arc4random() % [self.place.subPlaces count];
+        LKPlace *randomPlace = [self.place.subPlaces objectAtIndex:randomIndex];
+        region = MKCoordinateRegionMake(randomPlace.position, MKCoordinateSpanMake(0.0001, 0.0001));
+        annotation = [[LKAnnotation alloc] initWithPlace:self.place andPositionIndexOf:randomIndex];
+        
+    } else {
+        
+        LKPlace *place = (LKPlace *)[self.event.place.subPlaces firstObject];
+        
+        region = MKCoordinateRegionMake(place.position, MKCoordinateSpanMake(0.0001, 0.0001));
+        annotation = [[LKAnnotation alloc] initWithPlace:place];
+        
+    }
     
     [self.miniMap renderOverlay];
     [self.miniMap addAnnotation:annotation];
@@ -191,33 +206,54 @@
 
 - (IBAction)findMe:(id)sender {
     
-    [self navigateToMapWithPlace:self.place];
+    if(self.place) {
+        [self navigateToMapWithPlace:self.place];
+    } else {
+        [self navigateToMapWithPlace:self.event.place];
+    }
     
 }
 
-- (void)navigateToMapWithPlace:(LKPlace *)place {
+- (void)navigateToMapWithPlace:(id)location {
     
-    NSInteger tabIndex = 2;
-    MapViewController *vc = (MapViewController *)[(UINavigationController *)[[[self.tabBarController viewControllers] objectAtIndex:tabIndex] topViewController] visibleViewController]; //fifän, igen.
-    
-    if(place) {
+    if(location) {
         
-        NSInteger subPlaces = [place.subPlaces count];
+        if([location class] == [LKPlace class]) {
+            
+            NSInteger tabIndex = 2;
+            MapViewController *vc = (MapViewController *)[(UINavigationController *)[[[self.tabBarController viewControllers] objectAtIndex:tabIndex] topViewController] visibleViewController]; //fifän, igen.
+            
+            LKPlace *place = location;
+            NSInteger subPlaces = [place.subPlaces count];
         
-        if(subPlaces > 1) {
+            if(subPlaces > 1) {
+                
+                vc.visitCategory = place.category;
+                NSLog(@"Multiple places that are being requested, filter excluesively.");
+                
+            } else {
+                
+                vc.visitPlace = location;
+                
+            }
             
-            vc.visitCategory = place.category;
-            NSLog(@"Multiple places that are being requested, filter excluesively.");
+            [self.tabBarController setSelectedIndex:tabIndex];
             
-        } else {
+        } else if([location class] == [LKEvent class]) {
             
-            vc.visitPlace = place;
+            LKEvent *event = location;
+            
+            NSInteger tabIndex = 3;
+            
+            [[[self.tabBarController viewControllers] objectAtIndex:tabIndex] popToRootViewControllerAnimated:NO];
+            
+            ScheduleViewController *vc = (ScheduleViewController *)[[[self.tabBarController viewControllers] objectAtIndex:tabIndex] visibleViewController]; //fifän.
+            vc.visitEvent = event;
+            [self.tabBarController setSelectedIndex:tabIndex];
             
         }
         
     }
-    
-    [self.tabBarController setSelectedIndex:tabIndex];
     
 }
 

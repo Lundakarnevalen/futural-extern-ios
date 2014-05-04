@@ -29,6 +29,7 @@
 
 - (BOOL)isOver; //check if the event has already taken place.
 - (NSString *)timeLeft; //return the time left until launch date, thought that we could use the following format dd:hh:mm (for use with views)
+- (NSString *)dataIdentifier;
 
 - (NSString *)formattedStartTimeWithWeekday;
 //the following are in HH:mm format.

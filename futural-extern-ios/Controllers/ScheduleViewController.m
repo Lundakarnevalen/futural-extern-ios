@@ -39,6 +39,32 @@
     
 }
 
+- (void)viewDidAppear:(BOOL)animated {
+    
+    if(self.visitEvent) {
+        
+        NSLog(@"SHOW ME %@", self.visitEvent);
+        
+        [self.sectionButton setSelectedSegmentIndex:2]; //to see all of the events.
+        
+        for(LKEvent *event in [self events]) {
+            
+            if([[event dataIdentifier] isEqualToString:[self.visitEvent dataIdentifier]]) {
+                
+                [self performSegueWithIdentifier:@"event.detail" sender:event];
+                
+                break;
+                
+            }
+            
+        }
+        
+        self.visitEvent = nil;
+        
+    }
+    
+}
+
 - (NSArray *)events {
     
     //add a property to filter this relative to day.
@@ -105,6 +131,8 @@
 }
 
 - (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    NSLog(@"%@", indexPath);
     
     [[cell contentView] setBackgroundColor:[UIColor clearColor]];
     [[cell backgroundView] setBackgroundColor:[UIColor clearColor]];
@@ -188,12 +216,24 @@
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     
-    CGPoint buttonPosition = [sender convertPoint:CGPointZero toView:self.tableView];
-    NSIndexPath *indexPath = [self.tableView indexPathForRowAtPoint:buttonPosition];
+    LKEvent *event;
     
-    NSInteger row = [self.class rowIndexFromIndexPath:indexPath inTableView:self.tableView];
+    if([sender class] == [LKEvent class]) {
+        
+        event = sender;
+        
+        NSLog(@"SENDER : %@", event);
+        
+    } else {
     
-    LKEvent *event = [[self events] objectAtIndex:row];
+        CGPoint buttonPosition = [sender convertPoint:CGPointZero toView:self.tableView];
+        NSIndexPath *indexPath = [self.tableView indexPathForRowAtPoint:buttonPosition];
+        
+        NSInteger row = [self.class rowIndexFromIndexPath:indexPath inTableView:self.tableView];
+        
+        event = [[self events] objectAtIndex:row];
+        
+    }
     
     DetailViewController *detailVC = segue.destinationViewController;
     detailVC.event = event;
