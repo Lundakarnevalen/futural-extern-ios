@@ -236,10 +236,6 @@
             
             break;
             
-        case LKPlaceCategoryBeverage:
-            
-            break;
-            
         case LKPlaceCategoryChargingStation:
             
             break;
@@ -253,8 +249,9 @@
             break;
             
         case LKPlaceCategoryFood:
+        case LKPlaceCategoryBeverage:
             
-            imageName = @"hamburger-drink";
+            imageName = @"krog";
             
             break;
             

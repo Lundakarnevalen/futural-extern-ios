@@ -63,6 +63,7 @@
 		57E047BF190D5BAF00C45F68 /* Layout.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 57E047BE190D5BAF00C45F68 /* Layout.xcassets */; };
 		57E047C6190D689600C45F68 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 57E047C5190D689600C45F68 /* DetailViewController.m */; };
 		57F07CD519103FE600290BB3 /* MultipleChoicesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 57F07CD419103FE600290BB3 /* MultipleChoicesViewController.m */; };
+		57F3626019179CF4008760D0 /* OvumSecretaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 57F3625F19179CF4008760D0 /* OvumSecretaViewController.m */; };
 		57FB7472190B150A0059CA82 /* LKCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 57FB746B190B150A0059CA82 /* LKCell.m */; };
 		57FB7473190B150A0059CA82 /* LKGrid.m in Sources */ = {isa = PBXBuildFile; fileRef = 57FB746D190B150A0059CA82 /* LKGrid.m */; };
 		57FB7474190B150A0059CA82 /* LKImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 57FB746F190B150A0059CA82 /* LKImage.m */; };
@@ -164,6 +165,8 @@
 		57E047C5190D689600C45F68 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DetailViewController.m; path = Controllers/DetailViewController.m; sourceTree = "<group>"; };
 		57F07CD319103FE600290BB3 /* MultipleChoicesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MultipleChoicesViewController.h; path = Controllers/MultipleChoicesViewController.h; sourceTree = "<group>"; };
 		57F07CD419103FE600290BB3 /* MultipleChoicesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MultipleChoicesViewController.m; path = Controllers/MultipleChoicesViewController.m; sourceTree = "<group>"; };
+		57F3625E19179CF4008760D0 /* OvumSecretaViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OvumSecretaViewController.h; path = Controllers/OvumSecretaViewController.h; sourceTree = "<group>"; };
+		57F3625F19179CF4008760D0 /* OvumSecretaViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OvumSecretaViewController.m; path = Controllers/OvumSecretaViewController.m; sourceTree = "<group>"; };
 		57FB746A190B150A0059CA82 /* LKCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LKCell.h; path = Models/LKCell.h; sourceTree = "<group>"; };
 		57FB746B190B150A0059CA82 /* LKCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LKCell.m; path = Models/LKCell.m; sourceTree = "<group>"; };
 		57FB746C190B150A0059CA82 /* LKGrid.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LKGrid.h; path = Models/LKGrid.h; sourceTree = "<group>"; };
@@ -383,6 +386,8 @@
 				575C94BC18FED02400A341EE /* Navigation */,
 				575C94B618FEC9C600A341EE /* ScheduleViewController.h */,
 				575C94B718FEC9C600A341EE /* ScheduleViewController.m */,
+				57F3625E19179CF4008760D0 /* OvumSecretaViewController.h */,
+				57F3625F19179CF4008760D0 /* OvumSecretaViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -544,6 +549,7 @@
 				57762124190993DB00B99E8E /* MiscellaneousViewController.m in Sources */,
 				577621211909932800B99E8E /* EntertainmentViewController.m in Sources */,
 				57FB7473190B150A0059CA82 /* LKGrid.m in Sources */,
+				57F3626019179CF4008760D0 /* OvumSecretaViewController.m in Sources */,
 				57407D1518FD2A5A0003F787 /* LKEvent.m in Sources */,
 				57E047C6190D689600C45F68 /* DetailViewController.m in Sources */,
 				1A411FF21901B1C700FF39F9 /* CreateAnnotationsViewController.m in Sources */,

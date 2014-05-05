@@ -2,17 +2,27 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>tåget</key>
+	<dict>
+		<key>openinghours</key>
+		<dict/>
+		<key>alcohol</key>
+		<false/>
+		<key>category</key>
+		<integer>22</integer>
+		<key>description</key>
+		<string>Årets tåg består av häftiga tåg i alla dess former, en resa genom tidsrymden. För att veta mer var god köp programbladet som säljs i shoppen på karnevalsområdet.</string>
+		<key>name</key>
+		<string>Tåget</string>
+		<key>payment_options</key>
+		<array/>
+		<key>positions</key>
+		<array/>
+	</dict>
 	<key>krogundervatten</key>
 	<dict>
 		<key>openinghours</key>
 		<dict>
-			<key>2014-05-04</key>
-			<dict>
-				<key>open</key>
-				<string>12:00</string>
-				<key>close</key>
-				<string>01:00</string>
-			</dict>
 			<key>2014-05-16</key>
 			<dict>
 				<key>open</key>
@@ -64,13 +74,6 @@ Välkommen till krog Undervatten!</string>
 	<dict>
 		<key>openinghours</key>
 		<dict>
-			<key>2014-05-04</key>
-			<dict>
-				<key>open</key>
-				<string>12:00</string>
-				<key>close</key>
-				<string>01:00</string>
-			</dict>
 			<key>2014-05-16</key>
 			<dict>
 				<key>open</key>

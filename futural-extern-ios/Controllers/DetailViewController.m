@@ -134,6 +134,7 @@
         
         informationBarColor = [LKColor colorWithIdentifier:LKColorBlue];
         logotypeStrokeColor = [UIColor whiteColor];
+        [self.sectionButton removeFromSuperview];
         [self.sectionButton setHidden:YES];
         [self.statusView setBackgroundColor:[LKColor colorWithIdentifier:LKColorLightBlue]];
         
@@ -157,9 +158,11 @@
     
     if(self.place) {
      
+        if([self.place.subPlaces count] > 0) {
         NSInteger randomIndex = arc4random() % [self.place.subPlaces count];
         place = [self.place.subPlaces objectAtIndex:randomIndex];
         annotation = [[LKAnnotation alloc] initWithPlace:self.place andPositionIndexOf:randomIndex];
+        }
         
     } else {
         
