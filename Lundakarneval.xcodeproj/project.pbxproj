@@ -1,0 +1,731 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1A3576ED1916D641005649FA /* Places.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1A3576EC1916D641005649FA /* Places.plist */; };
+		1A411FEC1901A7BC00FF39F9 /* UILabel+FuturaFont.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A411FEB1901A7BC00FF39F9 /* UILabel+FuturaFont.m */; };
+		1A411FEF1901A98D00FF39F9 /* UIView+Shadow.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A411FEE1901A98D00FF39F9 /* UIView+Shadow.m */; };
+		1A411FF21901B1C700FF39F9 /* CreateAnnotationsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A411FF11901B1C700FF39F9 /* CreateAnnotationsViewController.m */; };
+		1A4833791915010A00CDC0CD /* Radio.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1A4833781915010A00CDC0CD /* Radio.xcassets */; };
+		1A48337D191504F900CDC0CD /* RadioViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A48337C191504F900CDC0CD /* RadioViewController.m */; };
+		1A48337F1915057400CDC0CD /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A48337E1915057400CDC0CD /* AVFoundation.framework */; };
+		1A4A83CA190996AE00D7C466 /* LKButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A4A83C9190996AE00D7C466 /* LKButton.m */; };
+		1A7DA8A318FF06C70025C677 /* App.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1A7DA8A218FF06C70025C677 /* App.xcassets */; };
+		1A96E5831916E3DE0079D900 /* LKOverlayView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A96E5821916E3DE0079D900 /* LKOverlayView.m */; };
+		1ABFF6E219002BBB00C575EE /* LKAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ABFF6DE19002BBB00C575EE /* LKAnnotation.m */; };
+		1ABFF6E319002BBB00C575EE /* LKAnnotation.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1ABFF6DF19002BBB00C575EE /* LKAnnotation.xib */; };
+		1ABFF6E419002BBB00C575EE /* LKAnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ABFF6E119002BBB00C575EE /* LKAnnotationView.m */; };
+		1ABFF6E719002BDD00C575EE /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ABFF6E619002BDD00C575EE /* MapViewController.m */; };
+		1ABFF6E919002DD100C575EE /* Map.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1ABFF6E819002DD100C575EE /* Map.xcassets */; };
+		1ABFF6ED1900646900C575EE /* ECSlidingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ABFF6EC1900646900C575EE /* ECSlidingViewController.m */; };
+		1ABFF6F01900649300C575EE /* InitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ABFF6EF1900649300C575EE /* InitViewController.m */; };
+		1ABFF6F819006E5400C575EE /* MapFilterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ABFF6F719006E5400C575EE /* MapFilterViewController.m */; };
+		1ABFF6FA1900713800C575EE /* LKColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ABFF6F91900713800C575EE /* LKColor.m */; };
+		1ABFF6FE19007CF800C575EE /* LKOverlay.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ABFF6FD19007CF800C575EE /* LKOverlay.m */; };
+		1ABFF70119007E2000C575EE /* LKOverlayRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ABFF70019007E2000C575EE /* LKOverlayRenderer.m */; };
+		1ABFF7031900887F00C575EE /* futuralt-bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1ABFF7021900887F00C575EE /* futuralt-bold.ttf */; };
+		1ABFF706190088F700C575EE /* UILabel+Shadow+FuturaBoldFont.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ABFF705190088F700C575EE /* UILabel+Shadow+FuturaBoldFont.m */; };
+		1AE8E55518F42FB50078EBDF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AE8E55418F42FB50078EBDF /* Foundation.framework */; };
+		1AE8E55718F42FB50078EBDF /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AE8E55618F42FB50078EBDF /* CoreGraphics.framework */; };
+		1AE8E55918F42FB50078EBDF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AE8E55818F42FB50078EBDF /* UIKit.framework */; };
+		1AE8E55F18F42FB50078EBDF /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1AE8E55D18F42FB50078EBDF /* InfoPlist.strings */; };
+		1AE8E56118F42FB50078EBDF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AE8E56018F42FB50078EBDF /* main.m */; };
+		1AE8E56518F42FB50078EBDF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AE8E56418F42FB50078EBDF /* AppDelegate.m */; };
+		1AE8E56818F42FB50078EBDF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1AE8E56618F42FB50078EBDF /* Main.storyboard */; };
+		5703E5F01912C85F005DA0D2 /* scheduleTableHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5703E5EF1912C85F005DA0D2 /* scheduleTableHeader.xib */; };
+		5722E91018FD72F500BEE3A2 /* LKPlace.m in Sources */ = {isa = PBXBuildFile; fileRef = 5722E90F18FD72F500BEE3A2 /* LKPlace.m */; };
+		5722E91618FD7C3600BEE3A2 /* TabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5722E91518FD7C3600BEE3A2 /* TabBarViewController.m */; };
+		5722E91C18FD7DF300BEE3A2 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5722E91B18FD7DF300BEE3A2 /* MapKit.framework */; };
+		572A752219162DFF004F2128 /* LKMapView.m in Sources */ = {isa = PBXBuildFile; fileRef = 572A752119162DFF004F2128 /* LKMapView.m */; };
+		57407D1518FD2A5A0003F787 /* LKEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 57407D1418FD2A5A0003F787 /* LKEvent.m */; };
+		57407D1718FD2B1A0003F787 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57407D1618FD2B1A0003F787 /* CoreLocation.framework */; };
+		57407D1A18FD2B5C0003F787 /* LKSektion.m in Sources */ = {isa = PBXBuildFile; fileRef = 57407D1918FD2B5C0003F787 /* LKSektion.m */; };
+		57407D1D18FD2F110003F787 /* LKarnevalist.m in Sources */ = {isa = PBXBuildFile; fileRef = 57407D1C18FD2F110003F787 /* LKarnevalist.m */; };
+		575C949F18FE7F3D00A341EE /* Events.plist in Resources */ = {isa = PBXBuildFile; fileRef = 575C949E18FE7F3D00A341EE /* Events.plist */; };
+		575C94A318FE838E00A341EE /* TabBar.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 575C94A218FE838E00A341EE /* TabBar.xcassets */; };
+		575C94AF18FE90D900A341EE /* robothead.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 575C94AD18FE90D900A341EE /* robothead.ttf */; };
+		575C94B818FEC9C600A341EE /* ScheduleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 575C94B718FEC9C600A341EE /* ScheduleViewController.m */; };
+		575C94CB18FED4B400A341EE /* FoodViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 575C94CA18FED4B400A341EE /* FoodViewController.m */; };
+		576EA12C18FDD6BE00D4166D /* LKarneval.m in Sources */ = {isa = PBXBuildFile; fileRef = 576EA12B18FDD6BE00D4166D /* LKarneval.m */; };
+		576EA12F18FDD8F300D4166D /* OpeningHours.plist in Resources */ = {isa = PBXBuildFile; fileRef = 576EA12E18FDD8F300D4166D /* OpeningHours.plist */; };
+		577621211909932800B99E8E /* EntertainmentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 577621201909932800B99E8E /* EntertainmentViewController.m */; };
+		57762124190993DB00B99E8E /* MiscellaneousViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 57762123190993DB00B99E8E /* MiscellaneousViewController.m */; };
+		578929C519007BD4002AA116 /* PlaceCategories.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 578929C419007BD4002AA116 /* PlaceCategories.xcassets */; };
+		578929C91900839A002AA116 /* Events.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 578929C81900839A002AA116 /* Events.xcassets */; };
+		57994785190B18B60098BEA3 /* Places.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 57994784190B18B60098BEA3 /* Places.xcassets */; };
+		57CC6F61190C673A0006DE48 /* Covers.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 57CC6F60190C673A0006DE48 /* Covers.xcassets */; };
+		57DB443E190291D0009C3D37 /* Schedule.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 57DB443D190291D0009C3D37 /* Schedule.xcassets */; };
+		57E047BF190D5BAF00C45F68 /* Layout.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 57E047BE190D5BAF00C45F68 /* Layout.xcassets */; };
+		57E047C6190D689600C45F68 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 57E047C5190D689600C45F68 /* DetailViewController.m */; };
+		57F07CD519103FE600290BB3 /* MultipleChoicesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 57F07CD419103FE600290BB3 /* MultipleChoicesViewController.m */; };
+		57F3626019179CF4008760D0 /* OvumSecretaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 57F3625F19179CF4008760D0 /* OvumSecretaViewController.m */; };
+		57FB7472190B150A0059CA82 /* LKCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 57FB746B190B150A0059CA82 /* LKCell.m */; };
+		57FB7473190B150A0059CA82 /* LKGrid.m in Sources */ = {isa = PBXBuildFile; fileRef = 57FB746D190B150A0059CA82 /* LKGrid.m */; };
+		57FB7474190B150A0059CA82 /* LKImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 57FB746F190B150A0059CA82 /* LKImage.m */; };
+		57FB7475190B150A0059CA82 /* LKLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 57FB7471190B150A0059CA82 /* LKLayout.m */; };
+		57FB7476190B15C10059CA82 /* NavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5776211D19098C2100B99E8E /* NavigationViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1A3576EC1916D641005649FA /* Places.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Places.plist; path = Data/Places.plist; sourceTree = "<group>"; };
+		1A411FEA1901A7BC00FF39F9 /* UILabel+FuturaFont.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UILabel+FuturaFont.h"; path = "Models/UILabel+FuturaFont.h"; sourceTree = "<group>"; };
+		1A411FEB1901A7BC00FF39F9 /* UILabel+FuturaFont.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UILabel+FuturaFont.m"; path = "Models/UILabel+FuturaFont.m"; sourceTree = "<group>"; };
+		1A411FED1901A98D00FF39F9 /* UIView+Shadow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+Shadow.h"; path = "Models/UIView+Shadow.h"; sourceTree = "<group>"; };
+		1A411FEE1901A98D00FF39F9 /* UIView+Shadow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+Shadow.m"; path = "Models/UIView+Shadow.m"; sourceTree = "<group>"; };
+		1A411FF01901B1C700FF39F9 /* CreateAnnotationsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CreateAnnotationsViewController.h; path = Controllers/CreateAnnotationsViewController.h; sourceTree = "<group>"; };
+		1A411FF11901B1C700FF39F9 /* CreateAnnotationsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CreateAnnotationsViewController.m; path = Controllers/CreateAnnotationsViewController.m; sourceTree = "<group>"; };
+		1A4833781915010A00CDC0CD /* Radio.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Radio.xcassets; path = Data/Sprites/Radio.xcassets; sourceTree = "<group>"; };
+		1A48337B191504F900CDC0CD /* RadioViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RadioViewController.h; path = Controllers/Radio/RadioViewController.h; sourceTree = "<group>"; };
+		1A48337C191504F900CDC0CD /* RadioViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RadioViewController.m; path = Controllers/Radio/RadioViewController.m; sourceTree = "<group>"; };
+		1A48337E1915057400CDC0CD /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		1A4A83C8190996AE00D7C466 /* LKButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LKButton.h; path = Models/LKButton.h; sourceTree = "<group>"; };
+		1A4A83C9190996AE00D7C466 /* LKButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LKButton.m; path = Models/LKButton.m; sourceTree = "<group>"; };
+		1A7DA8A218FF06C70025C677 /* App.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = App.xcassets; sourceTree = "<group>"; };
+		1A96E5811916E3DE0079D900 /* LKOverlayView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LKOverlayView.h; path = Models/Overlay/LKOverlayView.h; sourceTree = "<group>"; };
+		1A96E5821916E3DE0079D900 /* LKOverlayView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LKOverlayView.m; path = Models/Overlay/LKOverlayView.m; sourceTree = "<group>"; };
+		1ABFF6DD19002BBB00C575EE /* LKAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LKAnnotation.h; sourceTree = "<group>"; };
+		1ABFF6DE19002BBB00C575EE /* LKAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LKAnnotation.m; sourceTree = "<group>"; };
+		1ABFF6DF19002BBB00C575EE /* LKAnnotation.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LKAnnotation.xib; sourceTree = "<group>"; };
+		1ABFF6E019002BBB00C575EE /* LKAnnotationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LKAnnotationView.h; sourceTree = "<group>"; };
+		1ABFF6E119002BBB00C575EE /* LKAnnotationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LKAnnotationView.m; sourceTree = "<group>"; };
+		1ABFF6E519002BDD00C575EE /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MapViewController.h; path = Controllers/Map/MapViewController.h; sourceTree = "<group>"; };
+		1ABFF6E619002BDD00C575EE /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MapViewController.m; path = Controllers/Map/MapViewController.m; sourceTree = "<group>"; };
+		1ABFF6E819002DD100C575EE /* Map.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Map.xcassets; path = Data/Sprites/Map.xcassets; sourceTree = "<group>"; };
+		1ABFF6EB1900646800C575EE /* ECSlidingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ECSlidingViewController.h; path = Controllers/Map/ECSlidingViewController.h; sourceTree = "<group>"; };
+		1ABFF6EC1900646900C575EE /* ECSlidingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ECSlidingViewController.m; path = Controllers/Map/ECSlidingViewController.m; sourceTree = "<group>"; };
+		1ABFF6EE1900649300C575EE /* InitViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = InitViewController.h; path = Controllers/Map/InitViewController.h; sourceTree = "<group>"; };
+		1ABFF6EF1900649300C575EE /* InitViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = InitViewController.m; path = Controllers/Map/InitViewController.m; sourceTree = "<group>"; };
+		1ABFF6F619006E5400C575EE /* MapFilterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MapFilterViewController.h; path = Controllers/Map/MapFilterViewController.h; sourceTree = "<group>"; };
+		1ABFF6F719006E5400C575EE /* MapFilterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MapFilterViewController.m; path = Controllers/Map/MapFilterViewController.m; sourceTree = "<group>"; };
+		1ABFF6F91900713800C575EE /* LKColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LKColor.m; path = Models/LKColor.m; sourceTree = "<group>"; };
+		1ABFF6FC19007CF800C575EE /* LKOverlay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LKOverlay.h; path = Models/Overlay/LKOverlay.h; sourceTree = "<group>"; };
+		1ABFF6FD19007CF800C575EE /* LKOverlay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LKOverlay.m; path = Models/Overlay/LKOverlay.m; sourceTree = "<group>"; };
+		1ABFF6FF19007E2000C575EE /* LKOverlayRenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LKOverlayRenderer.h; path = Models/Overlay/LKOverlayRenderer.h; sourceTree = "<group>"; };
+		1ABFF70019007E2000C575EE /* LKOverlayRenderer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LKOverlayRenderer.m; path = Models/Overlay/LKOverlayRenderer.m; sourceTree = "<group>"; };
+		1ABFF7021900887F00C575EE /* futuralt-bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "futuralt-bold.ttf"; path = "Data/Typefaces/futuralt-bold.ttf"; sourceTree = "<group>"; };
+		1ABFF704190088F700C575EE /* UILabel+Shadow+FuturaBoldFont.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UILabel+Shadow+FuturaBoldFont.h"; path = "Models/UILabel+Shadow+FuturaBoldFont.h"; sourceTree = "<group>"; };
+		1ABFF705190088F700C575EE /* UILabel+Shadow+FuturaBoldFont.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UILabel+Shadow+FuturaBoldFont.m"; path = "Models/UILabel+Shadow+FuturaBoldFont.m"; sourceTree = "<group>"; };
+		1AE8E55118F42FB50078EBDF /* Lundakarneval.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lundakarneval.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1AE8E55418F42FB50078EBDF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		1AE8E55618F42FB50078EBDF /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		1AE8E55818F42FB50078EBDF /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		1AE8E55C18F42FB50078EBDF /* Lundakarneval-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Lundakarneval-Info.plist"; sourceTree = "<group>"; };
+		1AE8E55E18F42FB50078EBDF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		1AE8E56018F42FB50078EBDF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = main.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		1AE8E56218F42FB50078EBDF /* Lundakarneval-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Lundakarneval-Prefix.pch"; sourceTree = "<group>"; };
+		1AE8E56318F42FB50078EBDF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = AppDelegate.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		1AE8E56418F42FB50078EBDF /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = AppDelegate.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		1AE8E56718F42FB50078EBDF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		1AE8E57318F42FB50078EBDF /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		5703E5EF1912C85F005DA0D2 /* scheduleTableHeader.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = scheduleTableHeader.xib; path = Views/scheduleTableHeader.xib; sourceTree = "<group>"; };
+		5722E90E18FD72F500BEE3A2 /* LKPlace.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; name = LKPlace.h; path = Models/LKPlace.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		5722E90F18FD72F500BEE3A2 /* LKPlace.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; name = LKPlace.m; path = Models/LKPlace.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		5722E91418FD7C3600BEE3A2 /* TabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; name = TabBarViewController.h; path = Controllers/TabBarViewController.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		5722E91518FD7C3600BEE3A2 /* TabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; name = TabBarViewController.m; path = Controllers/TabBarViewController.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		5722E91B18FD7DF300BEE3A2 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		5722E91D18FD80C700BEE3A2 /* LKColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; name = LKColor.h; path = Models/LKColor.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		5722E91E18FD80C700BEE3A2 /* InitViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; name = InitViewController.m; path = Controllers/Map/InitViewController.m; sourceTree = "<group>"; };
+		572A752019162DFF004F2128 /* LKMapView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LKMapView.h; path = Models/LKMapView.h; sourceTree = "<group>"; };
+		572A752119162DFF004F2128 /* LKMapView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LKMapView.m; path = Models/LKMapView.m; sourceTree = "<group>"; };
+		57407D1318FD2A5A0003F787 /* LKEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; name = LKEvent.h; path = Models/LKEvent.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		57407D1418FD2A5A0003F787 /* LKEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; name = LKEvent.m; path = Models/LKEvent.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		57407D1618FD2B1A0003F787 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		57407D1818FD2B5C0003F787 /* LKSektion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; name = LKSektion.h; path = Models/LKSektion.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		57407D1918FD2B5C0003F787 /* LKSektion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; name = LKSektion.m; path = Models/LKSektion.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		57407D1B18FD2F110003F787 /* LKarnevalist.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; name = LKarnevalist.h; path = Models/LKarnevalist.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		57407D1C18FD2F110003F787 /* LKarnevalist.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; name = LKarnevalist.m; path = Models/LKarnevalist.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		575C949E18FE7F3D00A341EE /* Events.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Events.plist; path = Data/Events.plist; sourceTree = "<group>"; };
+		575C94A218FE838E00A341EE /* TabBar.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = TabBar.xcassets; path = Data/Sprites/TabBar.xcassets; sourceTree = "<group>"; };
+		575C94AD18FE90D900A341EE /* robothead.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = robothead.ttf; path = Data/Typefaces/robothead.ttf; sourceTree = "<group>"; };
+		575C94B618FEC9C600A341EE /* ScheduleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ScheduleViewController.h; path = Controllers/ScheduleViewController.h; sourceTree = "<group>"; };
+		575C94B718FEC9C600A341EE /* ScheduleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ScheduleViewController.m; path = Controllers/ScheduleViewController.m; sourceTree = "<group>"; };
+		575C94C918FED4B400A341EE /* FoodViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FoodViewController.h; path = Controllers/FoodViewController.h; sourceTree = "<group>"; };
+		575C94CA18FED4B400A341EE /* FoodViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FoodViewController.m; path = Controllers/FoodViewController.m; sourceTree = "<group>"; };
+		576EA12A18FDD6BE00D4166D /* LKarneval.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; name = LKarneval.h; path = Models/LKarneval.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		576EA12B18FDD6BE00D4166D /* LKarneval.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; name = LKarneval.m; path = Models/LKarneval.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		576EA12E18FDD8F300D4166D /* OpeningHours.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = OpeningHours.plist; path = Data/OpeningHours.plist; sourceTree = "<group>"; };
+		5776211C19098C2100B99E8E /* NavigationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NavigationViewController.h; path = Controllers/NavigationViewController.h; sourceTree = "<group>"; };
+		5776211D19098C2100B99E8E /* NavigationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NavigationViewController.m; path = Controllers/NavigationViewController.m; sourceTree = "<group>"; };
+		5776211F1909932800B99E8E /* EntertainmentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EntertainmentViewController.h; path = Controllers/EntertainmentViewController.h; sourceTree = "<group>"; };
+		577621201909932800B99E8E /* EntertainmentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EntertainmentViewController.m; path = Controllers/EntertainmentViewController.m; sourceTree = "<group>"; };
+		57762122190993DB00B99E8E /* MiscellaneousViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MiscellaneousViewController.h; path = Controllers/MiscellaneousViewController.h; sourceTree = "<group>"; };
+		57762123190993DB00B99E8E /* MiscellaneousViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MiscellaneousViewController.m; path = Controllers/MiscellaneousViewController.m; sourceTree = "<group>"; };
+		578929C419007BD4002AA116 /* PlaceCategories.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = PlaceCategories.xcassets; path = Data/Sprites/PlaceCategories.xcassets; sourceTree = "<group>"; };
+		578929C81900839A002AA116 /* Events.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Events.xcassets; path = Data/Sprites/Events.xcassets; sourceTree = "<group>"; };
+		57994784190B18B60098BEA3 /* Places.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Places.xcassets; path = Data/Sprites/Places.xcassets; sourceTree = "<group>"; };
+		57CC6F60190C673A0006DE48 /* Covers.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Covers.xcassets; path = Data/Sprites/Covers.xcassets; sourceTree = "<group>"; };
+		57DB443D190291D0009C3D37 /* Schedule.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Schedule.xcassets; path = Data/Sprites/Schedule.xcassets; sourceTree = "<group>"; };
+		57E047BE190D5BAF00C45F68 /* Layout.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Layout.xcassets; path = Data/Sprites/Layout.xcassets; sourceTree = "<group>"; };
+		57E047C4190D689600C45F68 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DetailViewController.h; path = Controllers/DetailViewController.h; sourceTree = "<group>"; };
+		57E047C5190D689600C45F68 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DetailViewController.m; path = Controllers/DetailViewController.m; sourceTree = "<group>"; };
+		57F07CD319103FE600290BB3 /* MultipleChoicesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MultipleChoicesViewController.h; path = Controllers/MultipleChoicesViewController.h; sourceTree = "<group>"; };
+		57F07CD419103FE600290BB3 /* MultipleChoicesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MultipleChoicesViewController.m; path = Controllers/MultipleChoicesViewController.m; sourceTree = "<group>"; };
+		57F3625E19179CF4008760D0 /* OvumSecretaViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OvumSecretaViewController.h; path = Controllers/OvumSecretaViewController.h; sourceTree = "<group>"; };
+		57F3625F19179CF4008760D0 /* OvumSecretaViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OvumSecretaViewController.m; path = Controllers/OvumSecretaViewController.m; sourceTree = "<group>"; };
+		57FB746A190B150A0059CA82 /* LKCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LKCell.h; path = Models/LKCell.h; sourceTree = "<group>"; };
+		57FB746B190B150A0059CA82 /* LKCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LKCell.m; path = Models/LKCell.m; sourceTree = "<group>"; };
+		57FB746C190B150A0059CA82 /* LKGrid.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LKGrid.h; path = Models/LKGrid.h; sourceTree = "<group>"; };
+		57FB746D190B150A0059CA82 /* LKGrid.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LKGrid.m; path = Models/LKGrid.m; sourceTree = "<group>"; };
+		57FB746E190B150A0059CA82 /* LKImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LKImage.h; path = Models/LKImage.h; sourceTree = "<group>"; };
+		57FB746F190B150A0059CA82 /* LKImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LKImage.m; path = Models/LKImage.m; sourceTree = "<group>"; };
+		57FB7470190B150A0059CA82 /* LKLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LKLayout.h; path = Models/LKLayout.h; sourceTree = "<group>"; };
+		57FB7471190B150A0059CA82 /* LKLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LKLayout.m; path = Models/LKLayout.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1AE8E54E18F42FB50078EBDF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1A48337F1915057400CDC0CD /* AVFoundation.framework in Frameworks */,
+				5722E91C18FD7DF300BEE3A2 /* MapKit.framework in Frameworks */,
+				57407D1718FD2B1A0003F787 /* CoreLocation.framework in Frameworks */,
+				1AE8E55718F42FB50078EBDF /* CoreGraphics.framework in Frameworks */,
+				1AE8E55918F42FB50078EBDF /* UIKit.framework in Frameworks */,
+				1AE8E55518F42FB50078EBDF /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1A48337A191504BE00CDC0CD /* Radio */ = {
+			isa = PBXGroup;
+			children = (
+				1A48337B191504F900CDC0CD /* RadioViewController.h */,
+				1A48337C191504F900CDC0CD /* RadioViewController.m */,
+			);
+			name = Radio;
+			sourceTree = "<group>";
+		};
+		1ABFF6DC19002BBB00C575EE /* Annotation */ = {
+			isa = PBXGroup;
+			children = (
+				1ABFF6DD19002BBB00C575EE /* LKAnnotation.h */,
+				1ABFF6DE19002BBB00C575EE /* LKAnnotation.m */,
+				1ABFF6DF19002BBB00C575EE /* LKAnnotation.xib */,
+				1ABFF6E019002BBB00C575EE /* LKAnnotationView.h */,
+				1ABFF6E119002BBB00C575EE /* LKAnnotationView.m */,
+			);
+			path = Annotation;
+			sourceTree = "<group>";
+		};
+		1ABFF6EA1900645300C575EE /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				1A411FF01901B1C700FF39F9 /* CreateAnnotationsViewController.h */,
+				1A411FF11901B1C700FF39F9 /* CreateAnnotationsViewController.m */,
+				1ABFF6EB1900646800C575EE /* ECSlidingViewController.h */,
+				1ABFF6EC1900646900C575EE /* ECSlidingViewController.m */,
+				1ABFF6EE1900649300C575EE /* InitViewController.h */,
+				1ABFF6EF1900649300C575EE /* InitViewController.m */,
+				1ABFF6F619006E5400C575EE /* MapFilterViewController.h */,
+				1ABFF6F719006E5400C575EE /* MapFilterViewController.m */,
+				1ABFF6E519002BDD00C575EE /* MapViewController.h */,
+				1ABFF6E619002BDD00C575EE /* MapViewController.m */,
+			);
+			name = Map;
+			sourceTree = "<group>";
+		};
+		1ABFF6FB19007CB100C575EE /* Overlay */ = {
+			isa = PBXGroup;
+			children = (
+				1ABFF6FC19007CF800C575EE /* LKOverlay.h */,
+				1ABFF6FD19007CF800C575EE /* LKOverlay.m */,
+				1ABFF6FF19007E2000C575EE /* LKOverlayRenderer.h */,
+				1ABFF70019007E2000C575EE /* LKOverlayRenderer.m */,
+				1A96E5811916E3DE0079D900 /* LKOverlayView.h */,
+				1A96E5821916E3DE0079D900 /* LKOverlayView.m */,
+			);
+			name = Overlay;
+			sourceTree = "<group>";
+		};
+		1AE8E54818F42FB50078EBDF = {
+			isa = PBXGroup;
+			children = (
+				1AE8E55A18F42FB50078EBDF /* Lundakarnevalen */,
+				1AE8E55318F42FB50078EBDF /* Frameworks */,
+				1AE8E55218F42FB50078EBDF /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		1AE8E55218F42FB50078EBDF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1AE8E55118F42FB50078EBDF /* Lundakarneval.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1AE8E55318F42FB50078EBDF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1A48337E1915057400CDC0CD /* AVFoundation.framework */,
+				5722E91B18FD7DF300BEE3A2 /* MapKit.framework */,
+				57407D1618FD2B1A0003F787 /* CoreLocation.framework */,
+				1AE8E55418F42FB50078EBDF /* Foundation.framework */,
+				1AE8E55618F42FB50078EBDF /* CoreGraphics.framework */,
+				1AE8E55818F42FB50078EBDF /* UIKit.framework */,
+				1AE8E57318F42FB50078EBDF /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		1AE8E55A18F42FB50078EBDF /* Lundakarnevalen */ = {
+			isa = PBXGroup;
+			children = (
+				573797EE18FFD57D00ABC2CD /* Views */,
+				576EA12D18FDD8D400D4166D /* Data */,
+				57407D0F18FD29F20003F787 /* Controllers */,
+				57407D0E18FD29EB0003F787 /* Models */,
+				1AE8E56318F42FB50078EBDF /* AppDelegate.h */,
+				1AE8E56418F42FB50078EBDF /* AppDelegate.m */,
+				1AE8E56618F42FB50078EBDF /* Main.storyboard */,
+				1AE8E55B18F42FB50078EBDF /* Supporting Files */,
+				1A7DA8A218FF06C70025C677 /* App.xcassets */,
+			);
+			name = Lundakarnevalen;
+			path = "futural-extern-ios";
+			sourceTree = "<group>";
+		};
+		1AE8E55B18F42FB50078EBDF /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				1AE8E55C18F42FB50078EBDF /* Lundakarneval-Info.plist */,
+				1AE8E55D18F42FB50078EBDF /* InfoPlist.strings */,
+				1AE8E56018F42FB50078EBDF /* main.m */,
+				1AE8E56218F42FB50078EBDF /* Lundakarneval-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		5722E92018FD81B300BEE3A2 /* Toolbox */ = {
+			isa = PBXGroup;
+			children = (
+				1A4A83C8190996AE00D7C466 /* LKButton.h */,
+				1A4A83C9190996AE00D7C466 /* LKButton.m */,
+				57FB746A190B150A0059CA82 /* LKCell.h */,
+				57FB746B190B150A0059CA82 /* LKCell.m */,
+				57FB746C190B150A0059CA82 /* LKGrid.h */,
+				57FB746D190B150A0059CA82 /* LKGrid.m */,
+				57FB746E190B150A0059CA82 /* LKImage.h */,
+				57FB746F190B150A0059CA82 /* LKImage.m */,
+				57FB7470190B150A0059CA82 /* LKLayout.h */,
+				57FB7471190B150A0059CA82 /* LKLayout.m */,
+				5722E91D18FD80C700BEE3A2 /* LKColor.h */,
+				1ABFF6F91900713800C575EE /* LKColor.m */,
+				5722E91E18FD80C700BEE3A2 /* InitViewController.m */,
+				1ABFF704190088F700C575EE /* UILabel+Shadow+FuturaBoldFont.h */,
+				1ABFF705190088F700C575EE /* UILabel+Shadow+FuturaBoldFont.m */,
+				1A411FEA1901A7BC00FF39F9 /* UILabel+FuturaFont.h */,
+				1A411FEB1901A7BC00FF39F9 /* UILabel+FuturaFont.m */,
+				1A411FED1901A98D00FF39F9 /* UIView+Shadow.h */,
+				1A411FEE1901A98D00FF39F9 /* UIView+Shadow.m */,
+			);
+			name = Toolbox;
+			sourceTree = "<group>";
+		};
+		573797EE18FFD57D00ABC2CD /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				5703E5EF1912C85F005DA0D2 /* scheduleTableHeader.xib */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		573797F218FFDC8700ABC2CD /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				1ABFF6FB19007CB100C575EE /* Overlay */,
+				1ABFF6DC19002BBB00C575EE /* Annotation */,
+				572A752019162DFF004F2128 /* LKMapView.h */,
+				572A752119162DFF004F2128 /* LKMapView.m */,
+			);
+			name = Map;
+			sourceTree = "<group>";
+		};
+		57407D0E18FD29EB0003F787 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				576EA12A18FDD6BE00D4166D /* LKarneval.h */,
+				576EA12B18FDD6BE00D4166D /* LKarneval.m */,
+				57407D1B18FD2F110003F787 /* LKarnevalist.h */,
+				57407D1C18FD2F110003F787 /* LKarnevalist.m */,
+				57407D1318FD2A5A0003F787 /* LKEvent.h */,
+				57407D1418FD2A5A0003F787 /* LKEvent.m */,
+				5722E90E18FD72F500BEE3A2 /* LKPlace.h */,
+				5722E90F18FD72F500BEE3A2 /* LKPlace.m */,
+				57407D1818FD2B5C0003F787 /* LKSektion.h */,
+				57407D1918FD2B5C0003F787 /* LKSektion.m */,
+				573797F218FFDC8700ABC2CD /* Map */,
+				5722E92018FD81B300BEE3A2 /* Toolbox */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		57407D0F18FD29F20003F787 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				1A48337A191504BE00CDC0CD /* Radio */,
+				57E047C4190D689600C45F68 /* DetailViewController.h */,
+				57E047C5190D689600C45F68 /* DetailViewController.m */,
+				5776211F1909932800B99E8E /* EntertainmentViewController.h */,
+				577621201909932800B99E8E /* EntertainmentViewController.m */,
+				575C94C918FED4B400A341EE /* FoodViewController.h */,
+				575C94CA18FED4B400A341EE /* FoodViewController.m */,
+				57762122190993DB00B99E8E /* MiscellaneousViewController.h */,
+				57762123190993DB00B99E8E /* MiscellaneousViewController.m */,
+				1ABFF6EA1900645300C575EE /* Map */,
+				57F07CD319103FE600290BB3 /* MultipleChoicesViewController.h */,
+				57F07CD419103FE600290BB3 /* MultipleChoicesViewController.m */,
+				575C94BC18FED02400A341EE /* Navigation */,
+				575C94B618FEC9C600A341EE /* ScheduleViewController.h */,
+				575C94B718FEC9C600A341EE /* ScheduleViewController.m */,
+				57F3625E19179CF4008760D0 /* OvumSecretaViewController.h */,
+				57F3625F19179CF4008760D0 /* OvumSecretaViewController.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		575C94A118FE835400A341EE /* Sprites */ = {
+			isa = PBXGroup;
+			children = (
+				57E047BE190D5BAF00C45F68 /* Layout.xcassets */,
+				57CC6F60190C673A0006DE48 /* Covers.xcassets */,
+				578929C81900839A002AA116 /* Events.xcassets */,
+				1ABFF6E819002DD100C575EE /* Map.xcassets */,
+				578929C419007BD4002AA116 /* PlaceCategories.xcassets */,
+				57994784190B18B60098BEA3 /* Places.xcassets */,
+				57DB443D190291D0009C3D37 /* Schedule.xcassets */,
+				575C94A218FE838E00A341EE /* TabBar.xcassets */,
+				1A4833781915010A00CDC0CD /* Radio.xcassets */,
+			);
+			name = Sprites;
+			sourceTree = "<group>";
+		};
+		575C94A818FE8D0000A341EE /* Typefaces */ = {
+			isa = PBXGroup;
+			children = (
+				1ABFF7021900887F00C575EE /* futuralt-bold.ttf */,
+				575C94AD18FE90D900A341EE /* robothead.ttf */,
+			);
+			name = Typefaces;
+			sourceTree = "<group>";
+		};
+		575C94BC18FED02400A341EE /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				5722E91418FD7C3600BEE3A2 /* TabBarViewController.h */,
+				5722E91518FD7C3600BEE3A2 /* TabBarViewController.m */,
+				5776211C19098C2100B99E8E /* NavigationViewController.h */,
+				5776211D19098C2100B99E8E /* NavigationViewController.m */,
+			);
+			name = Navigation;
+			sourceTree = "<group>";
+		};
+		576EA12D18FDD8D400D4166D /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				575C94A818FE8D0000A341EE /* Typefaces */,
+				575C94A118FE835400A341EE /* Sprites */,
+				576EA12E18FDD8F300D4166D /* OpeningHours.plist */,
+				1A3576EC1916D641005649FA /* Places.plist */,
+				575C949E18FE7F3D00A341EE /* Events.plist */,
+			);
+			name = Data;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1AE8E55018F42FB50078EBDF /* Lundakarneval */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1AE8E58318F42FB50078EBDF /* Build configuration list for PBXNativeTarget "Lundakarneval" */;
+			buildPhases = (
+				1AE8E54D18F42FB50078EBDF /* Sources */,
+				1AE8E54E18F42FB50078EBDF /* Frameworks */,
+				1AE8E54F18F42FB50078EBDF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Lundakarneval;
+			productName = "futural-extern-ios";
+			productReference = 1AE8E55118F42FB50078EBDF /* Lundakarneval.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1AE8E54918F42FB50078EBDF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = Lundakarnevalen;
+				TargetAttributes = {
+					1AE8E55018F42FB50078EBDF = {
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
+					};
+				};
+			};
+			buildConfigurationList = 1AE8E54C18F42FB50078EBDF /* Build configuration list for PBXProject "Lundakarneval" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 1AE8E54818F42FB50078EBDF;
+			productRefGroup = 1AE8E55218F42FB50078EBDF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1AE8E55018F42FB50078EBDF /* Lundakarneval */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1AE8E54F18F42FB50078EBDF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1A4833791915010A00CDC0CD /* Radio.xcassets in Resources */,
+				1ABFF6E319002BBB00C575EE /* LKAnnotation.xib in Resources */,
+				1ABFF7031900887F00C575EE /* futuralt-bold.ttf in Resources */,
+				57994785190B18B60098BEA3 /* Places.xcassets in Resources */,
+				5703E5F01912C85F005DA0D2 /* scheduleTableHeader.xib in Resources */,
+				1A3576ED1916D641005649FA /* Places.plist in Resources */,
+				57CC6F61190C673A0006DE48 /* Covers.xcassets in Resources */,
+				575C949F18FE7F3D00A341EE /* Events.plist in Resources */,
+				57DB443E190291D0009C3D37 /* Schedule.xcassets in Resources */,
+				578929C91900839A002AA116 /* Events.xcassets in Resources */,
+				575C94AF18FE90D900A341EE /* robothead.ttf in Resources */,
+				1ABFF6E919002DD100C575EE /* Map.xcassets in Resources */,
+				578929C519007BD4002AA116 /* PlaceCategories.xcassets in Resources */,
+				576EA12F18FDD8F300D4166D /* OpeningHours.plist in Resources */,
+				1AE8E55F18F42FB50078EBDF /* InfoPlist.strings in Resources */,
+				1AE8E56818F42FB50078EBDF /* Main.storyboard in Resources */,
+				575C94A318FE838E00A341EE /* TabBar.xcassets in Resources */,
+				1A7DA8A318FF06C70025C677 /* App.xcassets in Resources */,
+				57E047BF190D5BAF00C45F68 /* Layout.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1AE8E54D18F42FB50078EBDF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				57F07CD519103FE600290BB3 /* MultipleChoicesViewController.m in Sources */,
+				57FB7476190B15C10059CA82 /* NavigationViewController.m in Sources */,
+				1ABFF6ED1900646900C575EE /* ECSlidingViewController.m in Sources */,
+				1A4A83CA190996AE00D7C466 /* LKButton.m in Sources */,
+				1ABFF6FE19007CF800C575EE /* LKOverlay.m in Sources */,
+				1ABFF706190088F700C575EE /* UILabel+Shadow+FuturaBoldFont.m in Sources */,
+				1AE8E56518F42FB50078EBDF /* AppDelegate.m in Sources */,
+				57407D1D18FD2F110003F787 /* LKarnevalist.m in Sources */,
+				1ABFF6E219002BBB00C575EE /* LKAnnotation.m in Sources */,
+				57FB7472190B150A0059CA82 /* LKCell.m in Sources */,
+				1A96E5831916E3DE0079D900 /* LKOverlayView.m in Sources */,
+				5722E91618FD7C3600BEE3A2 /* TabBarViewController.m in Sources */,
+				1ABFF6E719002BDD00C575EE /* MapViewController.m in Sources */,
+				1ABFF6F01900649300C575EE /* InitViewController.m in Sources */,
+				1ABFF6FA1900713800C575EE /* LKColor.m in Sources */,
+				575C94CB18FED4B400A341EE /* FoodViewController.m in Sources */,
+				57762124190993DB00B99E8E /* MiscellaneousViewController.m in Sources */,
+				577621211909932800B99E8E /* EntertainmentViewController.m in Sources */,
+				57FB7473190B150A0059CA82 /* LKGrid.m in Sources */,
+				57F3626019179CF4008760D0 /* OvumSecretaViewController.m in Sources */,
+				57407D1518FD2A5A0003F787 /* LKEvent.m in Sources */,
+				57E047C6190D689600C45F68 /* DetailViewController.m in Sources */,
+				1A411FF21901B1C700FF39F9 /* CreateAnnotationsViewController.m in Sources */,
+				1ABFF6F819006E5400C575EE /* MapFilterViewController.m in Sources */,
+				1ABFF6E419002BBB00C575EE /* LKAnnotationView.m in Sources */,
+				572A752219162DFF004F2128 /* LKMapView.m in Sources */,
+				57407D1A18FD2B5C0003F787 /* LKSektion.m in Sources */,
+				575C94B818FEC9C600A341EE /* ScheduleViewController.m in Sources */,
+				5722E91018FD72F500BEE3A2 /* LKPlace.m in Sources */,
+				576EA12C18FDD6BE00D4166D /* LKarneval.m in Sources */,
+				57FB7475190B150A0059CA82 /* LKLayout.m in Sources */,
+				1AE8E56118F42FB50078EBDF /* main.m in Sources */,
+				1A411FEF1901A98D00FF39F9 /* UIView+Shadow.m in Sources */,
+				1ABFF70119007E2000C575EE /* LKOverlayRenderer.m in Sources */,
+				57FB7474190B150A0059CA82 /* LKImage.m in Sources */,
+				1A48337D191504F900CDC0CD /* RadioViewController.m in Sources */,
+				1A411FEC1901A7BC00FF39F9 /* UILabel+FuturaFont.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		1AE8E55D18F42FB50078EBDF /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1AE8E55E18F42FB50078EBDF /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		1AE8E56618F42FB50078EBDF /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1AE8E56718F42FB50078EBDF /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1AE8E58118F42FB50078EBDF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE = "6559BDAD-71E3-4074-A6AC-374CCB091E15";
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		1AE8E58218F42FB50078EBDF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				PROVISIONING_PROFILE = "6559BDAD-71E3-4074-A6AC-374CCB091E15";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		1AE8E58418F42FB50078EBDF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "futural-extern-ios/Lundakarneval-Prefix.pch";
+				INFOPLIST_FILE = "futural-extern-ios/Lundakarneval-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				PRODUCT_NAME = Lundakarneval;
+				PROVISIONING_PROFILE = "6559BDAD-71E3-4074-A6AC-374CCB091E15";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		1AE8E58518F42FB50078EBDF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "futural-extern-ios/Lundakarneval-Prefix.pch";
+				INFOPLIST_FILE = "futural-extern-ios/Lundakarneval-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				PRODUCT_NAME = Lundakarneval;
+				PROVISIONING_PROFILE = "6559BDAD-71E3-4074-A6AC-374CCB091E15";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1AE8E54C18F42FB50078EBDF /* Build configuration list for PBXProject "Lundakarneval" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1AE8E58118F42FB50078EBDF /* Debug */,
+				1AE8E58218F42FB50078EBDF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1AE8E58318F42FB50078EBDF /* Build configuration list for PBXNativeTarget "Lundakarneval" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1AE8E58418F42FB50078EBDF /* Debug */,
+				1AE8E58518F42FB50078EBDF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1AE8E54918F42FB50078EBDF /* Project object */;
+}

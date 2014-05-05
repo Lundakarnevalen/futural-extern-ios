@@ -9,6 +9,8 @@
 #define PLIST_PLACES "Places"
 #define PLIST_EVENTS "Events"
 
+const int NumberOfFilters = 5;
+
 @implementation LKarneval
 
 #pragma mark Singleton
@@ -71,8 +73,20 @@
         _places = [[NSMutableArray alloc] init];
         
         NSLog(@"%@: reading places..", self.class);
+        
+        
+        
         NSString *path = [[NSBundle mainBundle] pathForResource:@"Places" ofType:@"plist"];
-        NSDictionary *places = [NSDictionary dictionaryWithContentsOfFile:path];
+        NSDictionary *places;
+        
+        NSString *docsFolder = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)[0];
+        NSString *docsPath = [docsFolder stringByAppendingString:@"/Places.plist"];
+        // checks if file exists at the documents path, if so it takes the file, otherwise it takes the paht of the bundle.
+        if ([[NSFileManager defaultManager] fileExistsAtPath:docsPath]) {
+            places = [NSDictionary dictionaryWithContentsOfFile:docsPath];
+        } else {
+            places = [NSDictionary dictionaryWithContentsOfFile:path];
+        }
         
         for(NSString *identifier in places) { //dictionary enumerates with the key (NSString).
             
@@ -118,6 +132,12 @@
 
 #pragma mark Methods
 
+- (NSArray *)allEvents {
+    
+    return [[self class] sortEventsChronological:self.events];
+    
+}
+
 - (NSArray *)favoriteEvents {
     
     NSMutableArray *favorites;
@@ -135,7 +155,29 @@
         
     }
     
+    [self.class sortEventsChronological:favorites];
+    
     return favorites;
+    
+}
+
+- (NSArray *)upcomingEvents {
+    
+    NSMutableArray *upcoming = [[NSMutableArray alloc] init];
+    
+    for(LKEvent *event in self.events) {
+        
+        if(![event isOver]) {
+            
+            [upcoming addObject:event];
+            
+        }
+        
+    }
+    
+    [self.class sortEventsChronological:upcoming];
+    
+    return upcoming;
     
 }
 
@@ -171,7 +213,7 @@
     
     for(LKPlace *place in self.places) {
         
-        BOOL includeFile = YES;
+        BOOL includePlace = YES;
         
         for(NSNumber *typeContainer in categories) {
             
@@ -179,14 +221,14 @@
             
             if(place.category == category) {
 
-                includeFile = NO;
+                includePlace = NO;
                 break;
                 
             }
             
         }
         
-        if(includeFile) {
+        if(includePlace) {
          
             if(!places)
                 places = [[NSMutableArray alloc] init]; //lazy mofo.
@@ -198,6 +240,24 @@
     }
     
     return places;
+    
+}
+
+- (NSArray *)placesWithoutAlcohol { //*sobs*
+    
+    NSMutableArray *nonAlcoholic = [[NSMutableArray alloc] init];
+    
+    for(LKPlace *place in self.places) {
+        
+        if(!place.alcohol) {
+            
+            [nonAlcoholic addObject:place];
+            
+        }
+        
+    }
+    
+    return nonAlcoholic;
     
 }
 
@@ -237,22 +297,81 @@
 
 - (NSString *)description {
     
-    return [NSString stringWithFormat:@"This is %@ and we're opening at %@, at the moment we have %d events and %d places to see.", self.class, self.openingHours, [self.places count], [self.events count]];
+    return [NSString stringWithFormat:@"This is %@ and we're opening at %@, at the moment we have %lu events and %lu places to see.", self.class, self.openingHours, (unsigned long)[self.places count], (unsigned long)[self.events count]];
     
 }
 
 #pragma mark Class methods
 
++ (NSDictionary *)datesFromEvents:(NSArray *)events { //use with tableViews (sections).
+    
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    [formatter setDateFormat:@"MM-dd"];
+    
+    NSMutableDictionary *dates = [[NSMutableDictionary alloc] init];
+    
+    for(LKEvent *event in events) {
+        
+        NSString *date = [formatter stringFromDate:event.start];
+        
+        if(!dates[date]) {
+            
+            dates[date] = [[NSMutableArray alloc] init]; //store the events for that date.
+            
+        }
+        
+        [dates[date] addObject:event];
+        
+    }
+    
+    return dates;
+    
+}
+
++ (NSArray *)sortEventsChronological:(NSMutableArray *)events {
+    
+    [events sortUsingComparator:^NSComparisonResult(id obj1, id obj2) {
+        
+        return [[(LKEvent *)obj1 start] compare:[(LKEvent *)obj2 start]];
+        
+    }];
+    
+    return events;
+    
+}
+
 + (NSArray *)LKPlaceFilterFood {
     
-    return @[@(LKPlaceCategoryFood), @(LKPlaceCategorySnacks), @(LKPlaceCategoryCoffee)];
+    return @[@(LKPlaceCategoryFood), @(LKPlaceCategorySnacks), @(LKPlaceCategoryCoffee), @(LKPlaceCategoryBeverage)];
     
 }
 
 + (NSArray *)LKPlaceFilterEntertainment {
     
-    return @[@(LKPlaceCategoryTent), @(LKPlaceCategoryScene), @(LKPlaceCategoryLottery), @(LKPlaceCategoryMinorEntertainment)];
+    return @[@(LKPlaceCategoryTent), @(LKPlaceCategoryScene), @(LKPlaceCategoryLottery), @(LKPlaceCategoryMinorEntertainment), @(LKPlaceCategoryEntertainment), @(LKPlaceCategoryShow), @(LKPlaceCategoryChildren), @(LKPlaceCategoryTickets)];
     
+}
+
++ (NSArray *)LKPlaceFilterToilet {
+    
+    return @[@(LKPlaceCategoryToilet)];
+    
+}
+
++ (NSArray *)LKPlaceFilterTrash {
+    
+    return @[@(LKPlaceCategoryTrash)];
+    
+}
+
++ (NSArray *)LKPlaceFilterOther {
+    
+    return @[ @(LKPlaceCategoryFirstAid), @(LKPlaceCategoryChargingStation), @(LKPlaceCategoryShop), @(LKPlaceCategoryParking), @(LKPlaceCategoryPolice), @(LKPlaceCategoryATM), @(LKPlaceCategoryFireEscape), @(LKPlaceCategoryEntrance), @(LKPlaceCategoryRadio)];
+    
+}
+
++ (NSArray *)LKPlaceFilterMisc {
+    return [[[self.class LKPlaceFilterOther] arrayByAddingObjectsFromArray:[self.class LKPlaceFilterTrash]] arrayByAddingObjectsFromArray:[self.class LKPlaceFilterToilet]];
 }
 
 @end

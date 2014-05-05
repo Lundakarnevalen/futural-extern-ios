@@ -7,6 +7,7 @@
 //
 
 #import "FoodViewController.h"
+#import "DetailViewController.h"
 
 #import "LKLayout.h"
 #import "LKColor.h"
@@ -18,6 +19,33 @@
     [super viewDidLoad];
     
     [self renderGrid];
+    
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+    
+    if(self.visitIdentifier) {
+        
+        NSLog(@"SHOW ME %@", self.visitIdentifier);
+        self.visitPlace = nil;
+        
+        for(LKPlace *place in [self foodPlaces]) {
+            
+            if([place.name isEqualToString:self.visitIdentifier]) {
+                
+                self.visitPlace = place;
+                
+                [self performSegueWithIdentifier:@"food.detail" sender:self];
+                
+                break;
+                
+            }
+            
+        }
+        
+        self.visitIdentifier = nil;
+        
+    }
     
 }
 
@@ -37,15 +65,45 @@
         LKCell *cell = (LKCell *)object;
         LKPlace *place = [[self foodPlaces] objectAtIndex:index];
         
-        LKButton *button = [LKLayout buttonForCell:cell withStrokeColor:strokeColor andImage:[place imageForPlace]];
+        LKButton *button = [LKLayout buttonForCell:cell
+                                   withStrokeColor:strokeColor
+                                          andImage:[place imageForPlace]];
         button.tag = index; //identifier
+        [button addTarget:self action:@selector(cellClick:) forControlEvents:UIControlEventTouchUpInside];
         
-        UILabel *title = [LKLayout titleLabelForCell:cell withTitle:place.name];
+        UILabel *title = [LKLayout titleLabelForCell:cell
+                                           withTitle:place.name];
         
         [self.scrollView addSubview:button];
         [self.scrollView addSubview:title];
         
     }];
+    
+}
+
+- (void)cellClick:(id)sender {
+
+    [self performSegueWithIdentifier:@"food.detail" sender:sender];
+    
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    
+    DetailViewController *detailVC = [segue destinationViewController];
+    detailVC.segueIdentifier = segue.identifier;
+    
+    if([sender class] == [LKButton class]) {
+        
+        LKButton *button = (LKButton *)sender;
+        LKPlace *place = [[self foodPlaces] objectAtIndex:button.tag];
+        
+        detailVC.place = place;
+        
+    } else { //segue via map.
+        
+        detailVC.place = self.visitPlace;
+        
+    }
     
 }
 

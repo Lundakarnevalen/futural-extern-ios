@@ -33,25 +33,49 @@ typedef enum {
     LKPlaceCategoryMinorEntertainment = 11,
     LKPlaceCategoryCoffee = 12,
     LKPlaceCategoryParking = 13,
-    LKPlaceCategoryATM = 14
+    LKPlaceCategoryATM = 14,
+    LKPlaceCategoryTrash = 15,
+    LKPlaceCategoryPolice = 16,
+    LKPlaceCategoryFireEscape = 17,
+    LKPlaceCategoryRadio = 18,
+    LKPlaceCategoryEntrance = 19,
+    LKPlaceCategoryShow = 20,
+    LKPlaceCategoryTickets = 21,
+    LKPlaceCategoryEntertainment = 22,
+    LKPlaceCategoryChildren = 23
     
 } LKPlaceCategory;
 
 @interface LKPlace : NSObject
 
 @property (nonatomic) NSString *identifier; //has to be different from the other places.
+@property (nonatomic) LKPlace *parent;
+
 @property (nonatomic) NSString *name;
-@property (nonatomic) NSString *description;
+@property (nonatomic) NSString *information;
+@property (nonatomic) UIImage *image;
 
 @property (nonatomic) LKPlaceCategory category;
 @property (nonatomic) CLLocationCoordinate2D position;
+@property (nonatomic) NSMutableArray *subPlaces; //of LKPlace
+
+@property (nonatomic) NSDictionary *openingHours;
 
 @property (nonatomic, getter = isSellingAlcohol) BOOL alcohol; //selling alcoholic beverages?
 @property (nonatomic) NSMutableArray *paymentOptions; //of LKPaymentOption. what kind of payments are available (card, phone, futural). IF THE ARRAY IS EMPTY, IT'S FOR FREE.
 
+- (BOOL)isFree;
+- (BOOL)acceptsCash;
+- (BOOL)acceptsCard;
+
 - (LKPlace *)initWithProperties:(NSDictionary *)propertyList;
 
-- (UIImage *)imageForPlace;
+- (UIImage *)image;
+- (UIImage *)imageForAnnotation;
 + (UIImage *)imageForCategory:(LKPlaceCategory)category;
+- (UIImage *)imageForPlace;
+- (UIImage *)coverImage;
+
+- (NSString *)timeSpan; //00 - 00
 
 @end

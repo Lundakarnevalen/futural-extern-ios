@@ -8,6 +8,12 @@
 
 #import "LKEvent.h"
 
+@interface LKEvent() { }
+
+@property (nonatomic) NSInteger minutesBeforeEvent;
+
+@end
+
 @implementation LKEvent
 
 @synthesize favorite = _favorite;
@@ -18,15 +24,15 @@
     
     if(self) {
         
+        self.minutesBeforeEvent = 15; //change this if necessary.
+        
         self.identifier = propertyList[@"identifier"];
         self.name = propertyList[@"name"];
-        self.description = propertyList[@"description"];
+        self.information = propertyList[@"description"];
         
         NSDictionary *dates = propertyList[@"date"];
         self.start = [dates objectForKey:@"start"];
         self.end = [dates objectForKey:@"end"];
-        
-        //add logic to read a property list containing all the information about the event.
         
     }
     
@@ -36,21 +42,14 @@
 
 - (BOOL)isOver {
     
-    //check if the event has already taken place.
-    return NO;
+    NSDate *today = [NSDate date];
+    return [[today laterDate:self.end] isEqualToDate:today];
     
 }
 
 - (BOOL)isFavorite {
     
-    if(!_favorite) { //check the database
-        
-        _favorite = (BOOL)[[NSUserDefaults standardUserDefaults] boolForKey:[self dataIdentifier]];
-        
-        if(!_favorite)
-            _favorite = NO; //default if there's none in the database.
-        
-    }
+    _favorite = (BOOL)[[NSUserDefaults standardUserDefaults] boolForKey:[self dataIdentifier]];
     
     return _favorite;
     
@@ -59,6 +58,13 @@
 - (void)setFavorite:(BOOL)favorite {
     
     _favorite = favorite;
+    
+    if(_favorite) {
+        [self enableNotification];
+    } else {
+        [self disableNotification];
+    }
+    
     [[NSUserDefaults standardUserDefaults] setBool:favorite forKey:[self dataIdentifier]];
     [[NSUserDefaults standardUserDefaults] synchronize]; //important, or there may be some slight delays.
     
@@ -66,21 +72,24 @@
 
 - (NSString *)dataIdentifier { //the identifier that connects this event to the event in the database.
     
-    return [NSString stringWithFormat:@"%@ %@:%@", [self.name lowercaseString], [self formattedStartTime], [self formattedEndTime]];
+    NSString *identifier = [NSString stringWithFormat:@"%@ %@:%@", [self.name lowercaseString], self.start, self.end];
+    
+    return identifier;
     
 }
 
-- (NSInteger)secondsLeft {
+- (void)disableNotification {
     
-    //calculate how many seconds until the event is taking place (for use with push messages).
-    return 3600;
+    NSLog(@"Disabling %@", [self dataIdentifier]);
+    [[UIApplication sharedApplication] cancelLocalNotification:self.notification];
     
 }
 
-- (NSString *)timeLeft {
+- (void)enableNotification {
     
-    //return the time left until launch date, thought that we could use the following format dd:hh:mm (for use with views)
-    return @"dd:hh:mm";
+    NSLog(@"Enabling %@", [self dataIdentifier]);
+    [[UIApplication sharedApplication] scheduleLocalNotification:self.notification];
+
     
 }
 
@@ -102,6 +111,15 @@
     
 }
 
+- (NSString *)formattedStartTimeWithWeekday {
+    
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setDateFormat:@"EEEE"];
+    
+    return [dateFormatter stringFromDate:self.end];
+    
+}
+
 - (UIImage *)imageForEvent {
     
     UIImage *eventImage = [UIImage imageNamed:self.identifier];
@@ -113,6 +131,21 @@
     }
     
     return eventImage;
+    
+}
+
+- (UIImage *)coverImage {
+    
+    UIImage *coverImage = [UIImage imageNamed:[NSString stringWithFormat:@"cover-%@", self.identifier]];
+    
+    if(!coverImage) {
+        
+        //fallback to place.
+        return [self.place coverImage];
+        
+    }
+    
+    return coverImage;
     
 }
 
@@ -133,6 +166,51 @@
     }
     
     return _place;
+    
+}
+
+- (UILocalNotification *)notification {
+    
+    if(!_notification) {
+        
+        NSArray *notifications = [[UIApplication sharedApplication] scheduledLocalNotifications];
+        
+        NSLog(@"Looking for %@", [self dataIdentifier]);
+        
+        for(UILocalNotification *notification in notifications) {
+            
+            NSDictionary *information = notification.userInfo;
+            NSString *identifier = [information valueForKey:@"identifier"];
+            
+            if ([identifier isEqualToString:[self dataIdentifier]]) {
+                
+                _notification = notification;
+                break;
+                
+            }
+            
+        }
+        
+        if(!_notification) { //not there.
+            
+            NSLog(@"Did not find %@", [self dataIdentifier]);
+            
+            NSString *message = [NSString stringWithFormat:@"%@ börjar om %d min vid %@.", self.name, self.minutesBeforeEvent, self.place.name];
+            NSDate *firingDate = [self.start dateByAddingTimeInterval:-60 * self.minutesBeforeEvent];
+            
+            UILocalNotification* notification = [[UILocalNotification alloc] init];
+            notification.fireDate = firingDate;
+            notification.alertBody = message;
+            notification.userInfo = @{ @"identifier" : [self dataIdentifier] };
+            notification.timeZone = [NSTimeZone defaultTimeZone];
+            
+            _notification = notification;
+            
+        }
+        
+    }
+    
+    return _notification;
     
 }
 

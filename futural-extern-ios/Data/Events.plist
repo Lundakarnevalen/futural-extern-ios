@@ -4,6 +4,227 @@
 <array>
 	<dict>
 		<key>identifier</key>
+		<string>axelboman</string>
+		<key>name</key>
+		<string>Axel Boman</string>
+		<key>description</key>
+		<string>Som avslutning på karnevalsdagarna får vi besök av ingen mindre än Axel Boman. Sedan sitt genombrott 2010 med superdängan ”Purple Drank” har Axel inte bara blivit en stjärna på den svenska technohimlen, utan även ett självklart namn på den internationella klubbscenen. Med sin lekfulla techno och house gör Axel det omöjligt att stå stilla, oavsett om han spelar under sitt eget namn eller som en del av Studio Barnhus.</string>
+		<key>place</key>
+		<string>lillascenen</string>
+		<key>date</key>
+		<dict>
+			<key>start</key>
+			<date>2014-05-18T20:00:00Z</date>
+			<key>end</key>
+			<date>2014-05-18T11:37:00Z</date>
+		</dict>
+	</dict>
+	<dict>
+		<key>identifier</key>
+		<string>hampuslavin</string>
+		<key>name</key>
+		<string>Hampus Lavin</string>
+		<key>description</key>
+		<string>Maskinsektionens stolthet. Den dolda talangen. Hampus Lavin har tidigare bott i Berlin där han har samlat all sin musikaliska inspiration och blandat den med tidigare erfarenheter. Idag studerar han Civilingenjör på Lunds tekniska högskola men lägger ner stor del av sin fritid på DJ-andet. Hans spelning på Lundkarnevalen är en utav hans första men fler komma skall.</string>
+		<key>place</key>
+		<string>lillascenen</string>
+		<key>date</key>
+		<dict>
+			<key>start</key>
+			<date>2014-05-18T18:30:00Z</date>
+			<key>end</key>
+			<date>2014-05-18T19:15:00Z</date>
+		</dict>
+	</dict>
+	<dict>
+		<key>identifier</key>
+		<string>musse</string>
+		<key>name</key>
+		<string>Musse</string>
+		<key>description</key>
+		<string>Musse är en av de DJ’s som inte spelar skivor bara för att han tycker det är coolt, utan för att han faktiskt älskar musiken så pass mycket att det nästan gör lite ont. Han spelar hoppfull, glad och melodisk tech-house. När Musse inte spelar på Lundakarnevalen driver han klubben ”Laune” på Smålands Nation, där han bokar några av de största house- och techno-artisterna från hela världen.</string>
+		<key>place</key>
+		<string>lillascenen</string>
+		<key>date</key>
+		<dict>
+			<key>start</key>
+			<date>2014-05-18T17:00:00Z</date>
+			<key>end</key>
+			<date>2014-05-18T17:45:00Z</date>
+		</dict>
+	</dict>
+	<dict>
+		<key>identifier</key>
+		<string>thestompingacademy</string>
+		<key>name</key>
+		<string>The Stomping Academy</string>
+		<key>description</key>
+		<string>Den tio man starka musikmaskinen The Stomping Academy levererar dansant soulpop varvat med ösig rock och smäktande ballader. Med förra årets debutplatta ”Happy Family” i ryggen kommer The Stomping Academy nu till Lundakarnevalen för att se till att inte en enda människa står stilla. Så släpp sargen och snöra på dansskorna!</string>
+		<key>place</key>
+		<string>lillascenen</string>
+		<key>date</key>
+		<dict>
+			<key>start</key>
+			<date>2014-05-18T14:00:00Z</date>
+			<key>end</key>
+			<date>2014-05-18T14:45:00Z</date>
+		</dict>
+	</dict>
+	<dict>
+		<key>identifier</key>
+		<string>bernardhorn</string>
+		<key>name</key>
+		<string>Bernard Horn</string>
+		<key>description</key>
+		<string>Bernard är en 22-årig DJ och producent från Stockholm som bland annat är resident för Levande Charader (LECH), värd för Balettklubben och organisatör för Dans Dakar. Mannen med en hel del järn i elden kommer nu ner till Lundakarnevalen för att bjuda oss på house och techno som får allas fötter att röra sig. Missa inte det!</string>
+		<key>place</key>
+		<string>lillascenen</string>
+		<key>date</key>
+		<dict>
+			<key>start</key>
+			<date>2014-05-16T18:00:00Z</date>
+			<key>end</key>
+			<date>2014-05-16T18:45:00Z</date>
+		</dict>
+	</dict>
+	<dict>
+		<key>identifier</key>
+		<string>bobbiebigband</string>
+		<key>name</key>
+		<string>Bobbie Big Band</string>
+		<key>description</key>
+		<string>Bobbe Big Band startade våren 2005 och är numera ett etablerat storband i Lundaregionen. Bandet har genomfört ett flertal konserter tillsammans med jazzsolister som Lasse Lindgren, Vincent Nilsson, Miriam Aïda m.fl. BBB känns igen för sina stora temakonserter, som Latin of Sweden, All That Jazz och Kul Djur i Dur. Förutom egna konsertprojekt spelar Bobbe Big Band ofta upp till dans på baler, bröllop och andra dansanta arrangemang.</string>
+		<key>place</key>
+		<string>lillascenen</string>
+		<key>date</key>
+		<dict>
+			<key>start</key>
+			<date>2014-05-16T16:30:00Z</date>
+			<key>end</key>
+			<date>2014-05-16T17:15:00Z</date>
+		</dict>
+	</dict>
+	<dict>
+		<key>identifier</key>
+		<string>kingslounge</string>
+		<key>name</key>
+		<string>Kings Lounge</string>
+		<key>description</key>
+		<string>Kings Lounge är ett Helsingborgsbaserat band med fem medlemmar. Efter ett par år av spelande tillsammans bestämde de sig för ett år sedan att göra det på allvar, och har sedan dess varit med i flera musiktävlingar såsom Popcorntävlingen och Emergenza. De har nyligen spelat in sin första EP som inom kort släpps på Spotify, och ska dessutom premiärspela sin nya singel hos oss på Lundakarnevalen! Vi kan vänta oss popmusik med både rock och bluesinfluenser.</string>
+		<key>place</key>
+		<string>lillascenen</string>
+		<key>date</key>
+		<dict>
+			<key>start</key>
+			<date>2014-05-16T15:00:00Z</date>
+			<key>end</key>
+			<date>2014-05-16T15:45:00Z</date>
+		</dict>
+	</dict>
+	<dict>
+		<key>identifier</key>
+		<string>lillebrorcharlie</string>
+		<key>name</key>
+		<string>Lillebror Charlie</string>
+		<key>description</key>
+		<string>Lillebror Charlie bildades under våren 2014 på Kävesta Folkhögskola, 2 mil utanför Örebro. De kommer spela en skön blandning av svängig jazz och hårda funk-grooves, allt för att få igång stämningen på Karnevalen på bästa sätt. Spelningen i Lund gör de som en del av en Skåneturné tillsammans med folkhögskolan.</string>
+		<key>place</key>
+		<string>lillascenen</string>
+		<key>date</key>
+		<dict>
+			<key>start</key>
+			<date>2014-05-16T11:30:00Z</date>
+			<key>end</key>
+			<date>2014-05-16T12:15:00Z</date>
+		</dict>
+	</dict>
+	<dict>
+		<key>identifier</key>
+		<string>syskonenroth</string>
+		<key>name</key>
+		<string>Syskonen Roth</string>
+		<key>description</key>
+		<string>ROTH är en duo bestående av Julia och Gustav. Deras influenser och harmonier tar inspiration från filmer som fastnat i huvudet, 90-talet sedan barnsben, böcker, resor och en regnig gata en sommardag. Uppväxta i Midsommarkransen, en söderförort i Stockholm, skriver och producerar duon sin musik med influenser från rock, pop och indiedrömmar.</string>
+		<key>place</key>
+		<string>lillascenen</string>
+		<key>date</key>
+		<dict>
+			<key>start</key>
+			<date>2014-05-17T12:30:00Z</date>
+			<key>end</key>
+			<date>2014-05-17T13:15:00Z</date>
+		</dict>
+	</dict>
+	<dict>
+		<key>identifier</key>
+		<string>firstlove</string>
+		<key>name</key>
+		<string>First Love</string>
+		<key>description</key>
+		<string>First Love är en Uppsalakvartett bestående av percussion, gitarr, sång, trumpet och piano. Bandmedlemmarna träffades i ett Funk/Soul storband under studietiden och i slutet av 2012 bildades First Love. Stadigt groove, vackra röster, värmande gitarrer och melodiska trumpetslingor ger ett spännande akustiskt pop/soul sound som förgyller i alla lägen. Under maj 2013 släpptes debut EPn ”Someday Soon” som finns på Itunes och Spotify. Till sommaren släpper gruppen nytt fräscht material.</string>
+		<key>place</key>
+		<string>lillascenen</string>
+		<key>date</key>
+		<dict>
+			<key>start</key>
+			<date>2014-05-17T14:00:00Z</date>
+			<key>end</key>
+			<date>2014-05-17T14:45:00Z</date>
+		</dict>
+	</dict>
+	<dict>
+		<key>identifier</key>
+		<string>artsfactory</string>
+		<key>name</key>
+		<string>Arts Factory</string>
+		<key>description</key>
+		<string>Femmannabandet Arts Factory kommer till Lundakarnevalen för att bjuda på svängig, gitarrgrundad och harmonidriven indie rock från Helsingborg. De har tidigare spelat på bland annat Siestafestivalen, Landskronakarnevalen och Kultur i Tiomilaskogen festivalen och vill att sina energiska och sing-along vänliga låtar ska få Futuralkarnevalen att dansa och le, men också att tänka. I texterna finns budskap om egenmakt, männskliga rättigheter och, så klart, kärlek.</string>
+		<key>place</key>
+		<string>lillascenen</string>
+		<key>date</key>
+		<dict>
+			<key>start</key>
+			<date>2014-05-17T15:30:00Z</date>
+			<key>end</key>
+			<date>2014-05-17T16:15:00Z</date>
+		</dict>
+	</dict>
+	<dict>
+		<key>identifier</key>
+		<string>davidströmbäck</string>
+		<key>name</key>
+		<string>David Strömbäck</string>
+		<key>description</key>
+		<string>Emil Sunesson och David Strömbäck är två killar från Malmö som kommer att spela på lördagen på Foodstock. Emil har precis blivit signad och släppt sin första EP, den rekommenderar jag er verkligen att gå in och lyssna på! ”Dans” är min favorit. David spelar gärna vinylskivor vilket vi uppskattar enormt, såhär på futuralkarneval är det kul att inte bara blanda stilar utan även tidsåldrar!</string>
+		<key>place</key>
+		<string>lillascenen</string>
+		<key>date</key>
+		<dict>
+			<key>start</key>
+			<date>2014-05-17T17:00:00Z</date>
+			<key>end</key>
+			<date>2014-05-17T17:45:00Z</date>
+		</dict>
+	</dict>
+	<dict>
+		<key>identifier</key>
+		<string>invigning</string>
+		<key>name</key>
+		<string>Invigning</string>
+		<key>description</key>
+		<string>Invigning av karnevalen, det kommer bli storslaget och riktigt bra drag. Det blir en resa in i övermorgon med start imorgon. Om detta är din femte karneval väntar en speciell överraskning.</string>
+		<key>place</key>
+		<string>storascenen</string>
+		<key>date</key>
+		<dict>
+			<key>start</key>
+			<date>2014-05-16T11:00:00Z</date>
+			<key>end</key>
+			<date>2014-05-16T12:00:00Z</date>
+		</dict>
+	</dict>
+	<dict>
+		<key>identifier</key>
 		<string>partiet</string>
 		<key>name</key>
 		<string>Partiet</string>
@@ -14,9 +235,9 @@
 		<key>date</key>
 		<dict>
 			<key>start</key>
-			<date>2014-05-18T11:37:00Z</date>
+			<date>2014-05-18T15:00:00Z</date>
 			<key>end</key>
-			<date>2014-05-18T11:37:00Z</date>
+			<date>2014-05-18T15:45:00Z</date>
 		</dict>
 	</dict>
 	<dict>
@@ -31,9 +252,26 @@
 		<key>date</key>
 		<dict>
 			<key>start</key>
-			<date>2014-05-18T11:37:00Z</date>
+			<date>2014-05-18T12:30:00Z</date>
 			<key>end</key>
-			<date>2014-05-18T11:37:00Z</date>
+			<date>2014-05-18T13:15:00Z</date>
+		</dict>
+	</dict>
+	<dict>
+		<key>identifier</key>
+		<string>omradetstanger</string>
+		<key>name</key>
+		<string>Området stänger</string>
+		<key>description</key>
+		<string>Första tidsresan! Vi reser in i morgondagen (genom att gå hem och sova).</string>
+		<key>place</key>
+		<string>storascenen</string>
+		<key>date</key>
+		<dict>
+			<key>start</key>
+			<date>2014-05-16T21:59:00Z</date>
+			<key>end</key>
+			<date>2014-05-16T21:59:01Z</date>
 		</dict>
 	</dict>
 	<dict>
@@ -48,16 +286,33 @@
 		<key>date</key>
 		<dict>
 			<key>start</key>
-			<date>2014-05-17T11:37:00Z</date>
+			<date>2014-05-17T20:00:00Z</date>
 			<key>end</key>
-			<date>2014-05-17T11:37:00Z</date>
+			<date>2014-05-17T20:45:00Z</date>
 		</dict>
 	</dict>
 	<dict>
 		<key>identifier</key>
-		<string>emilochdavid</string>
+		<string>omradetoppnar</string>
 		<key>name</key>
-		<string>Emil Sunesson &amp; David Strömbäck</string>
+		<string>Området öppnar</string>
+		<key>description</key>
+		<string>Första dagen av karneval, hoppas du är redo för en dag fylld med skratt och glädje. Håll i hatten och upplev futurala aktiviter som aldrig innan skådats.</string>
+		<key>place</key>
+		<string>storascenen</string>
+		<key>date</key>
+		<dict>
+			<key>start</key>
+			<date>2014-05-16T10:00:00Z</date>
+			<key>end</key>
+			<date>2014-05-15T22:00:00Z</date>
+		</dict>
+	</dict>
+	<dict>
+		<key>identifier</key>
+		<string>emilsunesson</string>
+		<key>name</key>
+		<string>Emil Sunesson</string>
 		<key>description</key>
 		<string>Emil Sunesson och David Strömbäck är två killar från Malmö som kommer att spela på lördagen på Foodstock. Emil har precis blivit signad och släppt sin första EP, den rekommenderar jag er verkligen att gå in och lyssna på! ”Dans” är min favorit. David spelar gärna vinylskivor vilket vi uppskattar enormt, såhär på futuralkarneval är det kul att inte bara blanda stilar utan även tidsåldrar!</string>
 		<key>place</key>
@@ -65,9 +320,9 @@
 		<key>date</key>
 		<dict>
 			<key>start</key>
-			<date>2014-05-17T11:37:00Z</date>
+			<date>2014-05-17T18:30:00Z</date>
 			<key>end</key>
-			<date>2014-05-17T11:37:00Z</date>
+			<date>2014-05-17T19:15:00Z</date>
 		</dict>
 	</dict>
 	<dict>
@@ -82,9 +337,9 @@
 		<key>date</key>
 		<dict>
 			<key>start</key>
-			<date>2014-05-16T11:37:00Z</date>
+			<date>2014-05-16T15:15:00Z</date>
 			<key>end</key>
-			<date>2014-05-16T11:37:00Z</date>
+			<date>2014-05-16T16:00:00Z</date>
 		</dict>
 	</dict>
 	<dict>
@@ -99,9 +354,26 @@
 		<key>date</key>
 		<dict>
 			<key>start</key>
-			<date>2014-05-16T11:37:00Z</date>
+			<date>2014-05-16T13:30:00Z</date>
 			<key>end</key>
-			<date>2014-05-16T11:37:00Z</date>
+			<date>2014-05-16T14:15:00Z</date>
+		</dict>
+	</dict>
+	<dict>
+		<key>identifier</key>
+		<string>omradetoppnar</string>
+		<key>name</key>
+		<string>Området öppnar</string>
+		<key>description</key>
+		<string>Dags för dag 2, hoppas ni är sugna på skoj! Se till att sprid glädje. Samlas under trädet vid AF-Borgens sydvästraste hörn klockan 15:00 och leta efter första ledtråden.</string>
+		<key>place</key>
+		<string>storascenen</string>
+		<key>date</key>
+		<dict>
+			<key>start</key>
+			<date>2014-05-17T10:00:00Z</date>
+			<key>end</key>
+			<date>2014-05-16T22:00:00Z</date>
 		</dict>
 	</dict>
 	<dict>
@@ -117,6 +389,23 @@
 		<dict>
 			<key>start</key>
 			<date>2014-05-18T21:00:00Z</date>
+			<key>end</key>
+			<date>2014-05-17T22:00:00Z</date>
+		</dict>
+	</dict>
+	<dict>
+		<key>identifier</key>
+		<string>omradetoppnar</string>
+		<key>name</key>
+		<string>Området öppnar</string>
+		<key>description</key>
+		<string>Sista dagen av karnevalsfirande, ta på ditt bästa karnevalisthumör och gör detta till ett av dina bästa minnen.</string>
+		<key>place</key>
+		<string>storascenen</string>
+		<key>date</key>
+		<dict>
+			<key>start</key>
+			<date>2014-05-18T10:00:00Z</date>
 			<key>end</key>
 			<date>2014-05-17T22:00:00Z</date>
 		</dict>
@@ -140,6 +429,25 @@
 	</dict>
 	<dict>
 		<key>identifier</key>
+		<string>tåget</string>
+		<key>name</key>
+		<string>Tåget avgår</string>
+		<key>description</key>
+		<string>Nu tuffar tåget igång.
+
+För att få veta mer var god köp programbladet som säljs i shoppen på karnevalsområdet.</string>
+		<key>place</key>
+		<string>tåget</string>
+		<key>date</key>
+		<dict>
+			<key>start</key>
+			<date>2014-05-17T11:00:00Z</date>
+			<key>end</key>
+			<date>2014-05-17T13:00:00Z</date>
+		</dict>
+	</dict>
+	<dict>
+		<key>identifier</key>
 		<string>wintergatan</string>
 		<key>name</key>
 		<string>Wintergatan</string>
@@ -153,6 +461,25 @@
 			<date>2014-05-18T16:30:00Z</date>
 			<key>end</key>
 			<date>2014-05-18T17:15:00Z</date>
+		</dict>
+	</dict>
+	<dict>
+		<key>identifier</key>
+		<string>tåget</string>
+		<key>name</key>
+		<string>Tåget avgår</string>
+		<key>description</key>
+		<string>Nu tuffar tåget igång.
+
+För att få veta mer var god köp programbladet som säljs i shoppen på karnevalsområdet.</string>
+		<key>place</key>
+		<string>tåget</string>
+		<key>date</key>
+		<dict>
+			<key>start</key>
+			<date>2014-05-18T11:00:00Z</date>
+			<key>end</key>
+			<date>2014-05-18T13:00:00Z</date>
 		</dict>
 	</dict>
 	<dict>
@@ -280,7 +607,7 @@
 		<key>name</key>
 		<string>E-Type</string>
 		<key>description</key>
-		<string>Tre karnevaler senare är legenden är tillbaka i Lundagård. Martin ”E-Type” Eriksson debuterade 1991 och saknar fortfarande motstycke inom sin musikgenre Eurodance och vikingabeat. E-type är kanske mest känd får sina hitlåtar True Believer, Here I Go Again och den officiella EM-fotbollslåten Campione. Vad mer behöver vi säga; This Is The Way det kommer bli!</string>
+		<string>Tre karnevaler senare är legenden tillbaka i Lundagård. Martin ”E-Type” Eriksson debuterade 1991 och saknar fortfarande motstycke inom sin musikgenre Eurodance och vikingabeat. E-type är kanske mest känd får sina hitlåtar True Believer, Here I Go Again och den officiella EM-fotbollslåten Campione. Vad mer behöver vi säga; This Is The Way det kommer bli!</string>
 		<key>place</key>
 		<string>storascenen</string>
 		<key>date</key>
@@ -320,26 +647,116 @@
 		<key>date</key>
 		<dict>
 			<key>start</key>
-			<date>2014-04-16T12:30:00Z</date>
+			<date>2014-05-16T12:30:00Z</date>
 			<key>end</key>
-			<date>2014-04-16T13:30:00Z</date>
+			<date>2014-05-16T13:30:00Z</date>
 		</dict>
 	</dict>
 	<dict>
 		<key>identifier</key>
-		<string></string>
+		<string>omradetstanger</string>
 		<key>name</key>
-		<string>Invigning</string>
+		<string>Området stänger</string>
 		<key>description</key>
-		<string>Futuralt awesome invigning av Lundakarnevalen 2014</string>
+		<string>Andra tidsresan! Vi reser åter in i morgondagen (genom att gå hem och sova).</string>
 		<key>place</key>
 		<string>storascenen</string>
 		<key>date</key>
 		<dict>
 			<key>start</key>
-			<date>2014-04-16T11:00:00Z</date>
+			<date>2014-05-17T21:59:00Z</date>
 			<key>end</key>
-			<date>2014-04-16T12:00:00Z</date>
+			<date>2014-05-17T21:59:01Z</date>
+		</dict>
+	</dict>
+	<dict>
+		<key>identifier</key>
+		<string>verklighetensfolk</string>
+		<key>name</key>
+		<string>Verklighetens Folk</string>
+		<key>description</key>
+		<string>Skatepunk, trash metal, power pop, hästajazz, neosoul, urban country, rotblues, dance hall, hip hop och FM rock. Det är inte fy skam. 
+
+Men nu finns även villapop. Villapop förenar lifestyle med musik. Villapop är en blandning av träregel och Tomas Ledin. Villapop uppstår när Ernst Kirchsteiger möter Guns N´Roses.
+
+Och Verklighetens Folk spelar villapop. 
+</string>
+		<key>place</key>
+		<string>storascenen</string>
+		<key>date</key>
+		<dict>
+			<key>start</key>
+			<date>2014-05-17T13:30:00Z</date>
+			<key>end</key>
+			<date>2014-05-17T14:15:00Z</date>
+		</dict>
+	</dict>
+	<dict>
+		<key>identifier</key>
+		<string>omradetstanger</string>
+		<key>name</key>
+		<string>Området stänger</string>
+		<key>description</key>
+		<string>Karnevalen slutar, se till att hitta på mycket bus innan det tar slut. Imorgon är det för sent!</string>
+		<key>place</key>
+		<string>storascenen</string>
+		<key>date</key>
+		<dict>
+			<key>start</key>
+			<date>2014-05-18T21:59:00Z</date>
+			<key>end</key>
+			<date>2014-05-18T21:59:01Z</date>
+		</dict>
+	</dict>
+	<dict>
+		<key>identifier</key>
+		<string>dansen</string>
+		<key>name</key>
+		<string>Dansen</string>
+		<key>description</key>
+		<string>Dansa loss! Hur dansar man i framtiden? Det ryktas att roboten blivit populär igen, testa! Moon walk är inte lika häftigt längre, förutom på månen då alltså...</string>
+		<key>place</key>
+		<string>dansen</string>
+		<key>date</key>
+		<dict>
+			<key>start</key>
+			<date>2014-05-16T21:30:00Z</date>
+			<key>end</key>
+			<date>2014-05-16T00:00:00Z</date>
+		</dict>
+	</dict>
+	<dict>
+		<key>identifier</key>
+		<string>dansen</string>
+		<key>name</key>
+		<string>Dansen</string>
+		<key>description</key>
+		<string>Dansa loss! Hur dansar man i framtiden? Det ryktas att roboten blivit populär igen, testa! Moon walk är inte lika häftigt längre, förutom på månen då alltså...</string>
+		<key>place</key>
+		<string>dansen</string>
+		<key>date</key>
+		<dict>
+			<key>start</key>
+			<date>2014-05-17T21:30:00Z</date>
+			<key>end</key>
+			<date>2014-05-17T00:00:00Z</date>
+		</dict>
+	</dict>
+	<dict>
+		<key>identifier</key>
+		<string>dansen</string>
+		<key>name</key>
+		<string>Dansen</string>
+		<key>description</key>
+		<string>Dansa loss! Hur dansar man i framtiden? Det ryktas att roboten blivit populär igen, testa! Moon walk är inte lika häftigt längre, förutom på månen då alltså...</string>
+		<key>place</key>
+		<string>dansen</string>
+		<key>date</key>
+		<dict>
+			<key>start</key>
+			<date>2014-05-18T21:30:00Z</date>
+			<key>end</key>
+			<date>2014-05-18T00:00:00Z</date>
 		</dict>
 	</dict>
 </array>

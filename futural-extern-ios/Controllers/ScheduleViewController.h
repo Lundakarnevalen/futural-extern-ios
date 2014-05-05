@@ -12,4 +12,8 @@
 
 @property (nonatomic) LKarneval *karneval;
 
+@property (nonatomic) LKEvent *visitEvent;
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property (weak, nonatomic) IBOutlet UISegmentedControl *sectionButton;
+
 @end

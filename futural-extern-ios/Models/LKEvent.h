@@ -14,8 +14,9 @@
 @property (nonatomic) NSString *identifier; //does not have to be unique, but this is the string that connects the event to an image.
 
 @property (nonatomic) NSString *name;
-@property (nonatomic) NSString *description; //description of the event.
+@property (nonatomic) NSString *information; //description of the event.
 @property (nonatomic) LKPlace *place; //where the event is located.
+@property (nonatomic) UILocalNotification *notification; //grabbed from appdelegate if it's there, otherwise, new instance with data.
 
 @property (nonatomic) NSDate *start;
 @property (nonatomic) NSDate *end;
@@ -27,14 +28,19 @@
 - (LKEvent *)initWithProperties:(NSDictionary *)propertyList; //instantiate class with property data.
 
 - (BOOL)isOver; //check if the event has already taken place.
-- (NSInteger)secondsLeft; //calculate how many seconds until the event is taking place (for use with push messages).
-- (NSString *)timeLeft; //return the time left until launch date, thought that we could use the following format dd:hh:mm (for use with views)
+- (NSString *)dataIdentifier;
 
+- (NSString *)formattedStartTimeWithWeekday;
 //the following are in HH:mm format.
 - (NSString *)formattedStartTime;
 - (NSString *)formattedEndTime;
 
+//NOTIFICATIONS
+- (void)disableNotification;
+- (void)enableNotification;
+
 //if there's no event image, it will grab the LKPlace image instead.
 - (UIImage *)imageForEvent;
+- (UIImage *)coverImage;
 
 @end

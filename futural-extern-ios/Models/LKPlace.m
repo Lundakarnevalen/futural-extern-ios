@@ -16,11 +16,11 @@
     
     if(self) {
         
-        //create logic to read from a property list and store it in this model
         self.name = propertyList[@"name"];
-        self.description = propertyList[@"description"];
+        self.information = propertyList[@"description"];
         self.category = [propertyList[@"category"] integerValue];
         self.alcohol = [propertyList[@"alcohol"] boolValue];
+        self.openingHours = propertyList[@"openinghours"];
         
         for(NSString *option in propertyList[@"payment_options"]) {
             
@@ -29,11 +29,36 @@
             
         }
         
-        NSDictionary *position = propertyList[@"position"];
-        CLLocationDegrees latitude = [position[@"latitude"] doubleValue];
-        CLLocationDegrees longitude = [position[@"longitude"] doubleValue];
+        if(propertyList[@"position"]) {
+            
+            NSDictionary *position = propertyList[@"position"];
+            
+            CLLocationCoordinate2D coordinates;
+            coordinates.latitude = [position[@"latitude"] floatValue];
+            coordinates.longitude = [position[@"longitude"] floatValue];
+            
+            self.position = coordinates;
+            
+        }
         
-        self.position = CLLocationCoordinate2DMake(latitude, longitude);
+        NSArray *positions = propertyList[@"positions"];
+        
+        for(NSDictionary *position in positions) {
+            
+            NSString *name = position[@"name"];
+            
+            LKPlace *subPlace = [[LKPlace alloc] initWithProperties:position];
+            subPlace.parent = self;
+
+            if(!name) {
+                
+                subPlace.name = self.name; //fallback to category if no name is set.
+                
+            }
+            
+            [self.subPlaces addObject:subPlace];
+            
+        }
         
     }
     
@@ -47,40 +72,115 @@
     
 }
 
+- (NSString *)timeSpan {
+    
+    NSDate *today = [NSDate date];
+    
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setDateFormat:@"yyyy-MM-dd"];
+    
+    NSDictionary *openingHours = self.openingHours[[dateFormatter stringFromDate:today]];
+    
+    if(openingHours) {
+        
+        NSString *open = [openingHours objectForKey:@"open"];
+        open = [open substringToIndex:2];
+        NSString *close = [openingHours objectForKey:@"close"];
+        close = [close substringToIndex:2];
+        
+        return [NSString stringWithFormat:@"%@ - %@", open, close];
+        
+    } else {
+        
+        return @"";
+        
+    }
+    
+}
+
 - (BOOL)acceptsCard {
     
-    //loop through the array paymentOptions, if it finds an object containing LKPaymentOptionCard the place accepts card.
+    for(NSNumber *paymentContainer in self.paymentOptions) {
+        
+        if([paymentContainer integerValue] == LKPaymentOptionCard) {
+            
+            return YES;
+            
+        }
+        
+    }
+    
     return NO;
     
 }
 
-- (BOOL)acceptsFutural {
+- (BOOL)acceptsCash {
     
-    //look at acceptsCard
+    for(NSNumber *paymentContainer in self.paymentOptions) {
+        
+        if([paymentContainer integerValue] == LKPaymentOptionCash) {
+            
+            return YES;
+            
+        }
+        
+    }
+    
     return NO;
     
 }
 
-- (BOOL)acceptsPhone {
+- (UIImage *)coverImage {
     
-    //look at acceptsCard
-    return NO;
+    UIImage *cover = [UIImage imageNamed:[NSString stringWithFormat:@"cover-%@", self.identifier]];
+    
+    if(cover) {
+        
+        return cover;
+        
+    } else {
+        
+        return [UIImage imageNamed:@"cover-unknown"];
+        
+    }
     
 }
 
 - (UIImage *)imageForPlace {
     
     UIImage *identifierImage = [self.class imageForIdentifier:self.identifier];
+    UIImage *parentImage = [self.parent imageForPlace];
     
     if(identifierImage) {
         
         return identifierImage;
+        
+    } else if (parentImage) {
+        
+        return parentImage;
         
     } else { //fallback if no specific image/logotype.
         
         return [self.class imageForCategory:self.category];
         
     }
+}
+
+- (UIImage *)imageForAnnotation {
+    
+    return [self imageForPlace];
+    
+}
+
+- (LKPlaceCategory)category {
+    
+    if(_category == 0 && self.parent) {
+        
+        _category = self.parent.category;
+        
+    }
+    
+    return _category;
     
 }
 
@@ -98,11 +198,23 @@
     
 }
 
+- (NSMutableArray *)subPlaces {
+    
+    if(!_subPlaces) {
+        
+        _subPlaces = [[NSMutableArray alloc] init];
+        
+    }
+    
+    return _subPlaces;
+    
+}
+
 #pragma mark Misc
 
 - (NSString *)description {
     
-    return [NSString stringWithFormat:@"This is %@ and I'm located at %f&%f, our payment options are %@", self.name, self.position.latitude, self.position.longitude, self.paymentOptions];
+    return [NSString stringWithFormat:@"This is %@ and I'm located at %lu places, our payment options are %@", self.name, (unsigned long)[self.subPlaces count], self.paymentOptions];
     
 }
 
@@ -124,10 +236,6 @@
             
             break;
             
-        case LKPlaceCategoryBeverage:
-            
-            break;
-            
         case LKPlaceCategoryChargingStation:
             
             break;
@@ -141,8 +249,9 @@
             break;
             
         case LKPlaceCategoryFood:
+        case LKPlaceCategoryBeverage:
             
-            imageName = @"hamburger-drink";
+            imageName = @"krog";
             
             break;
             
@@ -160,7 +269,7 @@
             
         case LKPlaceCategoryScene:
             
-            imageName = @"show";
+            imageName = @"showen";
             
             break;
             
@@ -176,13 +285,9 @@
             
             break;
             
-        case LKPlaceCategoryToilet:
-            
-            break;
-            
         default:
             
-            imageName = @"unknown";
+            //imageName = @"unknown";
             
             break;
             

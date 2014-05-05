@@ -27,6 +27,14 @@
             
             break;
             
+        case LKColorDarkRed:
+            
+            red = 183;
+            green = 63;
+            blue = 47;
+            
+            break;
+            
         case LKColorBlue:
             
             red = 76.0;
@@ -40,6 +48,22 @@
             red = 123.0;
             green = 202.0;
             blue = 173.0;
+            
+            break;
+            
+        case LKColorLightBlue:
+            
+            red = 195;
+            green = 210;
+            blue = 238;
+            
+            break;
+            
+        case LKColorDarkGreen:
+            
+            red = 114;
+            green = 184;
+            blue = 158;
             
             break;
             
@@ -70,6 +94,19 @@
     }
     
     return [UIColor colorWithRed:red/255.0 green:green/255.0 blue:blue/255.0 alpha:alpha];
+    
+}
+
++ (void)customizeNavigationBar:(UINavigationBar *)navigationBar {
+    
+    NSDictionary *textAttributes = @{
+                                     NSForegroundColorAttributeName : [UIColor whiteColor],
+                                     NSFontAttributeName : [UIFont fontWithName:@"FuturaLT-Bold" size:18]
+                                     };
+    
+    [navigationBar setTranslucent:NO];
+    [navigationBar setBarTintColor:[self colorWithIdentifier:LKColorRed]];
+    [navigationBar setTitleTextAttributes:textAttributes];
     
 }
 

@@ -8,6 +8,7 @@
 
 #import "NavigationViewController.h"
 #import "LKColor.h"
+#import "LKLayout.h"
 
 @implementation NavigationViewController
 
@@ -15,12 +16,15 @@
     
     [super viewDidLoad];
     
-    [self setNeedsStatusBarAppearanceUpdate];
+    if ([self respondsToSelector:@selector(setNeedsStatusBarAppearanceUpdate)]) {
+        [self setNeedsStatusBarAppearanceUpdate];
+    }    
+    
     [self customizeNavigationbar];
     
 }
 
--(UIStatusBarStyle)preferredStatusBarStyle { return UIStatusBarStyleLightContent; } //set statusbar to white
+//-(UIStatusBarStyle)preferredStatusBarStyle { return UIStatusBarStyleLightContent; } //set statusbar to white
 
 - (void)customizeNavigationbar {
     
@@ -29,10 +33,24 @@
                                      NSFontAttributeName : [UIFont fontWithName:@"Robot!Head" size:28]
                                      };
     
+    if (SYSTEM_VERSION_LESS_THAN(@"7.0")) {
+        
+        [self.navigationBar setTintColor:[LKColor colorWithIdentifier:LKColorRed]];
+        
+    }
+    
+    [self.navigationBar.topItem setTitle:[LKLayout defaultTitle]];
     [self.navigationBar setTranslucent:NO];
-    [self.navigationBar setBarTintColor:[LKColor colorWithIdentifier:LKColorRed]];
+    if ([self respondsToSelector:@selector(setBarTintColor:)]) {
+        [self.navigationBar setBarTintColor:[LKColor colorWithIdentifier:LKColorRed]];
+        [self.navigationBar setTintColor:[UIColor whiteColor]];
+    } else {
+        [self.navigationBar setBackgroundColor:[LKColor colorWithIdentifier:LKColorRed]];
+    }
+    
     [self.navigationBar setTitleTextAttributes:textAttributes];
     
+    //shadow beneath navbar.
     UIView *shadow = [[UIView alloc] init];
     shadow.frame = CGRectMake(0, self.navigationBar.frame.size.height, self.navigationBar.frame.size.width, 3);
     shadow.backgroundColor = [UIColor colorWithWhite:0 alpha:0.15];
