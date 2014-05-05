@@ -457,7 +457,9 @@ Vi utlovar stämning &amp; drag som hade fått Jimi Hendrix att bli högerhänt!
 		<key>category</key>
 		<integer>19</integer>
 		<key>description</key>
-		<string>För att gå in på karnevalsområdet behövs en entrébiljett eller ett entréband. Engångsentré kostar 60 kr och ett entréband som gör att man kan gå in och ut obegränsat under de tre dagarna kostar 200 kr. Entrébiljett/band rekommenderas att köpa på förhand då köerna in på karnevalsområdet kan vara långa under karnevalsdagarna. Barn som är 6 år eller yngre går in gratis på området.</string>
+		<string>För att gå in på karnevalsområdet behövs en entrébiljett eller ett entréband. Engångsentré kostar 60 kr och ett entréband som gör att man kan gå in och ut obegränsat under de tre dagarna kostar 200 kr. Entrébiljett/band rekommenderas att köpa på förhand då köerna in på karnevalsområdet kan vara långa under karnevalsdagarna. Barn som är 6 år eller yngre går in gratis på området.
+
+Entrébiljetter köpta på internet måste hämtas ut i någon av biljettbodarna på Clemenstorget eller Stortorget utanför karnevalsområdet.</string>
 		<key>name</key>
 		<string>Entré</string>
 		<key>payment_options</key>
@@ -740,7 +742,7 @@ Vi utlovar stämning &amp; drag som hade fått Jimi Hendrix att bli högerhänt!
 		<key>alcohol</key>
 		<false/>
 		<key>category</key>
-		<integer>19</integer>
+		<integer>6</integer>
 		<key>description</key>
 		<string>På området finns en sjukstuga (se karta) med läkare och sjuksköterskor som mer än gärna plåstrar om dig när du blir skadad, det är bara att gå dit! Utöver detta så kan du få hjälp av sjukvårdsteam som hela tiden rör sig på området.</string>
 		<key>name</key>
@@ -2060,8 +2062,9 @@ Så borsta tänderna, glöm inte tandtråden och ta med hela familjen till Barne
 		<key>category</key>
 		<integer>21</integer>
 		<key>description</key>
-		<string>För att kunna gå in på Futuralkarnevalens område i Lundagård och se artister och de klassiska nöjena samt uppleva karnevalen i sin helhet, så krävs entrébiljett till karnevalsområdet. Entrébiljetter kan köpas vid varje entré till området. Vår
-rekommendation till dig är dock att köpa entrébiljett redan innan karnevalsdagarna för att undvika kön vid entréerna.</string>
+		<string>För att gå in på karnevalsområdet behövs en entrébiljett eller ett entréband. Engångsentré kostar 60 kr och ett entréband som gör att man kan gå in och ut obegränsat under de tre dagarna kostar 200 kr. Entrébiljett/band rekommenderas att köpa på förhand då köerna in på karnevalsområdet kan vara långa under karnevalsdagarna. Barn som är 6 år eller yngre går in gratis på området.
+
+Entrébiljetter köpta på internet måste hämtas ut i någon av biljettbodarna på Clemenstorget eller Stortorget utanför karnevalsområdet.</string>
 		<key>name</key>
 		<string>Biljetteriet</string>
 		<key>payment_options</key>
@@ -2753,9 +2756,9 @@ rekommendation till dig är dock att köpa entrébiljett redan innan karnevalsda
 				<key>position</key>
 				<dict>
 					<key>latitude</key>
-					<real>55.70512605161667</real>
+					<real>55.70605421252043</real>
 					<key>longitude</key>
-					<real>13.19529316574132</real>
+					<real>13.19455318842597</real>
 				</dict>
 			</dict>
 		</array>
