@@ -8,6 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
+#import "LKImage.h"
+
 @interface OvumSecretaViewController : UIViewController
+
+
+@property (strong, nonatomic) IBOutletCollection(UIView) NSArray *blockViews;
+@property (weak, nonatomic) IBOutlet UILabel *nameLabel;
+@property (weak, nonatomic) IBOutlet UILabel *headerLabel;
 
 @end

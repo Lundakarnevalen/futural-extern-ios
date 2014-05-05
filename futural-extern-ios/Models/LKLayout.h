@@ -24,6 +24,7 @@
 + (UIFont *)detailPaymentFont;
 + (UIFont *)informationHeaderFont;
 + (UIFont *)fontForTableHeader;
++ (UIFont *)ovumSecretaHeader;
 
 + (void)addShadowToView:(UIView *)view ofSize:(NSInteger)shadowSize;
 + (void)addInsetShadowToView:(UIView *)view ofSize:(NSInteger)shadowSize;

@@ -8,21 +8,28 @@
 
 #import "OvumSecretaViewController.h"
 
+#import "LKLayout.h"
+
 @interface OvumSecretaViewController ()
 
 @end
 
 @implementation OvumSecretaViewController
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
+- (void)viewDidLoad {
     
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    [super viewDidLoad];
     
-    if (self) {
-
+    [self.headerLabel setText:[self.headerLabel.text uppercaseString]];
+    [self.headerLabel setFont:[LKLayout ovumSecretaHeader]];
+    
+    for(UIView *block in self.blockViews) {
+        
+        [block setAlpha:0.9];
+        [LKLayout addShadowToView:block ofSize:3];
+        
     }
     
-    return self;
 }
 
 @end

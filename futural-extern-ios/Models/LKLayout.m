@@ -85,6 +85,12 @@
     
 }
 
++ (UIFont *)ovumSecretaHeader {
+    
+    return [UIFont fontWithName:[self futuraFontName] size:24];
+    
+}
+
 + (UIFont *)segmentFont {
     
     return [UIFont fontWithName:[self futuraFontName] size:10];
