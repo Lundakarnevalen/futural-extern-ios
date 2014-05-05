@@ -171,10 +171,10 @@
     UIView *topCircle = (UIView *)[[cell contentView] viewWithTag:TAG_TOP_CIRCLE];
     UIView *bottomCircle = (UIView *)[[cell contentView] viewWithTag:TAG_BOTTOM_CIRCLE];
     
-    [LKLayout addShadowToLabel:headerName withSizeOf:1];
-    [LKLayout addShadowToLabel:headerPlace withSizeOf:1];
-    [LKLayout addShadowToLabel:timeStart withSizeOf:1];
-    [LKLayout addShadowToLabel:timeEnd withSizeOf:1];
+//    [LKLayout addShadowToLabel:headerName withSizeOf:1];
+//    [LKLayout addShadowToLabel:headerPlace withSizeOf:1];
+//    [LKLayout addShadowToLabel:timeStart withSizeOf:1];
+//    [LKLayout addShadowToLabel:timeEnd withSizeOf:1];
     
     topCircle.hidden = (indexPath.row != 0);
     bottomCircle.hidden = (indexPath.row != [dates[dateString] count] - 1);
