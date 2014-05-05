@@ -24,6 +24,7 @@
 @interface MapViewController ()
 
 @property (nonatomic, strong) NSMutableDictionary *filter;
+@property (weak, nonatomic) IBOutlet UIView *filterDescView;
 
 @end
 
@@ -48,6 +49,17 @@
 }
 
 -(void)viewDidAppear:(BOOL)animated {
+    
+    [super viewDidAppear:animated];
+    
+    if ([[NSUserDefaults standardUserDefaults] objectForKey:@"showFilterDescView"] == nil) {
+        [[NSUserDefaults standardUserDefaults] setObject:[NSNumber numberWithBool:YES] forKey:@"showFilterDescView"];
+        self.filterDescView.hidden = NO;
+    } else {
+        NSNumber *showView = [[NSUserDefaults standardUserDefaults] objectForKey:@"showFilterDescView"];
+        BOOL hidden = ![showView boolValue];
+        self.filterDescView.hidden = hidden;
+    }
     
     [self reloadAnnotations];
     
@@ -136,6 +148,8 @@
 
 - (IBAction)showMapButtonClicked:(id)sender {
     
+    [[NSUserDefaults standardUserDefaults] setObject:[NSNumber numberWithBool:NO] forKey:@"showFilterDescView"];
+    self.filterDescView.hidden = YES;
     [self.slidingViewController anchorTopViewTo:ECLeft];
     
 }

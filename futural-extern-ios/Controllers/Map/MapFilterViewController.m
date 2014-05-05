@@ -24,7 +24,16 @@ NSString *const FilterMapTableViewRowDidSelect             = @"FilterMapTableVie
 - (void)viewDidLoad {
     
     [super viewDidLoad];
-    self.filter = [[NSUserDefaults standardUserDefaults] objectForKey:@"filter"];
+    self.filter = (NSMutableDictionary *)[[NSUserDefaults standardUserDefaults] dictionaryForKey:@"filter"];
+    if (!self.filter) {
+        self.filter = [[NSMutableDictionary alloc] init];
+        [self.filter setValue:[NSNumber numberWithBool:NO] forKey:@"food"];
+        [self.filter setValue:[NSNumber numberWithBool:NO] forKey:@"entertainment"];
+        [self.filter setValue:[NSNumber numberWithBool:NO] forKey:@"other"];
+        [self.filter setValue:[NSNumber numberWithBool:NO] forKey:@"toilet"];
+        [self.filter setValue:[NSNumber numberWithBool:NO] forKey:@"trash"];
+        [[NSUserDefaults standardUserDefaults] setObject:self.filter forKey:@"filter"];
+    }
     
 }
 

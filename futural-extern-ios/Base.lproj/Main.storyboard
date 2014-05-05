@@ -810,6 +810,30 @@ Emil Kristiansson</string>
                                     <action selector="showMapButtonClicked:" destination="4LJ-BV-Ygh" eventType="touchUpInside" id="Exw-eE-mF4"/>
                                 </connections>
                             </button>
+                            <view hidden="YES" alpha="0.84999999999999998" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UF6-ii-lUX">
+                                <rect key="frame" x="20" y="20" width="280" height="105"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ÄR KARTAN TOM?" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="an6-HU-GdX" customClass="UILabel_FuturaFont">
+                                        <rect key="frame" x="20" y="15" width="240" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.94117647059999998" green="0.32549019610000002" blue="0.24313725489999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Lugn i stormen! Klicka på filter-knappen uppe till höger och visa de sakerna du är intresserad av!" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="240" translatesAutoresizingMaskIntoConstraints="NO" id="jVr-NO-3v7">
+                                        <rect key="frame" x="20" y="34" width="240" height="51"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <color key="textColor" red="0.36470588240000001" green="0.3803921569" blue="0.49803921569999998" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="105" id="Ysm-6Q-hoc"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -817,7 +841,10 @@ Emil Kristiansson</string>
                             <constraint firstItem="zRu-NC-REF" firstAttribute="top" secondItem="ovd-0P-KLA" secondAttribute="bottom" constant="50" id="76o-Op-LVs"/>
                             <constraint firstItem="VOy-Cp-HdC" firstAttribute="top" secondItem="e0T-3B-zCv" secondAttribute="top" id="9zR-zC-DKw"/>
                             <constraint firstItem="VOy-Cp-HdC" firstAttribute="leading" secondItem="gTy-RO-O6Q" secondAttribute="leading" id="BTK-R6-c5L"/>
+                            <constraint firstItem="UF6-ii-lUX" firstAttribute="leading" secondItem="gTy-RO-O6Q" secondAttribute="leading" constant="20" id="Dcz-fj-2D0"/>
+                            <constraint firstAttribute="trailing" secondItem="UF6-ii-lUX" secondAttribute="trailing" constant="20" id="MMY-gk-5GQ"/>
                             <constraint firstItem="zRu-NC-REF" firstAttribute="top" secondItem="VOy-Cp-HdC" secondAttribute="bottom" id="gIp-K1-WnA"/>
+                            <constraint firstItem="UF6-ii-lUX" firstAttribute="top" secondItem="e0T-3B-zCv" secondAttribute="bottom" constant="20" id="ga7-iR-jQz"/>
                             <constraint firstAttribute="trailing" secondItem="ovd-0P-KLA" secondAttribute="trailing" constant="-15" id="l6Y-fz-qke"/>
                         </constraints>
                     </view>
@@ -829,6 +856,7 @@ Emil Kristiansson</string>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="filterDescView" destination="UF6-ii-lUX" id="uc6-iF-rXf"/>
                         <outlet property="mapView" destination="VOy-Cp-HdC" id="ope-2h-ibY"/>
                         <segue destination="CBE-hh-3D3" kind="modal" identifier="createAnnotationSegue" id="dlX-3D-OP5"/>
                     </connections>
