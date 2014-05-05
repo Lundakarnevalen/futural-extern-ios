@@ -378,7 +378,7 @@ Vi utlovar stämning &amp; drag som hade fått Jimi Hendrix att bli högerhänt!
 		<key>category</key>
 		<integer>15</integer>
 		<key>description</key>
-		<string>Här slänger du allt som inte ger dig någon karnevalist-glädje. Placerade strategiskt runt om hela området för att du inte ska behvöa gå allt för långt för att bli av med sånt osm kan användas till bättre saker. Tänk på att nedskräpning är dåligt och att Lund ska hålla i minst 1000 år till.</string>
+		<string>Här slänger du allt som inte ger dig någon karnevalist-glädje. Placerade strategiskt runt om hela området för att du inte ska behvöa gå allt för långt för att bli av med sånt som kan användas till bättre saker. Tänk på att nedskräpning är dåligt och att Lund ska hålla i minst 1000 år till.</string>
 		<key>name</key>
 		<string>Soptunna</string>
 		<key>payment_options</key>
@@ -2642,7 +2642,7 @@ Entrébiljetter köpta på internet måste hämtas ut i någon av biljettbodarna
 		<key>category</key>
 		<integer>20</integer>
 		<key>description</key>
-		<string>På Tegnérsplatsen precis söder på AF-borgen ligger Lundakarnevalens äldsta och mest urballade nöje, nämligen Karnevalscirkusen! Cirkusen har en lång historia av att blanda studentikos humor med parodier på cirkusnummer, såväl som genuint imponerande sådana. Detta år kommer föreställningen, namngiven ”Cirkus 40 minuter”, att ta med publiken på en hisnande färd mellan olika främmande platser, och bjuda på en frisk blandning av gammalt såväl som nytt. En traditionell cirkus skickas ut på under ytterst otraditionella omständigheter på grund av en mystisk resenär från framtiden. Bered er på ett äventyr fylld med både spänning, humor och grace. Ett sant nöje för hela familjen!</string>
+		<string>På Tegnérsplatsen precis söder om AF-borgen ligger Lundakarnevalens äldsta och mest urballade nöje, nämligen Karnevalscirkusen! Cirkusen har en lång historia av att blanda studentikos humor med parodier på cirkusnummer, såväl som genuint imponerande sådana. Detta år kommer föreställningen, namngiven ”Cirkus 40 minuter”, att ta med publiken på en hisnande färd mellan olika främmande platser, och bjuda på en frisk blandning av gammalt såväl som nytt. En traditionell cirkus skickas ut på under ytterst otraditionella omständigheter på grund av en mystisk resenär från framtiden. Bered er på ett äventyr fylld med både spänning, humor och grace. Ett sant nöje för hela familjen!</string>
 		<key>name</key>
 		<string>Cirkusen</string>
 		<key>payment_options</key>
