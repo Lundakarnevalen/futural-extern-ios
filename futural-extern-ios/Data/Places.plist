@@ -11,7 +11,9 @@
 		<key>category</key>
 		<integer>22</integer>
 		<key>description</key>
-		<string>Årets tåg består av häftiga tåg i alla dess former, en resa genom tidsrymden. För att veta mer var god köp programbladet som säljs i shoppen på karnevalsområdet.</string>
+		<string>Årets tåg består av häftiga tåg i alla dess former, en resa genom tidsrymden. 
+
+För att få veta mer var god köp programbladet som säljs i shoppen på karnevalsområdet.</string>
 		<key>name</key>
 		<string>Tåget</string>
 		<key>payment_options</key>
@@ -306,9 +308,6 @@ Pris: 50 kr per portion</string>
 På scenen finns underhållning dag, kväll &amp; natt. Under lunchtid erbjuder vi underhållning som är mer familjeanpassad, och under eftermiddag &amp; kväll satsar vi för fullt på musik från världens alla hörn - reggae, folk, indie, hiphop och en massa annat! 
 
 Framåt natten skruvar vi upp tempot för att tillsammans med några av Sveriges största inom deep- &amp; tech-house skapa världens läckraste förfest.
-Vi utlovar stämning &amp; drag som hade fått Jimi Hendrix att bli högerhänt!
-På scenen finns underhållning dag, kväll &amp; natt. Under lunchtid erbjuder vi underhållning som är mer familjeanpassad, och under eftermiddag &amp; kväll satsar vi för fullt på musik från världens alla hörn - reggae, folk, indie, hiphop och en massa annat!
-Framåt natten skruvar vi upp tempot för att tillsammans med några av Sveriges största inom deep- &amp; tech-house skapa världens läckraste förfest.
 Vi utlovar stämning &amp; drag som hade fått Jimi Hendrix att bli högerhänt!</string>
 		<key>name</key>
 		<string>Foodstock</string>
@@ -353,7 +352,7 @@ Vi utlovar stämning &amp; drag som hade fått Jimi Hendrix att bli högerhänt!
 		<key>category</key>
 		<integer>2</integer>
 		<key>description</key>
-		<string>I Athen på AF-borgen hittar du tidsmaskinen som tar dig på en kulinarisk tidsresa som utan tvekan kommer att krydda din karnevalsupplevelse. För att på dagarna ta avstamp i det glada femtiotalet och erbjuda er både känslan, stämningen och maten hos en amerikansk diner, svidar vi mot kvällen om. Då kröker vi tid och rum och fortsätter på tidsresan som landar i en bar i sann anda av den välkända Studio 54. Tidsresor till trots, en sak kan ni alltid räkna med, och det är att på krog Thyme</string>
+		<string>I Athen på AF-borgen hittar du tidsmaskinen som tar dig på en kulinarisk tidsresa som utan tvekan kommer att krydda din karnevalsupplevelse. För att på dagarna ta avstamp i det glada femtiotalet och erbjuda er både känslan, stämningen och maten hos en amerikansk diner, svidar vi mot kvällen om. Då kröker vi tid och rum och fortsätter på tidsresan som landar i en bar i sann anda av den välkända Studio 54.</string>
 		<key>name</key>
 		<string>Krog Thyme Travel</string>
 		<key>payment_options</key>
@@ -378,7 +377,7 @@ Vi utlovar stämning &amp; drag som hade fått Jimi Hendrix att bli högerhänt!
 		<key>category</key>
 		<integer>15</integer>
 		<key>description</key>
-		<string>Här slänger du allt som inte ger dig någon karnevalist-glädje. Placerade strategiskt runt om hela området för att du inte ska behvöa gå allt för långt för att bli av med sånt som kan användas till bättre saker. Tänk på att nedskräpning är dåligt och att Lund ska hålla i minst 1000 år till.</string>
+		<string>Här slänger du allt som inte ger dig någon karnevalist-glädje. Placerade strategiskt runt om hela området för att du inte ska behöva gå allt för långt för att bli av med sånt som kan användas till bättre saker. Tänk på att nedskräpning är dåligt och att Lund ska hålla i minst 1000 år till.</string>
 		<key>name</key>
 		<string>Soptunna</string>
 		<key>payment_options</key>
@@ -457,7 +456,7 @@ Vi utlovar stämning &amp; drag som hade fått Jimi Hendrix att bli högerhänt!
 		<key>category</key>
 		<integer>19</integer>
 		<key>description</key>
-		<string>För att gå in på karnevalsområdet behövs en entrébiljett eller ett entréband. Engångsentré kostar 60 kr och ett entréband som gör att man kan gå in och ut obegränsat under de tre dagarna kostar 200 kr. Entrébiljett/band rekommenderas att köpa på förhand då köerna in på karnevalsområdet kan vara långa under karnevalsdagarna. Barn som är 6 år eller yngre går in gratis på området.
+		<string>För att gå in på karnevalsområdet behövs en entrébiljett eller ett entréband. Engångsentré kostar 60 kr och ett entréband som gör att man kan gå in och ut obegränsat under de tre dagarna kostar 200 kr. Entrébiljett/band rekommenderas att köpas på förhand då köerna in på karnevalsområdet kan vara långa under karnevalsdagarna. Barn som är 6 år eller yngre går in gratis på området.
 
 Entrébiljetter köpta på internet måste hämtas ut i någon av biljettbodarna på Clemenstorget eller Stortorget utanför karnevalsområdet.</string>
 		<key>name</key>
@@ -769,7 +768,7 @@ Entrébiljetter köpta på internet måste hämtas ut i någon av biljettbodarna
 		<key>category</key>
 		<integer>5</integer>
 		<key>description</key>
-		<string>Nöden har ingen lag, sägs det. Därför är Karnevalen så futural att flertalet toaletter har placerats ut runt om på området. Vart du än befinner dig, kommer du inte ha långt till ett rum där du kan pudra näsan. En automatic poo remover.</string>
+		<string>Nöden har ingen lag, sägs det. Därför är Karnevalen så futural att flertalet toaletter har placerats ut runt om på området. Var du än befinner dig, kommer du inte ha långt till ett rum där du kan pudra näsan. En automatic poo remover.</string>
 		<key>name</key>
 		<string>Toaletter</string>
 		<key>payment_options</key>
@@ -1701,7 +1700,7 @@ Entrébiljetter köpta på internet måste hämtas ut i någon av biljettbodarna
 		<key>category</key>
 		<integer>4</integer>
 		<key>description</key>
-		<string>Hur man än vrider och vänder på historien, världen och dess invånare ser man tydligt att vi gång efter annan bevittnar sagan om mänsklighetens gränslösa idioti. Det är nästan imponerande hur vuxna, ansvarstagande människor ständigt förstör sin egen verklighet. Som barn utsätts vi för enorma förhoppningar, varje ny generation förväntas bli den första vettiga generationen. Men nej, det kommer aldrig ske. Människan är, har alltid varit och kommer alltid att förbli en idiot. Följ med oss i Karnevalsrevyn Kottar &amp; Nötter –  45 minuter satiriska, intellektuella och tramsiga sketcher och fartfyllda sång- och dansnummer om allt och inget. En generationsresa där vi bevisar att varenda kotte, utan undantag, växer upp till att bli ett nöt.</string>
+		<string>20 tältnöjen som innehåller en kort och karnevalistisk upplevelse, för att veta mer om varje enskilt tältnöje, var god köp vårt programblad som finns tillgängligt på shoppen inne på karnevalsområdet.</string>
 		<key>name</key>
 		<string>Tältnöjen</string>
 		<key>payment_options</key>
@@ -1978,7 +1977,7 @@ Så borsta tänderna, glöm inte tandtråden och ta med hela familjen till Barne
 		<key>category</key>
 		<integer>22</integer>
 		<key>description</key>
-		<string>En vis person sa en gång ”Varför gå genom livet när du kan dansa?”. En ypperlig devis som Lundakarnevalen tagit till sig och kommer att efterleva – med råge! Under de tre karnevalsnätterna i maj så kan Lundakarnevalen stoltsera med Sveriges största nattklubb, Dansen, på AF-borgen! Under dessa nätter så kommer AF-borgen att transformeras till en mullrande dansinferno utan jämlike. Tillsammans kommer över 6000 personer dansa nätterna genom på Dansens fyra olika dansgolv i Tégners, Stora salen och Lilla salen till tonerna av våra fantastiska DJ:s och artister. </string>
+		<string>En vis person sa en gång ”Varför gå genom livet när du kan dansa?”. En ypperlig devis som Lundakarnevalen tagit till sig och kommer att efterleva – med råge! Under de tre karnevalsnätterna i maj så kan Lundakarnevalen stoltsera med Sveriges största nattklubb, Dansen, på AF-borgen! Under dessa nätter kommer AF-borgen att transformeras till ett mullrande dansinferno utan jämlike. Tillsammans kommer över 6000 personer dansa nätterna genom på Dansens fyra olika dansgolv i Tégners, Stora salen och Lilla salen till tonerna av våra fantastiska DJ:s och artister. </string>
 		<key>name</key>
 		<string>Dansen</string>
 		<key>payment_options</key>
@@ -2642,7 +2641,7 @@ Entrébiljetter köpta på internet måste hämtas ut i någon av biljettbodarna
 		<key>category</key>
 		<integer>20</integer>
 		<key>description</key>
-		<string>På Tegnérsplatsen precis söder om AF-borgen ligger Lundakarnevalens äldsta och mest urballade nöje, nämligen Karnevalscirkusen! Cirkusen har en lång historia av att blanda studentikos humor med parodier på cirkusnummer, såväl som genuint imponerande sådana. Detta år kommer föreställningen, namngiven ”Cirkus 40 minuter”, att ta med publiken på en hisnande färd mellan olika främmande platser, och bjuda på en frisk blandning av gammalt såväl som nytt. En traditionell cirkus skickas ut på under ytterst otraditionella omständigheter på grund av en mystisk resenär från framtiden. Bered er på ett äventyr fylld med både spänning, humor och grace. Ett sant nöje för hela familjen!</string>
+		<string>På Tegnérsplatsen precis söder om AF-borgen ligger Lundakarnevalens äldsta och mest urballade nöje, nämligen Karnevalscirkusen! Cirkusen har en lång historia av att blanda studentikos humor med parodier på cirkusnummer, såväl som genuint imponerande sådana. Detta år kommer föreställningen, namngiven ”Cirkus 40 minuter”, att ta med publiken på en hisnande färd mellan olika främmande platser, och bjuda på en frisk blandning av gammalt såväl som nytt. En traditionell cirkus skickas ut under ytterst otraditionella omständigheter på grund av en mystisk resenär från framtiden. Bered er på ett äventyr fylld med både spänning, humor och grace. Ett sant nöje för hela familjen!</string>
 		<key>name</key>
 		<string>Cirkusen</string>
 		<key>payment_options</key>
@@ -2767,7 +2766,7 @@ Entrébiljetter köpta på internet måste hämtas ut i någon av biljettbodarna
 		<key>category</key>
 		<string>22</string>
 		<key>description</key>
-		<string>Lunds universitet står hotat av en dold fienden med oklara intentioner. Den unga studentskan Sara, som av en ren slump dras in i de dramatiska förvecklingarna, visar sig vara den enda som kan skydda universitetet mot en våldsam undergång. Men är det egentligen en slump att det blir just hon? Under tiden som hon tvingas vänja sig vid sina nyvunna superkrafter, får vi stifta bekantskap med den nördige Filip. I sällskap av hennes nyfunne vän får vi följa våra hjältar genom hackerattacker, biljakter och slutligen i den avgörande kampen mot de onda i Sveriges första superhjältefilm…</string>
+		<string>Lunds universitet står hotat av en dold fiende med oklara intentioner. Den unga studentskan Sara, som av en ren slump dras in i de dramatiska förvecklingarna, visar sig vara den enda som kan skydda universitetet mot en våldsam undergång. Men är det egentligen en slump att det blir just hon? Under tiden som hon tvingas vänja sig vid sina nyvunna superkrafter, får vi stifta bekantskap med den nördige Filip. I sällskap av hennes nyfunne vän får vi följa våra hjältar genom hackerattacker, biljakter och slutligen i den avgörande kampen mot de onda i Sveriges första superhjältefilm…</string>
 		<key>name</key>
 		<string>Filmen</string>
 		<key>payment_options</key>
@@ -2792,7 +2791,7 @@ Entrébiljetter köpta på internet måste hämtas ut i någon av biljettbodarna
 		<key>category</key>
 		<string>22</string>
 		<key>description</key>
-		<string>På stora salens scen i AF-borgen möter du karnevalsspexet Atlantis! Här bjuds det på ett traditionellt lundensiskt spex där sagan om hur det gick för Atlantis berättas med högklassig humor, sång och dans. Föreställning börjar i ett slitet och nedgånget Atlantis. Staden håller inte längre för sin egen vikt och sjunker sakta men säkert, både ner i vattnet och ner i fördärvet. Invånarna i staden har vant sig vid förfallet, men stadens borgmästarinna har bestämt sig för att få staden på flytande igen (både bildligt och bokstavligen!). Atlantis ska återgå till sina forna glansdagar – och det illa kvickt!</string>
+		<string>På stora salens scen i AF-borgen möter du karnevalsspexet Atlantis! Här bjuds det på ett traditionellt lundensiskt spex där sagan om hur det gick för Atlantis berättas med högklassig humor, sång och dans. Föreställning börjar i ett slitet och nedgånget Atlantis. Staden håller inte längre för sin egen vikt och sjunker sakta men säkert, både ner i vattnet och ner i fördärvet. Invånarna i staden har vant sig vid förfallet, men stadens borgmästarinna har bestämt sig för att få staden flytande igen (både bildligt och bokstavligen!). Atlantis ska återgå till sina forna glansdagar – och det illa kvickt!</string>
 		<key>name</key>
 		<string>Spexet</string>
 		<key>payment_options</key>
