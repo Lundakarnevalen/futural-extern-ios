@@ -76,7 +76,30 @@
         self.choiceVC.strokeColor = self.logotypeImage.strokeColor;
         self.choiceVC.desiredBackgroundImage = self.coverImage.image;
         self.choiceVC.view.tag = viewTag;
-        self.choiceVC.view.frame = CGRectMake(c.origin.x, c.origin.y - self.navigationController.navigationBar.frame.size.height - 20, c.size.width, c.size.height); //make it fit (x)
+        
+        CGRect frame;
+        
+        CGPoint location;
+        location.x = c.origin.x;
+        
+        if (SYSTEM_VERSION_LESS_THAN(@"7.0")) {
+            
+            location.y = c.origin.y;
+            
+        } else {
+        
+            location.y = c.origin.y - self.navigationController.navigationBar.frame.size.height - 20;
+            
+        }
+        
+        CGSize size = c.size;
+        frame.origin = location;
+        frame.size = size;
+        
+        
+        self.choiceVC.view.frame = frame; //make it fit (x)
+        
+        
         [self.view addSubview:self.choiceVC.view];
         
     }
@@ -130,26 +153,35 @@
     
     MKCoordinateRegion region;
     LKAnnotation *annotation;
+    LKPlace *place;
     
     if(self.place) {
      
         NSInteger randomIndex = arc4random() % [self.place.subPlaces count];
-        LKPlace *randomPlace = [self.place.subPlaces objectAtIndex:randomIndex];
-        region = MKCoordinateRegionMake(randomPlace.position, MKCoordinateSpanMake(0.0001, 0.0001));
+        place = [self.place.subPlaces objectAtIndex:randomIndex];
         annotation = [[LKAnnotation alloc] initWithPlace:self.place andPositionIndexOf:randomIndex];
         
     } else {
         
-        LKPlace *place = (LKPlace *)[self.event.place.subPlaces firstObject];
-        
-        region = MKCoordinateRegionMake(place.position, MKCoordinateSpanMake(0.0001, 0.0001));
+        place = (LKPlace *)[self.event.place.subPlaces firstObject];
         annotation = [[LKAnnotation alloc] initWithPlace:place];
         
     }
     
-    [self.miniMap renderOverlay];
-    [self.miniMap addAnnotation:annotation];
-    [self.miniMap setRegion:region];
+    BOOL placeIsNil = (place == nil);
+    
+    [self.mapLabel setHidden:placeIsNil];
+    [self.mapView setHidden:placeIsNil];
+    
+    if(place) {
+        
+        region = MKCoordinateRegionMake(place.position, MKCoordinateSpanMake(0.0001, 0.0001));
+        
+        [self.miniMap renderOverlay];
+        [self.miniMap addAnnotation:annotation];
+        [self.miniMap setRegion:region];
+        
+    }
     
     [LKLayout customizeSegment:self.sectionButton];
     

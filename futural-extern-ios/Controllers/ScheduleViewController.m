@@ -183,7 +183,13 @@
     bottomCircle.layer.cornerRadius = bottomCircle.frame.size.height / 2;
     
     headerName.text = [NSString stringWithFormat:@"%@", [event.name uppercaseString]];
-    headerPlace.text = [NSString stringWithFormat:@"%@", [event.place.name uppercaseString]];
+    
+    NSString *place = [event.place.name uppercaseString];
+    if(place) {
+        headerPlace.text = place;
+    } else {
+        headerPlace.text = @"SE PROGRAMBLAD";
+    }
     
     NSString *startTime =[NSString stringWithFormat:@"%@", [event formattedStartTime]];
     NSString *endTime = [NSString stringWithFormat:@"%@", [event formattedEndTime]];

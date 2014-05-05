@@ -33,6 +33,12 @@
                                      NSFontAttributeName : [UIFont fontWithName:@"Robot!Head" size:28]
                                      };
     
+    if (SYSTEM_VERSION_LESS_THAN(@"7.0")) {
+        
+        [self.navigationBar setTintColor:[LKColor colorWithIdentifier:LKColorRed]];
+        
+    }
+    
     [self.navigationBar.topItem setTitle:[LKLayout defaultTitle]];
     [self.navigationBar setTranslucent:NO];
     if ([self respondsToSelector:@selector(setBarTintColor:)]) {

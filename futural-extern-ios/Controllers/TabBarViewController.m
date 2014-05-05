@@ -31,13 +31,22 @@
     UIColor *colorStandby = [LKColor colorWithIdentifier:LKColorLightRed];
     
     NSDictionary *selectedProperties = @{
+                                         UITextAttributeTextColor : [UIColor whiteColor],
                                          NSFontAttributeName : font,
                                          NSForegroundColorAttributeName : colorActive
                                          }; //active tab
     NSDictionary *normalProperties = @{
+                                       UITextAttributeTextColor : [LKColor colorWithIdentifier:LKColorLightRed],
                                        NSFontAttributeName : font,
                                        NSForegroundColorAttributeName : colorStandby
                                        }; //standby tab
+    
+    if (SYSTEM_VERSION_LESS_THAN(@"7.0")) {
+        
+        [[UITabBar appearance] setTintColor:[UIColor whiteColor]];
+        
+    }
+    
     
     [[UITabBarItem appearance] setTitleTextAttributes:selectedProperties forState:UIControlStateSelected];
     [[UITabBarItem appearance] setTitleTextAttributes:normalProperties forState:UIControlStateNormal];
