@@ -39,8 +39,9 @@
     [self.mapView renderOverlay];
     
     self.slidingViewController.underRightViewController  = [self.storyboard instantiateViewControllerWithIdentifier:@"Filter"];
-    [self.view addGestureRecognizer:self.slidingViewController.panGesture];
     [self.slidingViewController setAnchorLeftRevealAmount:150.0f];
+    [self.view addGestureRecognizer:self.slidingViewController.panGesture];
+    self.slidingViewController.shouldAllowUserInteractionsWhenAnchored = YES;
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(navigateToDetail:) name:@"map.to.detail" object:nil]; //map model
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(filterMapTableViewRowDidSelect:) name:FilterMapTableViewRowDidSelect object:nil]; //filter
