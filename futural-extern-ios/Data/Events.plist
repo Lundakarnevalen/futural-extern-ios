@@ -16,7 +16,7 @@
 			<key>start</key>
 			<date>2014-05-18T20:00:00Z</date>
 			<key>end</key>
-			<date>2014-05-18T11:37:00Z</date>
+			<date>2014-05-18T21:00:00Z</date>
 		</dict>
 	</dict>
 	<dict>
@@ -337,7 +337,7 @@
 		<key>date</key>
 		<dict>
 			<key>start</key>
-			<date>2014-05-16T15:15:00Z</date>
+			<date>2014-05-16T20:00:00Z</date>
 			<key>end</key>
 			<date>2014-05-16T16:00:00Z</date>
 		</dict>
@@ -757,6 +757,25 @@ Och Verklighetens Folk spelar villapop.
 			<date>2014-05-18T21:30:00Z</date>
 			<key>end</key>
 			<date>2014-05-18T02:00:00Z</date>
+		</dict>
+	</dict>
+	<dict>
+		<key>identifier</key>
+		<string>cover-unknown</string>
+		<key>name</key>
+		<string>King Romeo</string>
+		<key>description</key>
+		<string>Lundabaserade King Romeo har just släppt sitt debutalbum – Hurry Up To Love. Det är ett drömskt konceptalbum med syfte att påminna om vad som är viktigt egentligen. Bandet har hyllats för sin atmosfäriska stämning och lovat att förmedla samma stämningsfullhet på karnevalen. (Bild: Elin Wollin)
+
+”Skynda er att älska. Gärna med den här orkestern som soundtrack. Det fungerar i alla tider och väderlekar.” – Drefvet</string>
+		<key>place</key>
+		<string>lillascenen</string>
+		<key>date</key>
+		<dict>
+			<key>start</key>
+			<date>2014-05-18T10:30:00Z</date>
+			<key>end</key>
+			<date>2014-05-18T11:15:00Z</date>
 		</dict>
 	</dict>
 </array>

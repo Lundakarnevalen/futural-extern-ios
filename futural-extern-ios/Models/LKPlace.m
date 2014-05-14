@@ -269,7 +269,7 @@
             
         case LKPlaceCategoryScene:
             
-            imageName = @"showen";
+            imageName = @"fun";
             
             break;
             
